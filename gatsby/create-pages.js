@@ -64,6 +64,25 @@ const createPages = async ({ graphql, actions }) => {
     }
   })
 
+  // archived blog from Wordpress
+  const archivedBlogPosts = await graphql(`
+    {
+      allAllWordpressPostJson {
+        edges {
+          node {
+            path
+          }
+        }
+      }
+    }
+  `)
+  archivedBlogPosts.data.allAllWordpressPostJson.edges.forEach(edge =>
+    createPage({
+      path: edge.node.path,
+      component: path.resolve('./src/templates/archived-blog-post-template.js'),
+      context: { slug: edge.node.path },
+    }))
+
   // Feeds
   await createTagsPages(graphql, actions)
   await createCategoriesPages(graphql, actions)

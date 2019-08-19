@@ -17,7 +17,7 @@ module.exports = async (graphql, actions) => {
 
   const { postsPerPage } = siteConfig
   const numPages = Math.ceil(
-    (result.data.allMarkdownRemark.totalCount + result.data.allAllWordpressPostJson.totalCount) / postsPerPage)
+    (result.data.allMarkdownRemark.totalCount) / postsPerPage)
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({
