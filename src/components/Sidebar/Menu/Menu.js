@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styles from './Menu.module.scss';
+import React from 'react'
+import { Link } from 'gatsby'
+import styles from './Menu.module.scss'
 
 const Menu = ({ menu }) => (
   <nav className={styles['menu']}>
@@ -18,6 +18,6 @@ const Menu = ({ menu }) => (
       ))}
     </ul>
   </nav>
-);
+)
 
-export default Menu;
+export default Menu

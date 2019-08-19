@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   url: 'https://www.berlinchan.com/',
   pathPrefix: '/',
@@ -53,4 +51,4 @@ module.exports = {
       vkontakte: '#',
     },
   },
-};
+}

@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby'
 
 const useTagsList = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -13,10 +13,10 @@ const useTagsList = () => {
           }
         }
       }
-    `
-  );
+    `,
+  )
 
-  return allMarkdownRemark.group;
-};
+  return allMarkdownRemark.group
+}
 
-export default useTagsList;
+export default useTagsList

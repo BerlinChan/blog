@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styles from './Tags.module.scss';
+import React from 'react'
+import { Link } from 'gatsby'
+import styles from './Tags.module.scss'
 
 const Tags = ({ tags, tagSlugs }) => (
   <div className={styles['tags']}>
@@ -14,6 +14,6 @@ const Tags = ({ tags, tagSlugs }) => (
       ))}
     </ul>
   </div>
-);
+)
 
-export default Tags;
+export default Tags

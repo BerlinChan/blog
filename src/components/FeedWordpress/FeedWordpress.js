@@ -1,17 +1,16 @@
-import React, { Fragment } from 'react';
-import moment from 'moment';
-import { Link } from 'gatsby';
-import styles from './FeedWordpress.module.scss';
+import React, { Fragment } from 'react'
+import moment from 'moment'
+import { Link } from 'gatsby'
+import styles from './FeedWordpress.module.scss'
 
 const FeedWordpress = ({ edges }) => (
   <div className={styles['feed']}>
     {edges.map((edge) => (
       <div className={styles['feed__item']} key={edge.node.path}>
         <div className={styles['feed__item-meta']}>
-          <time className={styles['feed__item-meta-time']} dateTime={moment(edge.node.date)
-            .format('YYYY-MM-DD')}>
-            {moment(edge.node.date)
-              .format('YYYY-MM-DD')}
+          <time className={styles['feed__item-meta-time']}
+                dateTime={moment(edge.node.date).format('YYYY-MM-DD')}>
+            {moment(edge.node.date).format('YYYY-MM-DD')}
           </time>
           <span className={styles['feed__item-meta-divider']}/>
           <span className={styles['feed__item-meta-category']}>
@@ -40,6 +39,6 @@ const FeedWordpress = ({ edges }) => (
       </div>
     ))}
   </div>
-);
+)
 
-export default FeedWordpress;
+export default FeedWordpress

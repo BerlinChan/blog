@@ -1,1 +1,1 @@
-export { default } from './FeedWordpress';
+export { default } from './FeedWordpress'

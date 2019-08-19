@@ -1,10 +1,10 @@
-import React from 'react';
-import { getContactHref } from '../../../utils';
-import styles from './Author.module.scss';
-import { useSiteMetadata } from '../../../hooks';
+import React from 'react'
+import { getContactHref } from '../../../utils'
+import styles from './Author.module.scss'
+import { useSiteMetadata } from '../../../hooks'
 
 const Author = () => {
-  const { author } = useSiteMetadata();
+  const { author } = useSiteMetadata()
 
   return (
     <div className={styles['author']}>
@@ -20,7 +20,7 @@ const Author = () => {
         </a>
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Author;
+export default Author

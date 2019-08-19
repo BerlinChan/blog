@@ -1,7 +1,7 @@
-import React from 'react';
-import { getContactHref, getIcon } from '../../../utils';
-import Icon from '../../Icon';
-import styles from './Contacts.module.scss';
+import React from 'react'
+import { getContactHref, getIcon } from '../../../utils'
+import Icon from '../../Icon'
+import styles from './Contacts.module.scss'
 
 const Contacts = ({ contacts }) => (
   <div className={styles['contacts']}>
@@ -14,12 +14,12 @@ const Contacts = ({ contacts }) => (
             rel="noopener noreferrer"
             target="_blank"
           >
-            <Icon name={name} icon={getIcon(name)} />
+            <Icon name={name} icon={getIcon(name)}/>
           </a>
         </li>
       )))}
     </ul>
   </div>
-);
+)
 
-export default Contacts;
+export default Contacts

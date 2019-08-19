@@ -1,32 +1,35 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Sidebar from '../components/Sidebar';
-import Feed from '../components/Feed';
-import Page from '../components/Page';
-import Pagination from '../components/Pagination';
-import { useSiteMetadata } from '../hooks';
+import React, { Fragment } from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import Sidebar from '../components/Sidebar'
+import Feed from '../components/Feed'
+import FeedWordpress from '../components/FeedWordpress'
+import Page from '../components/Page'
+import Pagination from '../components/Pagination'
+import { useSiteMetadata } from '../hooks'
+import archivedWordpressData from '../utils/archived-wordpress-data'
 
 const IndexTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
+  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
 
   const {
     currentPage,
     hasNextPage,
     hasPrevPage,
     prevPagePath,
-    nextPagePath
-  } = pageContext;
+    nextPagePath,
+  } = pageContext
 
-
-  const { edges } = data.allMarkdownRemark;
-  const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+  const { edges } = data.allMarkdownRemark
+  const pageTitle = currentPage > 0
+    ? `Posts - Page ${currentPage} - ${siteTitle}`
+    : siteTitle
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Sidebar isIndex />
+      <Sidebar isIndex/>
       <Page>
-        <Feed edges={edges} />
+        <Feed edges={edges}/>
         <Pagination
           prevPagePath={prevPagePath}
           nextPagePath={nextPagePath}
@@ -40,8 +43,8 @@ const IndexTemplate = ({ data, pageContext }) => {
         </Fragment> : null}
       </Page>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
@@ -67,6 +70,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default IndexTemplate;
+export default IndexTemplate
