@@ -1,4 +1,4 @@
-const getContactHref = (name: string, contact: string) => {
+const getContactHref = (name, contact) => {
   let href;
 
   switch (name) {

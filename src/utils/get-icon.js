@@ -1,6 +1,6 @@
 import { ICONS } from '../constants';
 
-const getIcon = (name: string) => {
+const getIcon = (name) => {
   let icon;
 
   switch (name) {
