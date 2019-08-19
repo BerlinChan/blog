@@ -46,9 +46,7 @@ module.exports = {
       facebook: 'berlinchancom',
       github: 'BerlinChan',
       email: 'berlinchancom@gmail.com',
-      telegram: '#',
-      rss: '#',
-      vkontakte: '#',
+      rss: 'rss.xml',
     },
   },
 }

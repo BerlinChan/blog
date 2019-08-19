@@ -5,7 +5,7 @@ import styles from './Layout.module.scss'
 const Layout = ({ children, title, description }) => (
   <div className={styles.layout}>
     <Helmet>
-      <html lang="en"/>
+      <html lang="zh-Hans"/>
       <title>{title}</title>
       <meta name="description" content={description}/>
       <meta property="og:site_name" content={title}/>

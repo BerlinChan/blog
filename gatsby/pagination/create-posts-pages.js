@@ -9,12 +9,15 @@ module.exports = async (graphql, actions) => {
       allMarkdownRemark(
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
       ) { totalCount }
-    }
+      allAllWordpressPostJson {
+        totalCount
+      }
+   }
   `)
 
   const { postsPerPage } = siteConfig
   const numPages = Math.ceil(
-    result.data.allMarkdownRemark.totalCount / postsPerPage)
+    (result.data.allMarkdownRemark.totalCount + result.data.allAllWordpressPostJson.totalCount) / postsPerPage)
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({

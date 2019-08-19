@@ -5581,6 +5581,14 @@ gatsby-telemetry@^1.1.12:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
+gatsby-transformer-json@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.npm.taobao.org/gatsby-transformer-json/download/gatsby-transformer-json-2.2.2.tgz#115573dd9d028a58124d15536ddb1629121f733e"
+  integrity sha1-EVVz3Z0CilgSTRVTbdsWKRIfcz4=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    bluebird "^3.5.0"
+
 gatsby-transformer-remark@^2.6.14:
   version "2.6.14"
   resolved "https://registry.npm.taobao.org/gatsby-transformer-remark/download/gatsby-transformer-remark-2.6.14.tgz#6c2f6944b7d66414b808bd71622f2c3f06b14452"
