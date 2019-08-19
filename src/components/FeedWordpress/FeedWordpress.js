@@ -1,14 +1,9 @@
 import React, { Fragment } from 'react';
 import moment from 'moment';
 import { Link } from 'gatsby';
-import type { EdgeWordpress } from '../../types';
 import styles from './FeedWordpress.module.scss';
 
-type Props = {
-  edges: EdgeWordpress
-};
-
-const FeedWordpress = ({ edges }: Props) => (
+const FeedWordpress = ({ edges }) => (
   <div className={styles['feed']}>
     {edges.map((edge) => (
       <div className={styles['feed__item']} key={edge.node.path}>
