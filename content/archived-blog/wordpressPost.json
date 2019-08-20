@@ -9,7 +9,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>总的来说，原因有三： 主机频繁死机 WordPress 越来越臃肿，不想花更多钱升级服务器 要备案 半年前开始 &hellip; </p>",
+    "excerpt": "总的来说，原因有三： 主机频繁死机 WordPress 越来越臃肿，不想花更多钱升级服务器 要备案 半年前开始 … ",
     "path": "/2019/08/why-leave-wordpress-and-aliyun/",
     "featured_media": null,
     "content": "\n<p>总的来说，原因有三：</p>\n\n\n\n<ol><li>主机频繁死机</li><li>WordPress 越来越臃肿，不想花更多钱升级服务器</li><li>要备案</li></ol>\n\n\n\n<p>半年前开始，部署在阿里云虚拟主机的 WordPress 博客和 <a href=\"https://awildpetcat.com\">awildpetcat.com</a>的留言本，可用性频繁降到0，7月27日这天就有三次挂，短信通知邮件通知，手机电脑就是一通叮铃咣啷。</p>\n\n\n\n<figure class=\"wp-block-image\"><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2019/08/ali-notification-mail-1024x513.jpg\" alt=\"\" class=\"wp-image-2521\" srcset=\"https://archived-blog.berlinchan.com/wp-content/uploads/2019/08/ali-notification-mail-1024x513.jpg 1024w, https://archived-blog.berlinchan.com/wp-content/uploads/2019/08/ali-notification-mail-300x150.jpg 300w, https://archived-blog.berlinchan.com/wp-content/uploads/2019/08/ali-notification-mail-768x385.jpg 768w, https://archived-blog.berlinchan.com/wp-content/uploads/2019/08/ali-notification-mail.jpg 1052w\" sizes=\"(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px\" /></figure>\n\n\n\n<p>阿里云独享虚拟主机经济版：</p>\n\n\n\n<blockquote class=\"wp-block-quote\"><p>空间：5G CPU：单核 内存：1G 带宽：1Mbps MySQL：500MB</p></blockquote>\n\n\n\n<p>2016年5月刚把<a href=\"https://archived-blog.berlinchan.com/2016/05/move-to-aliyun/\">网站从万网搬到阿里云</a>之初，用起来感觉很好，可好景不长。之前操作换过一次主机机房，仍然出现这问题。</p>\n\n\n\n<p>这锅也不能阿里云一个人背，Wordpress 功能越来越臃肿也是原因。最近 WordPress 更新的新版编辑器给我的体验还挺好，我另外安装插件Akismet Anti-Spam, Jetpack, WP Super Cache，也足够满足博客的需要。还有种类繁多的主题，可以实时预览和安装。那么臃肿也是这么多好玩、强大功能的代价吧。但是仔细想我对博客的需求，其实并不需要这么多。</p>\n\n\n\n<p>最后一个原因是上个月，我备案所属辖区片儿警给我打电话，让又重新注册备案一个什么编号。这些鬼 big brother 真的很烦人，很烦人！</p>\n\n\n\n<p>现在 Github Pages, Netlify 等服务免费又方便，纯静态也能满足需要，与其买每年298元的阿里云，还不如搬家咯，准备在 Hexo 和 Gatsby 之中选一个迁移走。</p>\n\n\n\n<h3>WordPress 迁移</h3>\n\n\n\n<p>考察了 <a href=\"https://github.com/gatsbyjs/gatsby\">gatsby-source-wordpress</a> 插件后，觉得太麻烦，准备用 WordPress 插件 WP2Static 将全站导出为静态文件，然后融合到新站中，同时域名也可以保持不变。</p>\n\n\n\n<p>自豪的使用 WordPress 最后一篇了，我们新站见。</p>\n",
@@ -36,7 +36,7 @@
         "name": "音乐"
       }
     ],
-    "excerpt": "<p>成都（吉他翻唱）<br />\n词曲：赵雷<br />\n弹唱：郑栋梁 郑亚亚 鲍晓琴<br />\n拍摄：陈柏林</p>\n",
+    "excerpt": "成都（吉他翻唱）\n词曲：赵雷\n弹唱：郑栋梁 郑亚亚 鲍晓琴\n拍摄：陈柏林\n",
     "path": "/2019/05/chengdu-guitar-cover/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2019/05/chengdu-guitar-cover.jpg"
@@ -70,7 +70,7 @@
         "name": "折腾装备"
       }
     ],
-    "excerpt": "<p>在腾讯视频观看，在优酷观看 单位年会抽奖中了小米电动滑板车，开箱使用过3、4回后说说体验，除了充电的几个问题（ &hellip; </p>",
+    "excerpt": "在腾讯视频观看，在优酷观看 单位年会抽奖中了小米电动滑板车，开箱使用过3、4回后说说体验，除了充电的几个问题（ … ",
     "path": "/2019/03/unboxing-xiaomi-scooter/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2019/03/2019-01-27xiaomi-scooter.jpg"
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "title": "钢琴演奏 &#8211; 巴赫的小步舞曲 in G大调",
+    "title": "钢琴演奏 – 巴赫的小步舞曲 in G大调",
     "date": "2018-12-20T05:51:58.000Z",
     "slug": "minuet-in-g-major",
     "categories": [
@@ -109,7 +109,7 @@
         "name": "音乐"
       }
     ],
-    "excerpt": "<p>今天来弹奏一首巴赫的小步舞曲G大调，Minuet in G Major。 此曲最开始是在巴赫Bach的第二任妻 &hellip; </p>",
+    "excerpt": "今天来弹奏一首巴赫的小步舞曲G大调，Minuet in G Major。 此曲最开始是在巴赫Bach的第二任妻 … ",
     "path": "/2018/12/minuet-in-g-major/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2018/12/cover-minuet.jpg"
@@ -133,7 +133,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>不知从哪看到存在主义（英语：existentialism）这个词，借用Wiki的定义： 存在主义，是一个哲学的 &hellip; </p>",
+    "excerpt": "不知从哪看到存在主义（英语：existentialism）这个词，借用Wiki的定义： 存在主义，是一个哲学的 … ",
     "path": "/2018/11/the-meaning-of-life/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2018/11/universe-1044107_640.jpg"
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "title": "卡农D大调Pachelbel &#8211; Canon in D",
+    "title": "卡农D大调Pachelbel – Canon in D",
     "date": "2018-09-01T12:09:10.000Z",
     "slug": "canon-in-d-keyboard",
     "categories": [
@@ -189,7 +189,7 @@
         "name": "音乐"
       }
     ],
-    "excerpt": "<p>（在Youku、腾讯视频上观看） 我跟着PianoKeys的视频学的 https://www.youtube. &hellip; </p>",
+    "excerpt": "（在Youku、腾讯视频上观看） 我跟着PianoKeys的视频学的 https://www.youtube. … ",
     "path": "/2018/09/canon-in-d-keyboard/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2018/09/self-learning-canon-keyboard.jpg"
@@ -228,7 +228,7 @@
         "name": "音乐"
       }
     ],
-    "excerpt": "<p>&lt;span data-mce-type=&#8221;bookmark&#8221; style=&#038;#8 &hellip; </p>",
+    "excerpt": "<span data-mce-type=”bookmark” style=&#8 … ",
     "path": "/2018/08/self-learning-canon-in-d-in-three-month/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2018/08/self-learning-Canon-in-D-in-three-month.jpg"
@@ -262,7 +262,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>(YouTube不显示的话你懂的。在优酷、腾讯视频上观看) 美味学院（武汉）烘培体验课，跟着燕子老师学做纸杯蛋 &hellip; </p>",
+    "excerpt": "(YouTube不显示的话你懂的。在优酷、腾讯视频上观看) 美味学院（武汉）烘培体验课，跟着燕子老师学做纸杯蛋 … ",
     "path": "/2018/06/learn-how-to-make-cupcake/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2018/07/make-cupcake-with-teacher-Yanzi.jpg"
@@ -304,7 +304,7 @@
         "name": "音乐"
       }
     ],
-    "excerpt": "<p>当当当！好久没有拍片的摄影师陈柏林回来啦！ 这次我有了一架钢琴！很不容易啊～ 一架入门款的Yamaha P-1 &hellip; </p>",
+    "excerpt": "当当当！好久没有拍片的摄影师陈柏林回来啦！ 这次我有了一架钢琴！很不容易啊～ 一架入门款的Yamaha P-1 … ",
     "path": "/2018/03/i-got-a-piano/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2018/03/2018-03-24i-got-a-piano@05x.jpg"
@@ -338,7 +338,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>我的路由器是Asus RT-AC68U，固件版本Merlin 380.69_2-X7.8。 相比密码，通过SS &hellip; </p>",
+    "excerpt": "我的路由器是Asus RT-AC68U，固件版本Merlin 380.69_2-X7.8。 相比密码，通过SS … ",
     "path": "/2018/03/manage-merlin-router-web-access-from-wan-via-ssh/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2018/03/SSH-on-Windows-Featured-670x335.jpg"
@@ -377,7 +377,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>装修在我爸和施工队的努力下，进展顺利。 你的浏览器需要支持Javascript以查看全景漫游</p>\n",
+    "excerpt": "装修在我爸和施工队的努力下，进展顺利。 你的浏览器需要支持Javascript以查看全景漫游\n",
     "path": "/2017/09/deco-tour/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/09/deco-vtour-cover.jpg"
@@ -410,7 +410,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>夏末单位搞趣味水上运动会，以前的单位搞趣味运动会都有些有趣的创意游戏项目，这回把场地搬到水上，我很期待会有更新 &hellip; </p>",
+    "excerpt": "夏末单位搞趣味水上运动会，以前的单位搞趣味运动会都有些有趣的创意游戏项目，这回把场地搬到水上，我很期待会有更新 … ",
     "path": "/2017/08/reverse-paddle-crew-and-team-work/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/12/IMG_8762_1.jpg"
@@ -449,7 +449,7 @@
         "name": "日记"
       }
     ],
-    "excerpt": "<p>最近诸事不顺。开工半个月后，换了一位更负责的工长，装修才算步入正轨。 水电验收前，拍照记录水电管线，图片太大， &hellip; </p>",
+    "excerpt": "最近诸事不顺。开工半个月后，换了一位更负责的工长，装修才算步入正轨。 水电验收前，拍照记录水电管线，图片太大， … ",
     "path": "/2017/07/before-water-electricity-acceptance-pano/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/07/before-water-electricity-acceptance-pano.jpg"
@@ -478,7 +478,7 @@
         "name": "日记"
       }
     ],
-    "excerpt": "<p>新换工作，碰上部门有位嘴巴特别厉害的UI设计，开始给我安排工作了—— “那这个事我就不操心，到周五我问一下进度 &hellip; </p>",
+    "excerpt": "新换工作，碰上部门有位嘴巴特别厉害的UI设计，开始给我安排工作了—— “那这个事我就不操心，到周五我问一下进度 … ",
     "path": "/2017/05/trouble-in-work/",
     "featured_media": null,
     "content": "<p>新换工作，碰上部门有位嘴巴特别厉害的UI设计，开始给我安排工作了——</p>\n<p><em>“那这个事我就不操心，到周五我问一下进度就行了，xx现在安排了有别的工作，估计弄不过来，你帮想一下要怎么做。”</em></p>\n<p>潜台词就是这工作都推给我了。我想我是新人，肯定是要吃这点亏，那我就都去做咯，可后来却指责我做的太多，把别人的事情都做了，憋红了脸跟我大谈什么敏捷开发的要点。在现有领域不占优势了，就进入另外的领域一比高低。我立刻看懂她的意图，况且我没有要比个高低的意思，于是马上装傻起来。</p>\n<p>第二次饭桌上闲聊星座，她问“咦，上次说谁是跟我蛮合得来的星座啊？”，我说“是我”，她立马就不说话了。哎，这下又打击到她对星座的信仰了，那岂不对我更是仇视。</p>\n",
@@ -547,7 +547,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>【新闻源监控系统】发布了0.3.1版本，作为技术探索性项目，本次更新在0.2.0的基础上，增加如下新特性： 爬 &hellip; </p>",
+    "excerpt": "【新闻源监控系统】发布了0.3.1版本，作为技术探索性项目，本次更新在0.2.0的基础上，增加如下新特性： 爬 … ",
     "path": "/2017/05/autonews-with-nlp-feature/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/03/auto-news-snapshot.jpg"
@@ -600,7 +600,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>兴趣爱好 接着【我的工作为什么失败】系列上一篇记述的，从腾讯大楚网离职前的“愚人节项目”中，唯一外包的工作是移 &hellip; </p>",
+    "excerpt": "兴趣爱好 接着【我的工作为什么失败】系列上一篇记述的，从腾讯大楚网离职前的“愚人节项目”中，唯一外包的工作是移 … ",
     "path": "/2017/05/why-i-became-a-web-devloper/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/05/web_developer.jpg"
@@ -643,7 +643,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>在大楚网做新闻编辑的时候，我一直梦寐以求有个工具，让新闻监控和部分转载工作自动化，这样我就能更优雅的编辑标题和 &hellip; </p>",
+    "excerpt": "在大楚网做新闻编辑的时候，我一直梦寐以求有个工具，让新闻监控和部分转载工作自动化，这样我就能更优雅的编辑标题和 … ",
     "path": "/2017/03/project-auto-news-system/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/03/auto-news-snapshot.jpg"
@@ -705,7 +705,7 @@
         "name": "读书"
       }
     ],
-    "excerpt": "<p>李健——“异乡人”。我仔细听了两遍你说喜欢的歌，说下我的理解还有疑问吧。 歌词“只为一扇窗”的“窗”，我想这是 &hellip; </p>",
+    "excerpt": "李健——“异乡人”。我仔细听了两遍你说喜欢的歌，说下我的理解还有疑问吧。 歌词“只为一扇窗”的“窗”，我想这是 … ",
     "path": "/2017/03/letter-about-the-song-you-love/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/03/letter.jpg"
@@ -779,7 +779,7 @@
     ]
   },
   {
-    "title": "Vlog &#8211; 东湖、吉他、火锅、WiiU",
+    "title": "Vlog – 东湖、吉他、火锅、WiiU",
     "date": "2017-02-27T11:16:32.000Z",
     "slug": "vlog-east-lake-guitar-wii",
     "categories": [
@@ -788,7 +788,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>周末和朋友们到东湖畔踏青，听Jack弹吉他，而后去他家吃饭玩WiiU。Nintendo的游戏果真是找回童趣的好 &hellip; </p>",
+    "excerpt": "周末和朋友们到东湖畔踏青，听Jack弹吉他，而后去他家吃饭玩WiiU。Nintendo的游戏果真是找回童趣的好 … ",
     "path": "/2017/02/vlog-east-lake-guitar-wii/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/02/CBL_3835.jpg"
@@ -832,7 +832,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>“They may still be young, but what is the biggest conce &hellip; </p>",
+    "excerpt": "“They may still be young, but what is the biggest conce … ",
     "path": "/2017/02/right-values-are-most-important/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/02/values.jpeg"
@@ -871,7 +871,7 @@
         "name": "日记"
       }
     ],
-    "excerpt": "<p>在youku上观看 4年前，父母亲曾在二爷爷的小女儿结婚时候去过天津，他们回来后我得以从照片中认识天津的亲戚们 &hellip; </p>",
+    "excerpt": "在youku上观看 4年前，父母亲曾在二爷爷的小女儿结婚时候去过天津，他们回来后我得以从照片中认识天津的亲戚们 … ",
     "path": "/2017/02/tianjin-tour-2/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/02/tianjin-day4_1.jpg"
@@ -953,7 +953,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>你和你爱人的十年，虽不知细节，但也能令我感受这份爱的伟大。即使不能是“爱情之爱”，我仍永远爱你。当有什么思绪令 &hellip; </p>",
+    "excerpt": "你和你爱人的十年，虽不知细节，但也能令我感受这份爱的伟大。即使不能是“爱情之爱”，我仍永远爱你。当有什么思绪令 … ",
     "path": "/2017/02/to-my-lover/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/02/IMG_20170217_143720_1.jpg"
@@ -987,7 +987,7 @@
         "name": "日记"
       }
     ],
-    "excerpt": "<p>在youku上观看 2017春节之前半年，父亲就计划了一趟天津的旅程，自驾回去寻访祖籍和探望亲戚，感受北方春节 &hellip; </p>",
+    "excerpt": "在youku上观看 2017春节之前半年，父亲就计划了一趟天津的旅程，自驾回去寻访祖籍和探望亲戚，感受北方春节 … ",
     "path": "/2017/02/tianjin-tour-1/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/02/tianjing-01_1.jpg"
@@ -1041,7 +1041,7 @@
         "name": "折腾装备"
       }
     ],
-    "excerpt": "<p>用了8年的Nikkor AF-S DX 18-55mm f3.5镜头，先是买D40x套机中的，后来挂在D700 &hellip; </p>",
+    "excerpt": "用了8年的Nikkor AF-S DX 18-55mm f3.5镜头，先是买D40x套机中的，后来挂在D700 … ",
     "path": "/2017/02/scrapped-afs-18-55mm-lens/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/02/scrappedCover.jpg"
@@ -1074,7 +1074,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>春节假期回宜昌路上，在公交车上见一约7岁小男孩神情专注的玩手机，让我想起前不久在武汉表哥家，看他2岁的儿子玩手 &hellip; </p>",
+    "excerpt": "春节假期回宜昌路上，在公交车上见一约7岁小男孩神情专注的玩手机，让我想起前不久在武汉表哥家，看他2岁的儿子玩手 … ",
     "path": "/2017/02/children-should-play-less-mobile-phones/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/02/CBL_3472_1.jpg"
@@ -1122,7 +1122,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>东湖听涛景区——上周六一个温暖的冬日，雾霾重重的武汉难得一露蓝天，我与微信公众号“两个脑袋TwoHeads”， &hellip; </p>",
+    "excerpt": "东湖听涛景区——上周六一个温暖的冬日，雾霾重重的武汉难得一露蓝天，我与微信公众号“两个脑袋TwoHeads”， … ",
     "path": "/2017/01/mobike-and-public-bicyle/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/01/2017-01-21rideB-bike-in-east-lake-wuhan.jpg"
@@ -1160,7 +1160,7 @@
         "name": "读书"
       }
     ],
-    "excerpt": "<p>看《X战警 &#8211; 逆转未来》的影评，当中提到电影《十二猴子》《源代码》，这几部影片都讲述的是主角时间 &hellip; </p>",
+    "excerpt": "看《X战警 – 逆转未来》的影评，当中提到电影《十二猴子》《源代码》，这几部影片都讲述的是主角时间 … ",
     "path": "/2017/01/movie-twelve-monkeys/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/01/movie-twelve-monkey.jpg"
@@ -1242,7 +1242,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>到杭州旅游的第二天，周四工作日路上车比较少，我在南山路一公园附近转悠，过马路时我正在纳闷没有红绿灯，猜想是否应 &hellip; </p>",
+    "excerpt": "到杭州旅游的第二天，周四工作日路上车比较少，我在南山路一公园附近转悠，过马路时我正在纳闷没有红绿灯，猜想是否应 … ",
     "path": "/2016/12/humanistic-care-of-traffic-in-hangzhou/",
     "featured_media": null,
     "content": "<p>到杭州旅游的第二天，周四工作日路上车比较少，我在南山路一公园附近转悠，过马路时我正在纳闷没有红绿灯，猜想是否应该等一下看看，以体现我是一位有素质的游客。这时左边余光看见一辆北京现代牌子的出租车开始减速，最后竟然在斑马线前停下来还有一辆公交车也同样。我突然明白了意思，然后快步穿过马路，来不及点头向司机表示感谢，那车已快速发动驶过斑马线。</p>\n<p>我猜想有种可能是因为我肩上挂着一台单反，看起来不是游客就是记者，所以大概杭州是想从这窗口透露一个良好的形象吧。可是在其他附近路口观察后发现，这是杭州司机们的一个体现人文关怀的文明规则。</p>\n<p>我骑自行车穿过灵溪隧道，在西溪湿地公园附近的公交车站看到的橱窗说明，印证了我的猜想。</p>\n<p><figure id=\"attachment_2108\" aria-describedby=\"caption-attachment-2108\" style=\"width: 800px\" class=\"wp-caption aligncenter\"><img class=\"wp-image-2108 size-full\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/CBL_3125.jpg\" width=\"800\" height=\"361\" srcset=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/CBL_3125.jpg 800w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/CBL_3125-300x135.jpg 300w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/CBL_3125-768x347.jpg 768w\" sizes=\"(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px\" /><figcaption id=\"caption-attachment-2108\" class=\"wp-caption-text\">杭州一个公交站台橱窗</figcaption></figure></p>\n<blockquote><p>公交服务真情伴您行——礼让篇</p>\n<p>……继公交车之后，杭州开始倡导出租车、私家车等机动车让行，机动车停在斑马线前，行人也往往加快脚步甚至小跑通过，这一成为杭州随处可见的场景。</p></blockquote>\n<p>公交车和出租车是城市交通的重要参与者，他们应该起到模范带头的作用。司机礼让，行人快速通过，多么默契和富有人情味的情景。</p>\n<p>不过事情总有例外。深夜到杭州正农历十六，我伴着满月在空无一人西湖边南山路漫步，过马路时候一辆出租车左转从我身后呼啸而过。</p>\n<p><img class=\"aligncenter size-full wp-image-2109\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/CBL_2923_1.jpg\" alt=\"\" width=\"800\" height=\"530\" srcset=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/CBL_2923_1.jpg 800w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/CBL_2923_1-300x199.jpg 300w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/CBL_2923_1-768x509.jpg 768w\" sizes=\"(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px\" /></p>\n",
@@ -1289,7 +1289,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>武汉天河进T3航站楼，自助领登机牌机器旁边过来个女服务员，几忽悠就办了这卡。每次购票30～300的抵扣，不会只 &hellip; </p>",
+    "excerpt": "武汉天河进T3航站楼，自助领登机牌机器旁边过来个女服务员，几忽悠就办了这卡。每次购票30～300的抵扣，不会只 … ",
     "path": "/2016/12/trap-in-airport/",
     "featured_media": null,
     "content": "<p><img class=\"aligncenter size-full wp-image-2091\" src=\"//archived-blog.berlinchan.com/wp-content/uploads/2016/12/IMG_20161214_211454-gold-card.jpg\" alt=\"img_20161214_211454-gold-card\" width=\"600\" height=\"450\" srcset=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/IMG_20161214_211454-gold-card.jpg 600w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/IMG_20161214_211454-gold-card-300x225.jpg 300w\" sizes=\"(max-width: 600px) 100vw, 600px\" /></p>\n<p>武汉天河进T3航站楼，自助领登机牌机器旁边过来个女服务员，几忽悠就办了这卡。每次购票30～300的抵扣，不会只能抵30吧！Google了一番果然是这样，每次买机票抵30有毛线用，哎晕了晕了。本来觉得机场是个有序高效的场合，降低了警惕，防不胜防被骗998元。再吃一堑，更长一智！</p>\n<p>刚才查了下，果然是骗子！查网站备案见下图，实际主办是甘肃乐翔航空服务有限公司。域名http://www.gslxhk.com/和caacvip.com链接向同一个IP:115.28.236.176，<img class=\"aligncenter size-full wp-image-2095\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/snapshot2016-12-15-上午2.12.45.png\" alt=\"snapshot2016-12-15-%e4%b8%8a%e5%8d%882-12-45\" width=\"893\" height=\"82\" srcset=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/snapshot2016-12-15-上午2.12.45.png 893w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/snapshot2016-12-15-上午2.12.45-300x28.png 300w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/snapshot2016-12-15-上午2.12.45-768x71.png 768w\" sizes=\"(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px\" />这商家软文、公关做得好，Google上搜出来尽是软文，负面言论都公关删掉了。比如说这篇知乎</p>\n<p><a href=\"https://www.zhihu.com/question/40393094\"><img class=\"aligncenter size-full wp-image-2098\" src=\"//archived-blog.berlinchan.com/wp-content/uploads/2016/12/snapshot2016-12-15-上午2.29.49.png\" alt=\"snapshot2016-12-15-%e4%b8%8a%e5%8d%882-29-49\" width=\"607\" height=\"414\" srcset=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/snapshot2016-12-15-上午2.29.49.png 607w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/12/snapshot2016-12-15-上午2.29.49-300x205.png 300w\" sizes=\"(max-width: 607px) 100vw, 607px\" />https://www.zhihu.com/question/40393094</a></p>\n<p>我以前就是删稿子的小编，媒体这搞法我见了那么多，&#x1f602;……</p>\n<p>还没离开武汉就入坑，飞机降落了回想总结刚才真是傻，大家也要注意：</p>\n<ul>\n<li>美貌与热心的人来搭讪帮忙要警惕（可是穿的地勤服务员样子的人，不就是应该热情帮助旅客吗？防不胜防啊！）；</li>\n<li>向你承诺有很多特权与后门可走的人，要警惕（她承诺登机口停止检票也能上飞机，有贵宾休息处，茶水点心都免费，还可以另外带两位通行者。其实就是旁边一家茶水吧的商家。还能帮领取登机牌，办理退票、报销凭证、托运）；</li>\n<li>吹嘘自己有官方背景（据说是36家航空公司联合支持的用民航通字眼做幌子，背后其实叫【甘肃乐翔航空服务有限公司】）；</li>\n<li>把你引导到角落谈话的人，要警惕（我们就去了边上一个展台最角落……）；</li>\n<li>向你承诺有很多优惠与实惠的人，要警惕（她承诺有赠送保险，机票价格折上折）；</li>\n<li>需要你付钱的——</li>\n</ul>\n<h3><strong><span style=\"color: #ff0000;\">立马打住！</span></strong></h3>\n<p>&nbsp;</p>\n<p>其实忽悠期间我注意到可疑点了，最后被骗终究还是放松警惕。那地勤服务员模样太唬人了。他们是能提供一些服务，不过也都是在候机厅帮跑腿，帮预定个机票等微不足道的事情。关于不事先明确说明每张机票可用卡内余额抵扣30～300元的详细规则，已经可纳入诈骗范畴。</p>\n<p>哎～这些年轻人怎么愿意去做骗人的勾当，可惜可惜。放任这些骗子，机场也是有责任的。有空再追究吧，我不想坏了出行的心情！</p>\n",
@@ -1340,7 +1340,7 @@
         "name": "读书"
       }
     ],
-    "excerpt": "<p>7年做7份工作，跳槽中有成功有失败，但是最后的离开的原因多是失望与失败，可以分【我的工作为什么失败】系列来记述 &hellip; </p>",
+    "excerpt": "7年做7份工作，跳槽中有成功有失败，但是最后的离开的原因多是失望与失败，可以分【我的工作为什么失败】系列来记述 … ",
     "path": "/2016/12/why-quit-media-field/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2017/05/web_developer.jpg"
@@ -1399,7 +1399,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>在去为同事庆祝生日的路上，我一个人走得很快，因为时间已经迟了。在地铁换乘站的通道处，心里一边嘀咕慢腾腾挪动的人 &hellip; </p>",
+    "excerpt": "在去为同事庆祝生日的路上，我一个人走得很快，因为时间已经迟了。在地铁换乘站的通道处，心里一边嘀咕慢腾腾挪动的人 … ",
     "path": "/2016/11/encounter-classmate-in-subway/",
     "featured_media": null,
     "content": "<p>在去为同事庆祝生日的路上，我一个人走得很快，因为时间已经迟了。在地铁换乘站的通道处，心里一边嘀咕慢腾腾挪动的人群，一边想起曾在这里听到人流中一个学生对他身边同学说“一个个面无表情”，于是我决定挤出点笑容来，好让自己显得不那么无趣且开心点。正在这时黑压压的人群中一个人影笑着冲我跑来，我无神的视线立刻聚焦，认出来是一位大学同学。他在这里等一位朋友。</p>\n<p>我能立刻认出他来，是因为他是我老乡，后来大学同班，住在我对面寝室，算关系比较好的同学，我任班长时他是参与组织活动的积极分子。今年夏天他应几位同学要求，准备在武汉组织毕业6周年聚会，提前半年就热心的四处联系，电话、微信、QQ都用上，结果临近约定日子，有几位离武汉很远的同学说来不成，于是爽约遍如瘟疫般散开，越来越多的人说来不成。最后大家似乎达成了无声的一致，那个曾热闹讨论聚会的群突然少有人发言，大家再次回到各自忙碌的生活中。</p>\n<p>毕业后我们在动车上也偶遇过一次，那次相见已是2年之前。相比大学时身材与穿着风格没什么变化，只是脸上多了些皱纹，带一副没有镜片的眼镜框，深色毛线围巾拧成一坨的围在脖子上。我们从通道中间移到栏杆边，避开喧闹的人流，我惊叹他如何从密集的人群中认出我来，他自豪的指着旁边人流说，“我会把每个路过人的面孔迅速认一遍”，说话间机敏的眼神迅速在人流中不同人身上跳跃。我后来想起，我曾经也有这样机敏的视线。我问起近况，于是听他说了毕业以来的经历。</p>\n<p>他毕业后做过舞蹈老师、体育老师、手机销售、司机，经营过桌游吧，在游船上做过活，在老家和武汉之间不同工作来来去去度过了6年。而后感叹钱没有赚到，人际关系也因为工作跨行业而损失。“这都是经历啊”，我用赞赏的口气说。而他似乎对这些经历和经验并不感到骄傲，只是回顾这些不同经历总结：除了开桌游吧，其他工作还是攒了些钱，大概有10万多。他睁大眼睛显得洋洋得意。</p>\n<p>我开玩笑问他这次是不是来武汉参加今天的“国考”，他也笑说我们已经超过岁数了。他8个月之前因为工作调动而来到武汉，不过不久就辞去了那份工作，现在正接受岗前培训，准备去一家通讯运营商做话务员，他说“是个国企，培训看起来工作还不错”。他催我若有急事就先走，可是相比去参加同事生日会，我更愿意与这位老同学聊聊，于是我们接着寒喧几句，然后互相说起各自最近还了解的其他同学的状况。回忆起那些人和事，恍如昨天。</p>\n<p>换乘站通道又迎来一大股人流。他没有问起，我也没说自己生活和工作近况，沉默几秒钟后，我接着之前的话头，“可以呀！趁年轻时候折腾过了”，本以为可以帮他总结一下多变的遭遇，他却出乎意料的说“我觉得还没折腾够！”，说话间眼睛透过镜框闪着光。</p>\n<p>突然他从人群中认出了要等的人，我们简单的道别。我朝他视线望去只看到一群脚步匆匆的人，当我再回过头看他，他已汇入茫茫人海不知去向。</p>\n",
@@ -1441,7 +1441,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>周五下班，合租房的一对夫妻煮了顿热腾腾的火锅，请我和其他合租户一起吃。这是我搬进来的第三个月，日常里都是各进自 &hellip; </p>",
+    "excerpt": "周五下班，合租房的一对夫妻煮了顿热腾腾的火锅，请我和其他合租户一起吃。这是我搬进来的第三个月，日常里都是各进自 … ",
     "path": "/2016/11/shared-roomate/",
     "featured_media": null,
     "content": "<p>周五下班，合租房的一对夫妻煮了顿热腾腾的火锅，请我和其他合租户一起吃。这是我搬进来的第三个月，日常里都是各进自己房间后就关门，除了每个月初均摊水电费，其他时间几乎不讲话，各自忙着自己的生活。借着这火锅，头一回大家坐在一起，聊起各自的工作和生活。</p>\n<p>这对夫妻在双方家庭的催促下因相亲而认识，他们曾下海做过淘宝电商，后来因为不成功且辛苦，最后选择回武汉，现在一家汽车保险公司做电话销售。他们1岁多的小孩留在老家由爷爷奶奶带着，只有到周末不加班时，才回家看看孩子。日常工作中丈夫每天打200个电话，他说这对提高业绩很重要，我们都应和表示赞同。我问他们今后打算在武汉定居还是回老家，他说“今后在看吧”，随后又补充一句“现在还在原始积累”。然后是一段沉默。</p>\n<p>另一个小伙今年从一所他不愿说的高校毕业，现在为一个投资现货的经纪公司做网络销售。在我们好奇追问下，他介绍他们的工作内容：同时登录6、7个微信然后和潜在投资者聊天，根据分析师的意见指导客户操作之类的，最后自嘲一句“其实都是骗人的”。他说想等女朋友明年毕业后一起去沿海城市亲戚朋友那工作，不过担心不做这份工作后能再去做什么。谈起职业长远考虑，他和坐他对面的车险销售同样赞成不是长久之计。不过小伙还是自豪的说，最近每个月都能挣上万，然后又掏出香烟递给对面的人，再熟练的给自己点上一支。我猜这是让他少有的不那么担忧的事情吧。</p>\n<p>我也将自己现在的程序员工作给他们讲了讲，然后大谈要找寻自己真正热爱的东西然后为之付出努力。从他们的沉默我知道这些话，他们听来不过是一些说教之辞。</p>\n",
@@ -1478,7 +1478,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>前几天的一个周六，我去公交站，远远就看见一位大概是对面学校的学生模样的小伙子，手中揽着一叠报纸，当我走近时他向 &hellip; </p>",
+    "excerpt": "前几天的一个周六，我去公交站，远远就看见一位大概是对面学校的学生模样的小伙子，手中揽着一叠报纸，当我走近时他向 … ",
     "path": "/2016/11/buy-a-news-paper/",
     "featured_media": null,
     "content": "<p>前几天的一个周六，我去公交站，远远就看见一位大概是对面学校的学生模样的小伙子，手中揽着一叠报纸，当我走近时他向我推销。</p>\n<p>我回想起一年前离开的大楚网，和在新闻行业的那些经历。我很乐意花一元钱买张报纸在等车之余，看看一年间报纸有何变化。</p>\n<p>我从双肩包里翻出最后一元现金，这都是在软件园附近生活养成的习惯。我问小伙子，“为什么要来卖报纸？是做什么活动？”，他只是反复回答了两遍，“是学校的活动”。</p>\n<p>这是一份楚天都市报，头版右下角小小的几个字写明它今天有16版。头版头条仍然是熟悉的“学习XX讲话与精神”式标题，末版是一些我不熟悉的明星的娱乐花边，中间则有类似老年人被骗而买回来的荒诞的东西的照片，当然还有广告已经被我“自动屏蔽”。只有其中整版公益广告图片，让我视线有所停留。那是一张站在高楼上拍摄的，晴朗天空下的繁荣都市照。照片署名是一位我听说过的摄影师。</p>\n<p>等到车来之前，我已经把报纸折起来。我想这就是我为什么离开新闻媒体行业。</p>\n",
@@ -1514,7 +1514,7 @@
         "name": "读书"
       }
     ],
-    "excerpt": "<p>读《我们最幸福：北朝鲜人民的真实生活》（作者：芭芭拉·德米克）书中这些历史时，联想到的却多是之前从虚构的体裁中 &hellip; </p>",
+    "excerpt": "读《我们最幸福：北朝鲜人民的真实生活》（作者：芭芭拉·德米克）书中这些历史时，联想到的却多是之前从虚构的体裁中 … ",
     "path": "/2016/08/nothing-to-envy/",
     "featured_media": null,
     "content": "<p>读《<a href=\"https://zh.wikipedia.org/wiki/%E6%88%91%E5%80%91%E6%9C%80%E5%B9%B8%E7%A6%8F%EF%BC%9A%E5%8C%97%E9%9F%93%E4%BA%BA%E6%B0%91%E7%9A%84%E7%9C%9F%E5%AF%A6%E7%94%9F%E6%B4%BB\">我们最幸福：北朝鲜人民的真实生活</a>》（作者：芭芭拉·德米克）书中这些历史时，联想到的却多是之前从虚构的体裁中了解到的，那种用于警示世人的寓言或娱乐大众的电影。仿佛《1984》中虚构的世界在现实中上演，平壤与清津等其他城市的关系如电影《饥饿游戏》中都城与施惠国的关系，社会阶层的鸿沟如电影《Elysium》中那样不可逾越。</p>\n<p>读这本书之前，我从未切身的思考过，如果这些剧情发生在真实世界会给人带来什么。如同人们在很多灾难后反思的那样：在新闻报道中或有众多人死于非命时，死伤人数往往成为一个统计数字。</p>\n<p>起初我不赞同作者的：深入讲述固定范围的几个人更能呈现这个国家人们真实的生活状态。我怕这些个案研究会有失偏颇而不像大范围统计数字那样足以证明整体状况。但随着作者细腻和详述的记载这些人物的日常生活和心理活动，让我感受到他们是一个个真实存在、活生生的人时，我才恍悟正是这集中的笔墨让本书深入人心，令人更敬佩那些在人为悲剧下艰难求生的人身上所闪现的人性光辉。在深入描写这几个人的学习、工作、旅行、恋爱经历当中，朝鲜人们的普遍生活状况也得以呈现。</p>\n<p>书名Nothing to envy直译为：无可炫耀，译者将其翻译为：我们最幸福，意思虽有偏离，但自欺欺人的反讽用法，更能表达出这些在被愚弄的环境中生存的人，所展现出来的愚蠢的自信。相比之下，我们最幸福。</p>\n",
@@ -1545,7 +1545,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>这是一篇在博文“前端工程——基础篇”中的回复。如下是回复正文： 我在武汉，这里做Web开发不少企业依照几乎是1 &hellip; </p>",
+    "excerpt": "这是一篇在博文“前端工程——基础篇”中的回复。如下是回复正文： 我在武汉，这里做Web开发不少企业依照几乎是1 … ",
     "path": "/2016/07/frontend-practice-in-wuhan/",
     "featured_media": null,
     "content": "<p>这是一篇在博文“<a href=\"https://github.com/fouber/blog/issues/10\">前端工程——基础篇</a>”中的回复。如下是回复正文：</p>\n<p>我在武汉，这里做Web开发不少企业依照几乎是10年前的方式进行：操作DOM节点、纯服务器端渲染、form表单提交、表情拽拽的把AJAX挂在嘴边说……这正是我身边每天发生的，而我所在的单位推进前端工程化则遇到很多奇怪因素的阻碍。</p>\n<p>我最近待的2家企业，一个做自有电商平台，在使用react+redux+webpack短短一个季度后，退回了jQuery+纯服务器端模板引擎时代，原因有两个：新上任领导不会、员工培训跟不上（这两个原因好像是同一个事）。</p>\n<p>另外一家单位外包做电商平台二次开发，据称为国内电商系统市场占有率第一，搞了近半年后我已经失望的提辞职。这一回的原因除了前家企业相同的两个原因外，还有个更有意思的：服务器端开发人员怕前端抢了他们的地盘。我最终选择离开是不愿再同整个团队通宵鏖战处理那些静态资源依赖关系，反复迭代内联样式直到! important都用上，最后将糟糕的产品连骗带哄交给客户。</p>\n<p>有天周一旁边同事抱怨修改别人的样式和模板好难受，第二天我问他有没有想过如何改变这个问题，他沉默了。</p>\n<p>这些事情每天在我眼前重复发生，实在忍受不了，心痛又无语的曾提交一个commit：</p>\n<p>d8e4109 Berlin Chan on 16/5/24 at 下午6:07<br />\n我已经经过了绝望而变的无可奈何,想要呐喊却又无言。大家都很努力依次处理bug,就像对待每件日常平凡无奇的工作,他们并不着急避免这种事,而是冷静在处理问题中留下更多问题,这种冷静让我感到绝望。<br />\nIn 5 branches: HEAD, master, develop, origin/master, origin/develop</p>\n<p>阮一峰博客里面看到一句话，类似是这样：</p>\n<blockquote><p>在中国你不想骗人不想做坏事，那你就只能去编码了</p></blockquote>\n<p>我是从传统媒体转行做前端开发，之所以转行正是对这句话的充分实践。可是没想到在我这个Web开发圈子的人，让我再同样的失望一回。</p>\n<p>近期参加的一些面试，偶尔会碰到有的企业意识到要做前后端分离与前端工程化，而已经深入实践的多为小型创业团队。曾经面试一创业公司，对方问我有没有写过“单元测试”“自动化测试”。后来我没去这家企业，现在想来很后悔。因为如果一个团队会用上这些工具，可见他们对代码质量（至少已经意识到）是如何的重视。</p>\n<p>《黑客与画家》前言里面的一个例子：旅游网站Orbitz成功打入竞争激烈的网络订票市场，主要原因就是使用了更好的编程语言。引用这个例子不为说明语言的孰优孰虐，而是说技术选型的结果会直接影响一家企业的兴衰。</p>\n<p>小型创业团队要在同一市场与人力财力更强大的企业竞争，技术方案是少有的可以成为优势的因素，当然何其珍贵了！</p>\n<p>刚才我的愚蠢而善良的领导召集前后端开发人员开会，总结上一个项目的得出以下经验：</p>\n<ol>\n<li>PHP模版中的&lt;{header}&gt;中的内容一定是要公用的静态资源才能放进去</li>\n<li>切图定义样式类只用class属性，后台开发人员只用id属性</li>\n<li>JS脚本资源引用，要按照切图静态页的顺序放进去</li>\n<li>表单提交不要用button标签，以防有的服务器端开发人员不知道如何屏蔽submit事件</li>\n<li>所有的JS交互直接写在HTML页中，方便服务器端开发人员定位交互代码</li>\n</ol>\n<p>然后演示了服务器端开发人员，将我已经用vue写好前端渲染的页面，重新用JS渲染出来的页面后，获得了在座一致认同——下面就这么搞！服务器端开发人员玩转前端的自豪感难以掩藏挂在脸上（包括我那愚善的领导），殊不知将整个团队拖入泥潭。而我这个习得性无助的人只能淡然视之。在一个封闭的圈子里面，经验和知识是如此的难以取得。若我们失败了，一定是败给了人性的弱点。</p>\n<p>若武汉是个稍微封闭地方，但从我面试过一些求职者来看，也许这个范围更为广泛（或是我单位很容易吸引初级开发者）。有2位从北京、上海回来的前端开发，从业4年有余，从交流中得知他们依然看到前端是做一些切图的工作。后来我跟一位优秀的实习生讨论，觉得这是一件多么可怕的事情：呆在一个地方，被蒙蔽了视野。做一个岗位，应当与整个行业同步，而不仅限于跟圈子站在一起。</p>\n<p>互联网是如此开放的环境，又有那么多优秀而慷慨的乐于人分享他们的智慧。这是我最喜欢互联网的原因之一，这让“身在小镇，胸怀世界”成为可能，并且能始终与“巨人”们站在一起。做互联网的人是最有资源利用好这一点的人群。</p>\n<p>我专职做前端开发的时间不长，短短1年，但从2000年初的个人站长热就开始接触网页三剑客，持续关注Web开发也有十余年时间。当我在报社、门户网站做过记者、摄影师、编辑后，又回到了Web开发领域，看到网页三剑客已衰落至死；看到ES6标准使Javascript拥有更多高级语言的特性；看到NodeJS拓展Javascript程序员的空间；看到npm成为前端开发的大宝库；看到React、Angular这些优秀的JS框架；看到Sass将老旧的CSS焕发新生；看到webpack将Web应用打包的干净优雅……最初看到这些事物的时候，每天都有新东西思考、探索和研究，就如同看到“一个全新的世界”，这也是为什么我喜欢前端开发。</p>\n<p>而此时当我还看到有人在操作DOM节点，找“父亲的兄弟的儿子”时，心中着急如猫抓。</p>\n<p>上个月我在infoQ的微信公众号看到一篇文章ThoughtWorks前端架构师为AngularJS2布道的文章，还听说他们参与举办了一次武汉前端开发交流会，为武汉Web前端开发圈技术革新的推广付出努力，在武汉真是难能可贵。</p>\n<p>希望武汉的Web前端开发圈能够更好，下一份工作我能更优雅的编码。</p>\n",
@@ -1576,7 +1576,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>新换的工作是在一家公司做电商应用ECstore二次开发，在项目工作中发现这套应用对于用户体验和开发体验上面做的 &hellip; </p>",
+    "excerpt": "新换的工作是在一家公司做电商应用ECstore二次开发，在项目工作中发现这套应用对于用户体验和开发体验上面做的 … ",
     "path": "/2016/06/why-separate-frontend-and-backend/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2016/06/5627594400199_middle.png"
@@ -1596,7 +1596,7 @@
     ]
   },
   {
-    "title": "2016-06-11长阳看望奶奶、游清江方山 &#8211; Berlin&#8217;s vlog",
+    "title": "2016-06-11长阳看望奶奶、游清江方山 – Berlin’s vlog",
     "date": "2016-06-11T09:02:12.000Z",
     "slug": "changyang-fang-mountain-vlog",
     "categories": [
@@ -1642,7 +1642,7 @@
         "name": "照片故事"
       }
     ],
-    "excerpt": "<p>伴随在媒体行业工作的经历，留存整理了近6万张图片，题材包含湖北风光、城市、企业、楼盘。特别是宜昌房产照片，不知 &hellip; </p>",
+    "excerpt": "伴随在媒体行业工作的经历，留存整理了近6万张图片，题材包含湖北风光、城市、企业、楼盘。特别是宜昌房产照片，不知 … ",
     "path": "/2016/05/image-library-open-source/",
     "featured_media": null,
     "content": "<p>伴随在媒体行业工作的经历，留存整理了近6万张图片，题材包含湖北风光、城市、企业、楼盘。特别是宜昌房产照片，不知不觉间纪录从2011年到2014年宜昌城市建设变化。</p>\n<p>去年底Google Photos取消容量限制，于是考虑将图片库全部上传并整理开源到Google Map，让这些数据发挥更大的价值。若要使用其中内容，您需遵照<a href=\"https://creativecommons.org/\">创作共享</a>的署名与相同方式共享协议，若您需要全尺寸分辨率的图片可以联系我。<img class=\"aligncenter size-full wp-image-2070\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/snap-shot-2016-11-28.png\" alt=\"snap-shot-2016-11-28\" width=\"615\" height=\"510\" srcset=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/snap-shot-2016-11-28.png 615w, https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/snap-shot-2016-11-28-300x249.png 300w\" sizes=\"(max-width: 615px) 100vw, 615px\" /></p>\n<p>下面列出了已公开的相册，可在 Google Photos 与 Google Maps 上访问到。</p>\n<h3>已共享相册（欢迎合作编辑）：</h3>\n<ul>\n<li><a href=\"https://goo.gl/photos/8byhMo8JTu21ygzN7\">宜昌-夷陵区-恒大绿洲</a></li>\n<li><a href=\"https://goo.gl/photos/hxi7VLPd67M6AruLA\">宜昌-夷陵区-星湖湾</a></li>\n<li><a href=\"https://goo.gl/photos/WB6a3GibtszUdvoj9\">宜昌-伍家岗区-江山多娇</a></li>\n<li><a href=\"https://goo.gl/photos/VJLS6x57DqtEu84x6\">宜昌-猇亭区-龙盘湖（世纪山水）</a></li>\n<li><a href=\"https://goo.gl/photos/7s7nmZsi8EP9MNmn9\">宜昌-伍家岗区-东郡</a></li>\n<li><a href=\"https://goo.gl/photos/2oXXRSohF9Kwyzx48\">宜昌-西陵区-解放路步行街（滨江公园、紫晶城、观澜、天御、园筑、滨江一号）</a></li>\n<li><a href=\"https://goo.gl/photos/Z61fbas5nRgowauG9\">宜昌-夷陵区-清江润城</a></li>\n</ul>\n<h3>待整理：</h3>\n<ul>\n<li>宜昌-猇亭区-</li>\n<li>宜昌-西陵区-卓悦广场</li>\n<li>宜昌-伍家岗区-虹桥国际公寓</li>\n<li>宜昌-伍家岗区-运河佳苑</li>\n<li>宜昌-西陵区-CBD中央商务区</li>\n<li>宜昌-西陵区-锦绣天下</li>\n<li>宜昌-伍家岗区-城中金谷</li>\n<li>宜昌-夷陵区-国宾一号</li>\n<li>宜昌-开发区-山水国际</li>\n<li>宜昌-夷陵区-锦绣星城</li>\n<li>宜昌&#8211;华祥商业中心</li>\n<li>宜昌&#8211;东辰一号御景</li>\n<li>宜昌-夷陵区-黄金花园</li>\n<li>宜昌-开发区-太平鸟时尚创业中心</li>\n<li>宜昌-伍家岗区-山水华庭</li>\n</ul>\n<p>发扬软件开源的传统，乘着影像继续探索。</p>\n<p>有什么好想法吗？请回复告诉我</p>\n",
@@ -1684,7 +1684,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>之前的香港主机每天狂掉线，大陆几乎无法访问，于是再次折腾将域名注册和主机都换到阿里云上，再加cdn基本大陆东北 &hellip; </p>",
+    "excerpt": "之前的香港主机每天狂掉线，大陆几乎无法访问，于是再次折腾将域名注册和主机都换到阿里云上，再加cdn基本大陆东北 … ",
     "path": "/2016/05/move-to-aliyun/",
     "featured_media": null,
     "content": "<p>之前的香港主机每天狂掉线，大陆几乎无法访问，于是再次折腾将域名注册和主机都换到阿里云上，再加cdn基本大陆东北、东南、华中都能访问了，后面好让我来分享下作为前端开发工程师的经验。</p>\n<p>现在的wordpress多媒体文件处理已经足够好，就把nextgen gallery插件给移除掉，为解决图片的引用，在数据库里弄了近1天，仍有部分图片没有修复对应上。</p>\n",
@@ -1700,7 +1700,7 @@
         "name": "软件"
       }
     ],
-    "excerpt": "<p>存在的问题 新安装或者升级完Adobe CC 2015后，在Bridge中使用Camera Raw会碰到这个问 &hellip; </p>",
+    "excerpt": "存在的问题 新安装或者升级完Adobe CC 2015后，在Bridge中使用Camera Raw会碰到这个问 … ",
     "path": "/2016/05/patch-bridge-camera-raw/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/patch-adobe-bridge-mac.png"
@@ -1735,7 +1735,7 @@
     ]
   },
   {
-    "title": "2016-05-01游天马寨-黄冈英山 &#8211; vlog",
+    "title": "2016-05-01游天马寨-黄冈英山 – vlog",
     "date": "2016-05-01T14:15:59.000Z",
     "slug": "vlog-tian-ma-camp",
     "categories": [
@@ -1772,7 +1772,7 @@
     ]
   },
   {
-    "title": "黄冈麻城纯阳山大峡谷徒步游 &#8211; vlog",
+    "title": "黄冈麻城纯阳山大峡谷徒步游 – vlog",
     "date": "2016-03-20T14:20:49.000Z",
     "slug": "vlog-chun-yang-valley",
     "categories": [
@@ -1818,7 +1818,7 @@
         "name": "数据库"
       }
     ],
-    "excerpt": "<p>问题描述 在Win10 x64下安装mysql-5.7.11之后，使用root登录mysql时候，显示如下：  &hellip; </p>",
+    "excerpt": "问题描述 在Win10 x64下安装mysql-5.7.11之后，使用root登录mysql时候，显示如下：  … ",
     "path": "/2016/02/solve-sql-error-1045-28000/",
     "featured_media": null,
     "content": "<h2>问题描述</h2>\n<p>在Win10 x64下安装mysql-5.7.11之后，使用root登录mysql时候，显示如下：</p>\n<p><code>C:\\MySQL&gt; mysql -u root -p<br />\nEnter password:<br />\nERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)<br />\n</code></p>\n<h2>解决方法</h2>\n<ol>\n<li>修改配置文件：我的例子里面是<code>my.ini</code>，在<code>[mysqld]</code>的下一行添加<code>skip-grant-tables</code>，如下样子<br />\n<code>[mysqld]<br />\nskip-grant-tables<br />\n</code>保存后退出</li>\n<li>重启mysql服务：用管理员权限打开命令行，执行:<br />\n<code>C:\\MySQL&gt; net stop mysql</code><br />\n停止服务后再启动服务<br />\n<code>C:\\MySQL&gt; net start mysql</code></li>\n<li>使用root登录，密码为空，命令行如下：<br />\n<code>mysql&gt; mysql -u root -p</code><br />\n已经可以登录进去了</li>\n<li>使用数据库mysql：<br />\n<code>mysql&gt; use mysql</code></li>\n<li>修改root的密码：<br />\n<code>mysql&gt; update user set authentication_string=password(\"new_password\") where user=\"root\";</code>\n</li>\n<li>刷新：<br />\n<code>mysql&gt; flush privileges;</code>\n</li>\n<li>退出登录：<br />\n<code>mysql&gt; quit</code>\n</li>\n<li>将第1步中添加的<code>skip-grant-tabels</code>删除并保存退出</li>\n<li>如第2步重启mysql服务，使用修改后的密码连接</li>\n</ol>\n",
@@ -1850,7 +1850,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>https://www.youtube.com/watch?v=joBkUahLP2g 新年假期，全家自驾去位 &hellip; </p>",
+    "excerpt": "https://www.youtube.com/watch?v=joBkUahLP2g 新年假期，全家自驾去位 … ",
     "path": "/2016/02/traveling-by-car-to-bai-li-huang/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2016/02/PANO_20160213_170300cover.jpg"
@@ -1890,7 +1890,7 @@
     ]
   },
   {
-    "title": "全景漫游方案PK &#8211; Panorama Studio VS krpano",
+    "title": "全景漫游方案PK – Panorama Studio VS krpano",
     "date": "2016-02-06T13:26:55.000Z",
     "slug": "panorama-studio-vs-krpano",
     "categories": [
@@ -1899,7 +1899,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>全景摄影，有的地方又叫360全景照，洋文叫Panoramic Photography。现在大规模应用于谷歌街景 &hellip; </p>",
+    "excerpt": "全景摄影，有的地方又叫360全景照，洋文叫Panoramic Photography。现在大规模应用于谷歌街景 … ",
     "path": "/2016/02/panorama-studio-vs-krpano/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2016/02/pano.jpg"
@@ -1924,7 +1924,7 @@
     ]
   },
   {
-    "title": "2016-01-02全家元旦游点军文佛山 &#8211; vlog",
+    "title": "2016-01-02全家元旦游点军文佛山 – vlog",
     "date": "2016-01-02T14:11:03.000Z",
     "slug": "vlog-wen-fo-mountain",
     "categories": [
@@ -1970,7 +1970,7 @@
         "name": "折腾装备"
       }
     ],
-    "excerpt": "<p>症状： Google Nexus5刷的CM12，GoPro App连接不上GoPro3+ Black Edit &hellip; </p>",
+    "excerpt": "症状： Google Nexus5刷的CM12，GoPro App连接不上GoPro3+ Black Edit … ",
     "path": "/2015/10/gopro3black-connect-with-nexus5-issues/",
     "featured_media": null,
     "content": "<h3>症状：</h3>\n<p>Google Nexus5刷的CM12，GoPro App连接不上GoPro3+ Black Edition，找到SSID后输入WiFi密码一直显示：正在获取IP……，而我的Nexus3（刷的CM11）上则一切正常。针对Nexus5查阅<a href=\"https://zh.gopro.com/support/articles/mobile-device-disconnects-from-the-cameras-wi-fi\" target=\"_blank\">官方网站</a>有如下说明：</p>\n<blockquote><p>“<strong>避免连接不良</strong>”。 如果有此设置，则确保取消选中此设置。<em><strong>典型设备：Nexus 5。</strong></em></p></blockquote>\n<p>但这并没有什么鸟用，依旧“获取IP地址中……”</p>\n<h3>解决方法：</h3>\n<p>最后在<a href=\"http://forum.cyanogenmod.org/topic/105064-wifi-gopro-silver-hero3-doesnt-connect-to-my-nexus4/\" target=\"_blank\">CM论坛</a>看到解决办法是为GoPro设备设置静态IP，设置如下：</p>\n<blockquote><p>static IP to 10.5.5.109<br />\nGateway: 10.5.5.1<br />\nNetwork Prefix Length: 24<br />\nDNS 1 8.8.8.8<br />\nDNS 2 8.8.4.4</p></blockquote>\n<p>再就能正常连接了（保存后，下次连接不需要再次输入），而且打开“避开状况不佳的网络”，仍然能正常工作。打开GoPro App时，Wi-Fi会自动切换连接到GoPro，退出后则还原能访问互联网的Wi-Fi连接。</p>\n<h3>疑问：</h3>\n<p>反正是能用了，但不知道问题出在哪里，CM论坛里头碰到这种问题的有GoPro3+sliver，也有手机Nexus4，有人知道怎么回事吗？</p>\n",
@@ -2012,7 +2012,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>希望这件“黑天鹅”事件，能对长江航运产生一些影响，让人们能更加安全的生活。 熬了一夜做这个东西，当我在为短片配 &hellip; </p>",
+    "excerpt": "希望这件“黑天鹅”事件，能对长江航运产生一些影响，让人们能更加安全的生活。 熬了一夜做这个东西，当我在为短片配 … ",
     "path": "/2015/06/east-star/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2015/06/eastStarShip.jpg"
@@ -2061,7 +2061,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>2015-05-17，中国好声音湖北地区独家网络招募-襄阳-试音活动，在活动的尾声也是最高潮我参与到其中。 我 &hellip; </p>",
+    "excerpt": "2015-05-17，中国好声音湖北地区独家网络招募-襄阳-试音活动，在活动的尾声也是最高潮我参与到其中。 我 … ",
     "path": "/2015/05/the-voice/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2015/05/tangcheng.jpg"
@@ -2100,7 +2100,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>……本次回调，中字头个股领跌，尤其是4月份被热炒的一带一路、央企整合等概念股。这类股票，个人投资者尤其是新股民 &hellip; </p>",
+    "excerpt": "……本次回调，中字头个股领跌，尤其是4月份被热炒的一带一路、央企整合等概念股。这类股票，个人投资者尤其是新股民 … ",
     "path": "/2015/05/learning-stock-market/",
     "featured_media": null,
     "content": "<blockquote><p>……本次回调，中字头个股领跌，尤其是4月份被热炒的一带一路、央企整合等概念股。这类股票，个人投资者尤其是新股民参与较多。概念股的回调是一次风险教育，是成长的洗礼。</p></blockquote>\n<p>上了一堂生动的基金投资课，盲目听信热门宣传，买两只类似题材的一带一路、央企整合，交学费1614.37￥。开了股票账户，记录一下。</p>\n",
@@ -2142,7 +2142,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>好难得的一次家庭出游，提前一个月计划好，叫上二姨、小姨、姨爹一同到宜昌去，游长阳、三峡，到潜江吃虾子，饱口福、 &hellip; </p>",
+    "excerpt": "好难得的一次家庭出游，提前一个月计划好，叫上二姨、小姨、姨爹一同到宜昌去，游长阳、三峡，到潜江吃虾子，饱口福、 … ",
     "path": "/2015/05/51-travel-in-yichang/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2015/05/未标题-1.jpg"
@@ -2205,7 +2205,7 @@
         "name": "镜头背后"
       }
     ],
-    "excerpt": "<p>大楚网：调皮的Q仔过愚人节大楚网愚人节特别策划 尽管是4分钟的短片，但整个流程仍是一次按照完整制片流程的实践。 &hellip; </p>",
+    "excerpt": "大楚网：调皮的Q仔过愚人节大楚网愚人节特别策划 尽管是4分钟的短片，但整个流程仍是一次按照完整制片流程的实践。 … ",
     "path": "/2015/04/memo-of-qq-april-fool-fun/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2015/04/dachuVideoCover_大楚视觉首页焦点图.jpg"
@@ -2294,7 +2294,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>4月25日，好友丁奕罗璇来武汉参加公务员考试，26日正周末，约上叶小玲，4人同行去欢乐谷找刺激。 欢乐谷的各种 &hellip; </p>",
+    "excerpt": "4月25日，好友丁奕罗璇来武汉参加公务员考试，26日正周末，约上叶小玲，4人同行去欢乐谷找刺激。 欢乐谷的各种 … ",
     "path": "/2015/04/wuhan-happy-valley/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2015/04/GOPR3223_1.jpg"
@@ -2333,7 +2333,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>4月12日武汉～成都坐动车，9个小时啊！美好的第一天就这么过去了，车上在我们大肆比较宽窄巷子与户部巷，想象成都 &hellip; </p>",
+    "excerpt": "4月12日武汉～成都坐动车，9个小时啊！美好的第一天就这么过去了，车上在我们大肆比较宽窄巷子与户部巷，想象成都 … ",
     "path": "/2015/04/travel-in-chengdu/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2015/06/image022.jpg"
@@ -2377,7 +2377,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>《追梦》这个节目是湖北日报65周年晚会上，请小徐老师给编排的，到了年底的2015年会上又拿出来演了一道，我们这 &hellip; </p>",
+    "excerpt": "《追梦》这个节目是湖北日报65周年晚会上，请小徐老师给编排的，到了年底的2015年会上又拿出来演了一道，我们这 … ",
     "path": "/2015/02/2015-new-media-group-annual/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2015/02/2015-01-28-2015年新媒体集团年会追梦节目组-追梦-后台花絮合影.jpg"
@@ -2426,7 +2426,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>最初准备采用xGen来生成基本体毛发，可反复检查始终无法让渲染结果稳定，偶尔会出现毛发颜色错误的故障，估计是软 &hellip; </p>",
+    "excerpt": "最初准备采用xGen来生成基本体毛发，可反复检查始终无法让渲染结果稳定，偶尔会出现毛发颜色错误的故障，估计是软 … ",
     "path": "/2014/12/qq-animation-project-2/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/12/renderTest-2-0-00-00-001.jpg"
@@ -2480,7 +2480,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>主意的由来 离开家，留了一台旧电脑给我爸妈用，爸妈老说一打开全是英文和好多东西，不知道点哪里。教了好几遍啊，把 &hellip; </p>",
+    "excerpt": "主意的由来 离开家，留了一台旧电脑给我爸妈用，爸妈老说一打开全是英文和好多东西，不知道点哪里。教了好几遍啊，把 … ",
     "path": "/2014/11/qq-animation-project-1/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/11/QQ-mesh.jpg"
@@ -2534,7 +2534,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>预览页面：寻访襄阳十八怪-大楚襄阳-“襄”知道吗-第1集 很久没有折腾web设计相关的事情，前段时间因为工作上 &hellip; </p>",
+    "excerpt": "预览页面：寻访襄阳十八怪-大楚襄阳-“襄”知道吗-第1集 很久没有折腾web设计相关的事情，前段时间因为工作上 … ",
     "path": "/2014/11/try-responsive-web-design-with-reflow/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/11/responsive-web-design.jpg"
@@ -2583,7 +2583,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>第三次将《少有人走的路》这本书送给身边的朋友，这是一封随书一起送给朋友的信。 有个朋友在自我介绍上写，请不要与 &hellip; </p>",
+    "excerpt": "第三次将《少有人走的路》这本书送给身边的朋友，这是一封随书一起送给朋友的信。 有个朋友在自我介绍上写，请不要与 … ",
     "path": "/2014/11/a-letter-to-friend/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/11/ki56tyoe.jpg"
@@ -2636,7 +2636,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>在约5分钟的内容里，说明我使用Canon 5D2 RAW Video &amp; Zoom H4N摄影与录音后 &hellip; </p>",
+    "excerpt": "在约5分钟的内容里，说明我使用Canon 5D2 RAW Video & Zoom H4N摄影与录音后 … ",
     "path": "/2014/07/canon-raw-video-workflow/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/07/canon-raw-video-workflow-cover.jpg"
@@ -2695,7 +2695,7 @@
         "name": "折腾装备"
       }
     ],
-    "excerpt": "<p>我的Google“三儿子”、又名三星I9250、又名Galaxy Nexus，在从台湾旅游回来后，手机的尾插坏 &hellip; </p>",
+    "excerpt": "我的Google“三儿子”、又名三星I9250、又名Galaxy Nexus，在从台湾旅游回来后，手机的尾插坏 … ",
     "path": "/2014/06/diy-fix-i9250/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/06/G0081170_1.jpg"
@@ -2744,7 +2744,7 @@
         "name": "照片故事"
       }
     ],
-    "excerpt": "<p>黄土填平的操场，少有跑动就会尘土飞扬 两个篮板奇怪的杵在光秃秃的黄土上，孩子们在周围跳大绳、跳房子，或者30多 &hellip; </p>",
+    "excerpt": "黄土填平的操场，少有跑动就会尘土飞扬 两个篮板奇怪的杵在光秃秃的黄土上，孩子们在周围跳大绳、跳房子，或者30多 … ",
     "path": "/2014/05/luotian-school-sports/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/ngg_featured/G0110545w_1.jpg"
@@ -2808,7 +2808,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>母亲节，感谢大楚网给我这个严肃、认真对妈妈说“我爱你”的机会，据说把我同事的妈妈都看哭了。 母亲节！妈妈，我爱 &hellip; </p>",
+    "excerpt": "母亲节，感谢大楚网给我这个严肃、认真对妈妈说“我爱你”的机会，据说把我同事的妈妈都看哭了。 母亲节！妈妈，我爱 … ",
     "path": "/2014/05/mama-iloveyou/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/05/Untitled-1.jpg"
@@ -2866,7 +2866,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>看梦瑶拿着新的Sony A5000拍拍身边的人，拍路边的三叶草，让我想起当初摄影为我打开一个崭新的世界的激动， &hellip; </p>",
+    "excerpt": "看梦瑶拿着新的Sony A5000拍拍身边的人，拍路边的三叶草，让我想起当初摄影为我打开一个崭新的世界的激动， … ",
     "path": "/2014/04/mengyao-new-camera/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/ngg_featured/mmexport1398773322961.jpg"
@@ -2905,7 +2905,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>去年此时，给三峡晚报、点军世界名花展策划、举办的“宜美人”摄影赛活动。朋友袁新学看到的，今年此时，我身不在宜昌 &hellip; </p>",
+    "excerpt": "去年此时，给三峡晚报、点军世界名花展策划、举办的“宜美人”摄影赛活动。朋友袁新学看到的，今年此时，我身不在宜昌 … ",
     "path": "/2014/04/model-in-flower/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/04/N06479YGWGAHIOV_1.jpg"
@@ -2964,7 +2964,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>&#8220;I don&#8217;t wanna survive, I wanna live.&#038;#8221 &hellip; </p>",
+    "excerpt": "“I don’t wanna survive, I wanna live.&#8221 … ",
     "path": "/2014/04/live-not-only-survive/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/04/GOPR0063_1397907935909_high_1.jpg"
@@ -3023,7 +3023,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>连续第4天被5：30的闹钟吵醒，起床查看一条刘雯特色的短信——发于临晨3点钟，告知就纪录片《自由的家猫》采访我 &hellip; </p>",
+    "excerpt": "连续第4天被5：30的闹钟吵醒，起床查看一条刘雯特色的短信——发于临晨3点钟，告知就纪录片《自由的家猫》采访我 … ",
     "path": "/2014/03/still-persist/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/03/IMG_20140328_130800.jpg"
@@ -3088,7 +3088,7 @@
     ]
   },
   {
-    "title": "梦瑶送给挚友刘悦&#038;小毛豆的新婚祝福",
+    "title": "梦瑶送给挚友刘悦&小毛豆的新婚祝福",
     "date": "2014-02-19T12:57:34.000Z",
     "slug": "wishes-from-meng-yao",
     "categories": [
@@ -3097,7 +3097,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>2014-02-18，梦瑶送给大学挚友刘悦&amp;小毛豆的新婚祝福，“恭喜你成为我们寝室第一个出嫁的幸福女孩 &hellip; </p>",
+    "excerpt": "2014-02-18，梦瑶送给大学挚友刘悦&小毛豆的新婚祝福，“恭喜你成为我们寝室第一个出嫁的幸福女孩 … ",
     "path": "/2014/02/wishes-from-meng-yao/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/02/Untitled-1.jpg"
@@ -3141,7 +3141,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>在YouTube上播放 2014-01-28，2014春节前夕，与梦瑶去汉街万达的亚洲土地餐厅，Cathy和她 &hellip; </p>",
+    "excerpt": "在YouTube上播放 2014-01-28，2014春节前夕，与梦瑶去汉街万达的亚洲土地餐厅，Cathy和她 … ",
     "path": "/2014/02/delicious-steps-in-asia-table/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/02/cover2.jpg"
@@ -3210,7 +3210,7 @@
         "name": "生活娱乐活动"
       }
     ],
-    "excerpt": "<p>俺最近每天给别人更新新闻，却很久没有“更新自己”。以为明天又要上班，但刚才一看，明儿俺休息！突然得到了一个本来 &hellip; </p>",
+    "excerpt": "俺最近每天给别人更新新闻，却很久没有“更新自己”。以为明天又要上班，但刚才一看，明儿俺休息！突然得到了一个本来 … ",
     "path": "/2014/02/happy-in-dachu/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2014/02/cover21.jpg"
@@ -3284,7 +3284,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>翻看2013年Google Calendar上记载的事件，很多重要的事情都没有在当时记载下感受，事后也就逐渐淡 &hellip; </p>",
+    "excerpt": "翻看2013年Google Calendar上记载的事件，很多重要的事情都没有在当时记载下感受，事后也就逐渐淡 … ",
     "path": "/2014/01/summary-2013/",
     "featured_media": null,
     "content": "<p>翻看2013年Google Calendar上记载的事件，很多重要的事情都没有在当时记载下感受，事后也就逐渐淡忘，没有用更多的时间来思考自己是件很遗憾的事情，即使是过后看起来很幼稚、不理智、消极的想法，也值得从其中看见自己的成长，提醒自己认识短浅与思维局限是多么可怕。</p>\n<p>既然都过去了，也不必再详细记载过去，因为有些新的事情让我迫不及待去书写。</p>\n<p>据来自三峡晚报工作、Google Calendar、博客中的痕迹，提一些关键词记个2013年流水帐。<!--more--></p>\n<p><b>Keywords of 2013：</b></p>\n<p>三峡晚报,友行游摄,胡学军,马志萍,杜娟,柳振洲,邓超,三峡物流园,陈涛,杨青,谭鸿鹤,邓云,张瑞林,邓冲,任精华,许兰兰,王东方,中新网,凯能数码,天猫,裴军,望超,赵强,易娜,石春美,徐刚,曾新达,三块田,叶旦丹,石安琪,苏骥,东风风行-景逸SUV,初高中同学聚会,To explore with images!,SNS,blog,wordpress,BerlinFilm.net,王茂宁,王晶,姜劲晖,武汉体育学院,大楚网,魏梦瑶,编程随想, 《少有人走的路》,《用户体验要素》,《经济学基础》</p>\n<p>2013年的工作大部分是在三峡晚报度过的，最值得记忆的是从3月持续到8月的游周刊“友行游摄”联盟系列活动，特别是与桥边世界名花展合作举办的“首届宜美人-世界名花展摄影赛”，即使从创收的角度看，3万元的金额少，其中还有抵门票，但从参与主导整个策划、公关、洽谈、合作、活动组织、报纸报道的过程中，学到不少经验，并且与谭鸿鹤建立比较好的共事关系。还有“友行游摄”这个名字的由来，和王克斌、邓超在电脑前头脑风暴出这么一个绕口的东西，但事实上这并不算个好策划。“友行游摄”联盟系列活动，西陵峡口风景区、桥边世界名花展、柴埠溪、车溪、屈原故里、神农架、大九湖、“两坝一峡”……随着活动的开展，策划越来越朝着我难以控制的方向发展。也在这项工作中认识不少朋友。</p>\n<p>无论是顶着酷暑、爬山、长途跋涉、杂草封路还是通宵熬夜，为三峡物流园拍摄工程记录照片，成为一项辛苦但有趣的工作。这其中，我已经把<a href=\"https://archived-blog.berlinchan.com/2013/panorama-tutorial/\">手持拍摄全景</a>的功夫用到了极致。在宜昌全城的报纸上通版大广告中看见我拍摄的照片，即使有时没署名，我也知道我已经足够胜任自己的工作。拍摄三峡物流园从平整地基到开业，期间在与邓超和陈涛共事中，建立了难得的友谊和信任关系。</p>\n<p>经常听说“把客户当朋友”，那凯能数码是唯一一个我这样做到的。始于工作上的联系，但成就了一批难得的友谊：裴军、万璐、望超、易娜、赵强、石春美、雷吉平、熊武林……曾经每日都会想到的名字，随着工作的转移，逐渐淡出脑海，即使不常联系，偶尔想起来心里也会怀念与他们共同度过的时光：</p>\n<ul>\n<li><a href=\"https://archived-blog.berlinchan.com/2013/canon-eos-700d/\">Canon EOS 700D机身/套机产品特色介绍</a></li>\n<li><a href=\"https://archived-blog.berlinchan.com/2013/night-club-portrait/\">镜头背后：夜魅酒吧拍人像（花絮短片）</a></li>\n<li><a href=\"https://archived-blog.berlinchan.com/2013/fujiuyuan-outdoor-portrait/\">镜头背后：香山福久源外景人像拍摄花絮</a></li>\n<li><a href=\"https://archived-blog.berlinchan.com/2013/fotography-basic/\">关于光圈 快门速度 感光度 摄影基础培训</a></li>\n<li><a href=\"https://archived-blog.berlinchan.com/2013/new-club/\">摄影大篷车-宜昌凯能数码影像俱乐部活动</a></li>\n</ul>\n<p>旅游、休闲、唱歌、饭局、接触各路高官要员、拍华丽的样板间、逛精致的园林，即使有那么多乐子，而且如柳振洲说的：随胡总见识了很多难得的场面，但在三峡晚报广告中心的工作大部分时间让人感到压抑和没着落，江然的儿童摄影创业想法和腾讯大楚网的机会，促使我离开工作了21个月的三峡晚报。</p>\n<p>2013-12-16，正式报到腾讯大楚网，这种感觉让我想起当初兴致高昂、怀有梦想的去到三峡晚报时的情景，但相比，这里的团队更年轻、充满活力，同事热情、通情达理、能干，管理制度有序。工作上逐渐熟悉，我同时有幸参与了一些单位活动：<a href=\"https://archived-blog.berlinchan.com/2014/happy-in-dachu/\">圣诞节姜饼DIY</a>、员工内部秒杀、<a href=\"https://archived-blog.berlinchan.com/2014/happy-in-dachu/\">年会</a>、抽奖，确实让我耳目一新。在参与2014年腾讯武汉年会的开场舞中，认识了为我们领舞的老师魏梦瑶——一位成熟踏实又年轻美貌的姑娘，于是我开始想想未来的各种美好可能，却想不出现在应该怎么办。</p>\n<p>家里于2013-06-23购东风风行景逸SUV，爸爸终于圆了开车梦，我们家也过上了有车的生活，特别是往来火车站有车接送感觉真幸福，只是我的驾照从4月份报名，至今天还没有考科目二。妈妈正式退休，据妈妈说这也是她离开武汉到宜昌的第30年了。家里后院还是一群猫猫狗狗鸡鸡，挺开心的。</p>\n<p>停用了berlinfilm.net域名，因bluehost被国内“墙”，博客主机移到wopus，目前感觉服务比较好。博客内容越来越丰富了，但内容也更加混乱，之前的分类系统现在几乎不适用，网站的名字全改，可见对自己仍然难以有清晰的定位。各SNS、IM帐号开始使用实名。</p>\n",
@@ -3311,7 +3311,7 @@
         "name": "折腾装备"
       }
     ],
-    "excerpt": "<p>EOS 700D是目前佳能入门级单反产品线中的最新款产品，于今年3月份推出。机身具有18.1万像素的APS-C &hellip; </p>",
+    "excerpt": "EOS 700D是目前佳能入门级单反产品线中的最新款产品，于今年3月份推出。机身具有18.1万像素的APS-C … ",
     "path": "/2013/11/canon-eos-700d/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/11/700Dpost.jpg"
@@ -3370,7 +3370,7 @@
         "name": "镜头背后"
       }
     ],
-    "excerpt": "<p>三峡晚报游周刊“友行游摄”联盟活动走进灯光色彩斑斓的酒吧，拍摄夜魅之中的人物。 本次活动特邀模特燕子，还有彩容 &hellip; </p>",
+    "excerpt": "三峡晚报游周刊“友行游摄”联盟活动走进灯光色彩斑斓的酒吧，拍摄夜魅之中的人物。 本次活动特邀模特燕子，还有彩容 … ",
     "path": "/2013/09/night-club-portrait/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/09/IMG_1466_1.jpg"
@@ -3429,7 +3429,7 @@
         "name": "镜头背后"
       }
     ],
-    "excerpt": "<p>8月31日，秋高气爽心情好，到位于宜昌伍家岗区桔城路的香山福久源一期小区拍摄外景人像。小区的坡地园林和坡地步道 &hellip; </p>",
+    "excerpt": "8月31日，秋高气爽心情好，到位于宜昌伍家岗区桔城路的香山福久源一期小区拍摄外景人像。小区的坡地园林和坡地步道 … ",
     "path": "/2013/09/fujiuyuan-outdoor-portrait/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/09/2013-08-31fujiuyuan.jpg"
@@ -3483,7 +3483,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>为三峡晚报房产部制作的工作汇报片，用于在2013年8月26日，中国房产超市网宜昌站上线推介会暨2013宜昌房地 &hellip; </p>",
+    "excerpt": "为三峡晚报房产部制作的工作汇报片，用于在2013年8月26日，中国房产超市网宜昌站上线推介会暨2013宜昌房地 … ",
     "path": "/2013/08/estate-department/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/09/2013-08-25sxwb-house_1-46-50.jpg"
@@ -3532,7 +3532,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>上周做了一个有意思的事情，帮朋友包装制作他们短片片头，我们基于一个静态的片头画面，稍加创意，用动画的形式让静态 &hellip; </p>",
+    "excerpt": "上周做了一个有意思的事情，帮朋友包装制作他们短片片头，我们基于一个静态的片头画面，稍加创意，用动画的形式让静态 … ",
     "path": "/2013/07/still2motion/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/07/4dreams-0-00-08-06.jpg"
@@ -3595,7 +3595,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>为宜昌华祥商业中心拍摄一组关于它们项目的夜景风光照片。 户外的夜景拍摄要关注的时机很重要，当中包括了天气、日落 &hellip; </p>",
+    "excerpt": "为宜昌华祥商业中心拍摄一组关于它们项目的夜景风光照片。 户外的夜景拍摄要关注的时机很重要，当中包括了天气、日落 … ",
     "path": "/2013/06/use-magic-lantern/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/06/MG_6465-Panorama_.jpg"
@@ -3648,7 +3648,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>你的社交网站个人页面，就是你在互联网上的形象，如果你是个追求个性、注重个人品牌的家伙，那么一定非常讨厌千篇一律 &hellip; </p>",
+    "excerpt": "你的社交网站个人页面，就是你在互联网上的形象，如果你是个追求个性、注重个人品牌的家伙，那么一定非常讨厌千篇一律 … ",
     "path": "/2013/04/weibo-bg/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/04/CBL1775e.jpg"
@@ -3701,7 +3701,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>给宜昌三峡物流园拍摄项目全景图，爬到对面的山上欣然发现置身于油菜花之中，一时兴起决定把这些拍下来，顺便以此为例 &hellip; </p>",
+    "excerpt": "给宜昌三峡物流园拍摄项目全景图，爬到对面的山上欣然发现置身于油菜花之中，一时兴起决定把这些拍下来，顺便以此为例 … ",
     "path": "/2013/03/panorama-tutorial/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/03/a.jpg"
@@ -3755,7 +3755,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>问自己一个问题，为什么你喜欢油菜花呢？ 我想其中最大的原因莫过于油菜花容易成片的生长，站在花田边放眼望去煞是宏 &hellip; </p>",
+    "excerpt": "问自己一个问题，为什么你喜欢油菜花呢？ 我想其中最大的原因莫过于油菜花容易成片的生长，站在花田边放眼望去煞是宏 … ",
     "path": "/2013/03/one-is-enough/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/03/CBL1403_1.jpg"
@@ -3804,7 +3804,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>角度决定一切&nbsp;&nbsp; 难得一见的东西更加吸引人，拍花同样需要拍出难得一见的效果才更出彩。站在花 &hellip; </p>",
+    "excerpt": "角度决定一切   难得一见的东西更加吸引人，拍花同样需要拍出难得一见的效果才更出彩。站在花 … ",
     "path": "/2013/03/flower-tips/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/03/CBL1483_1.jpg"
@@ -3858,7 +3858,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>微距是摄影中大家乐于讨论的题材之一，它细致入微的视角特别受心思细腻的女人们的喜爱，相比于大川大河类的风光，女人 &hellip; </p>",
+    "excerpt": "微距是摄影中大家乐于讨论的题材之一，它细致入微的视角特别受心思细腻的女人们的喜爱，相比于大川大河类的风光，女人 … ",
     "path": "/2013/03/macro-photography/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/03/macrophotography.jpg"
@@ -3897,7 +3897,7 @@
         "name": "折腾装备"
       }
     ],
-    "excerpt": "<p>使用吸管、CD盒自制热靴闪光灯蜂巢罩。 蜂巢罩是摄影布光常用变光工具，可使光线更具方向性，且具有平滑的明暗衰减 &hellip; </p>",
+    "excerpt": "使用吸管、CD盒自制热靴闪光灯蜂巢罩。 蜂巢罩是摄影布光常用变光工具，可使光线更具方向性，且具有平滑的明暗衰减 … ",
     "path": "/2013/03/honeycomb-diy/",
     "featured_media": null,
     "content": "<p>使用吸管、CD盒自制热靴闪光灯蜂巢罩。<br />\n蜂巢罩是摄影布光常用变光工具，可使光线更具方向性，且具有平滑的明暗衰减部位。</p>\n<p><object width=\"533\" height=\"400\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\"><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XNTA3NzkyMzIw/v.swf\" /><embed width=\"533\" height=\"400\" type=\"application/x-shockwave-flash\" src=\"http://player.youku.com/player.php/sid/XNTA3NzkyMzIw/v.swf\" /></object></p>\n<p><strong>更多的自制蜂巢的办法：</strong></p>\n<ul>\n<li><a href=\"http://www.shanzhuoboshi.com/blog/2010/01/23/4204.html\" target=\"_blank\">http://www.shanzhuoboshi.com/blog/2010/01/23/4204.html</a></li>\n<li><a href=\"http://www.51feibao.com/article-view-933.html\" target=\"_blank\">http://www.51feibao.com/article-view-933.html</a></li>\n<li><a href=\"http://www.photofans.cn/article/showarticle.php?threadyear=2013&amp;articleid=2258&amp;page=2\" target=\"_blank\">http://www.photofans.cn/article/showarticle.php?threadyear=2013&amp;articleid=2258&amp;page=2</a></li>\n</ul>\n",
@@ -3939,7 +3939,7 @@
         "name": "照片故事"
       }
     ],
-    "excerpt": "<p>撰稿记者张瑞林的文章展现的是个和气、总是满脸笑容的家伙，笑起来咪咪眼。在拍摄过程中给我的感受也确实如文中所说， &hellip; </p>",
+    "excerpt": "撰稿记者张瑞林的文章展现的是个和气、总是满脸笑容的家伙，笑起来咪咪眼。在拍摄过程中给我的感受也确实如文中所说， … ",
     "path": "/2013/03/img-text/",
     "featured_media": null,
     "content": "<p>撰稿记者张瑞林的文章展现的是个和气、总是满脸笑容的家伙，笑起来咪咪眼。在拍摄过程中给我的感受也确实如文中所说，我准备站和坐各拍2种表情，一个严肃一个咪咪眼，但是如何摆拍，他脸上总是有笑意。我突然意识到刻意把人塑造成另外一种风格是多么困难，既然事实不是这样，为什么要去强求捏造。在尝试多次后最后只留下笑容的照片。</p>\n<p><!--more--></p>\n<p style=\"text-align: center;\"><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/page_10.jpg' desc='' alt='人物报道的2种配图对比'/></p>\n<p>对企业家的传统映像可能是要严肃、不苟言笑、身材魁梧、霸气、高傲，这种“革命式”的性格更让人乐于接受。但是有亲和力显然也是性格上好的特质，面带微笑打出一片天下也不是没可能。</p>\n<p>右边的竖图片是我拍摄时准备的首选，左边的“办公桌式老总”横照是备用，结果出来的结果是把备用的横幅照片裁剪成竖图用上去，以我的观点解读结果是遗憾的。</p>\n<p>读标题、看文章后，右边的图更让人感觉这个家伙有血有肉的真实，感受这个家伙在宜昌奋斗的幸福。</p>\n<p>不过腿确实太黑了。</p>\n",
@@ -3986,7 +3986,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>2013年第一天，和朋友们去神农架滑雪。滑雪场位于距离木鱼镇35公里的天燕阁景区，滑雪场不是很大，有初级、中级 &hellip; </p>",
+    "excerpt": "2013年第一天，和朋友们去神农架滑雪。滑雪场位于距离木鱼镇35公里的天燕阁景区，滑雪场不是很大，有初级、中级 … ",
     "path": "/2013/01/shennongjia-ski-tour/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/01/a3.jpg"
@@ -4024,7 +4024,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>1月5日19点30，在位于万达广场金街2楼的凯能数码影像俱乐部举办了一场针对摄影初学者的培训讲座，讲座内容简单 &hellip; </p>",
+    "excerpt": "1月5日19点30，在位于万达广场金街2楼的凯能数码影像俱乐部举办了一场针对摄影初学者的培训讲座，讲座内容简单 … ",
     "path": "/2013/01/fotography-basic/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/01/q.jpg"
@@ -4068,7 +4068,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>2012-11-11朋友陈森和段懿菲举办婚礼，好多朋友给新人送来祝福，短片是在婚礼现场准备的。 感谢冯倩倩对拍 &hellip; </p>",
+    "excerpt": "2012-11-11朋友陈森和段懿菲举办婚礼，好多朋友给新人送来祝福，短片是在婚礼现场准备的。 感谢冯倩倩对拍 … ",
     "path": "/2013/01/friends-wedding/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/01/a2.jpg"
@@ -4107,7 +4107,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>以混乱的思绪和语序盘点了我2012年发布纪录片《自由的家猫》、换工作这两件事，其中《自由的家猫》是今年最大的成 &hellip; </p>",
+    "excerpt": "以混乱的思绪和语序盘点了我2012年发布纪录片《自由的家猫》、换工作这两件事，其中《自由的家猫》是今年最大的成 … ",
     "path": "/2013/01/2012end-ski/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/01/a1.jpg"
@@ -4146,7 +4146,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>12月22日，佳能摄影大篷车在宜昌举办了一站活动，宜昌凯能数码影像俱乐部活动在活动现场正式宣布成立。俱乐部的成 &hellip; </p>",
+    "excerpt": "12月22日，佳能摄影大篷车在宜昌举办了一站活动，宜昌凯能数码影像俱乐部活动在活动现场正式宣布成立。俱乐部的成 … ",
     "path": "/2013/01/new-club/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/01/a.jpg"
@@ -4180,7 +4180,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>为迎接13届记者节宜昌媒体的活动，给三峡晚报做的一段宣传片，《我们守望在基层》，盘点了2012年三峡晚报的一些 &hellip; </p>",
+    "excerpt": "为迎接13届记者节宜昌媒体的活动，给三峡晚报做的一段宣传片，《我们守望在基层》，盘点了2012年三峡晚报的一些 … ",
     "path": "/2013/01/13th-journalists-day/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2013/01/R1ZJXE2OV9EIM5HNTKR.jpg"
@@ -4209,7 +4209,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>开始全面学习闪光灯实用技巧了，刚开始实用离机闪光还是完全摸不着头脑，操作中手忙脚乱，拍出的片子也是成功率极低。 &hellip; </p>",
+    "excerpt": "开始全面学习闪光灯实用技巧了，刚开始实用离机闪光还是完全摸不着头脑，操作中手忙脚乱，拍出的片子也是成功率极低。 … ",
     "path": "/2012/11/strobe-light/",
     "featured_media": {
       "source_url": "https://archived-blog.berlinchan.com/wp-content/uploads/2012/11/dsc7451.jpg"
@@ -4234,7 +4234,7 @@
     ]
   },
   {
-    "title": "琐事：签约华盖失败&#038;大白猫丧命",
+    "title": "琐事：签约华盖失败&大白猫丧命",
     "date": "2012-10-23T02:27:02.000Z",
     "slug": "bad-things",
     "categories": [
@@ -4243,7 +4243,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>昨天在三江边拍一些无聊的磨基山照片，手机一响收到华盖创意的邮件，“您提交的作品不符合要求，暂不能签约……”，虽 &hellip; </p>",
+    "excerpt": "昨天在三江边拍一些无聊的磨基山照片，手机一响收到华盖创意的邮件，“您提交的作品不符合要求，暂不能签约……”，虽 … ",
     "path": "/2012/10/bad-things/",
     "featured_media": null,
     "content": "<p>昨天在三江边拍一些无聊的磨基山照片，手机一响收到华盖创意的邮件，“您提交的作品不符合要求，暂不能签约……”，虽然选送了我这里最好的几件作品。也许我应该更努力一些。</p>\n<p><!--more--></p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/mg_0711_2_tonemapped_1.jpg' desc='宜昌磨基山' alt='宜昌磨基山'/></p>\n<p><em>宜昌，磨基山</em></p>\n<p>上周报社收到一些来自华盖创意著作权侵权的诉讼，据说1张照片要求赔偿1万元。我很佩服华盖创意对于著作权的严肃对待。</p>\n<p>2012-10-23，我家猫子又遭后头院子的狼狗袭击，大白猫丧命。时隔大洋芋的去世1月11日还不到一年，我家的猫是受了诅咒吗？肥肥的大白猫从此就不在了，又是一个永远的别离。</p>\n",
@@ -4310,7 +4310,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>网站内容要丰富，服务器存储空间是基础。以前的cndns美橙互联服务器168元/年的空间才100MB，对于一个以 &hellip; </p>",
+    "excerpt": "网站内容要丰富，服务器存储空间是基础。以前的cndns美橙互联服务器168元/年的空间才100MB，对于一个以 … ",
     "path": "/2012/10/new-host/",
     "featured_media": null,
     "content": "<p>网站内容要丰富，服务器存储空间是基础。以前的cndns美橙互联服务器168元/年的空间才100MB，对于一个以图片为主要内容的网站完全无法满足。现在的网站服务器迁移到美国的bluehost了，和朋友丁奕一起合租，人均187元/年，存储空间无限量，这下完全解决存储容量的后顾之忧了。尽管上图片，让图片相册爆发吧，哈哈！</p>\n<p><!--more--></p>\n<p>影集网站-爱折腾的摄影师，纪录片《自由的家猫》网站的备案已经申请注销。</p>\n<p>三个域名：</p>\n<ul>\n<li>awildpetcat.com</li>\n<li>berlinchan.com</li>\n<li>berlinfilm.net</li>\n</ul>\n<p>还是放在cndns.com，转移域名太麻烦，先这样看看，要是足够稳定就不用转移了。</p>\n<p>另外，没有信用卡真麻烦。</p>\n",
@@ -4342,7 +4342,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>听TED上面杨澜的演讲，但是到一半的地方就快进到后面随意浏览至结束，我的感受是——非常失望。 概括下都讲了些什 &hellip; </p>",
+    "excerpt": "听TED上面杨澜的演讲，但是到一半的地方就快进到后面随意浏览至结束，我的感受是——非常失望。 概括下都讲了些什 … ",
     "path": "/2012/10/ted-yang-lan/",
     "featured_media": null,
     "content": "<p>听TED上面<a href=\"http://www.ted.com/talks/yang_lan.html\" target=\"_blank\">杨澜的演讲</a>，但是到一半的地方就快进到后面随意浏览至结束，我的感受是——非常失望。</p>\n<p>概括下都讲了些什么吧，先介绍自己的求学和职业生涯；再炫耀自己的诸多经历；再谈weibo上的热门话题，结合一些摘取的数据来证明她的一些观点。讲什么红十字协会、宝马or自行车、富士康什么的。先提及这些事件触及观点的一面，然后又自己打自己一巴掌说观点的另一面。真是把辩证法观点玩到高处，左右逢源，把中庸习俗体现彻底了。</p>\n<p><!--more--></p>\n<p>也不是喜欢看什么愤青或者戏剧化的东西，只是这种毫无观点的演讲，它毫无引发思考的，令我觉得它浪费了我的时间。</p>\n<p>建议TED不用再请这些人来演讲这类话题了。演讲罢，他们还是要回来到原来的地方生存，也就不得不为自己考虑下中庸的学问。</p>\n<p>但是！听完<a title=\"Michael Anti: Behind the Great Firewall of China\" href=\"http://www.ted.com/talks/michael_anti_behind_the_great_firewall_of_china.html\" target=\"_blank\">Behind the Great Firewall of China</a>和<a title=\"Leslie T. Chang: The voices of China's workers\" href=\"http://www.ted.com/talks/leslie_t_chang_the_voices_of_china_s_workers.html\" target=\"_blank\">The Voices of China’s workers</a>，我仍然会站起来为演讲者鼓掌！</p>\n<p>咦，我的观点呢？呵呵</p>\n",
@@ -4379,7 +4379,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>前段时间拍了很多宜昌城市的全景照片，也花了很多时间来后期处理它们，每张照片处理完后，我都喜欢把操作历史回到“打 &hellip; </p>",
+    "excerpt": "前段时间拍了很多宜昌城市的全景照片，也花了很多时间来后期处理它们，每张照片处理完后，我都喜欢把操作历史回到“打 … ",
     "path": "/2012/09/post-work/",
     "featured_media": null,
     "content": "<p>前段时间拍了很多宜昌城市的全景照片，也花了很多时间来后期处理它们，每张照片处理完后，我都喜欢把操作历史回到“打开”，这样对比起来看处理前和处理后的差别，真是令人惊叹，虽然照片内容不是很好，但后期处理仍然为画面质量提升带来很多改善。</p>\n<p><!--more--></p>\n<p>随便摘了两张对比看一看。这两张图片取自<a title=\"链向 新的拍摄项目-鸟瞰宜昌 的固定链接\" href=\"https://archived-blog.berlinchan.com/index.php/2012/birdviewofyc/\" rel=\"bookmark\">《新的拍摄项目-鸟瞰宜昌》</a>图集。</p>\n<p style=\"text-align: center;\"><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/dsc_3073-panorama_orig.jpg' desc='' alt='后期处理的力量2'/></p>\n<p style=\"text-align: center;\"><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/dsc_3063-panorama_orginal.jpg' desc='' alt='后期处理的力量1'/></p>\n",
@@ -4416,7 +4416,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>和一个朋友讨论短片剧本，朋友提到他观察到很多科班出生的年轻影视人偏向关注和拍摄一些“黑暗”题材的影片。在编剧方 &hellip; </p>",
+    "excerpt": "和一个朋友讨论短片剧本，朋友提到他观察到很多科班出生的年轻影视人偏向关注和拍摄一些“黑暗”题材的影片。在编剧方 … ",
     "path": "/2012/09/for-survival/",
     "featured_media": null,
     "content": "<p>和一个朋友讨论短片剧本，朋友提到他观察到很多科班出生的年轻影视人偏向关注和拍摄一些“黑暗”题材的影片。在编剧方面我没有什么经验，但我后来想通了为什么他会觉得这些很“黑暗”——因为真实所以“黑暗”。</p>\n<p>前天看了电影The Help，让我深刻感受到说真话需要多么大的勇气。把美丽皮表撕下，露出恶臭的内里，这种揭露丑恶实质的感觉也大快人心。</p>\n<p>准备来三峡晚报好好搞摄影，却被忽悠去广告部门。有次跑去摄影图片部找以前实习老师聊天，碰见摄影部主任，冠冕堂皇说“考试拍摄项目给我打的最高分9.5，但是xx在报纸上刊登的作品多一些，那也没有办法”，听到这些屁话我也只能笑笑吧然后走人<!--more-->。回想晚报考试之前去武汉找老师聊天，老师反复的强调要我找关系熟人，这件事认真严肃的讲了30分钟，我还是不信邪，结果最后惨痛的败给一个刚毕业的学生，这是给我上了沉重的一课。</p>\n<p style=\"text-align: center;\"><img alt=\"沮丧与不安\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/portrait/dsc6436.jpg\" desc=\"沮丧与不安\"/>精神沮丧与内心不安</p>\n<p>这一课的结论是什么呢？是靠埋头苦干搞不好的，这又让我想起来6月去北京找以前搜房网的新房主管聊天时候，他说：要让领导看到你的意见很独特，要让领导看见你做的事很有成效，至于背后你做了多少事情，领导不会理睬那些。</p>\n<p>我在照片质量上已经坚持不住了，随手拍吧。大家都有很多困难，大家都有很多牢骚，大家都要互相伤害，大家都要多搞点钱，大家都要把领导陪好。</p>\n<p>为三峡晚报周刊提供适用、美观的图片，理想和现实完美结合的工作岗位。但当多次听到告诫我要多接触业务，我已经开始意识到，在这里我很难在摄影的道路上做的更好了。现在我已经连续5天没碰过相机。这就是对个性的抹杀，对个人意识的强奸。有句话说“生活就像强奸，无法拒绝就要学会享受”，这“变态的真理”总结得很好。</p>\n<p>我想，我可能再也无法做回自己了。</p>\n<p>《转正再再申请》标题一打，我就感觉词穷了，我想说的都已经说过，再也无话可说。好不容易打上去200个字，回头一看字里行间只有埋怨和仇恨。中心把这些事情交给我做，我为中心工作，但是中心却不信任我。用我最好的设备、用我最严肃的态度、用我最苛刻的标准、用我更多的精力，但是当我发现我这样为难自己，只是我的一厢情愿，我以行动表达了自己的态度，换来的只是中心一如既往的猜疑，当无情多次的伤害我们的感情，我只好一点点收回我的热情，直到双方的付出到达一个平衡点时，彼此已经再无信任可言，感情也已消失殆尽。广告中心把我们当作做事的苦力，对我们的职位当作儿戏。这个月过完见习期就超过6个月，已经触碰法律的网。</p>\n<p>9月6日下班回家，下三江桥碰一个老婆子，真是倒霉！交警判断婆子主要事故责任，但还是去了我两个月的工资。只能说感谢我爸神奇般的及时出现，还有我妈在处理事故的帮忙。</p>\n<p style=\"text-align: center;\"><img alt=\"交通事故\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/dsc_5232.jpg\" desc=\"交通事故\"/>damn it!damn it!damn it!</p>\n<p>现在本人开始做美食版面编辑了，我对吃实在是没有研究，网上东拼西凑的搞文章吧。我以后不整摄影器材了，从此开始烧厨房设备！那是不可能的，哈哈。</p>\n<p>上下联：在网站抄报纸，在报纸抄网络</p>\n<p>横批：&nbsp;&nbsp; &nbsp;天下文章一大抄</p>\n<p>说完了牢骚继续为生存而苟且，默念圣方济各的祷告词：</p>\n<p>主啊，求你使我们成为你和平的工具，<br />\n在有仇恨的地方，让我播种仁爱，<br />\n在有伤害的地方，让我播种宽恕，<br />\n在有猜疑的地方，让我播种信任，<br />\n在有绝望的地方，让我播种希望，<br />\n在有黑暗的地方，让我播种光明，<br />\n在有悲伤的地方，让我播种喜乐。</p>\n<p>主啊，求你给予我们那梦寐以求的，<br />\n叫我们不求安慰，但去安慰，<br />\n不求理解，但去理解，<br />\n不求被爱，但去爱。<br />\n因为，给予就是我们的收获，<br />\n宽恕别人，我们就被宽恕，<br />\n这样的死亡，就是我们的新生。</p>\n<p>让我想起来铁娘子里面撒切尔夫人就职首相的那个镜头。</p>\n",
@@ -4478,7 +4478,7 @@
         "name": "折腾装备"
       }
     ],
-    "excerpt": "<p>这次是用手机上面的LED灯来为拍摄补光，又是手机哦，随身携带的手机果然是有大用处！ 报道《宜昌餐饮老字号小桃园 &hellip; </p>",
+    "excerpt": "这次是用手机上面的LED灯来为拍摄补光，又是手机哦，随身携带的手机果然是有大用处！ 报道《宜昌餐饮老字号小桃园 … ",
     "path": "/2012/08/mobilephonelight/",
     "featured_media": null,
     "content": "<p>这次是用手机上面的LED灯来为拍摄补光，又是手机哦，随身携带的手机果然是有大用处！</p>\n<p>报道《<a href=\"https://archived-blog.berlinchan.com/index.php/2012/xiaotaoyuan/\">宜昌餐饮老字号小桃园背后的故事</a>》中，拍摄小桃园的总经理父子俩，我想表现出父子两代人对经营小桃园品牌共同的专注和用心，那种脚踏实地抱着责任与爱的感情去经营的氛围。</p>\n<p><!--more--></p>\n<p>到现场发现这是个可以出很漂亮的环境人像的地方，不足15平米的一个小办公室里，挂满小桃园曾经获得的奖牌和名家题赠，还有老式的桌椅。</p>\n<p style=\"text-align: center;\"><img alt=\"用手机LED为拍摄补光\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/dsc6391_0.jpg\" desc=\"用手机LED为拍摄补光，随身携带的应急光源。\"/>用手机LED为拍摄补光，随身携带的应急光源。</p>\n<p>基本上取景后，移走背景桌上的一些杂物，安排万老先生坐下，就开始尝试主光的摆放位置了。主光是SB-700加反光伞，在相机左前方。伞的指向稍微向上倾斜，防止万老先生的白色衬衣太过亮，同时照亮站在后面的万老板。试拍发现，后面万老板的面部亮度不够且右侧脸太黑，没有反光板没有第二盏灯，手机出场了。点亮手机上的LED由我的同事拿着靠近后面万老板的面部右侧，对比没有用手机补光的照片，证明这种办法还是蛮有效的，是条件有限下和应急情况下不错的解决方法。</p>\n<p>后期对背景墙面调低亮度，以更加突出人物，总体来说是一张比较满意的照片。</p>\n<p><img alt=\"总经理万东山（前）和其子万楚平（后）用坚守和创新建设着至今有31年历史的宜昌餐饮老字号小桃园\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/portrait/dsc6015.jpg\" desc=\"总经理万东山（前）和其子万楚平（后）用坚守和创新建设着至今有31年历史的宜昌餐饮老字号小桃园\"/></p>\n<p style=\"text-align: center;\"><em>总经理万东山（前）和其子万楚平（后）用坚守和创新建设着至今有31年历史的宜昌餐饮老字号小桃园</em></p>\n<p style=\"text-align: left;\">总结这次项目，显然我还差两只热靴闪光灯、束光筒、反光板这些工具。继续“烧”是有点在所难免了。</p>\n<p>再说点有趣的题外话，上次还讲到<a href=\"https://archived-blog.berlinchan.com/index.php/2012/android2remote/\">用Android设备做单反可视快门线</a>， 除了这个用处，还有次跑老远拍摄一些城市街道，到现场才发现相机一点电也没有（肯定是我刷的Canon破解Magic Lantern固件给闹的。此固件下经常取出SD卡就会红灯一直亮，直到电耗光）。没办法的情况下就想起手机了，这一想还不得了，我身上的Nokia 6120c和Galaxy Nexus两个手机上面的前后加起来就有4个镜头，一想吓一跳啊。用Galaxy Nexus拍摄一些照片，最后下面这张就见报了，是讽刺也是让我见识到手机摄影的威力。</p>\n<p><img alt=\"用手机Galaxy Nexus拍摄的宜昌城东桔城路\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/img_20120612_101424.jpg\" desc=\"用手机Galaxy Nexus拍摄的宜昌城东桔城路\"/></p>\n<p style=\"text-align: center;\"><em>用手机Galaxy Nexus拍摄的宜昌城东桔城路</em></p>\n<p>严肃的摄影师是不会到现场才发现设备有故障，这种蠢事发生在我这里显然是有苦衷的，呵呵，报社其实更愿意让我直接用意念就能拍出好的照片。</p>\n<p>最后放上本文主题图片，那张正在发光的Galaxy Nexus的拍摄现场照片。</p>\n<p><img alt=\"发光中的Galaxy Nexus拍摄现场\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/dsc_5249.jpg\" desc=\"发光中的Galaxy Nexus拍摄现场\"/></p>\n",
@@ -4515,7 +4515,7 @@
         "name": "照片故事"
       }
     ],
-    "excerpt": "<p>——宜昌餐饮老字号：小桃园背后的故事 宜昌一家本土餐饮品牌，31年如一日的为我们提供着可口的包子，说到这里相信 &hellip; </p>",
+    "excerpt": "——宜昌餐饮老字号：小桃园背后的故事 宜昌一家本土餐饮品牌，31年如一日的为我们提供着可口的包子，说到这里相信 … ",
     "path": "/2012/08/xiaotaoyuan/",
     "featured_media": null,
     "content": "<p style=\"text-align: right;\">——宜昌餐饮老字号：小桃园背后的故事</p>\n<p>宜昌一家本土餐饮品牌，31年如一日的为我们提供着可口的包子，说到这里相信很多人都能叫出他的名字——小桃园。</p>\n<p>这里我们不说桃园小包多么的好吃，因为对于味觉，文字的描述是那么的苍白。我们也不刻意的挖掘餐饮文化建设，因为文化不是靠建设，而是来自于时间的积淀。我们只说小桃园这个与包子有关的品牌背后的故事和这31年来每天为我们默默坚持所作的事情。</p>\n<p><!--more--></p>\n<p><img alt=\"总经理万东山（前）和其子万楚平（后）用坚守和创新建设着至今有31年历史的宜昌餐饮老字号小桃园\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/portrait/dsc6015.jpg\" desc=\"总经理万东山（前）和其子万楚平（后）用坚守和创新建设着至今有31年历史的宜昌餐饮老字号小桃园\"/></p>\n<p style=\"text-align: center;\"><em>至今有31年历史的宜昌餐饮老字号小桃园总经理万东山（前）和儿子万楚平（后）</em></p>\n<p>小桃园由万东山、陶柱云俩位老夫妻于1981年秋创办，以一张半桌子起家的小桃园，现已发展成为在宜昌市区拥有12家，在省外北京、湖南开设分店，并有永久性的店面的中等规模的私营企业。桃园小包因其讲究卫生、皮薄、馅嫩、汁多、味鲜而被大众所喜爱，是地地道道宜昌本土的餐饮行业老字号品牌。</p>\n<p>小桃园主打的猪肉包在91年已成为宜昌有名的风味早点，记者还清晰的记得曾经九码头小桃园店，早晨排长队购买包子的场景。市书法家协会副主席武永发曾题赠“笼中蒸白玉 桃园独飘香 店外排长龙 信誉频送财”来赞美桃园小包和顾客排队购买的盛况，可见其品质独特。</p>\n<p><img alt=\"漂亮的桃园小包\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/photo_story/mg_3534.jpg\" desc=\"漂亮的桃园小包\"/></p>\n<p style=\"text-align: center;\"><em>漂亮的桃园小包</em></p>\n<p>万老先生之子万楚平94年开始经营自己的小桃园分店，在自己的经营中，他传承了小桃园猪肉包的品质，而后不断研制创新，结合猪肉包的诸多优点推出色泽更鲜、口味带辣、口感更厚重的牛肉馅包。</p>\n<p>这样的创新却给注重保持品质、产品专一的万老先生带来疑虑，并招致反对。对传统的坚守，对创新的慎重，这种近乎固执的态度，看得出万老先生经营的小桃园，对于品质和专一是如何的重视。</p>\n<p><img alt=\"小桃园后厨先进的自动切葱机和干净的食材，还有自动洗肉机。先进设备的引进使用，为今后更加标准的工业化生产起到铺垫。\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/photo_story/dsc6019.jpg\" desc=\"小桃园后厨先进的自动切葱机和干净的食材，还有自动洗肉机。先进设备的引进使用，为今后更加标准的工业化生产起到铺垫。\"/></p>\n<p style=\"text-align: center;\"><em>小桃园后厨先进的自动切葱机和干净的食材，还有自动洗肉机。先进设备的引进使用，为今后更加标准的工业化生产起到铺垫</em></p>\n<p>但在万楚平先生的坚持下，最终还是推出了牛肉馅的桃园小包，在经历过市场一段时间的检验后获得消费者的普遍认可。这样万老先生终于接受创新，96年起的小桃园从此多了牛肉馅包这一主打产品。</p>\n<p>为了寻求更多可能，万楚平先生于2002年创立新品牌“仙一品”，2005年于环城东路开设200平方的品牌形象店。回忆这一切时，万楚平先生也不禁感慨：“由于发展速度过快，人才储备不足，无法满足我对品质的整体要求，总归还是暂停了大店的经营。”随后，万先生对记者说，“建立品牌形象店的目标并未就此消散，反而更强烈，我计划在三年内开一家能成为‘宜昌名片’的早餐名店。”就是这两代人共同对品质的执着，小桃园与仙一品于2011年荣获首批宜昌放心早餐的荣誉。万先生补充“小桃园和仙一品不仅要满足检验标准，更要达到自己的良心标准，不仅是要让顾客放心，更要对得起自己的良心。”</p>\n<p>食品安全问题层出不穷，确实有时候让我们疑惑是否健康与美味已经各自走上相反的路线。对于这个问题，万先生也直言不讳的告诉我们“起酥油、氢化植物油甚至猪油在面粉中的添加，能使面点的口感直接上升三四倍，现代人都注重健康与养生，我们在包子的制作中是不添加这些的。”谈到小桃园今后发展的问题上，万先生参考学习了业界很多优秀案例，并寻找投资，希望未来把小桃园做成集原料生产、加工、销售完整产业线的食品企业。而眼下发展的关键在于不断的培养人才、留住人才，不断的研制创新更多健康美味的菜品。看得出，万楚平先生对于小桃园未来发展处在厚积的阶段，等待薄发的一天。</p>\n<p><img alt=\"小桃园的工人正在包包子。虽然在宜昌市区开设有12家分店，但是仍保留古老的生产方式。\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/photo_story/dsc_3596.jpg\" desc=\"小桃园的工人正在包包子。虽然在宜昌市区开设有12家分店，但是仍保留古老的生产方式。\"/></p>\n<p style=\"text-align: center;\"><em>小桃园的工人正在包包子。虽然在宜昌市区开设有12家分店，但是仍保留古老的生产方式</em></p>\n<p>那些打“小桃园”品牌擦边球经营的现象，让万先生父子俩在发展分店直营或加盟的问题上再次抱有不同意见，一些经营理念的对立，但向着共同的经营目标——永保小桃园小吃的上乘品质；在互相影响交融中让小桃园、仙一品这两个在宜昌本土成长的老品牌更放光芒；在坚持品质和产品创新中，把桃园小包建设成宜昌小吃界一张不朽的名片。</p>\n<p><img alt=\"店面的各种奖牌和题词见证小桃园的历史与辉煌\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/photo_story/dsc_3582.jpg\" desc=\"店面的各种奖牌和题词见证小桃园的历史与辉煌\"/></p>\n<p style=\"text-align: center;\"><em>店面的各种奖牌和题词见证小桃园的历史与辉煌</em></p>\n<p>一碗白米粥、两袋榨菜、四只桃园小包，又是一天美妙的开始……</p>\n<p style=\"text-align: right;\">图/文 陈柏林</p>\n<p style=\"text-align: right;\"><span style=\"font-size: small;\">《三峡晚报》2012年8月8日C10版</span></p>\n<p style=\"text-align: right;\"><span style=\"font-size: small;\">（报纸电子版打不开，不得不说三峡新闻网很垃圾）</span></p>\n",
@@ -4567,7 +4567,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>上周三峡电视台的三峡夜航栏目来采访我，录制了一段访问，节目已经在三峡电视台-综合频道播出，长约5分钟的短片介绍 &hellip; </p>",
+    "excerpt": "上周三峡电视台的三峡夜航栏目来采访我，录制了一段访问，节目已经在三峡电视台-综合频道播出，长约5分钟的短片介绍 … ",
     "path": "/2012/07/hotagain/",
     "featured_media": null,
     "content": "<p>上周三峡电视台的三峡夜航栏目来采访我，录制了一段访问，节目已经在三峡电视台-综合频道播出，长约5分钟的短片介绍了我拍摄影片原由、拍摄中遇到的困难、从这个项目而来的感悟和影片所获荣誉。我在电视上的普通话吐词不清，语速过快，呵呵。这次《自由的家猫》和我又小火了一把，哈哈。然后去奇瑞拍汽车五环也让我很火！恼火！</p>\n<p><!--more--></p>\n<p>《自由的家猫》自3月发布以来，就有4个月了，好多朋友在我的网站上留言，youku网上的影片至今累计播放2818次，也由此认识很多影视行内人，算是我作为摄影师的第一次正式露脸。</p>\n<p>节目播出后，在网上竟然一点都找不到节目的相关痕迹，看来电视媒体和网络之间的隔阂有点大啊（至少三峡电视台是这样）。不像报纸媒体都有数字版报纸、网络转载之类的。话说电视节目更应该利用平台的优势，做好电视节目之外的新闻副产品的工作。看看电视的丰富性，我还真想去电视台工作（不过，折腾性思维：新鲜期过后，什么都是一样的）。<br />\n<img alt=\"大洋芋肖像\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/portrait/dsc_1978.jpg\" desc=\"纪录片《自由的家猫》主角大洋芋肖像\"/><br />\n还是纪念我的大洋芋</p>\n<p>上周六跑去拍摄奇瑞汽车的奥运主题活动，他们用49辆车摆成一个五环的图形，我的个哥，爬到20米高的天台的棚子上面拍摄的，这么大太阳棚子晒得滚烫，膝盖着地都会烫！打招呼使用照片要署名了，结果今天网上一搜，大楚、易车、三峡广论照样不署名就放上去了。打电话要求署名，大楚网已经修改了，其他的还没见改（等等，我叫什么来着？）感觉很恼火，网络这种玩意大家当作娱乐瞅瞅，谁在乎一张照片谁拍的呢？我打个水印吧，随便哪个小孩用美图秀秀就能搞定。有些说法说了就是蛮伤感情，无奈，再次火一下！恼火！</p>\n<p><img alt=\"奇瑞汽车五环\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/dsc_3530-panorama.jpg\" desc=\"\"/></p>\n",
@@ -4629,7 +4629,7 @@
         "name": "折腾装备"
       }
     ],
-    "excerpt": "<p>单反相机可视快门线，一些特殊取景情况下会派上大用场，比如说比较危险、比较高、特别低的地方。借助一款应用，我们可 &hellip; </p>",
+    "excerpt": "单反相机可视快门线，一些特殊取景情况下会派上大用场，比如说比较危险、比较高、特别低的地方。借助一款应用，我们可 … ",
     "path": "/2012/07/android2remote/",
     "featured_media": null,
     "content": "<p>单反相机可视快门线，一些特殊取景情况下会派上大用场，比如说比较危险、比较高、特别低的地方。借助一款应用，我们可以把你的Android设备立刻变成价值上千元的可视遥控快门线。</p>\n<p><!--more--></p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/20120718001.jpg' desc='' alt='Android设备做相机可视快门线'/></p>\n<p>为了越过桥上护栏网拍摄铁轨上的和谐号，我用脚架支起相机，然后用手机操作取景和曝光。这张照片是用Nokia 6120c拍的，凑合看。</p>\n<p>DSLR Controller这款程序是我目前用过的5种同类应用中最好用的，但遗憾的是它仅支持Canon设备，使用其他品牌设备的我们后面再推荐几款。</p>\n<h1>下面我来一步一步说明如何使用：</h1>\n<ol>\n<li>确认你的Android设备支持OTG（On The Go）功能，你可以在你的设备说明书上查阅相关的说明，或者到论坛上问一问手机折腾高手；</li>\n<li>准备一根OTG线和USB A型-mini-B型线；</li>\n<li>Android设备上安装DSLR Controller应用，我这里是Galaxy Nexus手机；</li>\n<li>连接好相机和Android设备，我这里的相机是Canon 500D和；</li>\n<li>打开相机电源，唤醒手机，这时候手机应该提醒有设备接入，并提醒打开DSLR Controller；</li>\n<li>Enjoy it!</li>\n</ol>\n<p>在DSLR Controller里面可以控制光圈、快门、ISO、图片尺寸、辅助构图线、对焦，甚至还可以实时显示直方图。选项菜单里面有拍摄视频，但是不能启用，可惜了。</p>\n<h1>类似的Android设备单反遥控软件：</h1>\n<ul>\n<li>Helicon Remote &#8211; USB连接，支持Nikon、Canon设备，支持实时取景；</li>\n<li>DSLR Remote &#8211; 红外遥控，支持Nikon、Canon、Fuji、Minolta、Olympus、Pentax、Sony，不支持实时取景；</li>\n<li>RYC USB Lite &#8211; USB连接，不支持实时取景。</li>\n</ul>\n<p>&nbsp;</p>\n",
@@ -4671,7 +4671,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>16日，宜昌车溪附近青龙峡漂流景区，邀请了约170个的哥的姐跑去漂流，商业活动哦，这个我们不讨论。媒体的三峡晚 &hellip; </p>",
+    "excerpt": "16日，宜昌车溪附近青龙峡漂流景区，邀请了约170个的哥的姐跑去漂流，商业活动哦，这个我们不讨论。媒体的三峡晚 … ",
     "path": "/2012/07/morethenme/",
     "featured_media": null,
     "content": "<p>16日，宜昌车溪附近青龙峡漂流景区，邀请了约170个的哥的姐跑去漂流，商业活动哦，这个我们不讨论。媒体的三峡晚报、三峡商报、三峡日报、三峡电视台的记者受邀去体验报道。看看三峡电视台的是怎么折腾摄像机的吧。</p>\n<p><!--more--></p>\n<p>下图就是三峡电视台旅游频道的同仁们了，对于他们的敬业精神我实在佩服，我怕毁了照相机没有下水，沿着漂流路线一路走下来。用他们的话说“不下水拍不到好的主观镜头，对于器材我们那里的规矩是，坏了只要见尸首就没有大问题”。</p>\n<p><img alt=\"比我更折腾\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/mg_2139.jpg\" desc=\"三峡电视台旅游频道的家伙们\"/></p>\n<p>至于这样是否合适呢，大家肯定自有定论。最后摄像机安然无恙，船上另外的家伙是出镜记者，他们带人指导，一般停靠在比较平缓的水域进行录制。这种通力合作的工作状态是我敬佩的。最后到漂流终点我看了下回放，效果还不错，大部分镜头都算稳定，且声音清晰。</p>\n",
@@ -4703,7 +4703,7 @@
         "name": "照片故事"
       }
     ],
-    "excerpt": "<p>最近工作所需，我打算开始一个新的拍摄项目-鸟瞰宜昌。我想在主要城区的高层建筑上鸟瞰拍摄一些街道、车流和建筑，包 &hellip; </p>",
+    "excerpt": "最近工作所需，我打算开始一个新的拍摄项目-鸟瞰宜昌。我想在主要城区的高层建筑上鸟瞰拍摄一些街道、车流和建筑，包 … ",
     "path": "/2012/07/birdviewofyc/",
     "featured_media": null,
     "content": "<p>最近工作所需，我打算开始一个新的拍摄项目-鸟瞰宜昌。我想在主要城区的高层建筑上鸟瞰拍摄一些街道、车流和建筑，包括夜景。这是个没什么技术含量耗时耗力的体力活，一种苦力的收集。像发展大道、城东大道、西陵一路、沿江大道、云集路等稍微漂亮点的路，白天拍摄顺便踩点，晚上拍夜景。<!--more--></p>\n<p style=\"text-align: center;\"><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/dsc_3045-panorama.jpg' desc='湖北宜昌，鸟瞰发展大道' alt='鸟瞰发展大道'/>鸟瞰发展大道</p>\n",
@@ -4745,7 +4745,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>宜昌也有微影活动了，促进宜昌影视文化发展确实需要这样的平台，让业内人士、爱好者能齐聚一堂，互相学习、共同发展。 &hellip; </p>",
+    "excerpt": "宜昌也有微影活动了，促进宜昌影视文化发展确实需要这样的平台，让业内人士、爱好者能齐聚一堂，互相学习、共同发展。 … ",
     "path": "/2012/07/ycweiying/",
     "featured_media": null,
     "content": "<p align=\"left\">宜昌也有微影活动了，促进宜昌影视文化发展确实需要这样的平台，让业内人士、爱好者能齐聚一堂，互相学习、共同发展。我的《自由的家猫》已经投稿咯！头奖1万元哦！快来Show出你的大作吧！下面是活动的一些介绍，具体请见<a title=\"首届三峡微电影大赛\" href=\"http://blog.sina.com.cn/u/2741851353\" target=\"_blank\" rel=\"noopener noreferrer\">首届三峡微电影大赛活动官方博客</a>。<!--more--></p>\n<p align=\"left\" style=\"text-align: center;\"><img alt=\"湖北传树杯首届三峡微电影大赛\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/blog_img/a36d54d9xc1afbad47503690.jpg\" desc=\"湖北传树杯首届三峡微电影大赛\"/></p>\n<h1 align=\"left\">一、大赛主题</h1>\n<p align=\"left\">摄眼看三峡，微影吐芳华，最美镜像与动人故事展示最美宜昌。</p>\n<h1 align=\"left\">二、大赛时间：</h1>\n<p align=\"left\">2012年5月至11月；</p>\n<h1>三、参赛对象</h1>\n<p>参赛对象为三峡流域微电影爱好者的微电影作品与三峡流域外微电影爱好者创作的关于三峡题材的作品。</p>\n<h1>四、作品要求</h1>\n<p>1.微电影作品要围绕喜迎十八大，弘扬主旋律，突出大赛主题,彰显时代特征和三峡文化特色或宜昌文化特色。</p>\n<p>2.作品类型为叙事性微电影，主要指微故事片、艺术片、纪录片、音乐片、喜剧片、电视散文等，并带有浓厚的三峡或宜昌味道（可以方言配音，可以使用“峡普”、“宜普”配音），每部片时长7－30分钟；达不到时长或超过时长，需作特别说明。</p>\n<p>3.作品可以是专业摄影设备、手机、DV拍摄并经剪辑合成的影片，也可以是Flash、动漫等形式表现的影像短片。</p>\n<p>4.作 品必须由参赛本人（或团队）原创，且未在相关媒体上发表过，无违反国家法律法规的内容。作品严禁剽窃、抄袭。参赛者应确认拥有作品的著作权，主办方不承担 包括（不限于）肖像权、名誉权、隐私权、著作权、商标权等纠纷而产生的法律责任，如出现以上纠纷，主办方保留取消其参赛资格及追回奖项的权利。</p>\n<h1>五、大赛步骤</h1>\n<p>1.宣传发动（5月底以前）：各地各单位充分利用所属宣传阵地特别是报纸、会刊、网络、微博（群）、腾讯、手机等媒体进行宣传，积极组织动员广大微电影爱好者参赛。</p>\n<p>2.报名创作（5月下旬至 8月31日）：6月9日在三峡职业技术学院旅游管理学院举行盛大启动仪式；参赛者根据大赛主题和相关要求进行微电影创作；并于即日起填写报名表报名（《“湖北传树杯”首届三峡微电影大赛报名表》附后或在新浪网http://blog.sina.com.cn/hubeichuanshu下载），并通过电子邮箱发送到526862866@qq.com 和330695548@qq.com。</p>\n<p>3.作品报送（7月1日至8月31日）：通过电子邮件发送到526862866@qq.com、330695548@qq.com，由组委会统一上传到指定网站，并将报名表和参赛作品光盘各一份一并报送至大赛组委会办公室。</p>\n<p>4.作品初审（9月1日至9月20日）：大赛组委会对参赛作品进行资格审查，并通过网络投票、网友点评和评分初审等方式评出初选作品，再由评委会组织专家点评初选作品，筛选出若干微电影作品入围。并推荐若干部优秀作品参加湖北省和全国微电影大典的总评选，角逐湖北和中国微电影桂冠。</p>\n<p>5.网络展示（10月1日-10月20日）：大赛组委会对入围作品进行网上展播，并对入围作品进行二次评审，依据评委打分情况确定入围决赛作品若干。</p>\n<p>6.现场决赛（11月上旬）：入围决赛作品的作者与专业评委进行现场互动，每轮互动后，由专业评委、观众进行现场打分确定获奖作品并颁奖。</p>\n<h1>六、奖励方式</h1>\n<p>“湖北传树杯”首届三峡微电影大赛设特一等奖1名，奖金10000元；二等奖2名，奖金2000元；三等奖3名，奖金1000元。优秀奖若干，发给奖励证书。</p>\n<h1>七、联系方式</h1>\n<p>联系电话：0717-6252461 地址：宜昌云集路21号（443000）</p>\n<p>电子邮箱发送到526862866<a href=\"mailto:@qq.com\">@qq.com</a> <a href=\"mailto:735480387@qq.com\">330695548@qq.com</a></p>\n",
@@ -4796,7 +4796,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>27日9：30，首届国际大学生新媒体文化节在北京师范大学英东学术讲堂颁奖，纪录片《自由的家猫》获得优秀奖。我还 &hellip; </p>",
+    "excerpt": "27日9：30，首届国际大学生新媒体文化节在北京师范大学英东学术讲堂颁奖，纪录片《自由的家猫》获得优秀奖。我还 … ",
     "path": "/2012/06/back-with-honor/",
     "featured_media": null,
     "content": "<p>27日9：30，首届国际大学生新媒体文化节在北京师范大学英东学术讲堂颁奖，纪录片《自由的家猫》获得优秀奖。我还准备一段获奖感言，可惜没用上，怎么感觉有点像打了个酱油一样。</p>\n<p>颁奖仪式上，特等奖作品《地铁人生》的两位主创，其中来自广州在北京农业大学读书的女生无意之言让我感慨，她说每个城市都有地铁。可惜的是，来北京领奖，却是我24年来首次做地铁。我的家乡宜昌没有地铁，我读书的武汉等我毕业了地铁才刚开始修<!--more-->。后来我的朋友提醒我了，实际上整个湖北到今天都还没有地铁坐。一个让我感到新奇的事物，也许在他们意识里就是一个理应存在的东西，一直都有，一直都用。</p>\n<p>如下图片是从nextgen gallery相册中迁移来的</p>\n<p># 201206-领奖游北京<br />\n## 《自由的家猫》获得首届国际大学生新媒体文化节优秀奖，到北京领奖顺便游北京三环的荣誉之行照片。</p>\n<p><img alt=\"纪录片《自由的家猫》获得首届国际大学生新媒体文化节优秀奖\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5968e.jpg\"/><br />\n<img alt=\"英国普罗派乐电视台吉祥物\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5973e.jpg\"/><br />\n<img alt=\"dsc5765\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5765.jpg\"/><br />\n<img alt=\"dsc5768\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5768.jpg\"/><br />\n<img alt=\"dsc5769\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5769.jpg\"/><br />\n<img alt=\"dsc5772\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5772.jpg\"/><br />\n<img alt=\"dsc5774\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5774.jpg\"/><br />\n<img alt=\"dsc5775\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5775.jpg\"/><br />\n<img alt=\"dsc5778\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5778.jpg\"/><br />\n<img alt=\"dsc5779\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5779.jpg\"/><br />\n<img alt=\"dsc5784\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5784.jpg\"/><br />\n<img alt=\"dsc5785\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5785.jpg\"/><br />\n<img alt=\"dsc5786\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5786.jpg\"/><br />\n<img alt=\"dsc5787\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5787.jpg\"/><br />\n<img alt=\"dsc5790\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5790.jpg\"/><br />\n<img alt=\"dsc5793\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5793.jpg\"/><br />\n<img alt=\"dsc5796\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5796.jpg\"/><br />\n<img alt=\"dsc5799\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5799.jpg\"/><br />\n<img alt=\"dsc5802\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5802.jpg\"/><br />\n<img alt=\"dsc5803\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5803.jpg\"/><br />\n<img alt=\"dsc5808\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5808.jpg\"/><br />\n<img alt=\"dsc5810-panorama\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5810-panorama.jpg\"/><br />\n<img alt=\"dsc5829\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5829.jpg\"/><br />\n<img alt=\"dsc5832\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5832.jpg\"/><br />\n<img alt=\"dsc5835\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5835.jpg\"/><br />\n<img alt=\"dsc5836-panorama\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5836-panorama.jpg\"/><br />\n<img alt=\"北京故宫博物馆\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5859.jpg\"/><br />\n<img alt=\"dsc5863\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5863.jpg\"/><br />\n<img alt=\"dsc5864\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5864.jpg\"/><br />\n<img alt=\"dsc5865\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5865.jpg\"/><br />\n<img alt=\"dsc5867\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5867.jpg\"/><br />\n<img alt=\"dsc5869\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5869.jpg\"/><br />\n<img alt=\"dsc5870\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5870.jpg\"/><br />\n<img alt=\"dsc5871-panorama\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5871-panorama.jpg\"/><br />\n<img alt=\"dsc5887\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5887.jpg\"/><br />\n<img alt=\"dsc5889\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5889.jpg\"/><br />\n<img alt=\"dsc5895\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5895.jpg\"/><br />\n<img alt=\"dsc5898\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5898.jpg\"/><br />\n<img alt=\"dsc5902\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5902.jpg\"/><br />\n<img alt=\"dsc5903-panorama\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5903-panorama.jpg\"/><br />\n<img alt=\"dsc5907\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5907.jpg\"/><br />\n<img alt=\"dsc5910\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5910.jpg\"/><br />\n<img alt=\"dsc5914\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5914.jpg\"/><br />\n<img alt=\"dsc5927\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5927.jpg\"/><br />\n<img alt=\"dsc5942\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5942.jpg\"/><br />\n<img alt=\"dsc5959\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5959.jpg\"/><br />\n<img alt=\"dsc5960\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5960.jpg\"/><br />\n<img alt=\"img_20120627_201619\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/img_20120627_201619.jpg\"/><br />\n<img alt=\"img_20120628_145620\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/img_20120628_145620.jpg\"/></p>\n<p>思想如何透露年龄，命运如何限制视野。</p>\n<p>看那些获得一二三等奖的，来自北京大学，北京电影学院，中国传媒大学的大学生们，想想为什么我的作品只能得优秀奖，为什么我的作品内容意义会稍小，万千感慨归为一句：只缘身在此山中。</p>\n<p>回到家看了活动发的光盘中一二三等奖作品，《然后就没有然后了》的创意不错，能从人物的表情来讲故事，《古今风韵琉璃厂》的教育意义比较丰富，其他的很失望。</p>\n<p>有的人完成工作，有的人交作业，我做梦，做梦想。</p>\n",
@@ -4843,7 +4843,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>上午颁奖结束，下午出门溜达，乘公汽到后海附近下车，然后开始逛后海，穿过胡同，到中海景山公园，到故宫博物馆，乘车 &hellip; </p>",
+    "excerpt": "上午颁奖结束，下午出门溜达，乘公汽到后海附近下车，然后开始逛后海，穿过胡同，到中海景山公园，到故宫博物馆，乘车 … ",
     "path": "/2012/06/half-day-travel-in-beijing/",
     "featured_media": null,
     "content": "<p>上午颁奖结束，下午出门溜达，乘公汽到后海附近下车，然后开始逛后海，穿过胡同，到中海景山公园，到故宫博物馆，乘车到天安门广场，走到王府井大街，和傅旦妮感受全聚德的威力-实在是太油了。在步行街喝酸奶，乘凉，去小吃街看各种稀奇的东西，体验吹糖人的乐趣，看炸蝎子的肉麻<!--more-->。</p>\n<p><img alt=\"dsc5903-panorama\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/dsc5903-panorama.jpg\" desc=\"\"/></p>\n<p>此行北京，老天也很照顾，27日整天都是阴天，走在路上一点也不晒，特别是在故宫里面，也不用刻意寻求遮荫，走累了就坐在石阶上休息。相比来说游客也不算多，感觉不错！</p>\n<p>在地图上回顾今天走过的路线，半天走完北京三环内，那实在是累，晚上提着3套烤鸭，靠着毅力的能量才回到了酒店。</p>\n",
@@ -4880,7 +4880,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>尝试、探索新的东西，让人保持兴奋和激情，就像小孩喜欢不停问为什么一样。可惜随着我们对任何东西开始司空见惯，这种 &hellip; </p>",
+    "excerpt": "尝试、探索新的东西，让人保持兴奋和激情，就像小孩喜欢不停问为什么一样。可惜随着我们对任何东西开始司空见惯，这种 … ",
     "path": "/2012/06/passion-creativity/",
     "featured_media": null,
     "content": "<p>尝试、探索新的东西，让人保持兴奋和激情，就像小孩喜欢不停问为什么一样。可惜随着我们对任何东西开始司空见惯，这种激情开始褪去<!--more-->。</p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/201206-honor_travel/img_20120628_145620.jpg' desc='' alt='img_20120628_145620'/></p>\n<p>这就是为什么詹姆斯卡梅隆长久坚持深海探索的原因，那是他长久保持活力、创造力的精神动力。影片阿凡达里连成网络的植物，蓝色皮肤的纳威人…这些虚构的东西并不是天马行空的空想，而是地球世界的神奇再现。卡梅隆对各种探索中真实所见进行加工，才创造了梦幻的潘多拉星球。如果没有那些探索经历，也就不会有这一切。这样也就很容易理解为什么他说在好莱坞当导演只是他的副业了。</p>\n<p>这些是我第一次坐飞机在云层上想到的。第一次感受飞机强烈的加速度，感受平时几乎忘记其存在的重力牵引，凝视云层上头顶上方深蓝的天空，观察云层投影在云层上的阴影，分析月相与太阳位置的关系，等等这些第一次感受，让我激动无比，以至于2小时的航程令我觉得实在太短暂。</p>\n<p>写下这些想法，为了让我在长时间没有活力与激情的时候想起那是一种什么样的感觉。其实也不用长时间，2天后从北京返回宜昌的飞机上我仍然坐在窗边，可是那种兴奋的感觉已不再有，这速度连我自己也很吃惊。</p>\n<p>或者我应该把《太阳系的奇迹》《行星地球》再看一遍，BBC的纪录片总能让我兴奋不已。</p>\n",
@@ -4917,7 +4917,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>从3月15日离开宜昌搜房网，到三峡晚报至今整有3月的时间。从辞职的不安，到去北京未遂，到认真准备晚报考试，到满 &hellip; </p>",
+    "excerpt": "从3月15日离开宜昌搜房网，到三峡晚报至今整有3月的时间。从辞职的不安，到去北京未遂，到认真准备晚报考试，到满 … ",
     "path": "/2012/06/get-and-lost-in-job/",
     "featured_media": null,
     "content": "<p>从3月15日离开宜昌搜房网，到三峡晚报至今整有3月的时间。从辞职的不安，到去北京未遂，到认真准备晚报考试，到满怀激情的投入新工作，到发现我在新岗位上毫无价值，到一次次去拉广告遭拒绝，到沮丧到无所谓，这些天整个人的心智都处在混乱状态。</p>\n<p>说离开搜房网没有后悔？那不完全正确，我怀念那里的同事们，我欣赏我和同事们一步一步建设维护的漂亮的宜昌商品房信息数据库，记得在办公室下载各部奥斯卡获奖1080p影片和各种素材资源。</p>\n<p>人总是害怕改变的。</p>\n<p>职业的改变在近期确实给我带来不少苦恼，但有幸认识曹主任，介绍我进宜昌市摄影协会，算是有得有失。</p>\n",
@@ -4954,7 +4954,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>首届国际大学生新媒体文化节——“我与奥运”——北京—伦敦连线，27日颁奖即将在北京师范大学英东学术讲堂举办，我 &hellip; </p>",
+    "excerpt": "首届国际大学生新媒体文化节——“我与奥运”——北京—伦敦连线，27日颁奖即将在北京师范大学英东学术讲堂举办，我 … ",
     "path": "/2012/06/new-media-culture-festival/",
     "featured_media": null,
     "content": "<p>首届国际大学生新媒体文化节——“我与奥运”——北京—伦敦连线，27日颁奖即将在北京师范大学英东学术讲堂举办，我的作品《自由的家猫》获奖，并受邀去接受颁奖。<!--more-->22日被告知可能拿去英国普罗派乐电视台播放，要求有英文字幕，我正好乘端午节假期把好友李文静帮助翻译了部分的字幕给翻译完，并添加到影片渲染。</p>\n<p>连着两天的熬夜，用Google翻译加人工润饰再Word改错，算是勉强用中式英语给翻译完，然后迅速放入影片对准时间轴。这样的一次小工作，又找回了曾经的激情。</p>\n<p>期间还和高中毕业后再没见过的同学吃了个饭，李晨、崔劲峰、向亮、汪浪，老同学见面很久没有的真正的开心！吃饭喝酒叙旧，然后一群二中的家伙在一中门口合影！</p>\n<p>把影片的中文、英文、中英文字幕3个版本放着渲染，跑去陈文新装修的家玩一天。在陈文家看见那数字电视目录上全都是恶心的广告，为什么我的Firefox总是开着ADblock，这些无时无刻强奸我们感观的东西，让我很难受。</p>\n<p>明天就要去北京了，可惜时间太短暂，第一次坐飞机，第一次去北京。感谢今天柯记者又帮我写了个消息登在明天的三峡晚报，还要谢谢请假时候邓主任的理解。</p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/portrait/dsc_1978.jpg' desc='纪录片《自由的家猫》主角大洋芋肖像' alt='大洋芋肖像'/>纪念我可爱的大洋芋</p>\n",
@@ -4991,7 +4991,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>博客程序准备从PJ-Blog换到WorldPress了，确实折腾不起。 整PJ-Blog程序，看了那么多参考， &hellip; </p>",
+    "excerpt": "博客程序准备从PJ-Blog换到WorldPress了，确实折腾不起。 整PJ-Blog程序，看了那么多参考， … ",
     "path": "/2012/06/start-new-blog/",
     "featured_media": null,
     "content": "<p>博客程序准备从PJ-Blog换到WorldPress了，确实折腾不起。</p>\n<p>整PJ-Blog程序，看了那么多参考，改了那么多代码，试了一大堆插件，到最后博客没怎么写，摄影作品没出几张。</p>\n<p>站在巨人的肩上，直接用比较成熟和稳定维护更新的WordPress，多留出时间来充实博客内容，也好让自己想想我到底想要做什么。</p>\n<p><del>NGGallery插件的测试哦，先放这里看看</del><br />\n如下图片是从nextgen gallery相册中迁移来的</p>\n<p># 发展中的宜昌<br />\n## 发展中的宜昌，走到街上看大张旗鼓地拆迁，看栋栋高楼拔地而起。改变了地貌，改变了环境，改变了记忆，改变了宜昌。</p>\n<p><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/0002.jpg\" alt=\"0002\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/0006.jpg\" alt=\"宜昌夷陵长江大桥\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/0007.jpg\" alt=\"0007\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/0008.jpg\" alt=\"宜昌万达广场\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/0012.jpg\" alt=\"宜昌城东大道，商品房项目东辰一号\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/0013.jpg\" alt=\"宜昌城东大道\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/mg_0643-panorama.jpg\" alt=\"宜昌商品房项目碧水兰庭\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/mg_0645.jpg\" alt=\"mg_0645\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/mg_0651.jpg\" alt=\"宜昌江南点军区商品房项目维多利亚港湾的日落\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/mg_0695.jpg\" alt=\"mg_0695\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/yichang/mg_0698.jpg\" alt=\"mg_0698\" /></p>\n",
@@ -5033,7 +5033,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>博客程序试用了Z-Blog和PJ-Blog，最后这么长时间一直用了PJ-Blog。相册主程序先用怪兽模板而后又 &hellip; </p>",
+    "excerpt": "博客程序试用了Z-Blog和PJ-Blog，最后这么长时间一直用了PJ-Blog。相册主程序先用怪兽模板而后又 … ",
     "path": "/2012/06/a-good-habit/",
     "featured_media": null,
     "content": "<p>博客程序试用了<a title=\"z-blog\" href=\"http://www.rainbowsoft.org\" target=\"_blank\">Z-Blog</a>和<a title=\"pj-blog\" href=\"http://www.pjhome.net\" target=\"_blank\">PJ-Blog</a>，最后这么长时间一直用了<a title=\"pj-blog\" href=\"http://www.pjhome.net\" target=\"_blank\">PJ-Blog</a>。相册主程序先用怪兽模板而后又自己学ActionScript写程序。折腾了这么久，最后还是冷静下来，再想自己到底要做什么。和我一起折腾的朋友不再折腾，让我想起《前女友的幽灵》里面主角对弟弟说的“You and me against the world, right?”，确实有点感觉孤独和失落。</p>\n<p>换工作到三峡晚报广告中心，仍然像当初到搜房网一样，始于一腔热情而后半死不活。博客和相册也好久没有更新，<a title=\"自由的家猫\" href=\"http://www.awildpetcat.com\" target=\"_blank\">《自由的家猫》</a>纪录片项目也告一段落。</p>\n<p>写博客是一种精神吧，记录这一段时间的感触，PJ-Blog各种Bug和对新浏览器支持的不好，最后还是决定换WorldPress了，换了以后也就不再折腾博客程序这些事情了吧，好好写一点有用的内容。我也决定在三峡晚报广告中心坚持一下，我的定位就是商业摄影师，呵呵，这样走下去是什么路线？走走看看。</p>\n<p>谢谢PJ-Blog这段时间的陪伴！第一版的Flash相册已从服务器移除。旧博客的内容将逐步迁移到新的WordPress程序中，但是旧博客中朋友们的留言将不会被迁移，不过我已经全部备份，谢谢你们的关注，就让这些成为记忆，重新开始新的篇章。</p>\n",
@@ -5055,7 +5055,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>2012年5月5日三峡晚报对《自由的家猫》进行了报道，还上了当天的封面导读，三峡新闻网和手机报也同步有报道，还 &hellip; </p>",
+    "excerpt": "2012年5月5日三峡晚报对《自由的家猫》进行了报道，还上了当天的封面导读，三峡新闻网和手机报也同步有报道，还 … ",
     "path": "/2012/05/wild-cat-news/",
     "featured_media": null,
     "content": "<p>2012年5月5日三峡晚报对<a href=\"http://www.awildpetcat.com\" target=\"_blank\">《自由的家猫》</a>进行了<a href=\"http://epaper.cnhubei.com/html/sxwb/20120505/sxwb1726937.html\" target=\"_blank\">报道</a>，还上了当天的封面导读，<a href=\"http://news.sxxw.net/html/20125/5/322520.shtml\" target=\"_blank\">三峡新闻网和手机报也同步有报道</a>，还有<a href=\"http://hb.qq.com/a/20120505/000327.htm\" target=\"_blank\">大楚网上也转载</a>了，有朋友看到了还发短信我咧！有给我鼓励的，有给予好评的。</p>\n<p>要感谢记者柯黎，还有我的实习老师郑联学。</p>\n<p><a href=\"http://www.awildpetcat.com\" target=\"_blank\">《自由的家猫》</a>入围了大学生电影节，但是没有获奖，这下纪录片项目也算是告一段落，小有成功吧。</p>\n<p>我上传了<a href=\"http://v.youku.com/v_show/id_XMzg4MjA2NzI4.html\" target=\"_blank\">《自由的家猫》1080p版本到Youku.com</a>。</p>\n<p>现在换了这工作，每天都那么忙乱，很久没有看书和接触新的内容了，就怕时间长了，自己也会变得陈腐，无法朝梦想走得更远和创造更多有趣的东西。</p>\n",
@@ -5087,7 +5087,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>《自由的家猫》入围第19届北京大学生电影节第13届大学生原创影片大赛的纪录片单元和&ldquo;爱地球&#038;rdq &hellip; </p>",
+    "excerpt": "《自由的家猫》入围第19届北京大学生电影节第13届大学生原创影片大赛的纪录片单元和“爱地球&rdq … ",
     "path": "/2012/04/ruwei-bcsff13/",
     "featured_media": null,
     "content": "<p><a target=\"_blank\" href=\"http://www.awildpetcat.com\">《自由的家猫》</a>入围<a target=\"_blank\" href=\"http://www.bcsff.org/original/20120405229.html\">第19届北京大学生电影节第13届大学生原创影片大赛</a>的纪录片单元和&ldquo;爱地球&rdquo;环保影片单元。还报名了优酷网络单元的，但是没有入围。</p>\n<p>最近有一些朋友联系我，讨论影片拍摄的问题，谈论自己对这部影片的看法，谢谢你们的关注！</p>\n<p>观看《自由的家猫》请点击如下链接：</p>\n<p><a target=\"_blank\" href=\"http://www.awildpetcat.com\">《自由的家猫》网站www.aWildPetCat.com</a></p>\n<p><a target=\"_blank\" href=\"http://v.youku.com/v_show/id_XMzY2MjY1NzUy.html\">优酷网观看《自由的家猫》</a></p>\n",
@@ -5139,7 +5139,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>纪录片《自由的家猫》网站awildpetcat.com域名启用。</p>\n",
+    "excerpt": "纪录片《自由的家猫》网站awildpetcat.com域名启用。\n",
     "path": "/2012/04/awildpetcat-com/",
     "featured_media": null,
     "content": "<p>纪录片《自由的家猫》网站<a href=\"http://www.awildpetcat.com\" target=\"_blank\">awildpetcat.com</a>域名启用。</p>\n",
@@ -5176,7 +5176,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>思考摄影这么长时间，4年来到目前仍然是想追求简化 、简单，参考身边很多人的意见，和刚到《三峡晚报》做摄影记者了 &hellip; </p>",
+    "excerpt": "思考摄影这么长时间，4年来到目前仍然是想追求简化 、简单，参考身边很多人的意见，和刚到《三峡晚报》做摄影记者了 … ",
     "path": "/2012/03/think-limit/",
     "featured_media": null,
     "content": "<p>思考摄影这么长时间，4年来到目前仍然是想追求简化 、简单，参考身边很多人的意见，和刚到《三峡晚报》做摄影记者了解的一些别人的反馈，看来我所秉持的审美观并不符合大众的口味，但是并不是我的审美观方面的问题，而是画面内涵的缺失。</p>\n<p>摄影工作中，特别是拍摄人像的时候，我还是慢不下来。一个十分钟的现场拍摄需要3天的前期准备，这连我自己都觉得不可思议，但是漂亮的一瞬间确实不是按一个快门那么简单。目前为止我的拍摄对象对我说的最多的话就是“好了没有？”“还要拍啊！”等等，我得多用一点自信，让我和拍摄对象慢下来，多了解拍摄对象和让拍摄气氛更为有趣。</p>\n<p>这些我在摄影上面的瓶颈，是我思想和认知的局限所造成。技术在短时间内已经不是我的障碍，反而是器材成为我的限制，特别是在晚报的工作当中（哦……）。每月安排一个时间去寻找题材和自由创作，在完成<a href=\"http://cat.berlinchan.com\" target=\"_blank\">《自由的家猫》</a>纪录片后，自我的修炼不会停止。</p>\n",
@@ -5208,7 +5208,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>3月15日最后一天在宜昌搜房网上班，16日到武汉准备去京参加个小型纪录片交流论坛活动，结果《三峡晚报》招聘考试 &hellip; </p>",
+    "excerpt": "3月15日最后一天在宜昌搜房网上班，16日到武汉准备去京参加个小型纪录片交流论坛活动，结果《三峡晚报》招聘考试 … ",
     "path": "/2012/03/wild-cat-release/",
     "featured_media": null,
     "content": "<p>3月15日最后一天在宜昌搜房网上班，16日到武汉准备去京参加个小型纪录片交流论坛活动，结果《三峡晚报》招聘考试提前，就退票回宜昌。刻了那么多DVD的碟子也没有机会送去交流。北京大学生电影节13届原创电影组委会收到我的投稿，目前无新的消息。</p>\n<p><a href=\"http://dldyr.com/\" target=\"_blank\">独立电影人</a>网站接纳了我的投稿，在页面上刊登了《自由的家猫》影片</p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20120330091015_1.jpg' desc='独立电影人网截图' alt='独立电影人网截图'/></p>\n<p><a href=\"http://www.filmaker.cn/forum.php?mod=viewthread&amp;tid=18162&amp;extra=page%3D1\" target=\"_blank\">拍电影</a>网接纳了我的投稿</p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20120330091126_2.jpg' desc='拍电影网截图' alt='拍电影网截图'/></p>\n<p>影片上传<a href=\"http://v.youku.com/v_show/id_XMzY2MjY1NzUy.html\" target=\"_blank\">优酷网</a>（720p）和<a href=\"http://www.tudou.com/programs/view/6sdCwW-3fWs/\" target=\"_blank\">土豆网</a>（720p），宣传看样子没有做好，在宜昌的几个大论坛上发了都没人理会，大家还是更乐于谈论些虚化、光圈、ISO什么之类的话题。《自由的家猫》网站<a href=\"http://www.aWildPetCat.com\" target=\"_blank\">www.aWildPetCat.com</a>备案仍没有完成，网站也宣传也不行。</p>\n<p>宣传、推广是现在最大的问题，看来我是太低调了吗？搞什么都太低调了，呵呵。</p>\n",
@@ -5245,7 +5245,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>启用了新域名www.BerlinChan.com，修改备案很是花了一些时间啊。还有纪录片《自由的家猫》的域名a &hellip; </p>",
+    "excerpt": "启用了新域名www.BerlinChan.com，修改备案很是花了一些时间啊。还有纪录片《自由的家猫》的域名a … ",
     "path": "/2012/03/berlinchan-com/",
     "featured_media": null,
     "content": "<p>启用了新域名<a href=\"http://www.BerlinChan.com\" target=\"_blank\">www.BerlinChan.com</a>，修改备案很是花了一些时间啊。还有纪录片《自由的家猫》的域名aWildPetCat.com准备备案，将于2012-5启用，请暂用<a href=\"http://cat.berlinchan.com\" target=\"_blank\">cat.berlinchan.com</a>访问。<a href=\"https://archived-blog.berlinchan.com/gallery/\" target=\"_blank\">老版本的摄影相册</a>不再更新维护。</p>\n<p>已经辞了搜房网工作，在反复挣扎后，终于做了这个决定，内心终于又恢复安静。现在没有时间来抒情，过了这几天再来写。</p>\n",
@@ -5287,7 +5287,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>想得到漂亮的摄影作品，首先当然是要了解自己拥有的器材，除了反复阅读说明书外，当然是要多试验。 创意过程是在现场 &hellip; </p>",
+    "excerpt": "想得到漂亮的摄影作品，首先当然是要了解自己拥有的器材，除了反复阅读说明书外，当然是要多试验。 创意过程是在现场 … ",
     "path": "/2012/02/creativity/",
     "featured_media": null,
     "content": "<p>想得到漂亮的摄影作品，首先当然是要了解自己拥有的器材，除了反复阅读说明书外，当然是要多试验。</p>\n<p>创意过程是在现场凭空想出来的，而是结合各种试验经验，根据拍摄现场的具体条件产生的，是对已有经验的再加工和利用。</p>\n",
@@ -5324,7 +5324,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>当两次去到谷城的时候，这里的气息让我感觉这里也可以成为安逸平和度过我人生的地方。在路边和人力三轮车夫说笑，留下 &hellip; </p>",
+    "excerpt": "当两次去到谷城的时候，这里的气息让我感觉这里也可以成为安逸平和度过我人生的地方。在路边和人力三轮车夫说笑，留下 … ",
     "path": "/2012/01/xiang-yang/",
     "featured_media": null,
     "content": "<p>当两次去到谷城的时候，这里的气息让我感觉这里也可以成为安逸平和度过我人生的地方。在路边和人力三轮车夫说笑，留下一个电话请网吧网管电话告知是否恢复电力，石板路木头房子的小巷，夜晚干净布满星星的天空，便宜可口的小吃，宽敞车少的马路，谷城朋友的热情，都成为我眷恋这个小县城的理由。这种氛围的生活也是另一种追求，或者说是作为一种没有追求时候的追求。</p>\n",
@@ -5356,7 +5356,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>&nbsp;今天一早起床就头晕，刚坐下准备吃早饭，爸从外面进来就说大洋芋死了，我晕的没办法，也没跟爸妈一起去看 &hellip; </p>",
+    "excerpt": " 今天一早起床就头晕，刚坐下准备吃早饭，爸从外面进来就说大洋芋死了，我晕的没办法，也没跟爸妈一起去看 … ",
     "path": "/2012/01/cat-dead/",
     "featured_media": null,
     "content": "<p>&nbsp;今天一早起床就头晕，刚坐下准备吃早饭，爸从外面进来就说大洋芋死了，我晕的没办法，也没跟爸妈一起去看。大洋芋应该是被狗咬死了。纪录片《自由的家猫》后期还没结束，但是主角已经遭遇不幸。</p>\n",
@@ -5393,7 +5393,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>　　大学时候在校报参与报道党代会，这次作为党员代表参加党代会，虽然是街道办基层的党代会，但是会议流程还是蛮完备 &hellip; </p>",
+    "excerpt": "　　大学时候在校报参与报道党代会，这次作为党员代表参加党代会，虽然是街道办基层的党代会，但是会议流程还是蛮完备 … ",
     "path": "/2011/10/party/",
     "featured_media": null,
     "content": "<p><a title=\"湖北宜昌西坝街道办事处党员代表大会\" href=\"https://archived-blog.berlinchan.com/wordpress/wp-content/gallery/old_blog_file/20111108162003_DSC_0090.jpg\"><br />\n<img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20111108162003_DSC_0090.jpg' desc='湖北宜昌西坝街道办事处党员代表大会' alt='西坝街道办事处党员代表大会'/><br />\n</a>　　大学时候在校报参与报道党代会，这次作为党员代表参加党代会，虽然是街道办基层的党代会，但是会议流程还是蛮完备的，哈哈，还是蛮有光的！</p>\n",
@@ -5420,7 +5420,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>工作上的事情，宜昌搜房网的《小五看房记》，想让栏目形式更新颖，正好也尝试下完整流程的制片。只能说是浅层初次尝试 &hellip; </p>",
+    "excerpt": "工作上的事情，宜昌搜房网的《小五看房记》，想让栏目形式更新颖，正好也尝试下完整流程的制片。只能说是浅层初次尝试 … ",
     "path": "/2011/09/xiao5house/",
     "featured_media": null,
     "content": "<p>工作上的事情，宜昌<a href=\"http://newhouse.yc.soufun.com/2011-09-26/5972732.htm\" target=\"_blank\" rel=\"noopener noreferrer\">搜房网的《小五看房记》</a>，想让栏目形式更新颖，正好也尝试下完整流程的制片。只能说是浅层初次尝试，简单的写了分镜头脚本，就是说在摄制之前脑袋里面先预演一边节目的样貌。经过讨论的脚本，加上临时的一些修改，最终呈现的效果作为初次尝试来说是成功的，可离预想又差很远。用一个水货无线领夹麦克风录音，效果过得去。同事初次作为主讲人表现也不错。</p>\n<ul>\n<li>脚本：陈柏林 冯倩倩</li>\n<li>主讲人：冯倩倩</li>\n<li>摄像、剪辑、配乐：陈柏林</li>\n</ul>\n<p style=\"text-align: center;\"><object width=\"500\" height=\"380\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\"/><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XMzA2Mjk3MDc2/v.swf\"/><param name=\"play\" value=\"true\"/><param name=\"loop\" value=\"loop\"/><param name=\"menu\" value=\"true\"/><embed width=\"500\" height=\"380\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" src=\"http://player.youku.com/player.php/sid/XMzA2Mjk3MDc2/v.swf\" type=\"application/x-shockwave-flash\" menu=\"true\" loop=\"loop\" play=\"true\"/></object></p>\n<p style=\"text-align: center;\"><a href=\"http://v.youku.com/v_show/id_XMzA2Mjk3MDc2.html\" target=\"_blank\" rel=\"noopener noreferrer\">点击到youku视频源地址，打开“超清”模式播放</a></p>\n",
@@ -5477,7 +5477,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>初了解摄影，很多书籍和说法都是强调“摄影是做减法”，讲求画面简洁、干净、重点突出。Simple is Smar &hellip; </p>",
+    "excerpt": "初了解摄影，很多书籍和说法都是强调“摄影是做减法”，讲求画面简洁、干净、重点突出。Simple is Smar … ",
     "path": "/2011/08/decreasing/",
     "featured_media": null,
     "content": "<p>初了解摄影，很多书籍和说法都是强调“摄影是做减法”，讲求画面简洁、干净、重点突出。Simple is Smart（简单即智慧）也是我喜欢的概念之一。</p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20101130210832.jpg' desc='宜昌滨江公园双亭广场' alt='宁静'/></p>\n<p>当反复看这幅在宜昌滨江公园双亭广场的照片时候，突然觉得，我是不“减”过头了。<br />\n如图所见，照片主体仅仅是亭子而已，背景是天空、日落，如此简单的内容或者可以用唯美来形容。若是作为杂志插图、平面设计素材一定不错。单作为摄影作品来欣赏，确实太单薄。在拍摄取景时，我有意使画面干净，并在后期处理中抹掉了一些树枝。那些树枝在任何方面无益于照片整体。也就是说在拍摄当时的意识就无法使这张照片成为好的摄影作品，现在想来，如果画面中有人物或许会好些。</p>\n<p>我想“做减法”是摄影入门吧，我现在要想一下如何“做加法”了。</p>\n",
@@ -5514,7 +5514,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>弹开机身闪光灯，随意拍摄快照，总是照片看起来非常生硬，特别是拍摄人物的时候，硬阴影就像是镶边一样出现在人物轮廓 &hellip; </p>",
+    "excerpt": "弹开机身闪光灯，随意拍摄快照，总是照片看起来非常生硬，特别是拍摄人物的时候，硬阴影就像是镶边一样出现在人物轮廓 … ",
     "path": "/2011/08/flashlight/",
     "featured_media": null,
     "content": "<p>弹开机身闪光灯，随意拍摄快照，总是照片看起来非常生硬，特别是拍摄人物的时候，硬阴影就像是镶边一样出现在人物轮廓处。机身闪光灯发射的光线，又被同一方向的镜头所捕捉，照片中经常有强烈的反光，比如说人脸上的油光，哦……这效果感觉就像是朋友聚会上，在KTV里随意拿小相机拍快照一样，值得纪念但不值得欣赏。所以我用上第一台单反相机时候，几乎就没有使用过机身闪光灯。</p>\n<p>使用环境光拍摄几乎是我从开始了解摄影这3年以来，一直坚持的做法。晴天、阴天的户外拍摄，还是室内人物肖像、或是会议，无论场景照度如何，为了获得我能认可在网站新闻或报纸上刊登的图片，机身闪光灯都不会被使用。这也使我练就了“铁手”这一能力，学会在不同环境和姿势稳定拍摄，现在我几乎可以在1/10s，35mm的情况手持拍摄，并有一半的几率拍摄清晰。这些手持拍摄的能力我想在任何情况下都是必要的。</p>\n<p>刚才提到了照度，如果你还不了解，建议你看看<a href=\"http://www.filmaker.cn/archive/deng/2008/Understand_Camcorder.pdf\" target=\"_blank\">《理解摄像机》</a>，这是<a href=\"http://www.filmaker.cn\">www.filmaker.cn</a>论坛上一个叫邓东的家伙写的，内容能让你拨开广告宣传的迷雾，大概了解数码相机最根本的实质，等等。虽然是以摄像为主题的网站，但任有相当多的知识可以学习用于摄影，关键是这里的内容浅显易懂，阅读轻松，这不是你最喜欢的吗？呵呵。</p>\n<p>回主题，09年在学校宣传部实习，办公室有一台SONY A300相机和一只SONY热靴闪光灯，但是因为我对闪光灯的不良印像，我仍然没有使用过热靴闪光灯。实习的拍摄任务会议居多，曾在《美国新闻摄影教程》（没记错的话）上看见一个很赞同的原则“在会场不弄出任何自己听的见的声响”。所以我使用的相机对焦辅助照明、对焦确认音都是关闭的。而办公室那该死的SONY相机、热靴闪光灯，使用起来感觉就像是个大型机械、蒸汽机什么的，噪音很大。特别是那热靴闪光灯变焦时，刺耳的马达声让我难以接受。这些不好的印象更让我对使用闪光灯产生偏见。</p>\n<p>最近看了很多组优秀摄影作品，在了解他们拍摄现场方案后，才逐渐意识到使用闪光灯是作品成功一个很重要的方面。或者为了阅读轻松，你应该看一遍<a href=\"http://www.verycd.com/topics/2877478/\" target=\"_blank\">《尼康（CLS）闪光灯教程》</a>（资源来自<a href=\"http://www.verycd.com\" target=\"_blank\">电驴www.verycd.com</a>）这个教程，是以Nikon的热靴闪光灯为对象的布光教程，我看完第一遍，对比视频中的样片和我曾拍摄的作品，感觉那确实不是一个层次的，也当然不是一个层次的，呵呵。看曾经的拍摄并开始想象——如果这张照片，让我去现场重拍一次，我会如何打光、调整，并获得什么样的效果。这样的开始是好的。视频是英文的，就算你听不懂也能看个大概懂，或者“熟读诗经三百遍”，语言障碍不是障碍。</p>\n<p>当然我谈不了那些具体的方法，具体可以去看看<a href=\"http://www.shanzhuoboshi.com\">www.shanzhuoboshi.com</a>上大卫·豪比的文章，对于初学闪光灯者，这里的文章轻松易懂，且每篇文章都含有使用器材的链接，还有很多好书推荐。</p>\n<p>经常说的“戏剧化的光线”，很多时候都是隐藏在拍摄场景中闪光灯所营造出来的，毕竟环境光靠运气的成分比较多。经常说“摄影的技术就是用光的技术”，而完全掌控拍摄的照明情况才是真正的“用”光，不是吗？</p>\n<p>但这不意味着机身闪光灯就毫无用处，偶尔在背光时，在户外为人物加上眼神光时，机身闪光灯任是方便的选择。</p>\n<p>这是我学习摄影中的一些感悟，希望看完这些可以让你在学习中少走弯路。文中提到的那些书籍、文章都值得一看。或者你可以告诉我，曾对你有帮助的东西，以此开始我们的交流和共同学习。</p>\n",
@@ -5556,7 +5556,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>7月30日买好了票，和朋友们去万达看《变形金刚3》，下午3点天气突变狂风暴雨，我顶把伞出门5分钟就已经全湿了， &hellip; </p>",
+    "excerpt": "7月30日买好了票，和朋友们去万达看《变形金刚3》，下午3点天气突变狂风暴雨，我顶把伞出门5分钟就已经全湿了， … ",
     "path": "/2011/07/big-rain/",
     "featured_media": null,
     "content": "<p>7月30日买好了票，和朋友们去万达看《变形金刚3》，下午3点天气突变狂风暴雨，我顶把伞出门5分钟就已经全湿了，雷声不断，走在路上所有车的报警都在叫，四周空无一人，感觉像末日。下西坝江边的鱼馆子被掀了3、4个，路上的积水没过人行道的台阶，罕见啊。</p>\n<p><object width=\"550\" height=\"400\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\" /><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XMjkwNjQ0MTY4/v.swf\" /><param name=\"play\" value=\"true\" /><param name=\"loop\" value=\"loop\" /><param name=\"menu\" value=\"true\" /><embed width=\"550\" height=\"400\" type=\"application/x-shockwave-flash\" src=\"http://player.youku.com/player.php/sid/XMjkwNjQ0MTY4/v.swf\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" play=\"true\" loop=\"loop\" menu=\"true\" /></object></p>\n",
@@ -5593,7 +5593,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>好朋友们，永远爱你们，弟兄刘凯在外地工作，半年没见着了，昨天回来宜昌大家很是亢奋，去吃张记干锅。</p>\n",
+    "excerpt": "好朋友们，永远爱你们，弟兄刘凯在外地工作，半年没见着了，昨天回来宜昌大家很是亢奋，去吃张记干锅。\n",
     "path": "/2011/07/goodfriends/",
     "featured_media": null,
     "content": "<p>好朋友们，永远爱你们，弟兄刘凯在外地工作，半年没见着了，昨天回来宜昌大家很是亢奋，去吃张记干锅。</p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20110728172956_DSCF3045.jpg' desc='好朋友丁奕，周璇，刘凯，陈柏林' alt='好朋友们'/></p>\n",
@@ -5615,7 +5615,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>6月27日，《西坝街道庆祝中国共产党建党90周年纪念大会》上，我与其他三位朋友共同转正了，我作代表发言，写这个 &hellip; </p>",
+    "excerpt": "6月27日，《西坝街道庆祝中国共产党建党90周年纪念大会》上，我与其他三位朋友共同转正了，我作代表发言，写这个 … ",
     "path": "/2011/06/90anniversary/",
     "featured_media": null,
     "content": "<p>6月27日，《西坝街道庆祝中国共产党建党90周年纪念大会》上，我与其他三位朋友共同转正了，我作代表发言，写这个发言稿时翻看在大学宣传部实习时候的讲话稿，感觉现在又肤浅了很多……从09年12月成为预备党员到这转正转的真不容易啊呵呵。</p>\n",
@@ -5642,7 +5642,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>大学毕业一年摄影也快丢了，虽然买了新相机，但是没见新作品，我不想这么快就把对摄影的激情丧失。当再次拿起相机的时 &hellip; </p>",
+    "excerpt": "大学毕业一年摄影也快丢了，虽然买了新相机，但是没见新作品，我不想这么快就把对摄影的激情丧失。当再次拿起相机的时 … ",
     "path": "/2011/06/new-gallery/",
     "featured_media": null,
     "content": "<p>大学毕业一年摄影也快丢了，虽然买了新相机，但是没见新作品，我不想这么快就把对摄影的激情丧失。当再次拿起相机的时候，我对摄影已经有了更多的理解。最近学习Action Script 3，顺便立项建设一个新的作品集网站进行实践。</p>\n<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20110624131145_newGallery.jpg' desc='新版Flash相册-galleryV320110624' alt='新版Flash相册-galleryV3'/></p>\n<p>已经有雏形了，<a href=\"http://berlinfilm.net/galleryv3/gallery.html\" target=\"_blank\">点击预览</a>。采用前台Flash，后台ASP+XML。注册了新域名BerlinChan.com。旧版的相册停止更新。需要的功能基本实现，还需要界面的美化和切换动画的添加。</p>\n",
@@ -5674,7 +5674,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>今天2011-06-10，2011年过半回顾下都做了些什么事：  家里四川简州猫5月21日生第二窝4只，存活2 &hellip; </p>",
+    "excerpt": "今天2011-06-10，2011年过半回顾下都做了些什么事：  家里四川简州猫5月21日生第二窝4只，存活2 … ",
     "path": "/2011/06/review/",
     "featured_media": null,
     "content": "<p>今天2011-06-10，2011年过半回顾下都做了些什么事：</p>\n<ul>\n<li><span id=\"1308538614533S\" style=\"display: none;\"> </span>家里四川简州猫5月21日生第二窝4只，存活2只，现在小猫已经有7两重，已睁眼。</li>\n<li>积累拍摄家猫生活录像，准备立项纪录片。</li>\n<li>工作上因为有制作广告的需要，Flash和Action Script 3学习入门。顺便立项重制我自己的相册网站。</li>\n<li>炸宜昌三江桥特效项目、医院游乐场项目搁置，因为这两个项目，试验拍摄了360全景技术。</li>\n<li>购买Nikon D7000、Nikkor 50mm 1.8镜头。</li>\n<li>参加湖北省直机关考试，先报名群艺艺术馆摄影师因专业不符，后报名省歌剧舞剧院舞蹈演员，笔试49.6分（第二名），面试63.80分。报名参加公务员考试，武汉各工商所文化建设岗，笔试38.5分。买了3大本教材，除了法律和哲学，其他的内容我再也不想看了。</li>\n<li>试验拍摄时间伸缩（微速摄影）技术。</li>\n<li>为朋友覃拍摄活力宝贝自我介绍片。同朋友覃参加活力宝贝复赛，去十堰、襄阳谷城游一圈，在谷城第一次骑摩托车啊，感觉真好。</li>\n<li>看书《拍电影》、《电影镜头设计》。</li>\n<li>入党转正手续即将完成。</li>\n<li>为我的梦中情人胡送19朵玫瑰加2朵百合。<span id=\"1308538615045E\" style=\"display: none;\"> </span></li>\n</ul>\n<p>回顾一下感觉还是做了很多事情的，特别是考试这些事情，武汉跑了多少趟，最后还是回归现实太费神了。</p>\n",
@@ -5701,7 +5701,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>&nbsp; 摄像机简单运动匹配试验 Nikon某卡片机拍摄 Boujou摄像机反求 Maya动画 After &hellip; </p>",
+    "excerpt": "  摄像机简单运动匹配试验 Nikon某卡片机拍摄 Boujou摄像机反求 Maya动画 After … ",
     "path": "/2011/05/match-move-test/",
     "featured_media": null,
     "content": "<p style=\"text-align: center; \">&nbsp;<embed type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" src=\"http://player.youku.com/player.php/sid/XMjY5ODY3NzUy/v.swf\" width=\"550\" height=\"380\" play=\"true\" loop=\"true\" menu=\"true\"></embed></p>\n<p style=\"text-align: center; \">摄像机简单运动匹配试验</p>\n<ul>\n<li>Nikon某卡片机拍摄</li>\n<li>Boujou摄像机反求</li>\n<li>Maya动画</li>\n<li>After Effects合成</li>\n</ul>\n",
@@ -5748,7 +5748,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>宜昌万达广场开业半年来还没去逛过，听朋友们说这有个闷锅很好吃，于是我们决定去尝尝…… Nikon D7000拍 &hellip; </p>",
+    "excerpt": "宜昌万达广场开业半年来还没去逛过，听朋友们说这有个闷锅很好吃，于是我们决定去尝尝…… Nikon D7000拍 … ",
     "path": "/2011/05/delicious/",
     "featured_media": null,
     "content": "<p style=\"text-align: center;\"><object width=\"550\" height=\"380\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\" /><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XMjY5NTkzNjc2/v.swf\" /><param name=\"play\" value=\"true\" /><param name=\"loop\" value=\"loop\" /><param name=\"menu\" value=\"true\" /><embed width=\"550\" height=\"380\" type=\"application/x-shockwave-flash\" src=\"http://player.youku.com/player.php/sid/XMjY5NTkzNjc2/v.swf\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" play=\"true\" loop=\"loop\" menu=\"true\" /></object></p>\n<p>宜昌万达广场开业半年来还没去逛过，听朋友们说这有个闷锅很好吃，于是我们决定去尝尝……</p>\n<p>Nikon D7000拍摄，请点击到youku使用“超清”播放。</p>\n<p>宜昌还有哪些好吃的好玩的，留言告诉我吧！</p>\n",
@@ -5785,7 +5785,7 @@
         "name": "独立电影与短片"
       }
     ],
-    "excerpt": "<p>朋友参加某选秀节目，为她拍的自我介绍片段。使用Canon500D拍摄。 请点击到youku设置为“超清”播放。</p>\n",
+    "excerpt": "朋友参加某选秀节目，为她拍的自我介绍片段。使用Canon500D拍摄。 请点击到youku设置为“超清”播放。\n",
     "path": "/2011/05/show-introduction/",
     "featured_media": null,
     "content": "<p style=\"text-align: center;\"><object width=\"550\" height=\"400\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\" /><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XMjY5NTkyNTM2/v.swf\" /><param name=\"play\" value=\"true\" /><param name=\"loop\" value=\"loop\" /><param name=\"menu\" value=\"true\" /><embed width=\"550\" height=\"400\" type=\"application/x-shockwave-flash\" src=\"http://player.youku.com/player.php/sid/XMjY5NTkyNTM2/v.swf\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" play=\"true\" loop=\"loop\" menu=\"true\" /></object></p>\n<p style=\"text-align: left;\">朋友参加某选秀节目，为她拍的自我介绍片段。使用Canon500D拍摄。</p>\n<p style=\"text-align: left;\">请点击到youku设置为“超清”播放。</p>\n",
@@ -5827,7 +5827,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>D7000刚到手了拿来测试一下，没时间好好拍东西。拍我妹妹测试。全部手持拍摄，后期软件稳定，没有调色。 请点击 &hellip; </p>",
+    "excerpt": "D7000刚到手了拿来测试一下，没时间好好拍东西。拍我妹妹测试。全部手持拍摄，后期软件稳定，没有调色。 请点击 … ",
     "path": "/2011/05/d7000-handle-test/",
     "featured_media": null,
     "content": "<p style=\"text-align: center;\"><object width=\"550\" height=\"380\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\"/><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XMjU1NTc0MzY0/v.swf\"/><param name=\"play\" value=\"true\"/><param name=\"loop\" value=\"loop\"/><param name=\"menu\" value=\"true\"/><embed width=\"550\" height=\"380\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" src=\"http://player.youku.com/player.php/sid/XMjU1NTc0MzY0/v.swf\" type=\"application/x-shockwave-flash\" menu=\"true\" loop=\"loop\" play=\"true\"/></object></p>\n<p style=\"text-align: left;\">D7000刚到手了拿来测试一下，没时间好好拍东西。拍我妹妹测试。全部手持拍摄，后期软件稳定，没有调色。</p>\n<p style=\"text-align: left;\">请点击到youku设置为“超清”播放。</p>\n",
@@ -5874,7 +5874,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>  时间伸缩拍摄试验1 2010-10-05卧室阳光，用相机D40x，手动60s间隔逐帧拍摄，共70帧 时间伸 &hellip; </p>",
+    "excerpt": "  时间伸缩拍摄试验1 2010-10-05卧室阳光，用相机D40x，手动60s间隔逐帧拍摄，共70帧 时间伸 … ",
     "path": "/2011/05/time-warp/",
     "featured_media": null,
     "content": "<p style=\"text-align: center;\"> <object width=\"550\" height=\"380\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\" /><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XMjY5NTk5NTYw/v.swf\" /><param name=\"play\" value=\"true\" /><param name=\"loop\" value=\"loop\" /><param name=\"menu\" value=\"true\" /><embed width=\"550\" height=\"380\" type=\"application/x-shockwave-flash\" src=\"http://player.youku.com/player.php/sid/XMjY5NTk5NTYw/v.swf\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" play=\"true\" loop=\"loop\" menu=\"true\" /></object></p>\n<p style=\"text-align: center;\"><strong>时间伸缩拍摄试验1</strong></p>\n<p>2010-10-05卧室阳光，用相机D40x，手动60s间隔逐帧拍摄，共70帧</p>\n<p style=\"text-align: center;\"><strong>时间伸缩拍摄试验2</strong></p>\n<p style=\"text-align: left;\">2010-10-05宜昌江边阳光，用相机D40x，手动40s间隔逐帧拍摄，共158帧</p>\n<p style=\"text-align: center;\"><strong>时间伸缩拍摄总结</strong></p>\n<ul>\n<li>使用三脚架固定不动</li>\n<li>采用手动曝光模式，手动对焦</li>\n<li>自定义白平衡</li>\n<li>先计算好拍摄时间跨度，每帧间隔，总帧数</li>\n<li>时间跨度大，场景光线变化明显的情况下，对于曝光值的选定需要做到，大部分时间曝光“足够好”。据丁曝光后在拍摄中尽量不再调整</li>\n<li>采用单反拍摄的图像尺寸一般较大，可以后期使用裁剪加动画的方式，模拟摇拍效果</li>\n<li>选一个好景色！</li>\n</ul>\n<p>话说现在youku的视频蛮不错，传上去过一会就能看全高清的，哈哈有进步！点进去到youku看全高清吧！</p>\n",
@@ -5906,7 +5906,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>攒半年的工资就这样一下干净，7660元在淘宝上买入Nikon D7000，顺丰邮费到付34元，当面开箱验货，还 &hellip; </p>",
+    "excerpt": "攒半年的工资就这样一下干净，7660元在淘宝上买入Nikon D7000，顺丰邮费到付34元，当面开箱验货，还 … ",
     "path": "/2011/03/buy-d7000/",
     "featured_media": null,
     "content": "<p>攒半年的工资就这样一下干净，7660元在淘宝上买入Nikon D7000，顺丰邮费到付34元，当面开箱验货，还是比较放心的。</p>\n<p>说是高清，但是传到youku就变成这副模样，将就看吧，下面另外有youtube的高清视频（以后来传）。</p>\n<p><object width=\"550\" height=\"400\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\" /><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XMjUyNDM5ODY4/v.swf\" /><param name=\"play\" value=\"true\" /><param name=\"loop\" value=\"loop\" /><param name=\"menu\" value=\"true\" /><embed width=\"550\" height=\"400\" type=\"application/x-shockwave-flash\" src=\"http://player.youku.com/player.php/sid/XMjUyNDM5ODY4/v.swf\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" play=\"true\" loop=\"loop\" menu=\"true\" /></object></p>\n<p>3月初入手Nikon D7000，到手基本就没有拍过照片，一直在研究1080P拍摄，到户外街上手持拍摄，其效果已经非常满意了。暂时使用了以前D40x套头18-55mm镜头，由于镜头没有防抖，直接手持追拍很难拿稳，在家里面我尝试过把D7000安置在三脚架上，然后手持脚架再追拍会稳很多，有兴趣的话我再演示分享给大家。另外使用55-200mm防抖镜头，在拍摄高清中防抖效果非常好，看来还是需要入手一只标准变焦的防抖镜头，初步看了下腾龙的B005不错。</p>\n<p>拍摄中的追焦不是很好，无论使用标准区域、宽区域、人脸识别还是追踪追焦，只要相机一移动，基本上就“拉风箱”了。建议实际使用中，尽量使用有防抖功能的镜头，尽可能广角、小光圈拍摄，以避免过多的抖动和对焦不准问题。</p>\n<p>声音录制方面，D7000内置的麦克风会收录很大镜头对焦的声音，在户外有风的环境会有很大的隆隆声。我另外使用一个领夹式无线麦克风，录制单声道人声，再后期消除噪音，结果还过得去。</p>\n<p>拍摄于宜昌儿童公园和滨江公园，2011-03-17。</p>\n",
@@ -5943,7 +5943,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>在网上晃悠，发现一个有趣的网站，www.sentex.net/~mwandel/ 首页上这位大叔就是Matth &hellip; </p>",
+    "excerpt": "在网上晃悠，发现一个有趣的网站，www.sentex.net/~mwandel/ 首页上这位大叔就是Matth … ",
     "path": "/2011/02/interesting-site-carpenter/",
     "featured_media": null,
     "content": "<p>在网上晃悠，发现一个有趣的网站，<a href=\"http://www.sentex.net/~mwandel/\" target=\"_blank\">www.sentex.net/~mwandel/</a></p>\n<p style=\"text-align: center;\"><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20110224210918_1.jpg\" alt=\"网页截图\" width=\"438\" height=\"420\" /></p>\n<p style=\"text-align: left;\">首页上这位大叔就是Matthias Wandel，这家伙是个木工世家出生，他爸爸也是做木工的，除了木工典型制作的桌、椅、床之外，还做了很多了不起的稀奇玩意，下面列举几个：（一下图片全部来自<a href=\"http://www.sentex.net/\">http://www.sentex.net</a>）</p>\n<figure style=\"width: 178px\" class=\"wp-caption aligncenter\"><img class=\" \" title=\"木制三脚架\" src=\"//www.sentex.net/~mwandel/built/wood_tripod.jpg\" alt=\"\" width=\"178\" height=\"268\" /><figcaption class=\"wp-caption-text\">木制三脚架</figcaption></figure>\n<p style=\"text-align: center;\"><a href=\"http://www.sentex.net/~mwandel/built/practical.html\" target=\"_blank\">全木质的相机三脚架，这家伙懂摄影</a></p>\n<p style=\"text-align: center;\"><img class=\"aligncenter\" src=\"//www.sentex.net/~mwandel/photo/panohead.jpg\" alt=\"\" width=\"209\" height=\"233\" /></p>\n<p style=\"text-align: center;\"><a href=\"http://www.sentex.net/~mwandel/photo/panos.html\" target=\"_blank\">自制全景云台</a></p>\n<p style=\"text-align: center;\"><img class=\"aligncenter\" src=\"//www.sentex.net/~mwandel/organ/playing_organ.jpg\" alt=\"\" width=\"384\" height=\"285\" /></p>\n<p style=\"text-align: center;\"><a href=\"http://www.sentex.net/~mwandel/organ/organ.html\" target=\"_blank\">全木质的管风琴，这家伙懂音乐</a></p>\n<p style=\"text-align: center;\"><img class=\"aligncenter\" src=\"//www.sentex.net/~mwandel/tech/changer_overview.jpg\" alt=\"\" width=\"379\" height=\"232\" /></p>\n<p style=\"text-align: center;\"><a href=\"http://www.sentex.net/~mwandel/tech/changer.html\" target=\"_blank\">全木质的CD换片机，这家伙懂机电</a></p>\n<p style=\"text-align: center;\"><img class=\"aligncenter\" src=\"//www.sentex.net/~mwandel/tech/scanning_camera.jpg\" alt=\"\" /></p>\n<p style=\"text-align: center;\"><a href=\"http://www.sentex.net/~mwandel/tech/scanner.html\" target=\"_blank\">木质扫描相机，这家伙懂光学、软件，已经佩服的五体投地</a></p>\n<p style=\"text-align: center;\"><img class=\"aligncenter\" src=\"//www.sentex.net/~mwandel/cannon/marble_musket.jpg\" alt=\"\" width=\"495\" height=\"91\" /></p>\n<p style=\"text-align: center;\"><a href=\"http://www.sentex.net/~mwandel/cannon/air_gun.html\" target=\"_blank\">自制气枪</a></p>\n<p><img class=\"alignnone\" src=\"//www.sentex.net/~mwandel/cannon/m_and_m's.jpg\" alt=\"\" width=\"261\" height=\"197\" /><img src=\"//www.sentex.net/~mwandel/cannon/m_and_m_penetrates.jpg\" alt=\"\" width=\"255\" height=\"184\" /></p>\n<p style=\"text-align: center;\"><a href=\"http://www.sentex.net/~mwandel/cannon/air_gun.html\" target=\"_blank\">用M&amp;M豆当子弹，威力不小啊，三夹板打穿了！</a></p>\n<p style=\"text-align: center;\"><img class=\"aligncenter\" src=\"//www.sentex.net/~mwandel/photo/tossing-tikka-lights.jpg\" alt=\"\" /></p>\n<p style=\"text-align: center;\"><a href=\"http://www.sentex.net/~mwandel/photo/night-photography.html\" target=\"_blank\">这不是去年各大摄影杂志流行的光绘嘛，这家伙似乎很久以前就玩过了</a></p>\n<p style=\"text-align: left;\">等等一些，大家自己去看看这网站吧。不佩服不行，什么叫动手能力！这家伙网站结构也简明易懂，没有任何的装饰，只是要表达的内容平实的展示，比那些什么门户网站打开满眼flash飞舞看的舒服多了。</p>\n<p>就这些制作品，我已经很难想象需要多少方面的知识了。除此之外，他首页上还有个股票经营模拟游戏的链接……呵呵，总之挺有趣的，自己看看吧<a href=\"http://www.sentex.net/\">http://www.sentex.net</a></p>\n",
@@ -5985,7 +5985,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>转载自：http://bbs.hxsd.com/blog.php?b=11561 &#8212;&#8212; &hellip; </p>",
+    "excerpt": "转载自：http://bbs.hxsd.com/blog.php?b=11561 —— … ",
     "path": "/2011/02/hdri-format/",
     "featured_media": null,
     "content": "<p>转载自：<a href=\"http://bbs.hxsd.com/blog.php?b=11561\">http://bbs.hxsd.com/blog.php?b=11561</a><br />\n&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />\n<strong style=\"line-height: 22px;\">1、HDR简介</strong></p>\n<p>HDR的全称是High-Dynamic Range(高动态范围)。在此，我们先解释一下什么是Dynamic Range（动态范围），动态范围是指图像中所包含的从“最亮”至“最暗”的比值，也就是图像从“最亮”到“最暗”之间灰度划分的等级数；动态范围越大，所能表示的层次越丰富，所包含的色彩空间也越广。那高动态范围(HDR)顾名思义就是从“最亮”到“最暗”可以达到非常高的比值。<!--more--></p>\n<p>在日常生活中我们经常遇到这样的情况：突然从黑暗的房间中走到阳光下，眼睛会无法睁开；清晨阳光会穿透窗帘像光柱般照射入房间；反光度较高的物体在强光下会在周围产生光晕。以上这些生活中随处可见的现象在有HDR以前无法在3D世界中呈现！最大的原因就在于我们使用8～16bit的整数数据，使用8～16bit的整数数据是整个图象处理失真的关键点，所以我们对以往的运算方法做了以下二方面的重大改进：</p>\n<p>1、使用16bit、32bit的数据来提高像素数据的精度。既然继续使用8bit的数据来记录像素的特征不能满足HDR数据所需要的高精度运算的要求，在这种情况下，我们考虑使用16bit、32bit的数据记录来提高像素数据的精度都是可以的。使用了更多的数据来保存像素特征之后，无论是像素的对比度还是像素可以体现的色彩数目都有了巨大的提高。</p>\n<p>2、图象数据采用浮点数据。HDR真正的巨大变革来自于浮点数据的引入。我们可以采用浮点方式来处理和存放亮度数据，抛弃不准确的整数数据；同时计算机在引入浮点数据来存储象素的各个参数并且在运算的全过程都使用浮点数据，这样就可以有效的提高据的精确度。</p>\n<p>那么采用HDR后动态范围最大可以有多大呢？我们看如下的公式，就可以知道我们到底使用了HDR后动态值可以有多大，而动态值的大小直接表现了动态范围的大小：Dynamic Range=log10(Max Intensity / Min Intensity)。公式中intensity是指强度，我们对最大亮度除以最低亮度的结果取对数，得到的结果就是动态范围的相对数值。根据公式计算，当我们在亮度通道使用8bit的的情况下，最高亮度255，最低亮度1。那么计算得出的动态范围就是数值约为2.4，加上单位就是24dB。同理可以计算得出16bit 的亮度通道的动态范围是数值约是4.8，是使用8bit亮度通道的一倍。理论上在HDR模式下，动态范围的数值最高可以到达76.8。在NVIDIA所使用的OpenEXR中表现出来的HDR动态范围的数值最大值约有12.0，远远高出单纯使用16bit亮度通道的所带来的亮度体验，这是采用了优秀算法的结果。OpenEXR所能实现的最大动态范围已经超过了人眼的9，带来了更加真实的视觉体验。</p>\n<p><strong style=\"line-height: 22px;\">2、HDRI文件格式介绍(OpenEXR、Radiance RGBE、Float TIFF)</strong></p>\n<p>HDRI（High-Dynamic Range Image）就是记录采用了HDR技术的图象数据文件。常用的HDRI文件有OpenEXR、Radiance RGBE、FloatTIFF三种格式。</p>\n<p>2.1   OpenEXR文件格式</p>\n<p>OpenEXR是由工业光魔（Industrial Light &amp; Magic）开发的一种HDR标准。OpenEXR文件的扩展名为.exr，常见的OpenEXR文件是FP16（16bit Float Point，也被称为half Float Point）数据图像文件，每个通道的数据类型是FP16，一共四个通道64bpp，每个通道1个bit位用来标志“指数”，5个bit用来存放指数的值，10个bit存放色度坐标（u，v）的尾数，其动态范围从6.14 × 10 ^ -5到6.41 × 10 ^ 4。</p>\n<p>在OpenEXR的算法里面共使用16bit来表示光照数据。虽然看起来和使用16bit亮度通道运算位数相同，但是OpenEXR巧妙的采用了1个bit位用来标志“指数”，5个bit用来存放指数的值，10个bit存放色度坐标的尾数。这样就轻易的解决了浮点数值由于位数少而精度不高的问题。大大的拓宽的在FP16下的动态范围。根据实际的计算结果：在正规化的情况下OpenEXR可以提供和人眼基本相同的动态范围，最暗到最亮是0.00006103515625（6.14 × 10 ^ -5）到65504（6.41 × 10 ^ 4），动态范围是9.03；非正规化条件下，OpenEXR可以提供从最暗到最亮的数值从0.000000059604644775390625（5.96 × 10 ^ -8 ）到65504（6.41 × 10 ^ 4），化为动态范围表示就是12。</p>\n<p>下面是Still写的OpenEXR读写代码，保存的.exr文件采用Zips压缩编码。</p>\n<p>bool COpenExr::Load(const char fileName[], int&amp; width, int&amp; height, float** pixels)<br />\n{<br />\nstd::vector vecpixels;<br />\nif(!Load(fileName, width, height, vecpixels))<br />\nreturn false;<br />\nint num = width * height * 3;<br />\n*pixels = new float[num];<br />\nif(NULL == *pixels)<br />\nreturn false;<br />\nstd::vector::pointer ptr = &amp;vecpixels[0];<br />\nmemcpy(*pixels, ptr, num * 4);<br />\nreturn true;<br />\n}<br />\nbool COpenExr::Load(const char fileName[],   int&amp; width,   int&amp; height,   std::vector &amp;pixels)<br />\n{<br />\nImf::Array pixelsdata;<br />\nbool bLoad = loadImage(fileName, width, height, pixelsdata);<br />\nif(!bLoad) return false;<br />\nfor(int y = 0; y &lt; height; y++)<br />\n{<br />\nint i = y * width;<br />\nfor(int x = 0; x &lt; width; x++)<br />\n{<br />\nint j = i + x;<br />\nconst Imf::Rgba &amp;rp = pixelsdata[j];<br />\npixels.push_back( float(rp.r));<br />\npixels.push_back( float(rp.g));<br />\npixels.push_back( float(rp.b));<br />\n}<br />\n}<br />\nreturn true;<br />\n}<br />\nbool  COpenExr::loadImage (const char fileName[],  int&amp; width, int&amp; height,  Imf::Array&amp; pixels)<br />\n{<br />\nImf::RgbaInputFile in (fileName);<br />\nImath::Box2i dataWindow = in.dataWindow();<br />\nint dw, dh, dx, dy;<br />\nwidth = dw = dataWindow.max.x &#8211; dataWindow.min.x + 1;<br />\nheight = dh = dataWindow.max.y &#8211; dataWindow.min.y + 1;<br />\ndx = dataWindow.min.x;<br />\ndy = dataWindow.min.y;<br />\npixels.resizeErase (dw * dh);<br />\nin.setFrameBuffer (pixels &#8211; dx &#8211; dy * dw, 1, dw);<br />\ntry<br />\n{<br />\nin.readPixels (dataWindow.min.y, dataWindow.max.y);<br />\n}catch (const exception &amp;e)<br />\n{<br />\nstd::cerr &lt;&lt; e.what() &lt;&lt; std::endl;<br />\nreturn false;<br />\n}<br />\nreturn true;<br />\n}<br />\nbool COpenExr::Save(const char fileName[], int width, int height, const float* pixels)<br />\n{<br />\nstd::vector vecpixels(pixels, pixels + width * height * 3);<br />\nreturn Save(fileName, width, height, vecpixels);<br />\n}<br />\nbool COpenExr::Save(const char fileName[], int width, int height, const std::vector pixels)<br />\n{<br />\nImf::Array pixelsdata;<br />\npixelsdata.resizeErase(width * height);<br />\nfor(int y = 0; y &lt; height; y++)<br />\n{<br />\nint i = y * width;<br />\nfor(int x = 0; x &lt; width; x++)<br />\n{<br />\nint j = i + x;<br />\nhalf r = pixels[j * 3 ];<br />\nhalf g = pixels[j * 3 + 1];<br />\nhalf b = pixels[j * 3 + 2];<br />\npixelsdata[j] = Imf::Rgba(r, g, b);<br />\n}<br />\n}<br />\nreturn SaveImage(fileName, width, height, pixelsdata);<br />\n}<br />\nbool COpenExr::SaveImage(const char fileName[], int width, int height, const Imf::Array  &amp;pixels)<br />\n{<br />\nImf::RgbaOutputFile file (fileName, width, height);<br />\nfile.setFrameBuffer(pixels, 1, width);<br />\ntry<br />\n{<br />\nfile.writePixels(height);<br />\n}catch(const exception &amp;e)<br />\n{<br />\nstd::cerr&lt;&lt; e.what() &lt;        return false;<br />\n}<br />\nreturn true;<br />\n}<br />\n官方库链接地址：<a style=\"word-wrap: break-word; color: #009ec1; text-decoration: none; line-height: normal;\" href=\"http://www.openexr.com/\" target=\"_blank\">http://www.openexr.com/</a></p>\n<p>2.2  Radiance RGBE文件格式</p>\n<p>RGBE文件的扩展名为.hdr，RGBE正式名称为Radiance RGBE格式。这个本来是BR、FR等作为radiance材质的一种格式，也叫做radiance map，后来成为流行的一种HDR格式。所谓E，就是指数。Radiance RGBE文件每个通道为8bit BYTE数据类型，4个通道一共是32 bit。RGBE可以使用RLE压缩编码压缩，也可以不压缩。由文件头、RGBE数据组成。</p>\n<p>文件头如下：</p>\n<p>类型                                  输出格式<br style=\"word-wrap: break-word; line-height: normal;\" />char programtype[16];         //#?Radiancen#Generated by stilln<br style=\"word-wrap: break-word; line-height: normal;\" />float gamma;                      //1.0<br style=\"word-wrap: break-word; line-height: normal;\" />float exposure;                   //1.0<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\n字符串常量                          //FORMAT=32-bit_rle_rgbenn<br style=\"word-wrap: break-word; line-height: normal;\" />int nWidth, int nHeight         //-Y nHeight +X nWidthn <br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nRGBE数据与HDR FP32(RGB)相互转换公式如下：<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\n1、rgbe-&gt;FP32(RGB)<br style=\"word-wrap: break-word; line-height: normal;\" />如果e为0， R = G = B = 0.0，否则：<br style=\"word-wrap: break-word; line-height: normal;\" />R = r * 2^(e – 128 &#8211; 8);<br style=\"word-wrap: break-word; line-height: normal;\" />G = g * 2^(e – 128 &#8211; 8);<br style=\"word-wrap: break-word; line-height: normal;\" />B = b * 2^(e – 128 &#8211; 8);<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\n2、FP32(RGB) -&gt; rgbe<br style=\"word-wrap: break-word; line-height: normal;\" />v = max(R, G, B); <br style=\"word-wrap: break-word; line-height: normal;\" /><br />\n如果v &lt; 1e-32, r = g = b = e = 0, 否则：<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\n将v用科学计算法表示成 v = m * 2 ^ n ( 0 &lt; m &lt; 1)：<br style=\"word-wrap: break-word; line-height: normal;\" />r = R * m *  256.0/v; <br style=\"word-wrap: break-word; line-height: normal;\" />g = G * m *  256.0/v;<br style=\"word-wrap: break-word; line-height: normal;\" />b = B * m *  256.0/v;<br style=\"word-wrap: break-word; line-height: normal;\" />e = n + 128; <br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nStill注：</p>\n<p>1、我们一般说HDR采用FP32，指的是HDR图象运算时候的内存数据类型，而Radiance RGBE文件采用8bit BYTE类型存储HDR数据。也就是说打开Radiance RGBE文件，要使用上面的公式1将Radiance RGBE文件的8bit BYTE文件数据转换为FP 32的HDR内存数据进行运算；保存为Radiance RGBE文件时，要使用上面的公式2将HDR的FP32内存数据转换为Radiance RGBE的8bit BYTE文件数据进行保存。同理，OpenEXR文件的读写也存在将其FP 16的文件数据到HDR的 FP32图象数据的转换；而下面将要讲的Float Tiff是不需要进行数据转换，直接将HDR的FP 32图象数据保存到TIFF文件中即可。</p>\n<p>2、Radiance有多种文件格式，其官方库包含内容比较复杂，所以，实际的读写没有使用其官方库，而是使用了网络上一个简单的C语言读写类，Still并对其进行了部分修改（在文件头写入“Generated  by Still”）。 <br style=\"word-wrap: break-word; line-height: normal;\" /><br />\n读写类链接地址：<a style=\"word-wrap: break-word; color: #009ec1; text-decoration: none; line-height: normal;\" href=\"http://www.graphics.cornell.edu/~bjw/rgbe.html\" target=\"_blank\">http://www.graphics.cornell.edu/~bjw/rgbe.html</a><br style=\"word-wrap: break-word; line-height: normal;\" />官方库链接地址：<a style=\"word-wrap: break-word; color: #009ec1; text-decoration: none; line-height: normal;\" href=\"http://radsite.lbl.gov/radiance/\" target=\"_blank\">http://radsite.lbl.gov/radiance/</a><br style=\"word-wrap: break-word; line-height: normal;\" /><br />\n2.3   FloatTiff文件格式<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nTiff文件的扩展名为.tif(.tiff)，FloatTiff每个通道为FP32(32bit Float Point)类型，一共3个通道96bpp。用Tiff文件存储HDR数据，直接将HDR的FP32保存到TIFF文件中，有官方库可以利用。下面是Still写的代码样例，HDR数据我采用的是LZW压缩编码：    <br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nbool  CFloatTiff::Load(const char fileName[], int&amp; width, int&amp; height, float** pixels)<br style=\"word-wrap: break-word; line-height: normal;\" />{<br style=\"word-wrap: break-word; line-height: normal;\" />TIFF* fp = NULL;<br style=\"word-wrap: break-word; line-height: normal;\" />if((fp = TIFFOpen(fileName, &#8220;r&#8221;)) == NULL)<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br style=\"word-wrap: break-word; line-height: normal;\" />//获取信息<br style=\"word-wrap: break-word; line-height: normal;\" />uint16 bps,  spp, datatype, photometric, compression, planarconfig, fillorder;<br style=\"word-wrap: break-word; line-height: normal;\" />//每个通道占据的数据位数<br style=\"word-wrap: break-word; line-height: normal;\" />if( (TIFFGetField(fp, TIFFTAG_BITSPERSAMPLE, &amp;bps) == 0) || (bps != 32))<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br style=\"word-wrap: break-word; line-height: normal;\" />//每个象素的通道数目<br style=\"word-wrap: break-word; line-height: normal;\" />if((TIFFGetField(fp, TIFFTAG_SAMPLESPERPIXEL, &amp;spp) == 0) || (spp != 3))<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br style=\"word-wrap: break-word; line-height: normal;\" />//每个通道的数据类型<br style=\"word-wrap: break-word; line-height: normal;\" />if((TIFFGetField(fp, TIFFTAG_SAMPLEFORMAT, &amp;datatype) == 0) || (datatype != AMPLEFORMAT_IEEEFP))<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br />\n//图像的数据采用的颜色模型<br style=\"word-wrap: break-word; line-height: normal;\" />if((TIFFGetField(fp, TIFFTAG_PHOTOMETRIC, &amp;photometric) == 0) || (photometric != PHOTOMETRIC_RGB))<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br />\n<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFGetField(fp, TIFFTAG_IMAGEWIDTH, &amp;width);<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFGetField(fp, TIFFTAG_IMAGELENGTH, &amp;height);<br style=\"word-wrap: break-word; line-height: normal;\" />int num = width * height * 3;<br style=\"word-wrap: break-word; line-height: normal;\" />*pixels = new float[num];<br style=\"word-wrap: break-word; line-height: normal;\" />if(NULL == *pixels)<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nif( TIFFReadEncodedStrip(fp, 0, *pixels, width * height * 3 * 4) == -1)<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nTIFFClose(fp);<br style=\"word-wrap: break-word; line-height: normal;\" />return true;<br style=\"word-wrap: break-word; line-height: normal;\" />}<br style=\"word-wrap: break-word; line-height: normal;\" />bool  CFloatTiff::Save(const char fileName[], int width, int height, const float* pixels)<br style=\"word-wrap: break-word; line-height: normal;\" />{<br style=\"word-wrap: break-word; line-height: normal;\" />if(NULL == pixels)<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nTIFF *fp = NULL;<br style=\"word-wrap: break-word; line-height: normal;\" />if((fp = TIFFOpen(fileName, &#8220;w&#8221;)) == NULL)<br style=\"word-wrap: break-word; line-height: normal;\" />return false;<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nTIFFSetField(fp, TIFFTAG_IMAGEWIDTH, width);<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFSetField(fp, TIFFTAG_IMAGELENGTH, height);<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFSetField(fp, TIFFTAG_COMPRESSION, COMPRESSION_LZW);//COMPRESSION_DEFLATE;<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFSetField(fp, TIFFTAG_PLANARCONFIG, PLANARCONFIG_CONTIG);<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFSetField(fp, TIFFTAG_PHOTOMETRIC, PHOTOMETRIC_RGB);<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFSetField(fp, TIFFTAG_BITSPERSAMPLE, 32);<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFSetField(fp, TIFFTAG_SAMPLESPERPIXEL, 3);<br style=\"word-wrap: break-word; line-height: normal;\" />TIFFSetField(fp, TIFFTAG_SAMPLEFORMAT, SAMPLEFORMAT_IEEEFP);<br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nif(TIFFWriteEncodedStrip(fp, 0, const_cast(pixels), width * height * 3 * 4) == -1)<br style=\"word-wrap: break-word; line-height: normal;\" />return false; <br style=\"word-wrap: break-word; line-height: normal;\" /><br />\nTIFFClose(fp);<br style=\"word-wrap: break-word; line-height: normal;\" />return true;<br style=\"word-wrap: break-word; line-height: normal;\" />}   <br style=\"word-wrap: break-word; line-height: normal;\" /><br style=\"word-wrap: break-word; line-height: normal;\" />官方库链接地址：<a style=\"word-wrap: break-word; color: #009ec1; text-decoration: none; line-height: normal;\" href=\"http://www.remotesensing.org/libtiff/\" target=\"_blank\">http://www.remotesensing.org/libtiff/</a></p>\n<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />\n转载自：<a href=\"http://bbs.hxsd.com/blog.php?b=11561\">http://bbs.hxsd.com/blog.php?b=11561</a></p>\n",
@@ -6008,7 +6008,7 @@
     ]
   },
   {
-    "title": "街拍宜昌CBD漂亮GG&#038;MM",
+    "title": "街拍宜昌CBD漂亮GG&MM",
     "date": "2011-02-12T08:21:00.000Z",
     "slug": "street-photography",
     "categories": [
@@ -6017,7 +6017,7 @@
         "name": "照片故事"
       }
     ],
-    "excerpt": "<p>街拍也是我一直想尝试的事情，别说看似容易的事情，却要有胆量去做，之前尝试使用长焦站在远处“打”别人，结果出来的 &hellip; </p>",
+    "excerpt": "街拍也是我一直想尝试的事情，别说看似容易的事情，却要有胆量去做，之前尝试使用长焦站在远处“打”别人，结果出来的 … ",
     "path": "/2011/02/street-photography/",
     "featured_media": null,
     "content": "<p>街拍也是我一直想尝试的事情，别说看似容易的事情，却要有胆量去做，之前尝试使用长焦站在远处“打”别人，结果出来的结果不太满意，长焦奇怪的视角总是把人“压扁”，严重的“虚化背景”把人物与环境分离开来，街拍的气息根本感觉不到，而且按照大师的说法，站在远处鬼鬼祟祟的瞄别人更容易引起别人怀疑。</p>\n<p>看过很多大师的方法介绍，塞上耳机摇摇晃晃拍了就走、掰弄相机突然抬头闪拍、避免眼神接触……呵呵总归是要胆子大了冲上前去拍。</p>\n<p>如下图片是从nextgen gallery相册中迁移来的</p>\n<p># 2011-02-12宜昌CBD街拍<br />\n## 旧博客迁移过来的部分照片，2011-02-12宜昌CBD街拍</p>\n<p><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/2011-02-12street/20110212161439_DSC_0052.jpg\" alt=\"街拍#4\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/2011-02-12street/20110212161450_DSC_0062.jpg\" alt=\"街拍#2\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/2011-02-12street/20110212161456_DSC_0065.jpg\" alt=\"街拍#3\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/2011-02-12street/20110212161502_DSC_0092.jpg\" alt=\"街拍#1\" /><br />\n<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/2011-02-12street/20110212161513_DSC_0104.jpg\" alt=\"街拍#5\" /></p>\n<p>最后分享街拍大师的网站<a href=\"http://www.nickturpin.com/\">http://www.nickturpin.com</a>。</p>\n",
@@ -6049,7 +6049,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>很早之前就对360度全景拍摄感兴趣，但是器材的限制一直没机会玩，鱼眼镜头和节点云台都是不菲的花费。 很多时候我 &hellip; </p>",
+    "excerpt": "很早之前就对360度全景拍摄感兴趣，但是器材的限制一直没机会玩，鱼眼镜头和节点云台都是不菲的花费。 很多时候我 … ",
     "path": "/2011/02/panorama-test/",
     "featured_media": null,
     "content": "<p>很早之前就对360度全景拍摄感兴趣，但是器材的限制一直没机会玩，鱼眼镜头和节点云台都是不菲的花费。</p>\n<p>很多时候我都直接用18-55mm@18mm的镜头手持拍摄然后接片小范围的全景，用PTGui的smartblend混合可以很好的消除较小的视差，整体效果看起来也过得去，于是干脆用一般的脚架拍个360度试试看，于是就有了这个实验。</p>\n<p>用D40x相机，18-55mm@18mm，拍摄66张拼接</p>\n<p><object width=\"550\" height=\"400\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\"/><param name=\"src\" value=\"https://archived-blog.berlinchan.com/wp-content/uploads/2012/06/DSC_0009-Panorama_out.swf\"/><param name=\"play\" value=\"true\"/><param name=\"loop\" value=\"loop\"/><param name=\"menu\" value=\"true\"/><embed width=\"550\" height=\"400\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2012/06/DSC_0009-Panorama_out.swf\" type=\"application/x-shockwave-flash\" play=\"true\" loop=\"loop\" menu=\"true\"/></object></p>\n<p>可以看到，远处的栅栏拼接的较好，而顶部的轨道由于距离太近而视差明显，PTGui的smartblend也无能为力，然后就是因为镜头视角不大，拍摄66张才能包含接近360度范围（没有拍摄天和地面），这给控制曝光、拼接步骤、拍摄有变化的元素带来很大困难。</p>\n<p>还有大师们360度全景拼接配合HDR效果，不知道是先HDR再拼接，还是先拼接再HDR。我看网上说都可以，反正我是没弄出来HDR效果，弄出来的也太难看了。</p>\n",
@@ -6081,7 +6081,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>2011-01-15，宜昌猇亭的一个楼盘盛世天下开盘，开发商请来了齐秦、金波，我跑去凑个热闹，哈哈。正好好久没 &hellip; </p>",
+    "excerpt": "2011-01-15，宜昌猇亭的一个楼盘盛世天下开盘，开发商请来了齐秦、金波，我跑去凑个热闹，哈哈。正好好久没 … ",
     "path": "/2011/01/qiqing/",
     "featured_media": null,
     "content": "<p><img src='https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20110115165014_02.jpg' desc='宜昌某地产项目商业活动请齐秦献唱' alt='齐秦'/></p>\n<p>2011-01-15，宜昌猇亭的一个楼盘盛世天下开盘，开发商请来了齐秦、金波，我跑去凑个热闹，哈哈。正好好久没使相机要发霉咯，带去当Paparazzi体验一下。齐秦刚出场时黑色墨镜加亮黑裤子，酷感十足。从侧面看，齐秦有点啤酒肚了，呵呵但是帅气依旧。唱完第一首歌后，摘下墨镜现场气氛到达顶峰。唱了《大约在冬季》《月亮代表我的心》《夜夜夜夜》，回家来专门找来这两首歌听好几遍，嗯我爱上他了，嘿嘿。</p>\n",
@@ -6118,7 +6118,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>当初配置电脑时候，卖家就说西数1TB绿盘装系统不好用，但还是冲着价格买下来，回来装Win7竟然装了几乎2个小时 &hellip; </p>",
+    "excerpt": "当初配置电脑时候，卖家就说西数1TB绿盘装系统不好用，但还是冲着价格买下来，回来装Win7竟然装了几乎2个小时 … ",
     "path": "/2011/01/harddisk/",
     "featured_media": null,
     "content": "<p>当初配置电脑时候，卖家就说西数1TB绿盘装系统不好用，但还是冲着价格买下来，回来装Win7竟然装了几乎2个小时才安装完，1T绿盘所谓的什么高级格式化，除了麻烦和速度慢还真找不到什么优点可说。</p>\n<p>后来绿盘竟然不到600小时就坏区开不了机！到网上一查还有不少网友1TB绿盘快速悲剧的……这质量真是服了，为了数据的安全，一狠心570元败了1TB西数黑盘，有网友这样形容黑盘“数据几乎不可能丢失”，听起来不错，唉舍财免灾！舍财免灾！</p>\n<p style=\"text-align: center;\"><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20110106211848_DSC_0099.jpg\" alt=\"西数绿盘和黑盘\" /></p>\n<p style=\"text-align: center;\"><strong>把1TB黑盘、绿盘来个合影</strong></p>\n<p style=\"text-align: center;\"><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20110106211629_24-2010_20-41.jpg\" alt=\"西数绿盘\" /></p>\n<p style=\"text-align: center;\"><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20110106211646_24-2010_20-42.jpg\" alt=\"西数黑盘\" /></p>\n<p style=\"text-align: center;\"><strong>1TB黑盘是SATA3标准的，接入主板SATA3端口，都折腾上电脑用HDtune测试</strong></p>\n<p>基准测试曲线和数据参考下，但是从使用感觉来说——基本上感觉不到差别，看网上的评测，有说温彻斯特硬盘在SATA3标准中本身的传输速率已经成为瓶颈，唉，有点失望，等固态硬盘降价吧。黑盘寻道声音果然比绿盘声音大好多。</p>\n",
@@ -6150,7 +6150,7 @@
         "name": "见闻杂事"
       }
     ],
-    "excerpt": "<p>今天上班出门踩盘，在车上看手机上新闻，看到一个叫做“达尔文奖”的东西，好久没有笑这么爽了…… 简单来说，达尔文 &hellip; </p>",
+    "excerpt": "今天上班出门踩盘，在车上看手机上新闻，看到一个叫做“达尔文奖”的东西，好久没有笑这么爽了…… 简单来说，达尔文 … ",
     "path": "/2011/01/interesting-site-darwin/",
     "featured_media": null,
     "content": "<p style=\"text-indent: 2em;\">今天上班出门踩盘，在车上看手机上新闻，看到一个叫做“达尔文奖”的东西，好久没有笑这么爽了……</p>\n<p style=\"text-indent: 2em;\">简单来说，达尔文奖就是颁给那些稀里糊涂死去的蠢人，以此纪念他们为促进人类基因进步而做出贡献的奖项。</p>\n<p style=\"text-align: center;\">2010年的评选已有结果，先看这个倒霉蛋都是怎么死的：</p>\n<p style=\"text-align: center;\"> <strong>冠军撞门掉进电梯井摔死</strong></p>\n<p style=\"text-align: center;\"><object width=\"450\" height=\"380\" classid=\"clsid:d27cdb6e-ae6d-11cf-96b8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\"><param name=\"pluginspage\" value=\"http://www.macromedia.com/go/getflashplayer\" /><param name=\"src\" value=\"http://player.youku.com/player.php/sid/XMjEyODQ0NTQ0/v.swf\" /><param name=\"play\" value=\"true\" /><param name=\"loop\" value=\"loop\" /><param name=\"menu\" value=\"true\" /><embed width=\"450\" height=\"380\" type=\"application/x-shockwave-flash\" src=\"http://player.youku.com/player.php/sid/XMjEyODQ0NTQ0/v.swf\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" play=\"true\" loop=\"loop\" menu=\"true\" /></object></p>\n<p style=\"text-indent: 2em;\">1月2日，2010年度“达尔文奖”新鲜出炉。</p>\n<p style=\"text-indent: 2em;\">大奖冠军得主是韩国大田市的一名40岁男子，双腿残疾，靠轮椅代步。2010年8月25日，该男子在一家大型商场购物完毕后，准备乘坐观光电梯下楼。而这时，电梯也正巧停在他所在的楼层，几名乘客陆续走进电梯。该男子见状赶紧滑着轮椅冲向电梯，然而等他到达电梯门口时，电梯门却关上了。</p>\n<p style=\"text-indent: 2em;\">由于只差几秒钟而没赶上电梯，他气得大发雷霆并连续3次用轮椅猛撞电梯门，不料电梯门竟被突然撞开，令毫无防备的他连人带车掉进电梯井活活摔死。</p>\n<p style=\"text-indent: 2em; text-align: center;\"><strong>亚军“亲热”情侣被碾成肉酱</strong></p>\n<p style=\"text-indent: 2em;\">荣获亚军殊荣的是一对来自巴西的情侣。2010年6月的一天清晨6点，这对情侣驾车行驶在连接巴西圣保罗州和里约热内卢州之间的“维亚·达特拉”高速公路上，这条路是巴西最重要、最繁忙的高速公路。然而这对情侣竟一时兴起打算在车内“亲热”一番。随后，他们将车停下来。由于四周浓雾弥漫，他们将车停在道路正中央！正当两名情侣在车中“亲热”时，一辆巨大的货车从后面高速行驶而来，避让不及之下，将这辆汽车撞成废铁。可怜的是，这对情侣也当场被碾成了肉酱。</p>\n<p style=\"text-indent: 2em;\">温蒂感叹称：“这两位做出一个明显愚蠢的决定，而就在他们试图繁殖后代之际，自然选择法则却令他们‘不能繁殖’（即结果自己性命）。”</p>\n<p style=\"text-indent: 2em; text-align: center;\"><strong>季军儿子被“传家宝”炸死</strong></p>\n<p style=\"text-indent: 2em;\">季军得主是罗马尼亚布勒伊拉市一名35岁男子。该男子家中有一个用来夯实花园泥土的夯土器，是他父亲亲手制作，用了近40年。父亲去世后，该男子将它当作“传家宝”珍藏起来。</p>\n<p style=\"text-indent: 2em;\">2010年4月，男子发现夯土器上的金属手柄生锈断掉了，于是找来焊接工具，试图将它和夯土器重新焊到一起。然而这个夯土器实际上是一枚二战加农炮弹！当该男子将金属手柄与夯土器进行焊接时，高温和火花刹那之间引爆了炮弹，随着一声轰天巨响，该男子被炸得当场血肉横飞。</p>\n<p style=\"text-indent: 2em;\">那对车震中死去的情侣真是太经典了，“在正在繁殖中让自己不能繁殖”，听起来像一个悖论。</p>\n<p style=\"text-indent: 2em;\">这看似开玩笑的奖项还有官方网站<a href=\"http://www.darwinawards.com/\">http://www.darwinawards.com/</a>，或者去<a href=\"http://zh.wikipedia.org/zh/%E9%81%94%E7%88%BE%E6%96%87%E7%8D%8E\" target=\"_blank\">维基百科看看这个奖项的相关资料</a>了解下。为人类种群的进化而自己淘汰自己，听起来蛮伟大，哈哈。</p>\n",
@@ -6182,7 +6182,7 @@
         "name": "摄影学习与折腾"
       }
     ],
-    "excerpt": "<p>今天晚上决定不开电脑，安心的看看书，随手拿一本摄影杂志，是本08年6月的《影像视觉》，翻书惊奇的发现上面有我的 &hellip; </p>",
+    "excerpt": "今天晚上决定不开电脑，安心的看看书，随手拿一本摄影杂志，是本08年6月的《影像视觉》，翻书惊奇的发现上面有我的 … ",
     "path": "/2010/12/learning-photography/",
     "featured_media": null,
     "content": "<p>今天晚上决定不开电脑，安心的看看书，随手拿一本摄影杂志，是本08年6月的《影像视觉》，翻书惊奇的发现上面有我的注记，是大学时候留下的。回想那时大学从书本上的来的东西很多一直受用到现在，而毕业后的半年中，虽然几乎每天面对电脑，但似乎并没有记得什么，这更让我认定电脑是一个很好消磨时间的东西。好回今天的主题：翻书看到一篇文章《绝佳17条，风光摄影快速晋级》，文章中很多处验证了我从学习摄影初认同的观点——Simple is Smart.<img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/simple2complex/20101213203310_IMG_001.jpg\" alt=\"20101213203310_IMG_001\" /><!--more--><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/simple2complex/20101213203318_IMG_002.jpg\" alt=\"20101213203318_IMG_002\" /><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/simple2complex/20101213203326_IMG_003.jpg\" alt=\"20101213203326_IMG_003\" /></p>\n<p>仔细对比分析以上的案例，他们通过构图调整、拍摄时机、角度微调达到简洁画面的目的，让画面简洁是拍摄优秀作品行之有效的手段。（图片摘自《影像视觉》08年6月刊36～51页文章）</p>\n<p>简单即智慧。这个观点我最初是从《美国纽约摄影学院教材》中看到的（他原话不是这句）。把照片拍“简单”听起来简单，但尝试起来不容易。初入摄影最大的困惑便是不知如何用取景框界定画面中的元素：哪些该框进来？哪些不该？该从什么方向、角度拍摄？于是取景、构图理所当然成了摄影入门的第一课，当然那之前你还必须了解透彻手上拿的什么玩意儿，呵呵。</p>\n<p>我是从学校图书馆找的一本韩国人写的摄影构图教学书上学习构图的，书中用非常粗的线条画出画面中重要元素，再分析画面构成的方法，描述了各种构图常用概念。我觉得这种方法非常棒！我也一直使用这种方法。但是后来去图书馆再也没找到过这本书。</p>\n<p><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/simple2complex/20101213213632_1.jpg\" alt=\"书扫描4\" /><br />\n在网上看见过这本书的引用，有谁知道书名的，麻烦告诉一个</p>\n<p>利用这种分析构图的方式，去观察分析优秀作品并通过实践，发现画面简洁确实是让作品看起来“不一样”的行之有效的手段。但为什么说不容易，那是因为按下快门前，对于新手有太多问题要考虑，构图、角度微调、画面元素、主体、背景等等。只有多练习多思考，这些东西才能熟练。在我的实践中，于是有了两套以武汉体育学院为题材的建筑和风光照片，其最终作品受到多数观者的肯定。</p>\n<p><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/simple2complex/20101213214144_0006_big.jpg\" alt=\"武汉体育学院-抽象建筑\" /></p>\n<p style=\"text-align: center;\">我自己最喜欢的照片之一，拍摄的晚上篮球场馆的窗子，简单至极吧</p>\n<p style=\"text-align: center;\"><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/simple2complex/20101213214341_0038_big.jpg\" alt=\"武汉体育学院-微缩影像\" /></p>\n<p>我自己最喜欢的照片之一，拍摄的武体东田径场，更多请看<a href=\"http://berlinfilm.net/blog/gallery.asp\" target=\"_blank\">相册</a>的“风景 艺术”分类</p>\n<p>尝到甜头的我，把力求简洁应用到每次拍摄行动中。简洁的画面更容易从繁杂中找出亮点，更容易突出视觉中心，更容易达成普遍的构图美学需求，更容易明了表达意图。直到最近观赏了www.anatol.de上的作品，才意识到“简洁”不仅只是“简”，达到主体突出与内容丰富的平衡才是简洁的更高境界，即内容丰富的繁。</p>\n<p><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/simple2complex/20101213213719_2.jpg\" alt=\"网页截图\" /></p>\n<p style=\"text-align: center;\">网站<a href=\"http://www.anatol.de\" target=\"_blank\">www.anatol.de</a>的汽车、风景和人物照真是亮眼</p>\n<p>学习由简至繁，摄影是一样的道理。很眼馋<a href=\"http://www.anatol.de/\" target=\"_blank\">www.anatol.de</a>上这位德国摄影师的作品吧？不急，我们先从简单的开始！</p>\n<p>最后强烈推荐几本书：《美国纽约摄影教材》、《美国新闻摄影教程》、那本韩国构图书、《影像视觉》杂志、《摄影之友》杂志。还有，少上网，多看书。</p>\n",
@@ -6219,7 +6219,7 @@
         "name": "折腾随想"
       }
     ],
-    "excerpt": "<p>今天周六，跟爸爸还有几个亲戚去给爷爷上坟，到猇亭的水晶山陵园。这是我第一次来，爷爷去世的时候都没有通知我回来。 &hellip; </p>",
+    "excerpt": "今天周六，跟爸爸还有几个亲戚去给爷爷上坟，到猇亭的水晶山陵园。这是我第一次来，爷爷去世的时候都没有通知我回来。 … ",
     "path": "/2010/12/grandfather/",
     "featured_media": null,
     "content": "<p><img alt=\"给爷爷上坟\" src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20101212214812_DSC_0004.jpg\"/></p>\n<p>今天周六，跟爸爸还有几个亲戚去给爷爷上坟，到猇亭的水晶山陵园。这是我第一次来，爷爷去世的时候都没有通知我回来。</p>\n<p>上坟扫墓无非是炸鞭、烧纸、磕头，我第一个点上香、磕头，然后就站在旁边看别人重复这些动作，姑姑从包里拿出一封信，是妹妹写给爷爷的，妹妹今天上学没来，看着这些我一直很平静。爸爸去磕头的时候，他低着头用手抹了一下眼睛，擤一下鼻子。看到这一瞬，我一下忍不住，眼睛酸楚起来。我从来没见过我爸爸流眼泪，就算是皮开肉绽、摔断骨头了也照样雷打不动。我眼含泪水站在旁边看，想了很多内容，那些是我小妹妹所不懂的，她只在我旁边奇怪的看我。爷爷，走好。</p>\n",
@@ -6241,7 +6241,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>今天下班回家开电脑，竟然“欢迎”画面后就黑屏了，重启问题依旧，马上觉得问题不小了，因为即使是我3年前买的笔记本 &hellip; </p>",
+    "excerpt": "今天下班回家开电脑，竟然“欢迎”画面后就黑屏了，重启问题依旧，马上觉得问题不小了，因为即使是我3年前买的笔记本 … ",
     "path": "/2010/12/bad-hdd/",
     "featured_media": null,
     "content": "<p><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20101211193858_err.jpg\" alt=\"西数绿盘挂了\" /></p>\n<p>今天下班回家开电脑，竟然“欢迎”画面后就黑屏了，重启问题依旧，马上觉得问题不小了，因为即使是我3年前买的笔记本电脑安装Win7操作系统也没有出现过这种问题，基于对Win7的完全信任初步判定应该是硬件问题了……</p>\n<p>等终于倒腾进系统马上开HD Tune，果然“当前待映射扇区数”为1，说我硬盘已经是不稳定状态。当初买这个西数1TB绿盘有朋友就说不行，但是图便宜量足还是买了，现在后悔啊，累计通电数才566小时就开始悲剧发生。</p>\n<p>第二天继续倒腾，查网上好多办法都试过，最后是用MHDD检测了出问题的扇区，然后把这个扇区附近填零，把之前ghost的C盘分区备份重新恢复回去（这垃圾盘，ghost备份分区速度只有540MB/min），问题暂时解决，看来只是逻辑坏区，但是有部分系统文件损坏，Windows Defender也打不开。平白无故的出现坏区还开不了机，这硬盘不敢用了，还是老实搞个经搞的去……</p>\n",
@@ -6273,7 +6273,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>上周末把QQ签名改成网址了，两天有不少朋友（其实……呵呵）给QQ留言并提出了宝贵的意见：按钮声音过大；载入状态 &hellip; </p>",
+    "excerpt": "上周末把QQ签名改成网址了，两天有不少朋友（其实……呵呵）给QQ留言并提出了宝贵的意见：按钮声音过大；载入状态 … ",
     "path": "/2010/11/suggestion/",
     "featured_media": null,
     "content": "<p>上周末把QQ签名改成网址了，两天有不少朋友（其实……呵呵）给QQ留言并提出了宝贵的意见：按钮声音过大；载入状态提示不清楚；载入时间过长；背景色太多；尺寸过大首屏显示不下……看见朋友们的提议真是很开心，我会来慢慢的改进来做的更好。</p>\n<p>网站的框架构建已经到一定阶段，决定“一期工程”就此结束，接下来工作重点转移到内容建设。分享一句话：“在影像化工作里，知道何时停止揣摩一个意念，和为一个电影段落设计镜头，是同样重要的事。”借用到这里，现在是时候暂时停止揣摩，进行下一步了。</p>\n<p>心情大好，哈哈，给自己加油，上一张照片，拍摄于湖北宜昌滨江公园傍晚时间。拍摄时候使用了橙色渐变滤镜。</p>\n<p><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20101130210832.jpg\" alt=\"宁静\" /></p>\n",
@@ -6310,7 +6310,7 @@
         "name": "计算机与网络"
       }
     ],
-    "excerpt": "<p>今天网站备案终于批下来了，算网站可以合法的启用，呵呵，但是要正式开放还有很多要做到，网站的首页Flash相册基 &hellip; </p>",
+    "excerpt": "今天网站备案终于批下来了，算网站可以合法的启用，呵呵，但是要正式开放还有很多要做到，网站的首页Flash相册基 … ",
     "path": "/2010/11/record/",
     "featured_media": null,
     "content": "<p>今天网站备案终于批下来了，算网站可以合法的启用，呵呵，但是要正式开放还有很多要做到，网站的首页Flash相册基本框架搭建完毕，后面填充内容才是重点。</p>\n<p><img src=\"https://archived-blog.berlinchan.com/wp-content/uploads/2016/05/gallery/old_blog_file/20101125132258_1.jpg\" alt=\"相册\" /></p>\n<p>网站作用主要在于陈列陈柏林这个人的摄影、影片、CG作品，建立blog为了给自己找个地方记录自己的成长足迹，更希望通过这个窗口认识更多朋友。</p>\n<p>网站域名BerlinFilm.Net是Berlin（我的名字）加上Film（影片）而来的，为什么使用了Film单词而不是Photo或者Foto，因为我想做的事情不仅是摄影，我也喜欢CG、动画、视觉特效，也向往拍摄影片，我喜欢研究一切让视觉为之一振的东西，当然是从做摄影开始的，往后希望学习和发展到视觉的更多领域……</p>\n<p>网站首页Flash相册主体采用<a href=\"http://china.templatemonster.com/\" target=\"_blank\">TemplateMonster</a>的一款模板，二次工程而成，而blog部分直接采用的<a href=\"http://www.pjhome.net/\" target=\"_blank\">PJblog</a>程序。</p>\n",
