@@ -18,12 +18,6 @@
       &:focus {
         color: $color-primary;
       }
-
-      &--disable {
-        pointer-events: none;
-        color: lighten($color-gray, 20%);
-      }
-
     }
 
   }
@@ -41,12 +35,6 @@
       &:focus {
         color: $color-primary;
       }
-
-      &--disable {
-        pointer-events: none;
-        color: lighten($color-gray, 20%);
-      }
-
     }
 
   }

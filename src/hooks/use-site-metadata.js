@@ -22,6 +22,7 @@ const useSiteMetadata = () => {
               path
             }
             url
+            archivedBlogUrl
             title
             subtitle
             copyright

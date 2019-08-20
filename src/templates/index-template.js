@@ -3,11 +3,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Sidebar from '../components/Sidebar'
 import Feed from '../components/Feed'
-import FeedWordpress from '../components/FeedWordpress'
+import FeedArchivedBlog from '../components/FeedArchivedBlog'
 import Page from '../components/Page'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
-import archivedWordpressData from '../utils/archived-wordpress-data'
 
 const IndexTemplate = ({ data, pageContext }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
@@ -39,7 +38,7 @@ const IndexTemplate = ({ data, pageContext }) => {
         {!hasNextPage ? <Fragment>
           <hr/>
           <div>2019年8月之前的文章，从 Wordpress 迁移来</div>
-          <FeedWordpress edges={archivedWordpressData.allWordpressPost.edges}/>
+          <FeedArchivedBlog edges={data.allWordpressPostJson.edges}/>
         </Fragment> : null}
       </Page>
     </Layout>
@@ -65,6 +64,20 @@ export const query = graphql`
             date
             category
             description
+          }
+        }
+      }
+    }
+    allWordpressPostJson {
+      edges {
+        node {
+          date
+          excerpt
+          path
+          title
+          categories {
+            name
+            path
           }
         }
       }
