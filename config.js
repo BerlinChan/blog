@@ -2,18 +2,17 @@ module.exports = {
   url: 'https://www.berlinchan.com/',
   archivedBlogUrl: 'https://archived-blog.berlinchan.com',
   pathPrefix: '/',
-  title: '陈柏林',
+  title: '陈柏林的 Blog',
   subtitle: '',
   copyright: '',
-  postsPerPage: 4,
+  postsPerPage: 8,
   googleAnalyticsId: 'UA-73379983-2',
   disqusShortname: 'berlinchan',
-  useKatex: false,
   menu: [
     {
       label: '文章',
       path: '/',
-      // 前端 影片 摄影 钢琴
+      // 前端 小玩意 观点 短片 摄影 旅游 文化
     },
     {
       label: '作品',

@@ -1,9 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styles from './Layout.module.scss'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import Container from '@material-ui/core/Container'
+// import styles from './Layout.module.scss'
 
 const Layout = ({ children, title, description }) => (
-  <div className={styles.layout}>
+  <React.Fragment>
+    <CssBaseline/>
     <Helmet>
       <html lang="zh-Hans"/>
       <title>{title}</title>
@@ -12,8 +15,10 @@ const Layout = ({ children, title, description }) => (
       <meta name="twitter:card" content="summary"/>
       <meta name="twitter:title" content={title}/>
     </Helmet>
-    {children}
-  </div>
+    <Container maxWidth="lg">
+      {children}
+    </Container>
+  </React.Fragment>
 )
 
 export default Layout

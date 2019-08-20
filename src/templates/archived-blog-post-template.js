@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Post from '../components/Post'
 import { useSiteMetadata } from '../hooks'
 
 const PostTemplate = ({ data }) => {
