@@ -1,7 +1,6 @@
 const path = require('path')
 const _ = require('lodash')
-const createCategoriesPages = require(
-  './pagination/create-categories-pages.js')
+const createCategoriesPages = require('./pagination/create-categories-pages.js')
 const createTagsPages = require('./pagination/create-tags-pages.js')
 const createPostsPages = require('./pagination/create-posts-pages.js')
 

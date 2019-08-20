@@ -11,7 +11,7 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
       <div dangerouslySetInnerHTML={{ __html: data.wordpressPostJson.content }}/>
-      <div><a href={`${archivedBlogUrl}${path}`}>原 Wordpress 存档页</a></div>
+      <div><a href={`${archivedBlogUrl}${path}`}>原始存档页</a></div>
     </Layout>
   )
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
-import SearchIcon from '@material-ui/icons/Search'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
@@ -17,6 +16,8 @@ import Divider from '@material-ui/core/Divider'
 import Container from '@material-ui/core/Container'
 import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
+import SvgIcon from '@material-ui/core/SvgIcon'
+import Icons from '../constants/icons'
 
 function Copyright () {
   const { url: siteUrl } = useSiteMetadata()
@@ -174,7 +175,9 @@ export default () => {
           {siteTitle}
         </Typography>
         <IconButton>
-          <SearchIcon/>
+          <SvgIcon>
+            <Icons/>
+          </SvgIcon>
         </IconButton>
         <Button variant="outlined" size="small">
           Sign up

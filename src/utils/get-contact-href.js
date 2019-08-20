@@ -1,25 +1,16 @@
 const getContactHref = (name, contact) => {
-  let href
-
   switch (name) {
     case 'twitter':
-      href = `https://www.twitter.com/${contact}`
-      break
+      return `https://www.twitter.com/${contact}`
     case 'github':
-      href = `https://github.com/${contact}`
-      break
+      return `https://github.com/${contact}`
     case 'telegram':
-      href = `https://t.me/${contact}`
-      break
+      return `https://t.me/${contact}`
     case 'email':
-      href = `mailto:${contact}`
-      break
+      return `mailto:${contact}`
     default:
-      href = contact
-      break
+      return contact
   }
-
-  return href
 }
 
 export default getContactHref
