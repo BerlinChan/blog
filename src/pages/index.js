@@ -1,6 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import Layout from '../components/Layout'
+import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
+import Avatar from '@material-ui/core/Avatar'
 import IconButton from '@material-ui/core/IconButton'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
@@ -14,10 +17,9 @@ import Link from '@material-ui/core/Link'
 import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
 import Container from '@material-ui/core/Container'
-import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
-import SvgIcon from '@material-ui/core/SvgIcon'
-import Icons from '../constants/icons'
+import SvgIcons from '../assets/SvgIcons'
+import { withPrefix, Link as GatsbyLink } from 'gatsby'
 
 function Copyright () {
   const { url: siteUrl } = useSiteMetadata()
@@ -41,6 +43,9 @@ function Copyright () {
 }
 
 const useStyles = makeStyles(theme => ({
+  snsIcon: {
+    marginRight: theme.spacing(1),
+  },
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
@@ -154,49 +159,54 @@ const archives = [
   'April 2019',
 ]
 
-const social = ['GitHub', 'Twitter', 'Facebook']
-
 export default () => {
   const classes = useStyles()
-  const { title: siteTitle } = useSiteMetadata()
+  const { title: siteTitle, author: { contacts, photo } } = useSiteMetadata()
+  const social = ['twitter', 'wechat', 'youtube', 'github', 'facebook']
 
   return (
     <Layout title={siteTitle}>
-      <Toolbar className={classes.toolbar}>
-        <Button size="small">Subscribe</Button>
-        <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          className={classes.toolbarTitle}
-        >
-          {siteTitle}
-        </Typography>
-        <IconButton>
-          <SvgIcon>
-            <Icons/>
-          </SvgIcon>
-        </IconButton>
-        <Button variant="outlined" size="small">
-          Sign up
-        </Button>
-      </Toolbar>
-      <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-        {sections.map(section => (
-          <Link
+      <AppBar color={'default'}>
+        <Toolbar className={classes.toolbar}>
+          <Avatar alt="Berlin" src={withPrefix(photo)}/>
+          <Typography
+            component="h2"
+            variant="h5"
             color="inherit"
+            align="center"
             noWrap
-            key={section}
-            variant="body2"
-            href="#"
-            className={classes.toolbarLink}
+            className={classes.toolbarTitle}
           >
-            {section}
-          </Link>
-        ))}
-      </Toolbar>
+            {siteTitle}
+          </Typography>
+          <IconButton className={classes.snsIcon} href={contacts.twitter}>
+            <SvgIcons name={'twitter'}/>
+          </IconButton>
+          <IconButton className={classes.snsIcon} href={contacts.youtube}>
+            <SvgIcons name={'youtube'}/>
+          </IconButton>
+          <IconButton className={classes.snsIcon} href={contacts.facebook}>
+            <SvgIcons name={'facebook'}/>
+          </IconButton>
+          <IconButton className={classes.snsIcon} href={contacts.github}>
+            <SvgIcons name={'github'}/>
+          </IconButton>
+        </Toolbar>
+        <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
+          {sections.map(section => (
+            <Link
+              color="inherit"
+              noWrap
+              key={section}
+              variant="body2"
+              href="#"
+              className={classes.toolbarLink}
+            >
+              {section}
+            </Link>
+          ))}
+        </Toolbar>
+      </AppBar>
       <main>
         {/* Main featured post */}
         <Paper className={classes.mainFeaturedPost}>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { getContactHref } from '../../../utils'
 import styles from './Author.module.scss'
 import { useSiteMetadata } from '../../../hooks'
 
@@ -12,7 +11,7 @@ const Author = () => {
         {author.bio}
         <a
           className={styles['author__bio-twitter']}
-          href={getContactHref('twitter', author.contacts.twitter)}
+          href={author.contacts.twitter}
           rel="noopener noreferrer"
           target="_blank"
         >

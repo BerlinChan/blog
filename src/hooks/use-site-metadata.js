@@ -14,6 +14,8 @@ const useSiteMetadata = () => {
                 email
                 twitter
                 github
+                facebook
+                youtube
                 rss
               }
             }
