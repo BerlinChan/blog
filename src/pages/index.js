@@ -43,6 +43,9 @@ function Copyright () {
 }
 
 const useStyles = makeStyles(theme => ({
+  avatar: {
+    marginRight: theme.spacing(2),
+  },
   snsIcon: {
     marginRight: theme.spacing(1),
   },
@@ -166,31 +169,20 @@ export default () => {
 
   return (
     <Layout title={siteTitle}>
-      <AppBar color={'default'}>
+      <AppBar color={'default'} position={'absolute'}>
         <Toolbar className={classes.toolbar}>
-          <Avatar alt="Berlin" src={withPrefix(photo)}/>
+          <Avatar alt="Berlin" src={withPrefix(photo)} className={classes.avatar}/>
           <Typography
             component="h2"
             variant="h5"
             color="inherit"
-            align="center"
+            align="left"
             noWrap
             className={classes.toolbarTitle}
           >
             {siteTitle}
           </Typography>
-          <IconButton className={classes.snsIcon} href={contacts.twitter}>
-            <SvgIcons name={'twitter'}/>
-          </IconButton>
-          <IconButton className={classes.snsIcon} href={contacts.youtube}>
-            <SvgIcons name={'youtube'}/>
-          </IconButton>
-          <IconButton className={classes.snsIcon} href={contacts.facebook}>
-            <SvgIcons name={'facebook'}/>
-          </IconButton>
-          <IconButton className={classes.snsIcon} href={contacts.github}>
-            <SvgIcons name={'github'}/>
-          </IconButton>
+
         </Toolbar>
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
           {sections.map(section => (
@@ -315,6 +307,23 @@ export default () => {
       </main>
       <footer className={classes.footer}>
         <Container maxWidth="lg">
+          <Layout>
+            <IconButton className={classes.snsIcon} href={contacts.twitter} target="_blank" rel="noopener">
+              <SvgIcons name={'twitter'}/>
+            </IconButton>
+            <IconButton className={classes.snsIcon} href={contacts.youtube} target="_blank" rel="noopener">
+              <SvgIcons name={'youtube'}/>
+            </IconButton>
+            <IconButton className={classes.snsIcon} href={contacts.facebook} target="_blank" rel="noopener">
+              <SvgIcons name={'facebook'}/>
+            </IconButton>
+            <IconButton className={classes.snsIcon} href={contacts.github} target="_blank" rel="noopener">
+              <SvgIcons name={'github'}/>
+            </IconButton>
+            <IconButton className={classes.snsIcon}>
+              <SvgIcons name={'wechat'}/>
+            </IconButton>
+          </Layout>
           <Typography variant="h6" align="center" gutterBottom>
             Footer
           </Typography>
