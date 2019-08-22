@@ -7,9 +7,9 @@ import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import deepOrange from '@material-ui/core/colors/deepOrange'
 import amber from '@material-ui/core/colors/amber'
-import Header from '../Header'
-import Footer from '../Footer'
-import ScrollTop from '../ScrollTop'
+import Header from './Header'
+import Footer from './Footer'
+import ScrollTop from './ScrollTop'
 
 const theme = createMuiTheme({
   palette: {
@@ -32,7 +32,7 @@ const Layout = ({ children, title, description }) => (
       </Helmet>
       <Header/>
       <Container maxWidth="lg">
-        <Box my={2}>
+        <Box my={3}>
           {children}
         </Box>
         <Footer/>

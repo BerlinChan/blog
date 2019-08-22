@@ -6,7 +6,11 @@ import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
 import Slide from '@material-ui/core/Slide'
-import { useSiteMetadata } from '../../hooks'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import Hidden from '@material-ui/core/Hidden'
+import Menu from '../Menu'
+import { useSiteMetadata } from '../../../hooks'
 import { withPrefix, Link as GatsbyLink } from 'gatsby'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger/useScrollTrigger'
 
@@ -24,27 +28,29 @@ const useStyles = makeStyles(theme => ({
       textDecoration: 'none',
     },
   },
-  toolbarLink: {
-    padding: theme.spacing(1),
-    flexShrink: 0,
-  },
 }))
 const HideOnScroll = (props) => {
   const { children } = props
   const trigger = useScrollTrigger({
     threshold: 400,
   })
+  const triggerElevation = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+  })
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
-      {children}
+      {React.cloneElement(children, {
+        elevation: triggerElevation ? 4 : 0,
+      })}
     </Slide>
   )
 }
 
 export default (props) => {
   const classes = useStyles()
-  const { title: siteTitle, author: { name, photo }, menu } = useSiteMetadata()
+  const { title: siteTitle, author: { name, photo } } = useSiteMetadata()
 
   return (
     <React.Fragment>
@@ -59,18 +65,14 @@ export default (props) => {
                 {siteTitle}
               </Typography>
             </Link>
-            {menu.map((item, index) => (
-              <React.Fragment key={index}>
-                {item.path ?
-                  <Link component={GatsbyLink} color="inherit" noWrap variant="body1" className={classes.toolbarLink}
-                        to={item.path}>
-                    {item.label}
-                  </Link>
-                  : <Link color="inherit" noWrap variant="body1" className={classes.toolbarLink}
-                          target={'_blank'} rel="noopener" href={item.link}>
-                    {item.label}
-                  </Link>}
-              </React.Fragment>))}
+            <Hidden smDown>
+              <Menu/>
+            </Hidden>
+            <Hidden mdUp>
+              <IconButton edge="end" color="inherit" aria-label="menu">
+                <MenuIcon/>
+              </IconButton>
+            </Hidden>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

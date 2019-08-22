@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/Link'
-import { useSiteMetadata } from '../../hooks'
-import SvgIcons from '../../assets/SvgIcons'
+import { useSiteMetadata } from '../../../hooks'
+import SvgIcons from '../../../assets/SvgIcons'
 import { Link as GatsbyLink } from 'gatsby'
 
 const useStyles = makeStyles(theme => ({
