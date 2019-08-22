@@ -32,7 +32,7 @@ module.exports = {
     },
   ],
   author: {
-    name: '',
+    name: '陈柏林',
     photo: '/photo.jpg',
     bio: '前端开发工程师、摄影师，理想主义与黑客精神',
     contacts: {

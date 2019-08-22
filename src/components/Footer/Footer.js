@@ -59,7 +59,7 @@ export default () => {
         <Grid item xs={12} md={4}>
           <Typography variant="body2" color="textSecondary">
             <Link color="inherit" href={siteUrl}>
-              www.berlinchan.com
+              www.BerlinChan.com
             </Link>
             {' 基于 '}
             <Link color="inherit" href="https://www.gatsbyjs.org/" target="_blank" rel="noopener">Gatsby</Link>
