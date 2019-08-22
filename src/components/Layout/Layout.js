@@ -2,7 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Container from '@material-ui/core/Container'
-// import styles from './Layout.module.scss'
+import Header from '../Header'
+import Footer from '../Footer'
 
 const Layout = ({ children, title, description }) => (
   <React.Fragment>
@@ -15,8 +16,10 @@ const Layout = ({ children, title, description }) => (
       <meta name="twitter:card" content="summary"/>
       <meta name="twitter:title" content={title}/>
     </Helmet>
+    <Header/>
     <Container maxWidth="lg">
       {children}
+      <Footer/>
     </Container>
   </React.Fragment>
 )

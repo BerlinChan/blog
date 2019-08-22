@@ -6,12 +6,11 @@ import { useSiteMetadata, useCategoriesList } from '../../hooks'
 
 const Menu = ({ menu }) => {
 
-  return  <ul>
+  return <ul>
     {menu.map((item) => (
       <li key={item.path}>
         <Link component={GatsbyLink}
-              to={item.path}
-        >
+              to={item.path}>
           {item.label}
         </Link>
       </li>

@@ -11,25 +11,19 @@ module.exports = {
   menu: [
     {
       label: '文章',
-      path: '/',
+      path: '/page/0',
       // 前端 小玩意 观点 短片 摄影 旅游 文化
     },
     {
-      label: '作品',
-      path: '/',
-      children: [
-        {
-          label: '自由的家猫',
-          link: 'https://www.awildpetcat.com/',
-        },
-        {
-          label: '旧站博物馆',
-          link: 'https://museum.berlinchan.com/',
-        },
-      ],
+      label: '自由的家猫',
+      link: 'https://www.awildpetcat.com/',
     },
     {
-      label: '关于我',
+      label: '旧站博物馆',
+      link: 'https://museum.berlinchan.com/',
+    },
+    {
+      label: '关于',
       path: '/pages/about',
     },
     {

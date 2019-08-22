@@ -1,10 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Layout from '../components/Layout'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Avatar from '@material-ui/core/Avatar'
-import IconButton from '@material-ui/core/IconButton'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
@@ -14,55 +10,10 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/Link'
-import Button from '@material-ui/core/Button'
 import Divider from '@material-ui/core/Divider'
-import Container from '@material-ui/core/Container'
 import { useSiteMetadata } from '../hooks'
-import SvgIcons from '../assets/SvgIcons'
-import { withPrefix, Link as GatsbyLink } from 'gatsby'
-
-function Copyright () {
-  const { url: siteUrl } = useSiteMetadata()
-
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href={siteUrl}>
-        www.berlinchan.com
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'. Built with '}
-      <Link color="inherit" href="https://www.gatsbyjs.org/" target="_blank" rel="noopener">
-        Gatsby
-      </Link> {' and '}
-      <Link color="inherit" href="https://material-ui.com/" target="_blank" rel="noopener">
-        Material-UI
-      </Link>.
-    </Typography>
-  )
-}
 
 const useStyles = makeStyles(theme => ({
-  avatar: {
-    marginRight: theme.spacing(2),
-  },
-  snsIcon: {
-    marginRight: theme.spacing(1),
-  },
-  toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
-  toolbarTitle: {
-    flex: 1,
-  },
-  toolbarSecondary: {
-    justifyContent: 'space-between',
-    overflowX: 'auto',
-  },
-  toolbarLink: {
-    padding: theme.spacing(1),
-    flexShrink: 0,
-  },
   mainFeaturedPost: {
     position: 'relative',
     backgroundColor: theme.palette.grey[800],
@@ -112,25 +63,7 @@ const useStyles = makeStyles(theme => ({
   sidebarSection: {
     marginTop: theme.spacing(3),
   },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing(8),
-    padding: theme.spacing(6, 0),
-  },
 }))
-
-const sections = [
-  'Technology',
-  'Design',
-  'Culture',
-  'Business',
-  'Politics',
-  'Opinion',
-  'Science',
-  'Health',
-  'Style',
-  'Travel',
-]
 
 const featuredPosts = [
   {
@@ -146,7 +79,6 @@ const featuredPosts = [
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
   },
 ]
-
 const archives = [
   'March 2020',
   'February 2020',
@@ -164,43 +96,12 @@ const archives = [
 
 export default () => {
   const classes = useStyles()
-  const { title: siteTitle, author: { contacts, photo } } = useSiteMetadata()
+  const { title: siteTitle } = useSiteMetadata()
   const social = ['twitter', 'wechat', 'youtube', 'github', 'facebook']
 
   return (
     <Layout title={siteTitle}>
-      <AppBar color={'default'} position={'absolute'}>
-        <Toolbar className={classes.toolbar}>
-          <Avatar alt="Berlin" src={withPrefix(photo)} className={classes.avatar}/>
-          <Typography
-            component="h2"
-            variant="h5"
-            color="inherit"
-            align="left"
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            {siteTitle}
-          </Typography>
-
-        </Toolbar>
-        <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-          {sections.map(section => (
-            <Link
-              color="inherit"
-              noWrap
-              key={section}
-              variant="body2"
-              href="#"
-              className={classes.toolbarLink}
-            >
-              {section}
-            </Link>
-          ))}
-        </Toolbar>
-      </AppBar>
       <main>
-        {/* Main featured post */}
         <Paper className={classes.mainFeaturedPost}>
           {/* Increase the priority of the hero background image */}
           {
@@ -228,8 +129,6 @@ export default () => {
             </Grid>
           </Grid>
         </Paper>
-        {/* End main featured post */}
-        {/* Sub featured posts */}
         <Grid container spacing={4} className={classes.cardGrid}>
           {featuredPosts.map(post => (
             <Grid item key={post.title} xs={12} md={6}>
@@ -263,7 +162,6 @@ export default () => {
             </Grid>
           ))}
         </Grid>
-        {/* End sub featured posts */}
         <Grid container spacing={5} className={classes.mainGrid}>
           {/* Main content */}
           <Grid item xs={12} md={8}>
@@ -305,34 +203,6 @@ export default () => {
           {/* End sidebar */}
         </Grid>
       </main>
-      <footer className={classes.footer}>
-        <Container maxWidth="lg">
-          <Layout>
-            <IconButton className={classes.snsIcon} href={contacts.twitter} target="_blank" rel="noopener">
-              <SvgIcons name={'twitter'}/>
-            </IconButton>
-            <IconButton className={classes.snsIcon} href={contacts.youtube} target="_blank" rel="noopener">
-              <SvgIcons name={'youtube'}/>
-            </IconButton>
-            <IconButton className={classes.snsIcon} href={contacts.facebook} target="_blank" rel="noopener">
-              <SvgIcons name={'facebook'}/>
-            </IconButton>
-            <IconButton className={classes.snsIcon} href={contacts.github} target="_blank" rel="noopener">
-              <SvgIcons name={'github'}/>
-            </IconButton>
-            <IconButton className={classes.snsIcon}>
-              <SvgIcons name={'wechat'}/>
-            </IconButton>
-          </Layout>
-          <Typography variant="h6" align="center" gutterBottom>
-            Footer
-          </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Something here to give the footer a purpose!
-          </Typography>
-          <Copyright/>
-        </Container>
-      </footer>
     </Layout>
   )
 }
