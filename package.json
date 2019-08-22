@@ -25,9 +25,9 @@
     "disqus"
   ],
   "dependencies": {
-    "@material-ui/core": "^4.3.2",
+    "@material-ui/core": "^4.3.3",
     "@material-ui/icons": "^4.2.1",
-    "@material-ui/styles": "^4.3.0",
+    "@material-ui/styles": "^4.3.3",
     "classnames": "^2.2.6",
     "gatsby": "^2.13.75",
     "gatsby-link": "^2.2.7",
