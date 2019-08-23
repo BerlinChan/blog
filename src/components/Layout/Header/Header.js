@@ -6,10 +6,9 @@ import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
 import Slide from '@material-ui/core/Slide'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
 import Hidden from '@material-ui/core/Hidden'
 import Menu from '../Menu'
+import MenuDraw from '../MenuDraw'
 import { useSiteMetadata } from '../../../hooks'
 import { withPrefix, Link as GatsbyLink } from 'gatsby'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger/useScrollTrigger'
@@ -69,9 +68,7 @@ export default (props) => {
               <Menu/>
             </Hidden>
             <Hidden mdUp>
-              <IconButton edge="end" color="inherit" aria-label="menu">
-                <MenuIcon/>
-              </IconButton>
+              <MenuDraw/>
             </Hidden>
           </Toolbar>
         </AppBar>

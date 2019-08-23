@@ -129,7 +129,7 @@ export default () => {
             </Grid>
           </Grid>
         </Paper>
-        <Grid container spacing={4} className={classes.cardGrid}>
+        <Grid container spacing={4}>
           {featuredPosts.map(post => (
             <Grid item key={post.title} xs={12} md={6}>
               <CardActionArea component="a" href="#">
