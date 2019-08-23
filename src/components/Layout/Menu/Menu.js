@@ -9,12 +9,11 @@ import { makeStyles } from '@material-ui/core'
 import kebabCase from 'lodash/kebabCase'
 
 const useStyles = makeStyles(theme => ({
-  menuList: {
+  menuDropdown: {
     width: 200,
   },
   toolbarLink: {
     padding: theme.spacing(1),
-    flexShrink: 0,
   },
   activeLink: {
     color: theme.palette.action.active
@@ -42,7 +41,7 @@ export default () => {
              onClose={handleArticleMenuClose}
              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
              transformOrigin={{ vertical: 'top', horizontal: 'left' }}>
-      <MenuList onMouseLeave={handleArticleMenuClose} className={classes.menuList}>
+      <MenuList onMouseLeave={handleArticleMenuClose} className={classes.menuDropdown}>
         {categories.map((category, index) => <MenuItem key={index}>
           <Link to={`/category/${kebabCase(category.fieldValue)}/`} noWrap>
             {category.fieldValue}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
+import Box from '@material-ui/core/Box'
 import Toolbar from '@material-ui/core/Toolbar'
 import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
@@ -16,16 +17,19 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger/useScrollTrigge
 const useStyles = makeStyles(theme => ({
   avatar: {
     marginRight: theme.spacing(2),
-    flexShrink: 0,
   },
-  toolbar: {},
+  toolbar: {
+    borderBottom: `1px solid ${theme.palette.divider}`,
+  },
   toolbarTitle: {
     color: theme.palette.primary.main,
-    flex: 1,
     '&:hover': {
       color: theme.palette.primary.main,
       textDecoration: 'none',
     },
+  },
+  toolbarMenu: {
+    marginLeft: 'auto',
   },
 }))
 const HideOnScroll = (props) => {
@@ -64,12 +68,14 @@ export default (props) => {
                 {siteTitle}
               </Typography>
             </Link>
-            <Hidden smDown>
-              <Menu/>
-            </Hidden>
-            <Hidden mdUp>
-              <MenuDraw/>
-            </Hidden>
+            <Box className={classes.toolbarMenu}>
+              <Hidden smDown>
+                <Menu/>
+              </Hidden>
+              <Hidden mdUp>
+                <MenuDraw/>
+              </Hidden>
+            </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

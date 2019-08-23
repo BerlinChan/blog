@@ -1,6 +1,8 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import { Link as GatsbyLink, graphql } from 'gatsby'
+import { useSiteMetadata } from '../hooks'
 import Layout from '../components/Layout'
+import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
@@ -11,7 +13,6 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/Link'
 import Divider from '@material-ui/core/Divider'
-import { useSiteMetadata } from '../hooks'
 
 const useStyles = makeStyles(theme => ({
   mainFeaturedPost: {
@@ -94,7 +95,7 @@ const archives = [
   'April 2019',
 ]
 
-export default () => {
+export default ({ data }) => {
   const classes = useStyles()
   const { title: siteTitle } = useSiteMetadata()
   const social = ['twitter', 'wechat', 'youtube', 'github', 'facebook']
@@ -132,7 +133,7 @@ export default () => {
         <Grid container spacing={4}>
           {featuredPosts.map(post => (
             <Grid item key={post.title} xs={12} md={6}>
-              <CardActionArea component="a" href="#">
+              <CardActionArea component={GatsbyLink} to="#">
                 <Card className={classes.card}>
                   <div className={classes.cardDetails}>
                     <CardContent>
@@ -163,7 +164,6 @@ export default () => {
           ))}
         </Grid>
         <Grid container spacing={5} className={classes.mainGrid}>
-          {/* Main content */}
           <Grid item xs={12} md={8}>
             <Typography variant="h6" gutterBottom>
               From the Firehose
@@ -171,8 +171,6 @@ export default () => {
             <Divider/>
             {[].map(post => null)}
           </Grid>
-          {/* End main content */}
-          {/* Sidebar */}
           <Grid item xs={12} md={4}>
             <Paper elevation={0} className={classes.sidebarAboutBox}>
               <Typography variant="h6" gutterBottom>
@@ -200,9 +198,20 @@ export default () => {
               </Link>
             ))}
           </Grid>
-          {/* End sidebar */}
         </Grid>
       </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(filter: {frontmatter: {featured: {eq: true}}}) {
+      edges {
+        node {
+          id
+        }
+      }
+    }
+  }
+`
