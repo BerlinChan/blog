@@ -5,12 +5,12 @@ import { useSiteMetadata } from '../hooks'
 
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
-  const { title: postTitle, excerpt: postDescription, path } = data.wordpressPostJson
+  const { title: postTitle, excerpt: postDescription, path } = data.archivedBlogPostJson
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
-      <div dangerouslySetInnerHTML={{ __html: data.wordpressPostJson.content }}/>
+      <div dangerouslySetInnerHTML={{ __html: data.archivedBlogPostJson.content }}/>
       <div><a href={`${archivedBlogUrl}${path}`}>原始存档页</a></div>
     </Layout>
   )
@@ -18,7 +18,7 @@ const PostTemplate = ({ data }) => {
 
 export const query = graphql`
   query PostByPath($slug: String!) {
-    wordpressPostJson(path: {eq: $slug}) {
+    archivedBlogPostJson(path: {eq: $slug}) {
       categories {
         path
         name

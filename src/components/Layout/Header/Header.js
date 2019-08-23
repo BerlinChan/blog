@@ -31,6 +31,9 @@ const useStyles = makeStyles(theme => ({
   toolbarMenu: {
     marginLeft: 'auto',
   },
+  toolbarBottom: {
+    marginBottom: theme.spacing(3),
+  },
 }))
 const HideOnScroll = (props) => {
   const { children } = props
@@ -79,7 +82,7 @@ export default (props) => {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-      <Toolbar/>
+      <Toolbar className={classes.toolbarBottom}/>
     </React.Fragment>
   )
 }

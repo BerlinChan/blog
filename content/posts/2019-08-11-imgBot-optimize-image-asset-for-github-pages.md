@@ -5,7 +5,7 @@ template: "post"
 index: false
 featured_media: ''
 draft: false
-slug: "imgBot-optimize-image-asset-for-github-pages-project"
+slug: "/2019/08/imgBot-optimize-image-asset-for-github-pages-project"
 category: "前端"
 tags:
     - "前端"

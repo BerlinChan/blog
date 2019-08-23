@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'
-import styles from './Page.module.scss'
+import Typography from '@material-ui/core/Typography'
+import Box from '@material-ui/core/Box'
 
 const Page = ({ title, children }) => {
   const pageRef = useRef()
@@ -8,16 +9,12 @@ const Page = ({ title, children }) => {
     pageRef.current.scrollIntoView()
   })
 
-  return (
-    <div ref={pageRef} className={styles['page']}>
-      <div className={styles['page__inner']}>
-        {title && <h1 className={styles['page__title']}>{title}</h1>}
-        <div className={styles['page__body']}>
-          {children}
-        </div>
-      </div>
-    </div>
-  )
+  return (<Box ref={pageRef}>
+    {title && <Typography component={'h2'} variant={'h4'} gutterBottom>
+      {title}
+    </Typography>}
+    {children}
+  </Box>)
 }
 
 export default Page

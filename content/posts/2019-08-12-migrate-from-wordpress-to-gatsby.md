@@ -5,7 +5,7 @@ template: "post"
 index: false
 featured_media: ''
 draft: false
-slug: "migrate-from-wordpress-to-gatsby"
+slug: "/2019/08/migrate-from-wordpress-to-gatsby"
 category: "前端"
 tags:
     - "迁移"

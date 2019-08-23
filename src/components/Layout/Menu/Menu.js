@@ -31,7 +31,7 @@ export default () => {
   }
 
   return <React.Fragment>
-    <Link component={GatsbyLink} to={`/categories`} activeClassName={classes.activeLink}
+    <Link component={GatsbyLink} to={`/page`} activeClassName={classes.activeLink}
           color="inherit" noWrap variant="body1" className={classes.toolbarLink}
           aria-haspopup="true" aria-owns={anchorEl ? 'mouse-over-popover' : undefined}
           onMouseEnter={e => setAnchorEl(e.currentTarget)}

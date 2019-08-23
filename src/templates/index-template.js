@@ -1,16 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Sidebar from '../components/Sidebar'
 import Feed from '../components/Feed'
-import FeedArchivedBlog from '../components/FeedArchivedBlog'
 import Page from '../components/Page'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
 
 const IndexTemplate = ({ data, pageContext }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
-
   const {
     currentPage,
     hasNextPage,
@@ -18,15 +15,27 @@ const IndexTemplate = ({ data, pageContext }) => {
     prevPagePath,
     nextPagePath,
   } = pageContext
-
   const { edges } = data.allMarkdownRemark
+  const convertedEdges = data.allArchivedBlogPostJson.edges.map(({ node }) => ({
+    'node': {
+      'fields': {
+        'slug': node.path,
+        'categorySlug': node.categories.path
+      },
+      'frontmatter': {
+        'title': node.title,
+        'date': node.date,
+        'category': node.categories.map(category => category.name).join(','),
+        'description': node.excerpt,
+      }
+    }
+  }))
   const pageTitle = currentPage > 0
     ? `Posts - Page ${currentPage} - ${siteTitle}`
     : siteTitle
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Sidebar isIndex/>
       <Page>
         <Feed edges={edges}/>
         <Pagination
@@ -35,11 +44,6 @@ const IndexTemplate = ({ data, pageContext }) => {
           hasPrevPage={hasPrevPage}
           hasNextPage={hasNextPage}
         />
-        {!hasNextPage ? <Fragment>
-          <hr/>
-          <div>2019年8月之前的文章，从 Wordpress 迁移来</div>
-          <FeedArchivedBlog edges={data.allWordpressPostJson.edges}/>
-        </Fragment> : null}
       </Page>
     </Layout>
   )
@@ -68,7 +72,7 @@ export const query = graphql`
         }
       }
     }
-    allWordpressPostJson {
+    allArchivedBlogPostJson {
       edges {
         node {
           date
