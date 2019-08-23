@@ -94,6 +94,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
+            title: '陈柏林的 RSS Feed',
           }],
       },
     },
