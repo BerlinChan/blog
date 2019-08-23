@@ -1,5 +1,5 @@
 module.exports = {
-  url: 'https://www.berlinchan.com/',
+  url: 'https://blog.berlinchan.com/',
   archivedBlogUrl: 'https://archived-blog.berlinchan.com',
   pathPrefix: '/',
   title: 'Blog',

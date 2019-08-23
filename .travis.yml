@@ -5,7 +5,7 @@ language: node_js
 node_js: stable # 设置相应版本
 
 install:
-  - yarn # 安装
+  - yarn install # 安装
 
 script:
   - yarn run build
@@ -14,8 +14,8 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
+  keep_history: false
   local_dir: public/
-  #fqdn: www.berlinchan.com
+  fqdn: blog.berlinchan.com
   on:
     branch: master
