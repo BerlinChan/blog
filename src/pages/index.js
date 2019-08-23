@@ -13,6 +13,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/Link'
 import Divider from '@material-ui/core/Divider'
+import Sidebar from '../components/Sidebar'
 
 const useStyles = makeStyles(theme => ({
   mainFeaturedPost: {
@@ -57,13 +58,6 @@ const useStyles = makeStyles(theme => ({
     ...theme.typography.body2,
     padding: theme.spacing(3, 0),
   },
-  sidebarAboutBox: {
-    padding: theme.spacing(2),
-    backgroundColor: theme.palette.grey[200],
-  },
-  sidebarSection: {
-    marginTop: theme.spacing(3),
-  },
 }))
 
 const featuredPosts = [
@@ -80,25 +74,10 @@ const featuredPosts = [
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
   },
 ]
-const archives = [
-  'March 2020',
-  'February 2020',
-  'January 2020',
-  'December 2019',
-  'November 2019',
-  'October 2019',
-  'September 2019',
-  'August 2019',
-  'July 2019',
-  'June 2019',
-  'May 2019',
-  'April 2019',
-]
 
 export default ({ data }) => {
   const classes = useStyles()
   const { title: siteTitle } = useSiteMetadata()
-  const social = ['twitter', 'wechat', 'youtube', 'github', 'facebook']
 
   return (
     <Layout title={siteTitle}>
@@ -132,7 +111,7 @@ export default ({ data }) => {
         </Paper>
         <Grid container spacing={4}>
           {featuredPosts.map(post => (
-            <Grid item key={post.title} xs={12} md={6}>
+            <Grid item key={post.title} sm={12} md={6}>
               <CardActionArea component={GatsbyLink} to="#">
                 <Card className={classes.card}>
                   <div className={classes.cardDetails}>
@@ -164,39 +143,15 @@ export default ({ data }) => {
           ))}
         </Grid>
         <Grid container spacing={5} className={classes.mainGrid}>
-          <Grid item xs={12} md={8}>
+          <Grid item sm={12} md={8}>
             <Typography variant="h6" gutterBottom>
               From the Firehose
             </Typography>
             <Divider/>
             {[].map(post => null)}
           </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper elevation={0} className={classes.sidebarAboutBox}>
-              <Typography variant="h6" gutterBottom>
-                About
-              </Typography>
-              <Typography>
-                Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit
-                amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-              </Typography>
-            </Paper>
-            <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-              Archives
-            </Typography>
-            {archives.map(archive => (
-              <Link display="block" variant="body1" href="#" key={archive}>
-                {archive}
-              </Link>
-            ))}
-            <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-              Social
-            </Typography>
-            {social.map(network => (
-              <Link display="block" variant="body1" href="#" key={network}>
-                {network}
-              </Link>
-            ))}
+          <Grid item sm={12} md={4}>
+            <Sidebar/>
           </Grid>
         </Grid>
       </main>
@@ -206,7 +161,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {featured: {eq: true}}}) {
+    allMarkdownRemark(filter: {frontmatter: {index: {eq: true}}}) {
       edges {
         node {
           id

@@ -2,9 +2,10 @@
 title: 从 Wordpress 迁移 blog 到 Gatsby
 date: "2019-08-12T18:46:37.121+08"
 template: "post"
-featured: false
+index: false
+featured_media: ''
 draft: false
-slug: "/posts/migrate-from-wordpress-to-gatsby"
+slug: "migrate-from-wordpress-to-gatsby"
 category: "前端"
 tags:
     - "迁移"

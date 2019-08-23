@@ -2,7 +2,7 @@ module.exports = {
   url: 'https://blog.berlinchan.com/',
   archivedBlogUrl: 'https://archived-blog.berlinchan.com',
   pathPrefix: '/',
-  title: 'Blog',
+  title: '陈柏林的Blog',
   subtitle: '',
   copyright: '',
   postsPerPage: 8,
@@ -22,10 +22,6 @@ module.exports = {
       label: '关于',
       path: '/pages/about',
     },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts',
-    },
   ],
   author: {
     name: '陈柏林',
@@ -35,9 +31,9 @@ module.exports = {
       twitter: 'https://www.twitter.com/BerlinChanCom',
       facebook: 'https://www.facebook.com/berlinchancom',
       github: 'https://github.com/BerlinChan',
-      youtube: '',
+      youtube: 'https://www.youtube.com/user/berlinchancom',
       email: 'mailto:berlinchancom@gmail.com',
-      rss: 'rss.xml',
+      rss: '/rss.xml',
     },
   },
 }

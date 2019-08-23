@@ -39,7 +39,7 @@ export default () => {
             </Typography>
           </Grid>
         </Hidden>
-        <Grid item xs={12} md={4}>
+        <Grid item sm={6} md={4}>
           <IconButton className={classes.snsIcon} href={contacts.twitter} target="_blank" rel="noopener">
             <SvgIcons name={'twitter'}/>
           </IconButton>
@@ -56,7 +56,7 @@ export default () => {
             <SvgIcons name={'wechat'}/>
           </IconButton>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item sm={6} md={4}>
           <Typography variant="body2" color="textSecondary">
             <Link color="inherit" href={siteUrl}>
               www.BerlinChan.com

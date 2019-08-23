@@ -69,10 +69,10 @@ export default (props) => {
               </Typography>
             </Link>
             <Box className={classes.toolbarMenu}>
-              <Hidden smDown>
+              <Hidden xsDown>
                 <Menu/>
               </Hidden>
-              <Hidden mdUp>
+              <Hidden smUp>
                 <MenuDraw/>
               </Hidden>
             </Box>

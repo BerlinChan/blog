@@ -6,7 +6,7 @@ import { ThemeProvider } from '@material-ui/styles'
 import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import deepOrange from '@material-ui/core/colors/deepOrange'
-import amber from '@material-ui/core/colors/amber'
+import orange from '@material-ui/core/colors/orange'
 import Header from './Header'
 import Footer from './Footer'
 import ScrollTop from './ScrollTop'
@@ -14,7 +14,7 @@ import ScrollTop from './ScrollTop'
 const theme = createMuiTheme({
   palette: {
     primary: deepOrange,
-    secondary: amber,
+    secondary: orange,
   },
 })
 

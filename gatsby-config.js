@@ -94,7 +94,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: '陈柏林的 RSS Feed',
+            title: `${siteConfig.title} RSS Feed`,
           }],
       },
     },
@@ -168,7 +168,7 @@ module.exports = {
         output: '/sitemap.xml',
         serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
           url: site.siteMetadata.siteUrl + edge.node.path,
-          changefreq: 'daily',
+          changefreq: 'monthly',
           priority: 0.7,
         })),
       },
@@ -179,8 +179,8 @@ module.exports = {
         name: siteConfig.title,
         short_name: siteConfig.title,
         start_url: '/',
-        background_color: '#FFF',
-        theme_color: '#F7A046',
+        background_color: '#fafafa',
+        theme_color: '#f5f5f5',
         display: 'standalone',
         icon: 'static/photo.jpg',
       },
