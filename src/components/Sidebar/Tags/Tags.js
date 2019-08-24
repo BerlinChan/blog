@@ -6,8 +6,13 @@ import { useTagsList } from '../../../hooks'
 import kebabCase from 'lodash/kebabCase'
 import Box from '@material-ui/core/Box'
 import { makeStyles } from '@material-ui/core'
+import { grey } from '@material-ui/core/colors'
 
 const useStyles = makeStyles(theme => ({
+  title: {
+    padding: theme.spacing(1),
+    backgroundColor: grey[200],
+  },
   link: {
     marginRight: theme.spacing(3),
   },
@@ -24,7 +29,7 @@ const Tags = (props) => {
   const tagsList = useTagsList()
 
   return <Box {...props}>
-    <Typography variant="h6">标签</Typography>
+    <Typography variant="subtitle1" className={classes.title}>标签</Typography>
     <Box className={classes.listBox}>
       {tagsList.map((tag, index) =>
         <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}

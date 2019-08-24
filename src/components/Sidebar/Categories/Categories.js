@@ -5,9 +5,14 @@ import Typography from '@material-ui/core/Typography'
 import { useCategoriesList } from '../../../hooks'
 import kebabCase from 'lodash/kebabCase'
 import Box from '@material-ui/core/Box'
+import { grey } from '@material-ui/core/colors'
 import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
+  title: {
+    padding: theme.spacing(1),
+    backgroundColor: grey[200],
+  },
   link: {
     padding: theme.spacing(1),
     '&:hover': {
@@ -23,7 +28,7 @@ const Categories = (props) => {
   const categories = useCategoriesList()
 
   return <Box {...props}>
-    <Typography variant="h6">分类</Typography>
+    <Typography variant="subtitle1" className={classes.title}>分类</Typography>
     {categories.map((category, index) =>
       <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}
             display="block" variant="body1" noWrap key={index}

@@ -25,7 +25,7 @@ module.exports = async (graphql, actions) => {
         postsLimit: postsPerPage,
         postsOffset: i * postsPerPage,
         prevPagePath: i === 0 ? '' : i === 1 ? '/page' : `/page/${i - 1}`,
-        nextPagePath: i > numPages - 1 ? '' : `/page/${i + 1}`,
+        nextPagePath: i < numPages - 1 ? `/page/${i + 1}` : '',
       },
     })
   }
@@ -40,7 +40,7 @@ module.exports = async (graphql, actions) => {
         postsLimit: postsPerPage,
         postsOffset: i * postsPerPage,
         prevPagePath: i === 0 ? '' : i === 1 ? '/archivedBlogPage' : `/archivedBlogPage/${i - 1}`,
-        nextPagePath: i > numPagesArchivedBlog - 1 ? '' : `/archivedBlogPage/${i + 1}`,
+        nextPagePath: i < numPagesArchivedBlog - 1 ? `/archivedBlogPage/${i + 1}` : '',
       },
     })
   }

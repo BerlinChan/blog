@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import CardContent from '@material-ui/core/CardContent'
@@ -13,6 +14,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Hidden from '@material-ui/core/Hidden'
 import Link from '@material-ui/core/Link'
 import Divider from '@material-ui/core/Divider'
+import moment from 'moment'
 
 const useStyles = makeStyles(theme => ({
   mainFeaturedPost: {
@@ -40,6 +42,9 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(6),
       paddingRight: 0,
     },
+  },
+  cardActionArea: {
+    marginBottom: theme.spacing(3),
   },
   card: {
     display: 'flex',
@@ -89,44 +94,38 @@ export default ({ data }) => {
                   </Grid>
                 </Grid>
               </Paper>}
-              <Grid container spacing={4} className={classes.featuredBottom}>
-                {data.featuredPosts.edges.map(post => (
-                  <Grid item key={post.title} xs={12} md={6}>
-                    <CardActionArea component={GatsbyLink} to="#">
-                      <Card className={classes.card}>
-                        <div className={classes.cardDetails}>
-                          <CardContent>
-                            <Typography component="h2" variant="h5">
-                              {post.title}
-                            </Typography>
-                            <Typography variant="subtitle1" color="textSecondary">
-                              {post.date}
-                            </Typography>
-                            <Typography variant="subtitle1" paragraph>
-                              {post.description}
-                            </Typography>
-                            <Typography variant="subtitle1" color="primary">
-                              Continue reading...
-                            </Typography>
-                          </CardContent>
-                        </div>
-                        <Hidden xsDown>
-                          <CardMedia
-                            className={classes.cardMedia}
-                            image="https://source.unsplash.com/random"
-                            title="Image title"
-                          />
-                        </Hidden>
-                      </Card>
-                    </CardActionArea>
-                  </Grid>
-                ))}
-              </Grid>
             </React.Fragment>}>
       <Typography variant="h6" gutterBottom>近期文章</Typography>
-      <Divider/>
+      <Box mb={3}><Divider/></Box>
       {data.recentPosts.edges.map(({ node }, index) => (
-        <Typography key={index}>{node.frontmatter.title}</Typography>
+        <CardActionArea component={GatsbyLink} to={node.frontmatter.slug} key={index}
+                        className={classes.cardActionArea}>
+          <Card className={classes.card}>
+            <Box className={classes.cardDetails}>
+              <CardContent>
+                <Typography component="h2" variant="h5">
+                  {node.frontmatter.title}
+                </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  {moment(node.frontmatter.date).format('YYYY-MM-DD')}
+                </Typography>
+                <Typography variant="subtitle1" paragraph>
+                  {node.frontmatter.description}
+                </Typography>
+                <Typography variant="subtitle1" color="primary">
+                  阅读
+                </Typography>
+              </CardContent>
+            </Box>
+            <Hidden xsDown>
+              <CardMedia
+                className={classes.cardMedia}
+                image="https://source.unsplash.com/random"
+                title={node.frontmatter.title}
+              />
+            </Hidden>
+          </Card>
+        </CardActionArea>
       ))}
     </Layout>
   )
@@ -134,7 +133,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query IndexQuery{
-    featuredPosts: allMarkdownRemark(filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_media: {ne: ""}}}, limit: 3, sort: {order: DESC, fields: frontmatter___date}) {
+    featuredPosts: allMarkdownRemark(filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_top: {ne: false}}}, limit: 3, sort: {order: DESC, fields: frontmatter___date}) {
       edges {
         node {
           frontmatter {

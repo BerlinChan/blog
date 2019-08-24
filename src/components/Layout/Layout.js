@@ -4,8 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
 import Container from '@material-ui/core/Container'
-import deepOrange from '@material-ui/core/colors/deepOrange'
-import orange from '@material-ui/core/colors/orange'
+import { brown, deepOrange } from '@material-ui/core/colors'
 import Header from './Header'
 import Footer from './Footer'
 import ScrollTop from './ScrollTop'
@@ -15,7 +14,7 @@ import Sidebar from '../Sidebar/Sidebar'
 const theme = createMuiTheme({
   palette: {
     primary: deepOrange,
-    secondary: orange,
+    secondary: brown,
   },
 })
 
