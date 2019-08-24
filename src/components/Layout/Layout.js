@@ -36,17 +36,15 @@ const Layout = ({ title, description, children, featuredContent }) => {
     </Helmet>
     <Header/>
     <Container maxWidth="lg">
-      <main>
-        {featuredContent}
-        <Grid container spacing={5}>
-          <Grid item sm={12} md={8}>
-            {children}
-          </Grid>
-          <Grid item sm={12} md={4}>
-            <Sidebar/>
-          </Grid>
+      {featuredContent}
+      <Grid container spacing={5}>
+        <Grid item xs={12} md={8}>
+          {children}
         </Grid>
-      </main>
+        <Grid item xs={12} md={4}>
+          <Sidebar/>
+        </Grid>
+      </Grid>
       <Footer/>
     </Container>
     <ScrollTop/>
