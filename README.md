@@ -6,6 +6,7 @@
 
 ## TODO
 - [x] posts-pages, 标题标出 archivedBlog
+- [ ] index recent post list
 - [ ] featured image in list
 - [ ] dangerouslySetInnerHTML with script tag
 - [ ] next & prev post nav

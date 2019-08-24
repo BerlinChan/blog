@@ -58,25 +58,11 @@ const useStyles = makeStyles(theme => ({
 export default ({ data }) => {
   const classes = useStyles()
   const { title: siteTitle } = useSiteMetadata()
-  const featuredPosts = [
-    {
-      title: 'Featured post',
-      date: 'Nov 12',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    },
-    {
-      title: 'Post title',
-      date: 'Nov 11',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    },
-  ]
 
   return (
     <Layout title={siteTitle}
             featuredContent={<React.Fragment>
-              <Paper className={classes.mainFeaturedPost}>
+              {false && <Paper className={classes.mainFeaturedPost}>
                 {/* Increase the priority of the hero background image */}
                 {
                   <img
@@ -102,10 +88,10 @@ export default ({ data }) => {
                     </div>
                   </Grid>
                 </Grid>
-              </Paper>
+              </Paper>}
               <Grid container spacing={4} className={classes.featuredBottom}>
-                {featuredPosts.map(post => (
-                  <Grid item key={post.title} sm={12} md={6}>
+                {data.featuredPosts.edges.map(post => (
+                  <Grid item key={post.title} xs={12} md={6}>
                     <CardActionArea component={GatsbyLink} to="#">
                       <Card className={classes.card}>
                         <div className={classes.cardDetails}>
@@ -137,20 +123,26 @@ export default ({ data }) => {
                 ))}
               </Grid>
             </React.Fragment>}>
-      <Typography variant="h6" gutterBottom>
-        From the Firehose
-      </Typography>
+      <Typography variant="h6" gutterBottom>近期文章</Typography>
       <Divider/>
+      {data.recentPosts.edges.map(({ node }, index) => (
+        <Typography key={index}>{node.frontmatter.title}</Typography>
+      ))}
     </Layout>
   )
 }
 
 export const query = graphql`
   query IndexQuery{
-    featuredPosts: allMarkdownRemark(filter: {frontmatter: {index: {eq: true}}}) {
+    featuredPosts: allMarkdownRemark(filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_media: {ne: ""}}}, limit: 3, sort: {order: DESC, fields: frontmatter___date}) {
       edges {
         node {
-          id
+          frontmatter {
+            date
+            title
+            slug
+            description
+          }
         }
       }
     }
@@ -165,6 +157,7 @@ export const query = graphql`
             date
             featured_media
           }
+          excerpt
         }
       }
     }

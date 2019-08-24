@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Sidebar from '../components/Sidebar'
 import { useSiteMetadata } from '../hooks'
 import Typography from '@material-ui/core/Typography'
 
