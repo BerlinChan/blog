@@ -1,17 +1,27 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import moment from 'moment'
 import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
+import ArchivedBlogTips from '../components/ArchivedBlogTips'
+import Typography from '@material-ui/core/Typography'
+import Box from '@material-ui/core/Box'
 
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
-  const { title: postTitle, excerpt: postDescription, path } = data.archivedBlogPostJson
-  const metaDescription = postDescription !== null ? postDescription : siteSubtitle
+  const { title: postTitle, excerpt: postDescription, path, date } = data.archivedBlogPostJson
+  const metaDescription = postDescription ? postDescription : siteSubtitle
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
+      <Typography variant={'body2'}>
+        {moment(date).format('YYYY-MM-DD')}
+      </Typography>
+      <Typography component={'h2'} variant={'h4'}>{postTitle}</Typography>
       <div dangerouslySetInnerHTML={{ __html: data.archivedBlogPostJson.content }}/>
-      <div><a href={`${archivedBlogUrl}${path}`}>原始存档页</a></div>
+      <Box mt={3}>
+        <ArchivedBlogTips originLink={`${archivedBlogUrl}${path}`}/>
+      </Box>
     </Layout>
   )
 }

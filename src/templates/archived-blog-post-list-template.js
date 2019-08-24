@@ -5,14 +5,12 @@ import FeedArchivedBlog from '../components/FeedArchivedBlog'
 import Page from '../components/Page'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
+import Box from '@material-ui/core/Box'
+import ArchivedBlogTips from '../components/ArchivedBlogTips'
 
 const PostListTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
-  const {
-    currentPage,
-    prevPagePath,
-    nextPagePath,
-  } = pageContext
+  const { title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
+  const { currentPage, prevPagePath, nextPagePath } = pageContext
   const pageTitle = currentPage > 0
     ? `存档文章 - 第 ${currentPage} 页 - ${siteTitle}`
     : siteTitle
@@ -20,6 +18,9 @@ const PostListTemplate = ({ data, pageContext }) => {
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
       <Page>
+        <Box mb={3}>
+          <ArchivedBlogTips originLink={archivedBlogUrl}/>
+        </Box>
         <FeedArchivedBlog edges={data.allArchivedBlogPostJson.edges}/>
         <Pagination
           prevPageName={prevPagePath ? '' : '最近文章'}

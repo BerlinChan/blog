@@ -13,9 +13,9 @@ import Grid from '@material-ui/core/Grid'
 import Sidebar from '../Sidebar/Sidebar'
 
 const theme = createMuiTheme({
-  palette: {
-    primary: deepOrange,
-    secondary: orange,
+    palette: {
+      primary: deepOrange,
+      secondary: orange,
   },
 })
 

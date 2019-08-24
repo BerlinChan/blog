@@ -5,5 +5,7 @@
 [https://www.berlinchan.com/](https://www.berlinchan.com/)
 
 ## TODO
-- [ ] posts-pages, 标题标出 archivedBlog
+- [x] posts-pages, 标题标出 archivedBlog
+- [ ] dangerouslySetInnerHTML with script tag
+- [ ] Layout 组件提取 sidebar props
 - [ ] 修改 Schema，post categories 支持多个分类
