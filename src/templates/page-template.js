@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Sidebar from '../components/Sidebar'
-import Page from '../components/Page'
 import { useSiteMetadata } from '../hooks'
+import Typography from '@material-ui/core/Typography'
 
 const PageTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
@@ -15,10 +15,10 @@ const PageTemplate = ({ data }) => {
 
   return (
     <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>
-      <Sidebar/>
-      <Page title={pageTitle}>
-        <div dangerouslySetInnerHTML={{ __html: pageBody }}/>
-      </Page>
+      <Typography component={'h2'} variant={'h4'} gutterBottom>
+        {pageTitle}
+      </Typography>
+      <div dangerouslySetInnerHTML={{ __html: pageBody }}/>
     </Layout>
   )
 }

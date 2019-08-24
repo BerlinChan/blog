@@ -3,7 +3,7 @@ import moment from 'moment'
 import { Link } from 'gatsby'
 import styles from './Feed.module.scss'
 
-const Feed = ({ edges }) => (
+const PostList = ({ edges }) => (
   <div className={styles['feed']}>
     {edges.map((edge) => (
       <div className={styles['feed__item']} key={edge.node.fields.slug}>
@@ -31,4 +31,4 @@ const Feed = ({ edges }) => (
   </div>
 )
 
-export default Feed
+export default PostList

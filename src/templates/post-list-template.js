@@ -1,8 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Feed from '../components/Feed'
-import Page from '../components/Page'
+import PostList from '../components/PostList'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
 
@@ -20,14 +19,12 @@ const PostListTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Page>
-        <Feed edges={edges}/>
-        <Pagination
-          nextPageName={nextPagePath ? '' : '存档文章'}
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath ? nextPagePath : '/archivedBlogPage'}
-        />
-      </Page>
+      <PostList edges={edges}/>
+      <Pagination
+        nextPageName={nextPagePath ? '' : '存档文章'}
+        prevPagePath={prevPagePath}
+        nextPagePath={nextPagePath ? nextPagePath : '/archivedBlogPage'}
+      />
     </Layout>
   )
 }

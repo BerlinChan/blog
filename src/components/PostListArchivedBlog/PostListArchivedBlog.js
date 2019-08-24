@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import styles from './FeedArchivedBlog.module.scss'
 import { useSiteMetadata } from '../../hooks'
 
-const FeedArchivedBlog = ({ edges }) => {
+const PostListArchivedBlog = ({ edges }) => {
   const { archivedBlogUrl } = useSiteMetadata()
 
   return <div className={styles['feed']}>
@@ -39,4 +39,4 @@ const FeedArchivedBlog = ({ edges }) => {
   </div>
 }
 
-export default FeedArchivedBlog
+export default PostListArchivedBlog

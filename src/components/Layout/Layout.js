@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Helmet from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme } from '@material-ui/core/styles'
@@ -13,13 +13,16 @@ import Grid from '@material-ui/core/Grid'
 import Sidebar from '../Sidebar/Sidebar'
 
 const theme = createMuiTheme({
-    palette: {
-      primary: deepOrange,
-      secondary: orange,
+  palette: {
+    primary: deepOrange,
+    secondary: orange,
   },
 })
 
 const Layout = ({ title, description, children, featuredContent }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 })
+  })
 
   return <ThemeProvider theme={theme}>
     <CssBaseline/>

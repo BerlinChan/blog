@@ -6,6 +6,7 @@
 
 ## TODO
 - [x] posts-pages, 标题标出 archivedBlog
+- [ ] featured image in list
 - [ ] dangerouslySetInnerHTML with script tag
 - [ ] next & prev post nav
 - [ ] Layout 组件提取 sidebar props

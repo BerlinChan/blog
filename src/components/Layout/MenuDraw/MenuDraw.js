@@ -43,7 +43,7 @@ export default () => {
             aria-labelledby="nested-list-subheader"
             subheader={<ListSubheader component="div" id="nested-list-subheader">导航</ListSubheader>}
       >
-        <ListItem button component={GatsbyLink} to={`/categories`} activeClassName={classes.activeLink}>
+        <ListItem button component={GatsbyLink} to={`/page`} activeClassName={classes.activeLink}>
           <ListItemText primary="文章"/>
         </ListItem>
         {categories.map((category, index) =>

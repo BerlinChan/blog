@@ -1,11 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Sidebar from '../components/Sidebar'
-import Feed from '../components/Feed'
-import Page from '../components/Page'
+import PostList from '../components/PostList'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
+import Typography from '@material-ui/core/Typography'
 
 const TagTemplate = ({ data, pageContext }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
@@ -24,14 +23,14 @@ const TagTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Sidebar/>
-      <Page title={tag}>
-        <Feed edges={edges}/>
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-        />
-      </Page>
+      <Typography component={'h2'} variant={'h4'} gutterBottom>
+        {tag}
+      </Typography>
+      <PostList edges={edges}/>
+      <Pagination
+        prevPagePath={prevPagePath}
+        nextPagePath={nextPagePath}
+      />
     </Layout>
   )
 }
