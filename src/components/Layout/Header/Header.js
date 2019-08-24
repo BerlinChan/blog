@@ -25,7 +25,6 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.primary.main,
     '&:hover': {
       color: theme.palette.primary.main,
-      textDecoration: 'none',
     },
   },
   toolbarMenu: {
@@ -66,7 +65,7 @@ export default (props) => {
             <Link component={GatsbyLink} to={withPrefix('/')} className={classes.avatar}>
               <Avatar alt={name} src={withPrefix(photo)}/>
             </Link>
-            <Link component={GatsbyLink} to={withPrefix('/')} className={classes.toolbarTitle}>
+            <Link component={GatsbyLink} to={withPrefix('/')} className={classes.toolbarTitle} underline="none">
               <Typography component="h2" variant="h5" color="inherit" align="left" noWrap>
                 {siteTitle}
               </Typography>

@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
 import Link from '@material-ui/core/Link'
-import Popover from '@material-ui/core/Popover'
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
+import Popper from '@material-ui/core/Popper'
+import Grow from '@material-ui/core/Grow'
+import Paper from '@material-ui/core/Paper'
 import MenuList from '@material-ui/core/MenuList'
 import MenuItem from '@material-ui/core/MenuItem'
 import { useSiteMetadata, useCategoriesList } from '../../../hooks'
@@ -11,6 +14,9 @@ import kebabCase from 'lodash/kebabCase'
 const useStyles = makeStyles(theme => ({
   menuDropdown: {
     width: 200,
+  },
+  menuLink: {
+    width: '100%',
   },
   toolbarLink: {
     padding: theme.spacing(1),
@@ -31,34 +37,41 @@ export default () => {
   }
 
   return <React.Fragment>
-    <Link component={GatsbyLink} to={`/page`} activeClassName={classes.activeLink}
-          color="inherit" noWrap variant="body1" className={classes.toolbarLink}
-          aria-haspopup="true" aria-owns={anchorEl ? 'mouse-over-popover' : undefined}
+    <Link component={GatsbyLink} to={`/page`} noWrap variant="body1"
+          underline="none" className={classes.toolbarLink} activeClassName={classes.activeLink}
+          aria-haspopup="true" aria-controls="menu-list-grow"
           onMouseEnter={e => setAnchorEl(e.currentTarget)}
     >文章
     </Link>
-    <Popover open={Boolean(anchorEl)} anchorEl={anchorEl}
-             onClose={handleArticleMenuClose}
-             anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-             transformOrigin={{ vertical: 'top', horizontal: 'left' }}>
-      <MenuList onMouseLeave={handleArticleMenuClose} className={classes.menuDropdown}>
-        {categories.map((category, index) => <MenuItem key={index}>
-          <Link to={`/category/${kebabCase(category.fieldValue)}/`} noWrap>
-            {category.fieldValue}
-          </Link>
-        </MenuItem>)}
-      </MenuList>
-    </Popover>
+    <Popper open={Boolean(anchorEl)} anchorEl={anchorEl} transition disablePortal>
+      {({ TransitionProps }) => (
+        <Grow {...TransitionProps} style={{ transformOrigin: 'center bottom' }}>
+          <Paper id="menu-list-grow" onMouseLeave={handleArticleMenuClose}>
+            <ClickAwayListener onClickAway={handleArticleMenuClose}>
+              <MenuList className={classes.menuDropdown}>
+                {categories.map((category, index) => <MenuItem key={index}>
+                  <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}
+                        display="block" underline={'none'}
+                        className={classes.menuLink} activeClassName={classes.activeLink} noWrap>
+                    {category.fieldValue}
+                  </Link>
+                </MenuItem>)}
+              </MenuList>
+            </ClickAwayListener>
+          </Paper>
+        </Grow>
+      )}
+    </Popper>
 
     {menu.map((item, index) => (
       <React.Fragment key={index}>
         {item.path ?
           <Link component={GatsbyLink} to={item.path} activeClassName={classes.activeLink}
-                color="inherit" noWrap variant="body1" className={classes.toolbarLink}>
+                noWrap variant="body1" className={classes.toolbarLink} underline="none">
             {item.label}
           </Link>
-          : <Link color="inherit" noWrap variant="body1" className={classes.toolbarLink}
-                  target={'_blank'} rel="noopener" href={item.link}>
+          : <Link noWrap variant="body1" className={classes.toolbarLink}
+                  target={'_blank'} rel="noopener" href={item.link} underline="none">
             {item.label}
           </Link>}
       </React.Fragment>))}
