@@ -6,32 +6,16 @@ import Page from '../components/Page'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
 
-const IndexTemplate = ({ data, pageContext }) => {
+const PostListTemplate = ({ data, pageContext }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
   const {
     currentPage,
-    hasNextPage,
-    hasPrevPage,
     prevPagePath,
     nextPagePath,
   } = pageContext
   const { edges } = data.allMarkdownRemark
-  const convertedEdges = data.allArchivedBlogPostJson.edges.map(({ node }) => ({
-    'node': {
-      'fields': {
-        'slug': node.path,
-        'categorySlug': node.categories.path
-      },
-      'frontmatter': {
-        'title': node.title,
-        'date': node.date,
-        'category': node.categories.map(category => category.name).join(','),
-        'description': node.excerpt,
-      }
-    }
-  }))
   const pageTitle = currentPage > 0
-    ? `Posts - Page ${currentPage} - ${siteTitle}`
+    ? `文章 - 第 ${currentPage} 页 - ${siteTitle}`
     : siteTitle
 
   return (
@@ -39,10 +23,9 @@ const IndexTemplate = ({ data, pageContext }) => {
       <Page>
         <Feed edges={edges}/>
         <Pagination
+          nextPageName={nextPagePath ? '' : '存档文章'}
           prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
+          nextPagePath={nextPagePath ? nextPagePath : '/archivedBlogPage'}
         />
       </Page>
     </Layout>
@@ -50,7 +33,7 @@ const IndexTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
+  query PostListTemplate($postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
         limit: $postsLimit,
         skip: $postsOffset,
@@ -72,21 +55,7 @@ export const query = graphql`
         }
       }
     }
-    allArchivedBlogPostJson {
-      edges {
-        node {
-          date
-          excerpt
-          path
-          title
-          categories {
-            name
-            path
-          }
-        }
-      }
-    }
   }
 `
 
-export default IndexTemplate
+export default PostListTemplate

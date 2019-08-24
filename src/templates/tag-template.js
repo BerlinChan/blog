@@ -15,8 +15,6 @@ const TagTemplate = ({ data, pageContext }) => {
     currentPage,
     prevPagePath,
     nextPagePath,
-    hasPrevPage,
-    hasNextPage,
   } = pageContext
 
   const { edges } = data.allMarkdownRemark
@@ -32,8 +30,6 @@ const TagTemplate = ({ data, pageContext }) => {
         <Pagination
           prevPagePath={prevPagePath}
           nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
         />
       </Page>
     </Layout>

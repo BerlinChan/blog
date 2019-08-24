@@ -15,3 +15,4 @@ tags:
 description: "利用 Wordpress 插件 WP2Static 将内容静态化成 HTML，然后利用插件 gatsby-source-wordpress 提供的数据，为旧 blog 内容生成目录，并连接到静态化后的 HTML"
 ---
 
+<!-- endExcerpt -->

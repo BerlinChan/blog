@@ -1,26 +1,22 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 import { PAGINATION } from '../../constants'
-import styles from './Pagination.module.scss'
+import Link from '@material-ui/core/Link'
+import Grid from '@material-ui/core/Grid'
 
-const Pagination = ({
-  prevPagePath,
-  nextPagePath,
-  hasNextPage,
-  hasPrevPage,
-}) => {
+const Pagination = ({ prevPageName, nextPageName, prevPagePath, nextPagePath }) => {
 
   return (
-    <div className={styles['pagination']}>
-      {hasPrevPage ? <div className={styles['pagination__prev']}>
-        <Link rel="prev" to={prevPagePath} className={styles['pagination__prev-link']}>
-          {PAGINATION.PREV_PAGE}</Link>
-      </div> : null}
-      {hasNextPage ? <div className={styles['pagination__next']}>
-        <Link rel="next" to={nextPagePath} className={styles['pagination__next-link']}>
-          {PAGINATION.NEXT_PAGE}</Link>
-      </div> : null}
-    </div>
+    <Grid container justify="space-between">
+      <Grid item>
+        {prevPagePath ?
+          <Link component={GatsbyLink} rel="prev" to={prevPagePath} variant='h6'>
+            ← {prevPageName ? prevPageName : PAGINATION.PREV_PAGE}</Link> : null}
+      </Grid>
+      {nextPagePath ?
+        <Link component={GatsbyLink} rel="next" to={nextPagePath} variant='h6'>
+          {nextPageName ? nextPageName : PAGINATION.NEXT_PAGE} →</Link> : null}
+    </Grid>
   )
 }
 
