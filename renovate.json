@@ -15,6 +15,12 @@
         "react-dom"
       ],
       "groupName": "react"
+    },
+    {
+      "packagePatterns": [
+        "@material-ui"
+      ],
+      "groupName": "material-ui"
     }
   ],
   "labels": [
