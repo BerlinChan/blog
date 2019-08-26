@@ -117,13 +117,11 @@ export default ({ data }) => {
                 </Typography>
               </CardContent>
             </Box>
-            <Hidden xsDown>
-              <CardMedia
-                className={classes.cardMedia}
-                image="https://source.unsplash.com/random"
-                title={node.frontmatter.title}
-              />
-            </Hidden>
+            {node.frontmatter.featured_media && <Hidden xsDown>
+              <CardMedia className={classes.cardMedia}
+                         image={node.frontmatter.featured_media.childImageSharp.fixed.src}
+                         title={node.frontmatter.title}/>
+            </Hidden>}
           </Card>
         </CardActionArea>
       ))}
@@ -162,7 +160,13 @@ export const query = graphql`
             title
             category
             date
-            featured_media
+            featured_media {
+              childImageSharp {
+                fixed {
+                  src
+                }
+              }
+            }
           }
           excerpt
         }

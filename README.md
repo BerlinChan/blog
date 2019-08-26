@@ -7,8 +7,7 @@
 ## TODO
 - [x] posts-pages, 标题标出 archivedBlog
 - [x] index recent post list
-- [x] 存档博客中的 js 执行
-- [ ] featured image in list
+- [x] featured image in list
 - [ ] next & prev post nav
 - [ ] Layout 组件提取 sidebar props
 - [ ] 修改 Schema，post categories 支持多个分类
