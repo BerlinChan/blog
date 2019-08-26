@@ -7,37 +7,48 @@ import ArchivedBlogTips from '../components/ArchivedBlogTips'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 
+function loadScriptPromise (url) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function () {
+        if (script.readyState === 'loaded' || script.readyState === 'complete') {
+          script.onreadystatechange = null
+          resolve()
+        }
+      }
+    } else { //Others
+      script.onload = function () {
+        resolve()
+      }
+    }
+    script.src = url
+    document.getElementsByTagName('body')[0].appendChild(script)
+  })
+}
+
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
   const { title: postTitle, excerpt: postDescription, path, date } = data.archivedBlogPostJson
   const metaDescription = postDescription ? postDescription : siteSubtitle
 
   useEffect(() => {
-    const scriptSrcs = data.archivedBlogPostJson.content.match(/\ssrc=".+\.js"/g)
-    scriptSrcs.length && scriptSrcs.forEach(item => {
-      const scriptSrc = item.match(/\ssrc="(.+\.js)"/)[1]
-      const scriptElm = document.createElement('script')
-      scriptElm.type = 'text/javaScript'
-      scriptElm.src = scriptSrc
-      document.getElementsByTagName('head')[0].appendChild(scriptElm)
-    })
-    /*const scriptContents = data.archivedBlogPostJson.content.match(/<script\stype="text\/javascript">.+?<\/script>/g)
-    scriptContents.length && scriptContents.forEach(item => {
-      const content = item.match(/<script\stype="text\/javascript">(.+)<\/script>/)[1]
-      const scriptElm = document.createElement('script')
-      scriptElm.type = 'text/javaScript'
-      scriptElm.text = content
-      document.getElementsByTagName('head')[0].appendChild(scriptElm)
-    })*/
+    // extract script src in post
+    const scripts = data.archivedBlogPostJson.content.match(/\ssrc=".+\.js"/g)
+    const scriptSrcs = Array.isArray(scripts) ? scripts.map(item => item.match(/\ssrc="(.+\.js)"/)[1]) : []
+    scriptSrcs.forEach(async item => await loadScriptPromise(item))
   })
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
       <Typography variant={'body2'}>
-        {moment(date).format('YYYY-MM-DD')}
+        {moment(date).utcOffset(8).format('YYYY-MM-DD')}
       </Typography>
       <Typography component={'h2'} variant={'h4'}>{postTitle}</Typography>
-      <div dangerouslySetInnerHTML={{ __html: data.archivedBlogPostJson.content }}/>
+      <div
+        dangerouslySetInnerHTML={{ __html: data.archivedBlogPostJson.content.replace(/<script\s.+><\/script>/g, '') }}/>
       <Box mt={3}>
         <ArchivedBlogTips originLink={`${archivedBlogUrl}${path}`}/>
       </Box>
