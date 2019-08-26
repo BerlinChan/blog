@@ -46,6 +46,9 @@ export const query = graphql`
             name
             path
           }
+          featured_media {
+            source_url
+          }
         }
       }
     }

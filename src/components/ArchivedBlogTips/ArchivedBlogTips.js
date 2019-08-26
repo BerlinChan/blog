@@ -34,7 +34,7 @@ const ArchivedBlogTips = ({ originLink }) => {
       <Box className={classes.message}>
         <InfoIcon className={classes.icon}/>
         <Typography variant={'body2'} noWrap className={classes.text}>
-          这是旧博客文章存档，原页面见
+          {'这是旧博客文章存档，原页面: '}
           <Link href={originLink} target={'_blank'} rel="noopener"
                 color={'inherit'}>{originLink}</Link>
         </Typography>

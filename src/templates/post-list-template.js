@@ -48,6 +48,13 @@ export const query = graphql`
             date
             category
             description
+            featured_media {
+              childImageSharp {
+                fixed {
+                  src
+                }
+              }
+            }
           }
         }
       }

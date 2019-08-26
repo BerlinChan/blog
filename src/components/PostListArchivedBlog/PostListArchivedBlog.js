@@ -1,42 +1,66 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import moment from 'moment'
-import { Link } from 'gatsby'
-import styles from './FeedArchivedBlog.module.scss'
+import { Link as GatsbyLink } from 'gatsby'
 import { useSiteMetadata } from '../../hooks'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import Card from '@material-ui/core/Card'
+import Box from '@material-ui/core/Box'
+import CardContent from '@material-ui/core/CardContent'
+import Typography from '@material-ui/core/Typography'
+import Hidden from '@material-ui/core/Hidden'
+import CardMedia from '@material-ui/core/CardMedia'
+import { makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles(theme => ({
+  cardActionArea: {
+    marginBottom: theme.spacing(3),
+  },
+  card: {
+    display: 'flex',
+  },
+  cardDetails: {
+    flex: 1,
+  },
+  cardMedia: {
+    width: 200,
+  },
+}))
 
 const PostListArchivedBlog = ({ edges }) => {
-  const { archivedBlogUrl } = useSiteMetadata()
+  const classes = useStyles()
+  // const { archivedBlogUrl } = useSiteMetadata() // for categories link
 
-  return <div className={styles['feed']}>
-    {edges.map((edge) => (
-      <div className={styles['feed__item']} key={edge.node.path}>
-        <div className={styles['feed__item-meta']}>
-          <time className={styles['feed__item-meta-time']}
-                dateTime={moment(edge.node.date).format('YYYY-MM-DD')}>
-            {moment(edge.node.date).format('YYYY-MM-DD')}
-          </time>
-          <span className={styles['feed__item-meta-divider']}/>
-          <span className={styles['feed__item-meta-category']}>
-            {edge.node.categories.map((item, index) => <Fragment key={index}>
-              <span className={styles['feed__item-meta-divider']}/>
-              <a href={`${archivedBlogUrl}${item.path}`}
-                 className={styles['feed__item-meta-category-link']}>
-                {item.name}
-              </a>
-            </Fragment>)}
-          </span>
-        </div>
-        <h2 className={styles['feed__item-title']}>
-          <Link className={styles['feed__item-title-link']}
-                to={edge.node.path}>{edge.node.title}</Link>
-        </h2>
-        <div className={styles['feed__item-description']}
-             dangerouslySetInnerHTML={{ __html: edge.node.excerpt }}/>
-        <Link className={styles['feed__item-readmore']}
-              to={edge.node.path}>阅读</Link>
-      </div>
+  return <React.Fragment>
+    {edges.map(({ node }, index) => (
+      <CardActionArea component={GatsbyLink} to={node.path} key={index}
+                      className={classes.cardActionArea}>
+        <Card className={classes.card}>
+          <Box className={classes.cardDetails}>
+            <CardContent>
+              <Typography variant="subtitle1" color="textSecondary">
+                {moment(node.date).utcOffset(8).format('YYYY-MM-DD')}
+                {node.categories.map((item, index) => item.name)}
+              </Typography>
+              <Typography component="h2" variant="h5">
+                {node.title}
+              </Typography>
+              <Typography variant="subtitle1" paragraph
+                          dangerouslySetInnerHTML={{ __html: node.excerpt }}>
+              </Typography>
+              <Typography variant="subtitle1" color="primary">
+                阅读
+              </Typography>
+            </CardContent>
+          </Box>
+          {node.featured_media && <Hidden xsDown>
+            <CardMedia className={classes.cardMedia}
+                       image={node.featured_media.source_url}
+                       title={node.title}/>
+          </Hidden>}
+        </Card>
+      </CardActionArea>
     ))}
-  </div>
+  </React.Fragment>
 }
 
 export default PostListArchivedBlog
