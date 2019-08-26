@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     flex: 1,
   },
   cardMedia: {
-    width: 160,
+    width: 200,
   },
   featuredBottom: {
     marginBottom: theme.spacing(3),
@@ -67,7 +67,7 @@ export default ({ data }) => {
   return (
     <Layout title={siteTitle}
             featuredContent={<React.Fragment>
-              {false && <Paper className={classes.mainFeaturedPost}>
+              {1 && <Paper className={classes.mainFeaturedPost}>
                 {/* Increase the priority of the hero background image */}
                 {
                   <img
@@ -133,7 +133,11 @@ export default ({ data }) => {
 
 export const query = graphql`
   query IndexQuery{
-    featuredPosts: allMarkdownRemark(filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_top: {ne: false}}}, limit: 3, sort: {order: DESC, fields: frontmatter___date}) {
+    featuredPosts: allMarkdownRemark(
+      filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_top: {ne: false}}},
+      limit: 1,
+      sort: {order: DESC, fields: frontmatter___date}
+    ) {
       edges {
         node {
           frontmatter {
@@ -145,7 +149,11 @@ export const query = graphql`
         }
       }
     }
-    recentPosts: allMarkdownRemark(limit: 6, filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+    recentPosts: allMarkdownRemark(
+      limit: 6,
+      filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}}},
+      sort: {fields: frontmatter___date, order: DESC}
+    ) {
       edges {
         node {
           frontmatter {
