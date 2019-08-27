@@ -10,7 +10,7 @@ import { grey } from '@material-ui/core/colors'
 
 const useStyles = makeStyles(theme => ({
   title: {
-    padding: theme.spacing(1),
+    padding: theme.spacing(.5, 1),
     backgroundColor: grey[200],
   },
   link: {

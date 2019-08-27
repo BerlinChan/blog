@@ -1,7 +1,6 @@
 import React from 'react'
 import moment from 'moment'
 import { Link as GatsbyLink } from 'gatsby'
-import { useSiteMetadata } from '../../hooks'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import Card from '@material-ui/core/Card'
 import Box from '@material-ui/core/Box'
@@ -28,7 +27,6 @@ const useStyles = makeStyles(theme => ({
 
 const PostListArchivedBlog = ({ edges }) => {
   const classes = useStyles()
-  // const { archivedBlogUrl } = useSiteMetadata() // for categories link
 
   return <React.Fragment>
     {edges.map(({ node }, index) => (
@@ -41,9 +39,7 @@ const PostListArchivedBlog = ({ edges }) => {
                 {moment(node.date).utcOffset(8).format('YYYY-MM-DD')}
                 {node.categories.map((item, index) => item.name)}
               </Typography>
-              <Typography component="h2" variant="h5">
-                {node.title}
-              </Typography>
+              <Typography component="h2" variant="h5">{node.title}</Typography>
               <Typography variant="subtitle1" paragraph
                           dangerouslySetInnerHTML={{ __html: node.excerpt }}>
               </Typography>
