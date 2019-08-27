@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
-import { useSiteMetadata } from '../../../hooks'
+import { useSiteMetadata } from '../../hooks'
 
 const Comments = ({ postTitle, postSlug }) => {
   const { url, disqusShortname } = useSiteMetadata()
@@ -12,7 +12,7 @@ const Comments = ({ postTitle, postSlug }) => {
   return (
     <ReactDisqusComments
       shortname={disqusShortname}
-      identifier={postTitle}
+      identifier={postSlug}
       title={postTitle}
       url={url + postSlug}
     />

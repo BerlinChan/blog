@@ -13,7 +13,8 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(.5, 1),
     backgroundColor: grey[200],
   },
-  link: {
+  tagLink: {
+    padding: theme.spacing(1, 1, 0, 0),
     marginRight: theme.spacing(3),
   },
   listBox: {
@@ -34,7 +35,7 @@ const Tags = (props) => {
       {tagsList.map((tag, index) =>
         <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}
               variant="body1" noWrap key={index}
-              className={classes.link} activeClassName={classes.activeLink}>
+              className={classes.tagLink} activeClassName={classes.activeLink}>
           {tag.fieldValue}
         </Link>)}
     </Box>

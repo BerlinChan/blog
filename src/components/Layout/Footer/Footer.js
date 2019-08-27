@@ -8,6 +8,8 @@ import Link from '@material-ui/core/Link'
 import { useSiteMetadata } from '../../../hooks'
 import SvgIcons from '../../../assets/SvgIcons'
 import { Link as GatsbyLink } from 'gatsby'
+import Popover from '@material-ui/core/Popover'
+import qrCode from '../../../../static/media/2019/08/qrcode_for_gh_e9cd709bed60_258.jpg'
 
 const useStyles = makeStyles(theme => ({
   snsIcon: {
@@ -18,11 +20,23 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
   },
+  qrCodeText: {
+    marginTop: theme.spacing(1),
+  },
 }))
 
 export default () => {
+  const [anchorQrEl, setAnchorQrEl] = React.useState(null)
   const classes = useStyles()
   const { url: siteUrl, author: { contacts }, menu } = useSiteMetadata()
+
+  function handleQrClick (event) {
+    setAnchorQrEl(event.currentTarget)
+  }
+
+  function handleQrClose () {
+    setAnchorQrEl(null)
+  }
 
   return (
     <footer className={classes.footer}>
@@ -52,10 +66,20 @@ export default () => {
           <IconButton className={classes.snsIcon} href={contacts.github} target="_blank" rel="noopener">
             <SvgIcons name={'github'}/>
           </IconButton>
-          <IconButton className={classes.snsIcon}>
+          <IconButton className={classes.snsIcon} onClick={handleQrClick}>
             <SvgIcons name={'wechat'}/>
           </IconButton>
         </Grid>
+        <Popover anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+                 transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                 open={Boolean(anchorQrEl)}
+                 anchorEl={anchorQrEl}
+                 onClose={handleQrClose}>
+          <Typography align={'center'} className={classes.qrCodeText}>
+            公众号“摄影师陈柏林”
+          </Typography>
+          <img src={qrCode} alt="qrCode" width={258} height={258}/>
+        </Popover>
         <Grid item sm={6} md={4}>
           <Typography variant="body2" color="textSecondary">
             <Link color="inherit" href={siteUrl}>

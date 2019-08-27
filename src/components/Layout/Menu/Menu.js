@@ -56,6 +56,11 @@ export default () => {
                     {category.fieldValue}
                   </Link>
                 </MenuItem>)}
+                <MenuItem>
+                  <Link component={GatsbyLink} to={`/archivedBlogPage/`}
+                        display="block" underline={'none'}
+                        className={classes.menuLink} activeClassName={classes.activeLink} noWrap>存档文章</Link>
+                </MenuItem>
               </MenuList>
             </ClickAwayListener>
           </Paper>

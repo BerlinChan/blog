@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
   cardMedia: {
     width: 200,
   },
+  date: {
+    marginRight: theme.spacing(1),
+  },
 }))
 
 const PostList = ({ edges }) => {
@@ -35,8 +38,12 @@ const PostList = ({ edges }) => {
         <Card className={classes.card}>
           <Box className={classes.cardDetails}>
             <CardContent>
-              <Typography variant="subtitle1" color="textSecondary">
-                {moment(node.frontmatter.date).format('YYYY-MM-DD')} {node.frontmatter.category}
+              <Typography variant="subtitle1" color="textSecondary"
+                          className={classes.date} display={'inline'}>
+                {moment(node.frontmatter.date).format('YYYY-MM-DD')}
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary" display={'inline'}>
+                {node.frontmatter.category}
               </Typography>
               <Typography component="h2" variant="h5">
                 {node.frontmatter.title}

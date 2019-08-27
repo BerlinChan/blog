@@ -53,6 +53,12 @@ export default () => {
                     key={index} className={classes.nested}>
             <ListItemText primary={category.fieldValue}/>
           </ListItem>)}
+        <ListItem button component={GatsbyLink}
+                  to={`/archivedBlogPage/`}
+                  activeClassName={classes.activeLink}
+                  className={classes.nested}>
+          <ListItemText primary={'存档文章'}/>
+        </ListItem>
 
         {menu.map((item, index) => (
           <React.Fragment key={index}>

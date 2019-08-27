@@ -5,10 +5,8 @@
 [https://blog.berlinchan.com/](https://blog.berlinchan.com/)
 
 ## TODO
-- [x] posts-pages, 标题标出 archivedBlog
-- [x] index recent post list
-- [x] featured image in list
+- [ ] background featured image in list on sm 
 - [ ] next & prev post nav
 - [ ] Layout 组件提取 sidebar props
 - [ ] 修改 Schema，post categories 支持多个分类
-- [ ] gatsby-awesome-pagination
+- [ ] youku.com 视频替换
