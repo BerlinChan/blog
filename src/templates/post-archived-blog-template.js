@@ -20,12 +20,12 @@ const PostTemplate = ({ data }) => {
           date: date,
           category: '',
           description: postDescription,
-          tags: tags.map(tag => tag.name),
+          tags: (tags || []).map(tag => tag.name),
         },
         fields: {
           slug: path,
           categorySlug: '',
-          tagSlugs: tags.map(tag => tag.path),
+          tagSlugs: (tags || []).map(tag => tag.path),
         },
         html: content,
       }}/>
@@ -38,7 +38,7 @@ const PostTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query PostByPath($slug: String!) {
+  query ArchivedBlogPostByPath($slug: String!) {
     archivedBlogPostJson(path: {eq: $slug}) {
       categories {
         path

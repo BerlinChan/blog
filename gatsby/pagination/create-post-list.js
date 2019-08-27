@@ -34,7 +34,7 @@ module.exports = async (graphql, actions) => {
   for (let i = 0; i < numPagesArchivedBlog; i += 1) {
     createPage({
       path: i === 0 ? `/archivedBlogPage` : `/archivedBlogPage/${i}`,
-      component: path.resolve('./src/templates/archived-blog-post-list-template.js'),
+      component: path.resolve('./src/templates/post-list-archived-blog-template.js'),
       context: {
         currentPage: i,
         postsLimit: postsPerPage,

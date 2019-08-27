@@ -41,8 +41,7 @@ export default () => {
           underline="none" className={classes.toolbarLink} activeClassName={classes.activeLink}
           aria-haspopup="true" aria-controls="menu-list-grow"
           onMouseEnter={e => setAnchorEl(e.currentTarget)}
-    >文章
-    </Link>
+    >文章</Link>
     <Popper open={Boolean(anchorEl)} anchorEl={anchorEl} transition disablePortal>
       {({ TransitionProps }) => (
         <Grow {...TransitionProps} style={{ transformOrigin: 'center bottom' }}>

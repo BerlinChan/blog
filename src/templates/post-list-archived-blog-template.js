@@ -50,7 +50,7 @@ const PostListTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query ArchivedBlogPostListTemplate($postsLimit: Int!, $postsOffset: Int!) {
+  query PostListArchivedBlogTemplate($postsLimit: Int!, $postsOffset: Int!) {
     allArchivedBlogPostJson(
         limit: $postsLimit,
         skip: $postsOffset,

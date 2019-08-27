@@ -48,7 +48,7 @@ export default ({ data }) => {
   return (
     <Layout title={siteTitle}
             featuredContent={<React.Fragment>
-              {1 && <Paper className={classes.mainFeaturedPost}>
+              {false && <Paper className={classes.mainFeaturedPost}>
                 {/* Increase the priority of the hero background image */}
                 {
                   <img

@@ -38,8 +38,9 @@ const Post = ({ isArchivedBlogPost, post }) => {
         </Link>
       </Typography>
 
-      <Typography paragraph variant={'body1'}
-                  dangerouslySetInnerHTML={{ __html: html }}/>
+      <Typography paragraph variant={'body1'}>
+        <div dangerouslySetInnerHTML={{ __html: html }}/>
+      </Typography>
 
       <Box className={classes.tagList}>
         {tags.map((tag, index) => (

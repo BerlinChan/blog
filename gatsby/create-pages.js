@@ -78,7 +78,7 @@ const createPages = async ({ graphql, actions }) => {
   archivedBlogPosts.data.allArchivedBlogPostJson.edges.forEach(edge =>
     createPage({
       path: edge.node.path,
-      component: path.resolve('./src/templates/archived-blog-post-template.js'),
+      component: path.resolve('./src/templates/post-archived-blog-template.js'),
       context: { slug: edge.node.path },
     }))
 

@@ -2,7 +2,7 @@ module.exports = {
   url: 'https://blog.berlinchan.com/',
   archivedBlogUrl: 'https://archived-blog.berlinchan.com',
   pathPrefix: '/',
-  title: 'site',
+  title: '陈柏林的Blog',
   subtitle: '',
   copyright: '',
   postsPerPage: 6,
