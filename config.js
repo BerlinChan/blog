@@ -2,10 +2,10 @@ module.exports = {
   url: 'https://blog.berlinchan.com/',
   archivedBlogUrl: 'https://archived-blog.berlinchan.com',
   pathPrefix: '/',
-  title: '陈柏林的Blog',
+  title: 'site',
   subtitle: '',
   copyright: '',
-  postsPerPage: 8,
+  postsPerPage: 6,
   googleAnalyticsId: 'UA-73379983-2',
   disqusShortname: 'berlinchan',
   menu: [

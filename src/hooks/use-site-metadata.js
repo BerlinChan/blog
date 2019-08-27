@@ -6,6 +6,13 @@ const useSiteMetadata = () => {
       query SiteMetaData {
         site {
           siteMetadata {
+            url
+            archivedBlogUrl
+            title
+            subtitle
+            postsPerPage
+            copyright
+            disqusShortname
             author {
               name
               bio
@@ -24,12 +31,6 @@ const useSiteMetadata = () => {
               path
               link
             }
-            url
-            archivedBlogUrl
-            title
-            subtitle
-            copyright
-            disqusShortname
           }
         }
       }

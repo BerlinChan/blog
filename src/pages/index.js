@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box'
 import Link from '@material-ui/core/Link'
 import Divider from '@material-ui/core/Divider'
 import PostList from '../components/PostList'
+import Pagination from '../components/Pagination'
 
 const useStyles = makeStyles(theme => ({
   mainFeaturedPost: {
@@ -42,7 +43,7 @@ const useStyles = makeStyles(theme => ({
 
 export default ({ data }) => {
   const classes = useStyles()
-  const { title: siteTitle } = useSiteMetadata()
+  const { title: siteTitle, postsPerPage } = useSiteMetadata()
 
   return (
     <Layout title={siteTitle}
@@ -78,6 +79,7 @@ export default ({ data }) => {
       <Typography variant="h6" gutterBottom>近期文章</Typography>
       <Box mb={3}><Divider/></Box>
       <PostList edges={data.recentPosts.edges}/>
+      {data.allPostCount.totalCount > postsPerPage && <Pagination nextPagePath={'/page/1'}/>}
     </Layout>
   )
 }
@@ -129,5 +131,8 @@ export const query = graphql`
         }
       }
     }
+    allPostCount: allMarkdownRemark(
+      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+    ) { totalCount }
   }
 `
