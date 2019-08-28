@@ -7,7 +7,7 @@ import Grow from '@material-ui/core/Grow'
 import Paper from '@material-ui/core/Paper'
 import MenuList from '@material-ui/core/MenuList'
 import MenuItem from '@material-ui/core/MenuItem'
-import { useSiteMetadata, useCategoriesList } from '../../../hooks'
+import { useCategoriesList, useSiteMetadata } from '../../../hooks'
 import { makeStyles } from '@material-ui/core'
 import kebabCase from 'lodash/kebabCase'
 

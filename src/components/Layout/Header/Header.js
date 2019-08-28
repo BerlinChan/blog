@@ -11,7 +11,7 @@ import Hidden from '@material-ui/core/Hidden'
 import Menu from '../Menu'
 import MenuDraw from '../MenuDraw'
 import { useSiteMetadata } from '../../../hooks'
-import { withPrefix, Link as GatsbyLink } from 'gatsby'
+import { Link as GatsbyLink, withPrefix } from 'gatsby'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger/useScrollTrigger'
 
 const useStyles = makeStyles(theme => ({

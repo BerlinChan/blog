@@ -8,10 +8,12 @@ const NotFoundTemplate = () => {
 
   return (
     <Layout title={`Not Found - ${title}`} description={subtitle}>
-      <Typography component={'h2'} variant={'h4'} gutterBottom>
+      <Typography variant={'subtitle1'} gutterBottom>
         NOT FOUND
       </Typography>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <Typography component={'h2'} variant={'h4'}>
+        页面不存在
+      </Typography>
     </Layout>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
-import { useSiteMetadata, useCategoriesList } from '../../../hooks'
+import { useCategoriesList, useSiteMetadata } from '../../../hooks'
 import { makeStyles } from '@material-ui/core'
 import kebabCase from 'lodash/kebabCase'
 import Link from '@material-ui/core/Link'

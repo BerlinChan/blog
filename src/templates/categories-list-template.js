@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import Layout from '../components/Layout'
-import { useSiteMetadata, useCategoriesList } from '../hooks'
+import { useCategoriesList, useSiteMetadata } from '../hooks'
 import Typography from '@material-ui/core/Typography'
 
 const CategoriesListTemplate = () => {
