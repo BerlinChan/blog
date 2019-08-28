@@ -38,7 +38,7 @@ const Post = ({ isArchivedBlogPost, post }) => {
         </Link>
       </Typography>
 
-      <Typography paragraph variant={'body1'}>
+      <Typography component={'div'} paragraph variant={'body1'}>
         <div dangerouslySetInnerHTML={{ __html: html }}/>
       </Typography>
 
