@@ -17,6 +17,13 @@ const useStyles = makeStyles(theme => ({
   chip: {
     margin: theme.spacing(0.5),
   },
+  content: {
+    fontSize: theme.typography.htmlFontSize,
+    '& a': {
+      color: theme.palette.primary.main,
+      textDecoration: 'none',
+    },
+  },
 }))
 
 const Post = ({ isArchivedBlogPost, post }) => {
@@ -38,9 +45,7 @@ const Post = ({ isArchivedBlogPost, post }) => {
         </Link>
       </Typography>
 
-      <Typography component={'div'} paragraph variant={'body1'}>
-        <div dangerouslySetInnerHTML={{ __html: html }}/>
-      </Typography>
+      <div className={classes.content} dangerouslySetInnerHTML={{ __html: html }}/>
 
       <Box className={classes.tagList}>
         {tags.map((tag, index) => (
