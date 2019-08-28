@@ -1,6 +1,6 @@
 ---
 title: 从 Wordpress 迁移 blog 到 Gatsby
-date: "2019-08-12T18:46:37.121+08"
+date: "2019-08-12T10:46:37.121Z"
 template: "post"
 featured_top: false
 featured_media: "../../static/media/2019/08/wordpress-to-gatsby.png"

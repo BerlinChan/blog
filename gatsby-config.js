@@ -9,6 +9,7 @@ module.exports = {
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
     copyright: siteConfig.copyright,
+    UTC: siteConfig.UTC,
     postsPerPage: siteConfig.postsPerPage,
     disqusShortname: siteConfig.disqusShortname,
     menu: siteConfig.menu,

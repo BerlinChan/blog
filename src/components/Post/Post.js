@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
 
 const Post = ({ isArchivedBlogPost, post }) => {
   const classes = useStyles()
-  const { archivedBlogUrl } = useSiteMetadata()
+  const { archivedBlogUrl, UTC } = useSiteMetadata()
   const { html } = post
   const { categorySlug, tagSlugs } = post.fields
   const { category, tags, title, date } = post.frontmatter
@@ -30,7 +30,7 @@ const Post = ({ isArchivedBlogPost, post }) => {
     <React.Fragment>
       <Typography component="h2" variant={'h4'}>{title}</Typography>
       <Typography variant={'body1'} display={'inline'} color="textSecondary">
-        {moment(date).format('YYYY-MM-DD HH:mm')}
+        {moment.utc(date).utcOffset(UTC).format('YYYY-MM-DD HH:mm')}
       </Typography>
       <Typography variant={'body1'} display={'inline'} color="textSecondary">
         <Link component={GatsbyLink} to={categorySlug}>

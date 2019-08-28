@@ -1,1 +1,1 @@
-require('./static/css/prismjs/theme.min.css')
+import 'prismjs/themes/prism.css'

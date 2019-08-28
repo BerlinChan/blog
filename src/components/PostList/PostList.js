@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
 import CardMedia from '@material-ui/core/CardMedia'
 import { makeStyles } from '@material-ui/core'
+import { useSiteMetadata } from '../../hooks'
 
 const useStyles = makeStyles(theme => ({
   cardActionArea: {
@@ -30,6 +31,7 @@ const useStyles = makeStyles(theme => ({
 
 const PostList = ({ edges }) => {
   const classes = useStyles()
+  const { UTC } = useSiteMetadata()
 
   return <React.Fragment>
     {edges.map(({ node }, index) => (
@@ -40,7 +42,7 @@ const PostList = ({ edges }) => {
             <CardContent>
               <Typography variant="subtitle1" color="textSecondary"
                           className={classes.date} display={'inline'}>
-                {moment(node.frontmatter.date).format('YYYY-MM-DD')}
+                {moment.utc(node.frontmatter.date).utcOffset(UTC).format('YYYY-MM-DD')}
               </Typography>
               <Typography variant="subtitle1" color="textSecondary" display={'inline'}>
                 {node.frontmatter.category}
