@@ -5794,10 +5794,10 @@ gatsby-transformer-sharp@^2.2.12:
     semver "^5.7.1"
     sharp "^0.23.0"
 
-gatsby@^2.14.2:
+gatsby@^2.14.3:
   version "2.14.3"
-  resolved "https://registry.npm.taobao.org/gatsby/download/gatsby-2.14.3.tgz#8af133ed158753fc9201e637b49c54f723f40bae"
-  integrity sha1-ivEz7RWHU/ySAeY3tJxU9yP0C64=
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.14.3.tgz#8af133ed158753fc9201e637b49c54f723f40bae"
+  integrity sha512-U646Xh9nX1LXErKpvEUKBJhcCGSNC2+VCMd6cLJ48e0b9fXHZx71+9u+iuZirSXodBO9K+tOZZI6yx3pr/iGnw==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.5.5"
@@ -10645,8 +10645,8 @@ react-helmet@^5.2.1:
 
 react-hot-loader@^4.12.12:
   version "4.12.12"
-  resolved "https://registry.npm.taobao.org/react-hot-loader/download/react-hot-loader-4.12.12.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-hot-loader%2Fdownload%2Freact-hot-loader-4.12.12.tgz#8b33f59efef8a34f64e01f0d9393230d4b4bc6d4"
-  integrity sha1-izP1nv74o09k4B8Nk5MjDUtLxtQ=
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.12.tgz#8b33f59efef8a34f64e01f0d9393230d4b4bc6d4"
+  integrity sha512-Tkd412j5yPKHoTRsJzZb+5UJNFKkPszm7QGKGYvt+jnzTkDS+qK0u3AYPlB0MmBlwzUKVHICqq5KH9Srzda7XA==
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
@@ -13361,8 +13361,8 @@ webpack-log@^2.0.0:
 
 webpack-merge@^4.2.2:
   version "4.2.2"
-  resolved "https://registry.npm.taobao.org/webpack-merge/download/webpack-merge-4.2.2.tgz?cache=0&sync_timestamp=1566978693896&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack-merge%2Fdownload%2Fwebpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
-  integrity sha1-onxS6ng9E5iv0gh/VH17nS9DY00=
+  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.2.2.tgz#a27c52ea783d1398afd2087f547d7b9d2f43634d"
+  integrity sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==
   dependencies:
     lodash "^4.17.15"
 
@@ -13381,8 +13381,8 @@ webpack-stats-plugin@^0.3.0:
 
 webpack@~4.39.3:
   version "4.39.3"
-  resolved "https://registry.npm.taobao.org/webpack/download/webpack-4.39.3.tgz#a02179d1032156b713b6ec2da7e0df9d037def50"
-  integrity sha1-oCF50QMhVrcTtuwtp+DfnQN971A=
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.39.3.tgz#a02179d1032156b713b6ec2da7e0df9d037def50"
+  integrity sha512-BXSI9M211JyCVc3JxHWDpze85CvjC842EvpRsVTc/d15YJGlox7GIDd38kJgWrb3ZluyvIjgenbLDMBQPDcxYQ==
   dependencies:
     "@webassemblyjs/ast" "1.8.5"
     "@webassemblyjs/helper-module-context" "1.8.5"
