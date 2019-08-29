@@ -21,10 +21,15 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(0.5),
   },
   content: {
-    fontSize: theme.typography.htmlFontSize,
+    fontSize: 18,
+    lineHeight: 1.6,
     '& a': {
       color: theme.palette.primary.main,
       textDecoration: 'none',
+    },
+    '& blockquote': {
+      padding: theme.spacing(1, 2),
+      backgroundColor: theme.palette.grey[200],
     },
   },
 }))
