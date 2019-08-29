@@ -7,9 +7,13 @@ import kebabCase from 'lodash/kebabCase'
 import Box from '@material-ui/core/Box'
 import { makeStyles } from '@material-ui/core'
 import { grey } from '@material-ui/core/colors'
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
+import IconButton from '@material-ui/core/IconButton'
 
 const useStyles = makeStyles(theme => ({
   title: {
+    display: 'flex',
+    justifyContent: 'space-between',
     padding: theme.spacing(.5, 1),
     backgroundColor: grey[200],
   },
@@ -30,7 +34,12 @@ const Tags = (props) => {
   const tagsList = useTagsList()
 
   return <Box {...props}>
-    <Typography variant="subtitle1" className={classes.title}>标签</Typography>
+    <Box className={classes.title}>
+      <Typography variant="subtitle1">标签</Typography>
+      <IconButton component={GatsbyLink} to={'/tags'} aria-label="more" size="small">
+        <MoreHorizIcon/>
+      </IconButton>
+    </Box>
     <Box className={classes.listBox}>
       {tagsList.map((tag, index) =>
         <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}
