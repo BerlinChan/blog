@@ -93,7 +93,7 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml',
+            output: siteConfig.author.contacts.rss,
             title: `${siteConfig.title} RSS Feed`,
           }],
       },
@@ -103,7 +103,6 @@ module.exports = {
       options: {
         'excerpt_separator': `<!-- endExcerpt -->`,
         plugins: [
-          'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
             options: {
