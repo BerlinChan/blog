@@ -9,6 +9,9 @@ import { makeStyles } from '@material-ui/core'
 import { useSiteMetadata } from '../../hooks'
 
 const useStyles = makeStyles(theme => ({
+  date: {
+    marginRight: theme.spacing(1),
+  },
   tagList: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -36,7 +39,8 @@ const Post = ({ isArchivedBlogPost, post }) => {
   return (
     <React.Fragment>
       <Typography component="h2" variant={'h4'}>{title}</Typography>
-      <Typography variant={'body1'} display={'inline'} color="textSecondary">
+      <Typography variant={'body1'} display={'inline'} color="textSecondary"
+                  className={classes.date}>
         {moment.utc(date).utcOffset(UTC).format('YYYY-MM-DD HH:mm')}
       </Typography>
       <Typography variant={'body1'} display={'inline'} color="textSecondary">

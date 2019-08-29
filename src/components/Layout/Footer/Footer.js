@@ -69,6 +69,9 @@ export default () => {
           <IconButton className={classes.snsIcon} onClick={handleQrClick}>
             <SvgIcons name={'wechat'}/>
           </IconButton>
+          <IconButton className={classes.snsIcon} href={contacts.rss} target="_blank" rel="noopener">
+            <SvgIcons name={'rss'}/>
+          </IconButton>
         </Grid>
         <Popover anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
                  transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
