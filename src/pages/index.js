@@ -11,6 +11,8 @@ import Link from '@material-ui/core/Link'
 import Divider from '@material-ui/core/Divider'
 import PostList from '../components/PostList'
 import Pagination from '../components/Pagination'
+import GatsbyLink from 'gatsby-link'
+import BackgroundImage from 'gatsby-background-image'
 
 const useStyles = makeStyles(theme => ({
   mainFeaturedPost: {
@@ -18,10 +20,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(https://source.unsplash.com/user/erondu)',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
+    overflow: 'hidden',
   },
   overlay: {
     position: 'absolute',
@@ -44,38 +43,30 @@ const useStyles = makeStyles(theme => ({
 export default ({ data }) => {
   const classes = useStyles()
   const { title: siteTitle, postsPerPage } = useSiteMetadata()
+  const featuredPostEdge = data.featuredPosts.edges[0]
 
   return (
     <Layout title={siteTitle}
-            featuredContent={<React.Fragment>
-              {false && <Paper className={classes.mainFeaturedPost}>
-                {/* Increase the priority of the hero background image */}
-                {
-                  <img
-                    style={{ display: 'none' }}
-                    src="https://source.unsplash.com/user/erondu"
-                    alt="background"
-                  />
-                }
+            featuredContent={<Paper className={classes.mainFeaturedPost}>
+              <BackgroundImage fluid={featuredPostEdge.node.frontmatter.featured_media.childImageSharp.fluid}>
                 <div className={classes.overlay}/>
                 <Grid container>
                   <Grid item md={6}>
                     <div className={classes.mainFeaturedPostContent}>
                       <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                        Title of a longer featured blog post
+                        {featuredPostEdge.node.frontmatter.title}
                       </Typography>
                       <Typography variant="h5" color="inherit" paragraph>
-                        Multiple lines of text that form the lede, informing new readers quickly and
-                        efficiently about what&apos;s most interesting in this post&apos;s contents.
+                        {featuredPostEdge.node.frontmatter.description}
                       </Typography>
-                      <Link variant="subtitle1" href="#">
-                        Continue reading…
+                      <Link component={GatsbyLink} to={featuredPostEdge.node.frontmatter.slug} variant="subtitle1">
+                        阅读…
                       </Link>
                     </div>
                   </Grid>
                 </Grid>
-              </Paper>}
-            </React.Fragment>}>
+              </BackgroundImage>
+            </Paper>}>
       <Typography variant="h6" gutterBottom>近期文章</Typography>
       <Box mb={3}><Divider/></Box>
       <PostList edges={data.recentPosts.edges}/>
@@ -85,54 +76,59 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query IndexQuery{
-    featuredPosts: allMarkdownRemark(
-      filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_top: {ne: false}}},
-      limit: 1,
-      sort: {order: DESC, fields: frontmatter___date}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            date
-            title
-            slug
-            description
-          }
-        }
-      }
-    }
-    recentPosts: allMarkdownRemark(
-      limit: 6,
-      filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}}},
-      sort: {fields: frontmatter___date, order: DESC}
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            categorySlug
-          }
-          frontmatter {
-            description
-            slug
-            title
-            category
-            date
-            featured_media {
-              childImageSharp {
-                fixed {
-                  src
+    query IndexQuery{
+        featuredPosts: allMarkdownRemark(
+            filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_top: {ne: false}}},
+            limit: 1,
+            sort: {order: DESC, fields: frontmatter___date}
+        ) {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        slug
+                        description
+                        featured_media {
+                            childImageSharp {
+                                fluid(maxWidth: 1200) {
+                                    ...GatsbyImageSharpFluid_withWebp_tracedSVG                                }
+                            }
+                        }
+                    }
                 }
-              }
             }
-          }
-          excerpt
         }
-      }
+        recentPosts: allMarkdownRemark(
+            limit: 6,
+            filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}}},
+            sort: {fields: frontmatter___date, order: DESC}
+        ) {
+            edges {
+                node {
+                    fields {
+                        slug
+                        categorySlug
+                    }
+                    frontmatter {
+                        description
+                        slug
+                        title
+                        category
+                        date
+                        featured_media {
+                            childImageSharp {
+                                fixed {
+                                    src
+                                }
+                            }
+                        }
+                    }
+                    excerpt
+                }
+            }
+        }
+        allPostCount: allMarkdownRemark(
+            filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+        ) { totalCount }
     }
-    allPostCount: allMarkdownRemark(
-      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-    ) { totalCount }
-  }
 `

@@ -4,7 +4,6 @@ module.exports = {
   pathPrefix: '/',
   title: '陈柏林的Blog',
   subtitle: '',
-  copyright: '',
   UTC: '+08',
   postsPerPage: 6,
   googleAnalyticsId: 'UA-73379983-2',

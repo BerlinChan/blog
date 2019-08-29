@@ -11,7 +11,6 @@ const useSiteMetadata = () => {
             title
             subtitle
             postsPerPage
-            copyright
             UTC
             disqusShortname
             author {

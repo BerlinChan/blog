@@ -2,8 +2,8 @@
 title: Xbox One X 开箱及一年后感受
 date: "2019-08-27T10:46:37.121Z"
 template: "post"
-featured_top: false
-featured_media: "../../static/media/2019/08/wordpress-to-gatsby.png"
+featured_top: true
+featured_media: "../../static/media/2019/08/unbox-xbox-one-x-featured-media.jpg"
 draft: false
 slug: "/2019/08/talk-about-xbox-1x-after-1-year"
 category: "小玩意"

@@ -12,13 +12,13 @@ import Popover from '@material-ui/core/Popover'
 import qrCode from '../../../../static/media/2019/08/qrcode_for_gh_e9cd709bed60_258.jpg'
 
 const useStyles = makeStyles(theme => ({
-  snsIcon: {
-    marginRight: theme.spacing(1),
-  },
   footer: {
     backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing(8),
-    padding: theme.spacing(6, 0),
+    marginTop: theme.spacing(6),
+    padding: theme.spacing(6, 4),
+  },
+  snsIcon: {
+    marginRight: theme.spacing(1),
   },
   qrCodeText: {
     marginTop: theme.spacing(1),
@@ -43,11 +43,13 @@ export default () => {
       <Grid container spacing={3}>
         <Hidden smDown>
           <Grid item md={4}>
-            <Typography variant="body2" color="textSecondary" align={'center'}>
+            <Typography variant="subtitle1" color="textSecondary">
+              <Link component={GatsbyLink} to={'/page'} color="inherit">文章</Link>
+              {' | '}
               {menu.map((item, index) => <React.Fragment key={index}>
-                {item.path ?
-                  <Link component={GatsbyLink} to={item.path} color="inherit">{item.label}</Link> :
-                  <Link href={item.link} target="_blank" rel="noopener" color="inherit">{item.label}</Link>}
+                {item.path
+                  ? <Link component={GatsbyLink} to={item.path} color="inherit">{item.label}</Link>
+                  : <Link href={item.link} target="_blank" rel="noopener" color="inherit">{item.label}</Link>}
                 {index < menu.length - 1 ? ' | ' : null}
               </React.Fragment>)}
             </Typography>
@@ -72,17 +74,17 @@ export default () => {
           <IconButton className={classes.snsIcon} href={contacts.rss} target="_blank" rel="noopener">
             <SvgIcons name={'rss'}/>
           </IconButton>
+          <Popover anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+                   transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                   open={Boolean(anchorQrEl)}
+                   anchorEl={anchorQrEl}
+                   onClose={handleQrClose}>
+            <Typography align={'center'} className={classes.qrCodeText}>
+              公众号“摄影师陈柏林”
+            </Typography>
+            <img src={qrCode} alt="qrCode" width={258} height={258}/>
+          </Popover>
         </Grid>
-        <Popover anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-                 transformOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-                 open={Boolean(anchorQrEl)}
-                 anchorEl={anchorQrEl}
-                 onClose={handleQrClose}>
-          <Typography align={'center'} className={classes.qrCodeText}>
-            公众号“摄影师陈柏林”
-          </Typography>
-          <img src={qrCode} alt="qrCode" width={258} height={258}/>
-        </Popover>
         <Grid item sm={6} md={4}>
           <Typography variant="body2" color="textSecondary">
             <Link color="inherit" href={siteUrl}>

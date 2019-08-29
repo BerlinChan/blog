@@ -8,7 +8,6 @@ module.exports = {
     archivedBlogUrl: siteConfig.archivedBlogUrl,
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
-    copyright: siteConfig.copyright,
     UTC: siteConfig.UTC,
     postsPerPage: siteConfig.postsPerPage,
     disqusShortname: siteConfig.disqusShortname,
@@ -16,6 +15,12 @@ module.exports = {
     author: siteConfig.author,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./content/archived-blog`,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -108,6 +113,7 @@ module.exports = {
             },
           },
           {
+            // MUST before gatsby-remark-responsive-iframe
             resolve: 'gatsby-remark-embed-video',
             options: {
               width: 600,
@@ -129,12 +135,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-json',
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./content/archived-blog`,
-      },
-    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-material-ui',
