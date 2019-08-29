@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
+import Link from '@material-ui/core/Link'
 import kebabCase from 'lodash/kebabCase'
 import Layout from '../components/Layout'
 import { useCategoriesList, useSiteMetadata } from '../hooks'
@@ -10,14 +11,14 @@ const CategoriesListTemplate = () => {
   const categories = useCategoriesList()
 
   return (
-    <Layout title={`Categories - ${title}`} description={subtitle}>
+    <Layout title={`文章分类 - ${title}`} description={subtitle}>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
-        Categories
+        文章分类
       </Typography>
       <ul>
-        {categories.map((category) => (
-          <li key={category.fieldValue}>
-            <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
+        {categories.map((category, index) => (
+          <li key={index}>
+            <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}>
               {category.fieldValue} ({category.totalCount})
             </Link>
           </li>

@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import Layout from '../components/Layout'
 import { useSiteMetadata, useTagsList } from '../hooks'
+import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 
 const TagsListTemplate = () => {
@@ -10,14 +11,14 @@ const TagsListTemplate = () => {
   const tags = useTagsList()
 
   return (
-    <Layout title={`Tags - ${title}`} description={subtitle}>
+    <Layout title={`标签 - ${title}`} description={subtitle}>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
-        Tags
+        标签
       </Typography>
       <ul>
-        {tags.map((tag) => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
+        {tags.map((tag, index) => (
+          <li key={index}>
+            <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
           </li>

@@ -23,17 +23,17 @@ const PageTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query PageBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      html
-      frontmatter {
-        title
-        date
-        description
-      }
+    query PageBySlug($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            id
+            html
+            frontmatter {
+                title
+                date
+                description
+            }
+        }
     }
-  }
 `
 
 export default PageTemplate

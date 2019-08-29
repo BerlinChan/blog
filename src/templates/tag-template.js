@@ -18,8 +18,8 @@ const TagTemplate = ({ data, pageContext }) => {
 
   const { edges } = data.allMarkdownRemark
   const pageTitle = currentPage > 0
-    ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}`
-    : `All Posts tagged as "${tag}" - ${siteTitle}`
+    ? `包含标签"${tag}"的文章 - 第 ${currentPage} 页 - ${siteTitle}`
+    : `包含标签"${tag}"的文章 - ${siteTitle}`
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
@@ -36,35 +36,42 @@ const TagTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!) {
-    site {
-      siteMetadata {
-        title
-        subtitle
-      }
-    }
-    allMarkdownRemark(
-        limit: $postsLimit,
-        skip: $postsOffset,
-        filter: { frontmatter: { tags: { in: [$tag] }, template: { eq: "post" }, draft: { ne: true } } },
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ){
-      edges {
-        node {
-          fields {
-            slug
-            categorySlug
-          }
-          frontmatter {
-            title
-            date
-            category
-            description
-          }
+    query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!) {
+        site {
+            siteMetadata {
+                title
+                subtitle
+            }
         }
-      }
+        allMarkdownRemark(
+            limit: $postsLimit,
+            skip: $postsOffset,
+            filter: { frontmatter: { tags: { in: [$tag] }, template: { eq: "post" }, draft: { ne: true } } },
+            sort: { order: DESC, fields: [frontmatter___date] }
+        ){
+            edges {
+                node {
+                    fields {
+                        slug
+                        categorySlug
+                    }
+                    frontmatter {
+                        title
+                        date
+                        category
+                        description
+                        featured_media {
+                            childImageSharp {
+                                fixed {
+                                    src
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 `
 
 export default TagTemplate
