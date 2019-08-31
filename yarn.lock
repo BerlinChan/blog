@@ -2501,7 +2501,16 @@ browserslist@3.2.8:
     caniuse-lite "^1.0.30000844"
     electron-to-chromium "^1.3.47"
 
-browserslist@4.6.6, browserslist@^4.0.0, browserslist@^4.6.0, browserslist@^4.6.3, browserslist@^4.6.6:
+browserslist@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.7.0.tgz#9ee89225ffc07db03409f2fee524dc8227458a17"
+  integrity sha512-9rGNDtnj+HaahxiVV38Gn8n8Lr8REKsel68v1sPFfIGEK6uSXTY3h9acgiT1dZVtOOUtifo/Dn8daDQ5dUgVsA==
+  dependencies:
+    caniuse-lite "^1.0.30000989"
+    electron-to-chromium "^1.3.247"
+    node-releases "^1.1.29"
+
+browserslist@^4.0.0, browserslist@^4.6.0, browserslist@^4.6.3, browserslist@^4.6.6:
   version "4.6.6"
   resolved "https://registry.npm.taobao.org/browserslist/download/browserslist-4.6.6.tgz#6e4bf467cde520bc9dbdf3747dafa03531cec453"
   integrity sha1-bkv0Z83lILydvfN0fa+gNTHOxFM=
@@ -2734,7 +2743,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000980, caniuse-lite@^1.0.30000984:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000980, caniuse-lite@^1.0.30000984, caniuse-lite@^1.0.30000989:
   version "1.0.30000989"
   resolved "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000989.tgz#b9193e293ccf7e4426c5245134b8f2a56c0ac4b9"
   integrity sha1-uRk+KTzPfkQmxSRRNLjypWwKxLk=
@@ -4244,6 +4253,11 @@ electron-to-chromium@^1.3.191, electron-to-chromium@^1.3.47:
   resolved "https://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.244.tgz#7ba5461fa320ab16540a31b1d0defb7ec29b16e4"
   integrity sha1-e6VGH6MgqxZUCjGx0N77fsKbFuQ=
 
+electron-to-chromium@^1.3.247:
+  version "1.3.247"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.247.tgz#ff2332376150436599265b2dfd7a539f214f4ade"
+  integrity sha512-j/Rzx1FyVTwNifpG/DPQKEMz0mruRwoPpJ6Y1tTVmj6+/zAVzG8/YHZwBMLYCZgQH6seLOqaVxZ3RY3KMrT5IQ==
+
 elliptic@^6.0.0:
   version "6.5.0"
   resolved "https://registry.npm.taobao.org/elliptic/download/elliptic-6.5.0.tgz#2b8ed4c891b7de3200e14412a5b8248c7af505ca"
@@ -5620,20 +5634,6 @@ gatsby-remark-autolink-headers@^2.1.8:
     github-slugger "^1.2.1"
     lodash "^4.17.15"
     mdast-util-to-string "^1.0.6"
-    unist-util-visit "^1.4.1"
-
-gatsby-remark-copy-linked-files@^2.1.13:
-  version "2.1.13"
-  resolved "https://registry.npm.taobao.org/gatsby-remark-copy-linked-files/download/gatsby-remark-copy-linked-files-2.1.13.tgz#29c8d9500ba78a9d457f102540396c39abbd783e"
-  integrity sha1-KcjZUAunip1FfxAlQDlsOau9eD4=
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-    cheerio "^1.0.0-rc.3"
-    fs-extra "^8.1.0"
-    is-relative-url "^3.0.0"
-    lodash "^4.17.15"
-    path-is-inside "^1.0.2"
-    probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
 gatsby-remark-embed-video@^1.7.1:
@@ -8934,6 +8934,13 @@ node-releases@^1.1.25:
   version "1.1.28"
   resolved "https://registry.npm.taobao.org/node-releases/download/node-releases-1.1.28.tgz#503c3c70d0e4732b84e7aaa2925fbdde10482d4a"
   integrity sha1-UDw8cNDkcyuE56qikl+93hBILUo=
+  dependencies:
+    semver "^5.3.0"
+
+node-releases@^1.1.29:
+  version "1.1.29"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.29.tgz#86a57c6587a30ecd6726449e5d293466b0a0bb86"
+  integrity sha512-R5bDhzh6I+tpi/9i2hrrvGJ3yKPYzlVOORDkXhnZuwi5D3q1I5w4vYy24PJXTcLk9Q0kws9TO77T75bcK8/ysQ==
   dependencies:
     semver "^5.3.0"
 
