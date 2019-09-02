@@ -74,7 +74,7 @@
     "autoprefixer": "9.6.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-preset-gatsby": "0.2.11",
-    "browserslist": "4.6.6",
+    "browserslist": "4.7.0",
     "concurrently": "4.1.2",
     "gh-pages": "2.1.1",
     "postcss-pxtorem": "4.0.1",
