@@ -1089,16 +1089,16 @@
   dependencies:
     core-js "^2.5.7"
 
-"@material-ui/core@^4.3.3":
-  version "4.3.3"
-  resolved "https://registry.npm.taobao.org/@material-ui/core/download/@material-ui/core-4.3.3.tgz#38a02331da7916c18e65c3dc56f3f6a67ba60c07"
-  integrity sha1-OKAjMdp5FsGOZcPcVvP2pnumDAc=
+"@material-ui/core@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.4.0.tgz#820b6ee91da9eaf4018ff9e87e6ca04fc985e35a"
+  integrity sha512-p6yDcLYYHzJD0A6im+prcCahZBdlhh2OrTGQ4W1XN1X5uiMIg4niJ8FYBpgV0ssaluO+EYlaAKp2qGeMNRr/bA==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@material-ui/styles" "^4.3.3"
     "@material-ui/system" "^4.3.3"
     "@material-ui/types" "^4.1.1"
-    "@material-ui/utils" "^4.3.0"
+    "@material-ui/utils" "^4.4.0"
     "@types/react-transition-group" "^4.2.0"
     clsx "^1.0.2"
     convert-css-length "^2.0.1"
@@ -1159,10 +1159,19 @@
   dependencies:
     "@types/react" "*"
 
-"@material-ui/utils@^4.1.0", "@material-ui/utils@^4.3.0":
+"@material-ui/utils@^4.1.0":
   version "4.3.0"
   resolved "https://registry.npm.taobao.org/@material-ui/utils/download/@material-ui/utils-4.3.0.tgz#ea7f09815c792e80f270ef8b916517c3f9caba13"
   integrity sha1-6n8JgVx5LoDycO+LkWUXw/nKuhM=
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    prop-types "^15.7.2"
+    react-is "^16.8.6"
+
+"@material-ui/utils@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@material-ui/utils/-/utils-4.4.0.tgz#9275421e2798a067850d201212d46f12725828ad"
+  integrity sha512-UXoQVwArQEQWXxf2FPs0iJGT+MePQpKr0Qh0CPoLc1OdF0GSMTmQczcqCzwZkeHxHAOq/NkIKM1Pb/ih1Avicg==
   dependencies:
     "@babel/runtime" "^7.4.4"
     prop-types "^15.7.2"
@@ -5620,20 +5629,6 @@ gatsby-remark-autolink-headers@^2.1.8:
     github-slugger "^1.2.1"
     lodash "^4.17.15"
     mdast-util-to-string "^1.0.6"
-    unist-util-visit "^1.4.1"
-
-gatsby-remark-copy-linked-files@^2.1.13:
-  version "2.1.13"
-  resolved "https://registry.npm.taobao.org/gatsby-remark-copy-linked-files/download/gatsby-remark-copy-linked-files-2.1.13.tgz#29c8d9500ba78a9d457f102540396c39abbd783e"
-  integrity sha1-KcjZUAunip1FfxAlQDlsOau9eD4=
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-    cheerio "^1.0.0-rc.3"
-    fs-extra "^8.1.0"
-    is-relative-url "^3.0.0"
-    lodash "^4.17.15"
-    path-is-inside "^1.0.2"
-    probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
 gatsby-remark-embed-video@^1.7.1:
