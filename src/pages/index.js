@@ -7,8 +7,8 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
-import Link from '@material-ui/core/Link'
 import Divider from '@material-ui/core/Divider'
+import ButtonBase from '@material-ui/core/ButtonBase'
 import PostList from '../components/PostList'
 import Pagination from '../components/Pagination'
 import GatsbyLink from 'gatsby-link'
@@ -31,7 +31,9 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'rgba(0,0,0,.3)',
   },
   mainFeaturedPostContent: {
+    display: 'block',
     position: 'relative',
+    textAlign: 'left',
     padding: theme.spacing(3),
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(6),
@@ -52,17 +54,18 @@ export default ({ data }) => {
                 <div className={classes.overlay}/>
                 <Grid container>
                   <Grid item md={6}>
-                    <div className={classes.mainFeaturedPostContent}>
+                    <ButtonBase focusRipple className={classes.mainFeaturedPostContent}
+                                component={GatsbyLink} to={featuredPostEdge.node.frontmatter.slug}>
                       <Typography component="h1" variant="h3" color="inherit" gutterBottom>
                         {featuredPostEdge.node.frontmatter.title}
                       </Typography>
                       <Typography variant="h5" color="inherit" paragraph>
                         {featuredPostEdge.node.frontmatter.description}
                       </Typography>
-                      <Link component={GatsbyLink} to={featuredPostEdge.node.frontmatter.slug} variant="subtitle1">
+                      <Typography variant="subtitle1" color={'inherit'}>
                         阅读…
-                      </Link>
-                    </div>
+                      </Typography>
+                    </ButtonBase>
                   </Grid>
                 </Grid>
               </BackgroundImage>
