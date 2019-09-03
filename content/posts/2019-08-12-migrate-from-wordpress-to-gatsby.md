@@ -62,6 +62,12 @@ Wordpress 的旧文章很容易接入 GraphQL 并为生成器提供数据，使�
 而后用 `gatsby-transformer-json` 接入到 GraphQL，就可以完全脱离开 Wordpress 运行了。我存为的 JSON 文件如下图：
 ![archived-blog-json](../../static/media/2019/08/archived-blog-json.png)
 
+## 添加评论功能
+考虑过 Gitalk/Disqus/多说/Firebase/野狗，Firebase/Disqus 大陆用不了，Gitalk 只能用 GitHub 账号登陆，
+多说已经无法说🤐，野狗已停止运营。
+
+权衡后还是选择业界领先的 Disqus，反正这博客站访问的人少🤣
+
 ## 其它的尝试
 最开始尝试直接将 WP2Static 生成的静态 HTML 页放到 Gatsby 项目的 `/static` 目录下，因为该目录的内容会不经处理的直接拷贝至生成目录。
 然后用新站 Gatsby 生成目录指向这些旧文章，但这些链接就不在 SPA 的治下，前端路由会 404 找不到页面。
@@ -70,6 +76,14 @@ Wordpress 的旧文章很容易接入 GraphQL 并为生成器提供数据，使�
 但这样既然生成“空页面”了，还不如生成一篇完整的文章页，还能利用上 PWA 的 pre-fetch 特性。
 
 我在这些尝试上费了很多时间。
+
+## GitHub 上好用的工具
+Gatsby 是一个快速发展中的新框架，将代码托管在 GitHub 上时，用市场中的 [Dependabot Preview](https://github.com/marketplace/dependabot-preview)
+或者 [Renovate](https://github.com/marketplace/renovate)，能很好帮我们更新 npm 依赖。
+[使用 ImgBot 自动为 Github Pages 项目优化图片](https://www.berlinchan.com/2019/08/imgBot-optimize-image-asset-for-github-pages-project)，
+还有持续集成工具 [Travis CI](https://github.com/marketplace/travis-ci)。
+
+这些市场中的工具设计的简单易用，自动化的工作为我节省了大量时间。
 
 ## 总结
 Gatsby 是个非常不错的框架，框架自身和插件轻松实现 SPA PWA 特性，静态页先天的 SEO 优化。

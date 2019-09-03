@@ -27,7 +27,7 @@ description: "主机新用户开箱Xbox One X，谈为什么选它，和使用�
 
 购买后一年时间里，平均每周约玩3小时，算比较少的。有时候很久不玩，但抓住机会了，哼哼，可一日茶饭不思。
 
-我对于游戏的视听效果要求较高，所以目前最强性能的 Xbox One X 是我的首选，而下一代 Scarlett 仍然领跑主机性能。
+我对于游戏的视听效果要求较高，所以目前最强性能的 Xbox One X 是我的首选，而下一代 Scarlett 预计仍将领跑主机性能。
 
 我购买的游戏都是数字版，比光盘便宜容易购买，购买的游戏从 Store 安装也很容易，用支付宝在 Store 购买游戏很方便。
 
@@ -57,13 +57,14 @@ description: "主机新用户开箱Xbox One X，谈为什么选它，和使用�
 | Overcooked    |   在朋友 Switch 上玩了的，准备再买个手柄来和女朋友一起玩    |
 
 ## 值得关注的
-"就知道玩游戏"评论视频，有很多对游戏的深刻解读。 Youtube 频道：[攻壳Gamker唯一官方频道](https://www.youtube.com/channel/UCLgGLSFMZQB8c0WGcwE49Gw)
-游研社YYSTV，有很多对游戏的深刻解读。 Youtube 频道：[游研社YYSTV](https://www.youtube.com/channel/UCnq0zNFkSa8YFc3f1-7Q3mg)
-游戏早知道网站，最新折扣第一时间知晓，经常看到小编在凌晨发微信。[游戏早知道](http://www.yxzzd.com/)
+- [攻壳Gamker唯一官方频道](https://www.youtube.com/channel/UCLgGLSFMZQB8c0WGcwE49Gw)，有很多对游戏的深刻解读
+- [游研社YYSTV](https://www.youtube.com/channel/UCnq0zNFkSa8YFc3f1-7Q3mg)，游研社YYSTV，有很多对游戏的深刻解读
+- [游戏早知道](http://www.yxzzd.com/)，游戏早知道网站，最新折扣第一时间知晓，经常看到小编在凌晨发微信
 
 ## Xbox 近况照片
 ![xbox-and-wii](../../static/media/2019/08/xbox-and-wii.jpg)
-我把 Xbox 塞到电视柜里，平时电视柜移门都关着在，免得灰尘多，我不喜欢灰尘多。
+
+我把 Xbox 塞到电视柜里，平时电视柜移门都关着在，我不喜欢灰尘多。
 但是我电视柜不够深，Xbox 正面朝里放，下半部分凹进去的正好贴在柜子后板，才能关上门。
 
 中间红色是买家给的换区U盘，128MB的U盘，现在这么小的很少见呢！下面白色是 Wii，偶尔还玩一玩。

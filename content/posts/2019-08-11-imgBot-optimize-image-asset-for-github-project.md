@@ -1,11 +1,11 @@
 ---
-title: 使用 ImgBot 自动为 Github Pages 项目优化图片
+title: 使用 ImgBot 自动为 Github 项目优化图片
 date: "2019-08-11T10:46:37.121Z"
 template: "post"
 featured_top: false
 featured_media: '../../static/media/2019/08/github-imgbot.png'
 draft: false
-slug: "/2019/08/imgBot-optimize-image-asset-for-github-pages-project"
+slug: "/2019/08/imgBot-optimize-image-asset-for-github-project"
 category: "前端"
 tags:
     - "前端"

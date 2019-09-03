@@ -9,7 +9,6 @@ module.exports = {
   googleAnalyticsId: 'UA-73379983-2',
   disqusShortname: 'berlinchan',
   menu: [
-    // 前端 小玩意 观点 短片 摄影 旅游 文化
     {
       label: '自由的家猫',
       link: 'https://www.awildpetcat.com/',
