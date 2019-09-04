@@ -3,7 +3,7 @@ title: Pixel 升级 Android 10 并破解电信 4G
 date: "2019-09-04T15:09:00.121Z"
 template: "post"
 featured_top: false
-featured_media: '../../static/media/2019/09/android-10-dark-theme.jpg'
+featured_media: '../../static/media/2019/09/android-10-featured.jpg'
 draft: false
 slug: "/2019/09/update-android-10-and-flash-modem-for-china-telecom-4g"
 category: "小玩意"
