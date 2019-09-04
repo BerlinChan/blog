@@ -27,7 +27,7 @@ description: "Google 今天开始正式向自己的 Pixel 手机推送 Android 1
 ![android-10-version-info](../../static/media/2019/09/android-10-version-info.jpg)
 
 ## 破解电信4G
-破解的方法见 Gfan 帖子：[傻瓜都会超简单的破解方法](http://bbs.gfan.com/android-9531535-1-1.html)，屡试不爽直接成功了。
+破解的方法见 Gfan 帖子：[傻瓜都会超简单的破解方法](http://bbs.gfan.com/android-9531535-1-1.html)，屡试不爽直接成功了，正常打电话与 4G LTE 上网。
 
 以前的破解还参考过这篇：[Google Pixel android 9 破解电信4G](https://tuzhao.org/article/49)
 
@@ -41,5 +41,5 @@ Google Photos APP 中已经自动适配的黑色主题，但是 Gmail 却还没�
 
 ## 问题
 之后按照 [TWRP官网](https://twrp.me/google/googlepixel.html)安装了 3.3.0-0，
-但备份时会报错 `Failed to mount /system` `Failed to mount /vender`，暂时没有研究到底怎么回事。
+刷完后进入执行备份的时候会报错 `Failed to mount /system` `Failed to mount /vender`，无法备份这两个目录，也暂时没有研究到底怎么回事。
 ![android-10-twrp-failed-mount-system-vendor](../../static/media/2019/09/android-10-twrp-failed-mount-system-vendor.jpg)
