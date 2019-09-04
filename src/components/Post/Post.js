@@ -65,7 +65,7 @@ const Post = ({ isArchivedBlogPost, post }) => {
 
   return (
     <React.Fragment>
-      <Typography component="h2" variant={'h4'}>{title}</Typography>
+      <Typography component="h2" variant={'h4'} gutterBottom>{title}</Typography>
       <Typography variant={'body1'} display={'inline'} color="textSecondary"
                   className={classes.date}>
         {moment.utc(date).utcOffset(UTC).format('YYYY-MM-DD HH:mm')}

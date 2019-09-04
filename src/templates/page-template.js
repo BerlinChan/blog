@@ -12,8 +12,9 @@ const PageTemplate = ({ data }) => {
     ? pageDescription
     : siteSubtitle
 
+  // TODO: html content style
   return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>
+    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} noSidebar>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
         {pageTitle}
       </Typography>

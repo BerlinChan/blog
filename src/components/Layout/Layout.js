@@ -18,7 +18,7 @@ const theme = createMuiTheme({
   },
 })
 
-const Layout = ({ title, description, children, featuredContent }) => {
+const Layout = ({ title, description, children, featuredContent, noSidebar }) => {
   useEffect(() => {
     window.scrollTo({ top: 0 })
   })
@@ -40,9 +40,10 @@ const Layout = ({ title, description, children, featuredContent }) => {
         <Grid item xs={12} md={8}>
           {children}
         </Grid>
-        <Grid item xs={12} md={4}>
-          <Sidebar/>
-        </Grid>
+        {noSidebar ? null :
+          <Grid item xs={12} md={4}>
+            <Sidebar/>
+          </Grid>}
       </Grid>
       <Footer/>
     </Container>
