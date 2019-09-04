@@ -7,15 +7,15 @@ import Grid from '@material-ui/core/Grid'
 const Pagination = ({ prevPageName, nextPageName, prevPagePath, nextPagePath }) => {
 
   return (
-    <Grid container justify="space-between">
-      <Grid item>
-        {prevPagePath ?
-          <Link component={GatsbyLink} rel="prev" to={prevPagePath} variant='h6'>
-            ← {prevPageName ? prevPageName : PAGINATION.PREV_PAGE}</Link> : null}
-      </Grid>
-      {nextPagePath ?
+    <Grid container justify="space-between" wrap="nowrap">
+      {prevPagePath ? <Grid item>
+        <Link component={GatsbyLink} rel="prev" to={prevPagePath} variant='h6'>
+          ← {prevPageName ? prevPageName : PAGINATION.PREV_PAGE}</Link>
+      </Grid> : null}
+      {nextPagePath ? <Grid item>
         <Link component={GatsbyLink} rel="next" to={nextPagePath} variant='h6'>
-          {nextPageName ? nextPageName : PAGINATION.NEXT_PAGE} →</Link> : null}
+          {nextPageName ? nextPageName : PAGINATION.NEXT_PAGE} →</Link>
+      </Grid> : null}
     </Grid>
   )
 }

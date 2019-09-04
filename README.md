@@ -7,8 +7,8 @@
 
 ## TODO
 - [ ] active link
-- [ ] background featured image in list on sm
 - [ ] next & prev post nav
+- [ ] background featured image in list on sm
 - [ ] 修改 Schema，post categories 支持多个分类
 - [ ] youku.com 视频替换
 
