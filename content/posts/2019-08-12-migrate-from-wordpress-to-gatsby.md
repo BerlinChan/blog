@@ -87,5 +87,5 @@ Gatsby 是一个快速发展中的新框架，将代码托管在 GitHub 上时�
 
 ## 总结
 Gatsby 是个非常不错的框架，框架自身和插件轻松实现 SPA PWA 特性，静态页先天的 SEO 优化。
-我的迁移工作大概用了两周业余时间，新站部署在 GitHub Pages 上，用阿里云 CDN 加速，访问速度体验较以前快了不少，Lighthouse 评分如下，并还可进一步改善：
+我的迁移工作大概用了一个月业余时间，新站部署在 GitHub Pages 上，用阿里云 CDN 加速，访问速度体验较以前快了不少，Lighthouse 评分如下，并还可进一步改善：
 ![lighthouse-audit](../../static/media/2019/08/lighthouse-audit.png)
