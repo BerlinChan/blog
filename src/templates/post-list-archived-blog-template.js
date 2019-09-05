@@ -8,7 +8,7 @@ import ArchivedBlogTips from '../components/ArchivedBlogTips'
 import PostList from '../components/PostList'
 
 const PostListTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
+  const { title: siteTitle, archivedBlogUrl } = useSiteMetadata()
   const { currentPage, prevPagePath, nextPagePath } = pageContext
   const pageTitle = currentPage > 0
     ? `存档文章 - 第 ${currentPage} 页 - ${siteTitle}`
@@ -50,29 +50,29 @@ const PostListTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query PostListArchivedBlogTemplate($postsLimit: Int!, $postsOffset: Int!) {
-    allArchivedBlogPostJson(
-        limit: $postsLimit,
-        skip: $postsOffset,
-        sort:  {fields: date, order: DESC}
-      ) {
-      edges {
-        node {
-          date
-          excerpt
-          path
-          title
-          categories {
-            name
-            path
-          }
-          featured_media {
-            source_url
-          }
+    query PostListArchivedBlogTemplate($postsLimit: Int!, $postsOffset: Int!) {
+        allArchivedBlogPostJson(
+            limit: $postsLimit,
+            skip: $postsOffset,
+            sort:  {fields: date, order: DESC}
+        ) {
+            edges {
+                node {
+                    date
+                    excerpt
+                    path
+                    title
+                    categories {
+                        name
+                        path
+                    }
+                    featured_media {
+                        source_url
+                    }
+                }
+            }
         }
-      }
     }
-  }
 `
 
 export default PostListTemplate

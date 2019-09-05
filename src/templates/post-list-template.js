@@ -6,7 +6,7 @@ import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
 
 const PostListTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
+  const { title: siteTitle} = useSiteMetadata()
   const {
     currentPage,
     prevPagePath,

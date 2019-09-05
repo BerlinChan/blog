@@ -7,7 +7,7 @@ import { useCategoriesList, useSiteMetadata } from '../hooks'
 import Typography from '@material-ui/core/Typography'
 
 const CategoriesListTemplate = () => {
-  const { title, subtitle } = useSiteMetadata()
+  const { title } = useSiteMetadata()
   const categories = useCategoriesList()
 
   return (

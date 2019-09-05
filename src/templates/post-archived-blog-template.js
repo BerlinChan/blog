@@ -8,9 +8,8 @@ import Post from '../components/Post'
 import Comments from '../components/Comments'
 
 const PostTemplate = ({ data }) => {
-  const { title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
+  const { title: siteTitle, archivedBlogUrl } = useSiteMetadata()
   const { title: postTitle, excerpt: postDescription, content, path, date, tags } = data.archivedBlogPostJson
-  const metaDescription = postDescription ? postDescription : siteSubtitle
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`}>

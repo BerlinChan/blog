@@ -7,7 +7,7 @@ import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 
 const TagsListTemplate = () => {
-  const { title, subtitle } = useSiteMetadata()
+  const { title } = useSiteMetadata()
   const tags = useTagsList()
 
   return (

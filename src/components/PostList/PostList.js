@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
   cardMedia: {
     width: 200,
+    backgroundPosition: 'center',
   },
   date: {
     marginRight: theme.spacing(1),

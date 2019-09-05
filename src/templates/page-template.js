@@ -4,17 +4,22 @@ import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
 import Typography from '@material-ui/core/Typography'
 import Content from '../components/Content'
+import Metadata from '../components/Metadata'
 
 const PageTemplate = ({ data }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
+  const { url: siteUrl, title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
   const { html: pageBody } = data.markdownRemark
-  const { title: pageTitle, description: pageDescription } = data.markdownRemark.frontmatter
-  const metaDescription = pageDescription !== null
-    ? pageDescription
-    : siteSubtitle
+  const { title: pageTitle, description: pageDescription, slug } = data.markdownRemark.frontmatter
+  const metaData = {
+    title: pageTitle,
+    url: `${siteUrl}${slug}`,
+    description: pageDescription !== null ? pageDescription : siteSubtitle,
+    type: 'article',
+  }
 
   return (
     <Layout title={`${pageTitle} - ${siteTitle}`} noSidebar>
+      <Metadata {...metaData}/>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
         {pageTitle}
       </Typography>
@@ -32,6 +37,7 @@ export const query = graphql`
                 title
                 date
                 description
+                slug
             }
         }
     }

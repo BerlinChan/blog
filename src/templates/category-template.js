@@ -7,7 +7,7 @@ import { useSiteMetadata } from '../hooks'
 import Typography from '@material-ui/core/Typography'
 
 const CategoryTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
+  const { title: siteTitle } = useSiteMetadata()
 
   const {
     category,

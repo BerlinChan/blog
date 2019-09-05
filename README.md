@@ -9,7 +9,6 @@
 - [ ] active link
 - [ ] 修改 Schema，post categories 支持多个分类
 - [ ] description meta
-- [ ] background featured image in list on sm
 - [ ] youku.com 视频替换
 
 ## LICENSE
