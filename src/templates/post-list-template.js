@@ -30,36 +30,36 @@ const PostListTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query PostListTemplate($postsLimit: Int!, $postsOffset: Int!) {
-    allMarkdownRemark(
-        limit: $postsLimit,
-        skip: $postsOffset,
-        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } },
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ){
-      edges {
-        node {
-          fields {
-            slug
-            categorySlug
-          }
-          frontmatter {
-            title
-            date
-            category
-            description
-            featured_media {
-              childImageSharp {
-                fixed {
-                  src
+    query PostListTemplate($postsLimit: Int!, $postsOffset: Int!) {
+        allMarkdownRemark(
+            limit: $postsLimit,
+            skip: $postsOffset,
+            filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } },
+            sort: { order: DESC, fields: [frontmatter___date] }
+        ){
+            edges {
+                node {
+                    fields {
+                        slug
+                        categorySlug
+                    }
+                    frontmatter {
+                        title
+                        date
+                        category
+                        description
+                        featured_media {
+                            childImageSharp {
+                                fixed(width: 200, height: 200) {
+                                    src
+                                }
+                            }
+                        }
+                    }
                 }
-              }
             }
-          }
         }
-      }
     }
-  }
 `
 
 export default PostListTemplate

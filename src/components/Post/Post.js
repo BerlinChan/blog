@@ -7,6 +7,9 @@ import Box from '@material-ui/core/Box'
 import Chip from '@material-ui/core/Chip'
 import { makeStyles } from '@material-ui/core'
 import { useSiteMetadata } from '../../hooks'
+import { FacebookShareButton, LinkedinShareButton, TelegramShareButton, TwitterShareButton } from 'react-share'
+import SvgIcons from '../../assets/SvgIcons'
+import IconButton from '@material-ui/core/IconButton'
 
 const useStyles = makeStyles(theme => ({
   date: {
@@ -54,14 +57,20 @@ const useStyles = makeStyles(theme => ({
       },
     },
   },
+  shareButton: {
+    marginLeft: theme.spacing(1),
+    '& .SocialMediaShareButton': {
+      display: 'flex',
+    },
+  },
 }))
 
 const Post = ({ isArchivedBlogPost, post }) => {
   const classes = useStyles()
-  const { archivedBlogUrl, UTC } = useSiteMetadata()
+  const { url: siteUrl, archivedBlogUrl, UTC } = useSiteMetadata()
   const { html } = post
   const { categorySlug, tagSlugs } = post.fields
-  const { category, tags, title, date } = post.frontmatter
+  const { category, tags, title, date, slug, description } = post.frontmatter
 
   return (
     <React.Fragment>
@@ -87,6 +96,33 @@ const Post = ({ isArchivedBlogPost, post }) => {
             <Chip key={index} label={tag} className={classes.chip} variant="outlined"
                   component={GatsbyLink} to={tagSlugs[index]} clickable/>
         ))}
+      </Box>
+
+      <Box my={2} display={'flex'} alignItems={'center'}>
+        <Typography component={'h2'} variant={'h6'} display={'inline'}>分享</Typography>
+        <IconButton className={classes.shareButton}>
+          <FacebookShareButton url={`${siteUrl}${slug}`}
+                               quote={description}>
+            <SvgIcons name={'facebook'}/>
+          </FacebookShareButton>
+        </IconButton>
+        <IconButton className={classes.shareButton}>
+          <TwitterShareButton url={`${siteUrl}${slug}`}
+                              title={title}>
+            <SvgIcons name={'twitter'}/>
+          </TwitterShareButton>
+        </IconButton>
+        <IconButton className={classes.shareButton}>
+          <LinkedinShareButton url={`${siteUrl}${slug}`}>
+            <SvgIcons name={'linkedIn'}/>
+          </LinkedinShareButton>
+        </IconButton>
+        <IconButton className={classes.shareButton}>
+          <TelegramShareButton url={`${siteUrl}${slug}`}
+                               title={title}>
+            <SvgIcons name={'telegram'}/>
+          </TelegramShareButton>
+        </IconButton>
       </Box>
     </React.Fragment>
   )
