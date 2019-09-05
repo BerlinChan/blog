@@ -43,3 +43,10 @@ Google Photos APP 中已经自动适配的黑色主题，但是 Gmail 却还没�
 之后按照 [TWRP官网](https://twrp.me/google/googlepixel.html)安装了 3.3.0-0，
 刷完后进入执行备份的时候会报错 `Failed to mount /system` `Failed to mount /vender`，无法备份这两个目录，也暂时没有研究到底怎么回事。
 ![android-10-twrp-failed-mount-system-vendor](../../static/media/2019/09/android-10-twrp-failed-mount-system-vendor.jpg)
+
+## 更新：使用一天感受
+流畅度比之前的9版好了不是一点点！体现在底部左右滑动切换不同 APP 上尤为明显，在五六个 APP 中切换几乎毫无卡顿，
+程序流畅度上来，网速似乎也有提升。感觉 Pixel 重获新生了，希望能一直保持。
+
+底部左右滑动手势导航，交互跟之前有点差别，关键是流畅度上来了，操作体验非常好。
+之前的总是滑超前一个，要么卡顿突然到后一个，中间要切换的经常三四次切换不到，最后直接向上滑打开所有最近应用然后点击选择。

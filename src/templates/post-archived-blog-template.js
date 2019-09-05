@@ -6,6 +6,7 @@ import ArchivedBlogTips from '../components/ArchivedBlogTips'
 import Box from '@material-ui/core/Box'
 import Post from '../components/Post'
 import Comments from '../components/Comments'
+import Content from '../components/Content'
 
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, archivedBlogUrl } = useSiteMetadata()
@@ -26,8 +27,9 @@ const PostTemplate = ({ data }) => {
           categorySlug: '',
           tagSlugs: (tags || []).map(tag => tag.path),
         },
-        html: content,
-      }}/>
+      }}>
+        <Content html={content}/>
+      </Post>
       <Box mt={3}>
         <ArchivedBlogTips originLink={`${archivedBlogUrl}${path}`}/>
       </Box>

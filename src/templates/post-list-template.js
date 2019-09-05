@@ -50,7 +50,7 @@ export const query = graphql`
                         description
                         featured_media {
                             childImageSharp {
-                                fixed(width: 200, height: 200) {
+                                fixed(width: 200, height: 200, cropFocus: CENTER) {
                                     src
                                 }
                             }

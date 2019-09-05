@@ -120,7 +120,7 @@ export const query = graphql`
                         date
                         featured_media {
                             childImageSharp {
-                                fixed {
+                                fixed(width: 200, height: 200, cropFocus: CENTER) {
                                     src
                                 }
                             }
