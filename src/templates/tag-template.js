@@ -22,7 +22,7 @@ const TagTemplate = ({ data, pageContext }) => {
     : `包含标签"${tag}"的文章 - ${siteTitle}`
 
   return (
-    <Layout title={pageTitle} description={siteSubtitle}>
+    <Layout title={pageTitle}>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
         {tag}
       </Typography>

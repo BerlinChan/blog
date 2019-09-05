@@ -11,7 +11,7 @@ const TagsListTemplate = () => {
   const tags = useTagsList()
 
   return (
-    <Layout title={`标签 - ${title}`} description={subtitle}>
+    <Layout title={`标签 - ${title}`}>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
         标签
       </Typography>

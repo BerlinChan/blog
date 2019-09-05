@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
 import Typography from '@material-ui/core/Typography'
+import Content from '../components/Content'
 
 const PageTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
@@ -12,13 +13,12 @@ const PageTemplate = ({ data }) => {
     ? pageDescription
     : siteSubtitle
 
-  // TODO: html content style
   return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} noSidebar>
+    <Layout title={`${pageTitle} - ${siteTitle}`} noSidebar>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
         {pageTitle}
       </Typography>
-      <div dangerouslySetInnerHTML={{ __html: pageBody }}/>
+      <Content html={pageBody}/>
     </Layout>
   )
 }

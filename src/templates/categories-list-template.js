@@ -11,7 +11,7 @@ const CategoriesListTemplate = () => {
   const categories = useCategoriesList()
 
   return (
-    <Layout title={`文章分类 - ${title}`} description={subtitle}>
+    <Layout title={`文章分类 - ${title}`}>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
         文章分类
       </Typography>

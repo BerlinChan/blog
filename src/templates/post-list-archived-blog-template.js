@@ -15,7 +15,7 @@ const PostListTemplate = ({ data, pageContext }) => {
     : siteTitle
 
   return (
-    <Layout title={pageTitle} description={siteSubtitle}>
+    <Layout title={pageTitle}>
       <Box mb={3}>
         <ArchivedBlogTips originLink={archivedBlogUrl}/>
       </Box>

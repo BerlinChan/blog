@@ -13,7 +13,7 @@ const PostTemplate = ({ data }) => {
   const metaDescription = postDescription ? postDescription : siteSubtitle
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
+    <Layout title={`${postTitle} - ${siteTitle}`}>
       <Post isArchivedBlogPost post={{
         frontmatter: {
           title: postTitle,

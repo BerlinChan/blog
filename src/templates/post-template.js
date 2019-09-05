@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Metadata from '../components/Metadata'
 import Post from '../components/Post'
+import Content from '../components/Content'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
 import Comments from '../components/Comments'
@@ -27,7 +28,9 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout title={`${postTitle} - ${siteTitle}`}>
       <Metadata {...metaData}/>
-      <Post post={data.markdownRemark}/>
+      <Post post={data.markdownRemark}>
+        <Content html={data.markdownRemark.html}/>
+      </Post>
       <Box my={2}>
         <Pagination prevPageName={data.prevPost && data.prevPost.frontmatter.title}
                     nextPageName={data.nextPost && data.nextPost.frontmatter.title}

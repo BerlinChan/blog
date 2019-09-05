@@ -23,40 +23,6 @@ const useStyles = makeStyles(theme => ({
   chip: {
     margin: theme.spacing(0.5),
   },
-  content: {
-    fontSize: 18,
-    lineHeight: 1.6,
-    '& a': {
-      color: theme.palette.primary.main,
-      textDecoration: 'none',
-    },
-    '& blockquote': {
-      padding: theme.spacing(1, 2),
-      backgroundColor: theme.palette.grey[200],
-    },
-    '& table': {
-      display: 'block',
-      width: '100%',
-      overflow: 'auto',
-      borderSpacing: 0,
-      margin: theme.spacing(2, 0),
-      borderCollapse: 'collapse',
-      '& tr': {
-        borderTop: `1px solid ${theme.palette.divider}`,
-        backgroundColor: theme.palette.background.default,
-        '& th': {
-          fontWeight: theme.typography.fontWeightBold,
-        },
-        '& th,& td': {
-          border: `1px solid ${theme.palette.divider}`,
-          padding: theme.spacing(1, 2),
-        },
-        '&:nth-child(even)': {
-          backgroundColor: theme.palette.background.paper,
-        },
-      },
-    },
-  },
   shareButton: {
     marginLeft: theme.spacing(1),
     '& .SocialMediaShareButton': {
@@ -65,10 +31,9 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const Post = ({ isArchivedBlogPost, post }) => {
+const Post = ({ isArchivedBlogPost, post, children }) => {
   const classes = useStyles()
   const { url: siteUrl, archivedBlogUrl, UTC } = useSiteMetadata()
-  const { html } = post
   const { categorySlug, tagSlugs } = post.fields
   const { category, tags, title, date, slug, description } = post.frontmatter
 
@@ -85,9 +50,9 @@ const Post = ({ isArchivedBlogPost, post }) => {
         </Link>
       </Typography>
 
-      <div className={classes.content} dangerouslySetInnerHTML={{ __html: html }}/>
+      {children}
 
-      <Box className={classes.tagList}>
+      <Box mt={2} className={classes.tagList}>
         {tags.map((tag, index) => (
           isArchivedBlogPost ?
             <Chip key={index} label={tag} className={classes.chip} variant="outlined"
@@ -98,7 +63,7 @@ const Post = ({ isArchivedBlogPost, post }) => {
         ))}
       </Box>
 
-      <Box my={2} display={'flex'} alignItems={'center'}>
+      <Box mt={2} display={'flex'} alignItems={'center'}>
         <Typography component={'h2'} variant={'h6'} display={'inline'}>分享</Typography>
         <IconButton className={classes.shareButton}>
           <FacebookShareButton url={`${siteUrl}${slug}`}

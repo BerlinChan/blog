@@ -12,6 +12,7 @@ const Metadata = (props) => {
   return (
     <Helmet>
       {description && <meta name="description" content={description}/>}
+      <meta name="author" content={siteAuthorName}/>
 
       {/* Open Graph for Facebook & Twitter */}
       {url && <meta property="og:url" content={url}/>}

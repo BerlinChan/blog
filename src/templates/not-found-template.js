@@ -4,10 +4,10 @@ import { useSiteMetadata } from '../hooks'
 import Typography from '@material-ui/core/Typography'
 
 const NotFoundTemplate = () => {
-  const { title, subtitle } = useSiteMetadata()
+  const { title } = useSiteMetadata()
 
   return (
-    <Layout title={`Not Found - ${title}`} description={subtitle}>
+    <Layout title={`Not Found - ${title}`}>
       <Typography variant={'subtitle1'} gutterBottom>
         NOT FOUND
       </Typography>

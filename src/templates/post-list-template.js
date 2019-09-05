@@ -18,7 +18,7 @@ const PostListTemplate = ({ data, pageContext }) => {
     : siteTitle
 
   return (
-    <Layout title={pageTitle} description={siteSubtitle}>
+    <Layout title={pageTitle}>
       <PostList edges={edges}/>
       <Pagination
         nextPageName={nextPagePath ? '' : '存档文章'}

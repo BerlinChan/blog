@@ -22,7 +22,7 @@ const CategoryTemplate = ({ data, pageContext }) => {
     : `${category} - ${siteTitle}`
 
   return (
-    <Layout title={pageTitle} description={siteSubtitle}>
+    <Layout title={pageTitle}>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
         {category}
       </Typography>
