@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { createMuiTheme } from '@material-ui/core/styles'
@@ -18,20 +18,13 @@ const theme = createMuiTheme({
   },
 })
 
-const Layout = ({ title, description, children, featuredContent, noSidebar }) => {
-  useEffect(() => {
-    window.scrollTo({ top: 0 })
-  })
+const Layout = ({ title, children, featuredContent, noSidebar }) => {
 
   return <ThemeProvider theme={theme}>
     <CssBaseline/>
     <Helmet>
-      <html lang="zh-Hans"/>
+      <html lang="zh-Hans" prefix="og: http://ogp.me/ns#"/>
       <title>{title}</title>
-      <meta name="description" content={description}/>
-      <meta property="og:site_name" content={title}/>
-      <meta name="twitter:card" content="summary"/>
-      <meta name="twitter:title" content={title}/>
     </Helmet>
     <Header/>
     <Container maxWidth="lg">

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Metadata from '../components/Metadata'
 import Post from '../components/Post'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
@@ -8,15 +9,24 @@ import Comments from '../components/Comments'
 import Box from '@material-ui/core/Box'
 
 const PostTemplate = ({ data }) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
-  const { title: postTitle, description: postDescription } = data.markdownRemark.frontmatter
+  const { title: siteTitle, subtitle: siteSubtitle, url: siteUrl, author: { name: siteAuthorName } } = useSiteMetadata()
+  const { title: postTitle, description: postDescription, featured_media } = data.markdownRemark.frontmatter
   const { slug } = data.markdownRemark.fields
-  const metaDescription = postDescription !== null
-    ? postDescription
-    : siteSubtitle
+  const metaData = {
+    title: postTitle,
+    url: `${siteUrl}${slug}`,
+    description: postDescription !== null ? postDescription : siteSubtitle,
+    type: 'article',
+    image: {
+      url: `${siteUrl}${featured_media.childImageSharp.fixed.src}`,
+      width: featured_media.childImageSharp.fixed.width,
+      height: featured_media.childImageSharp.fixed.height,
+    },
+  }
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
+    <Layout title={`${postTitle} - ${siteTitle}`}>
+      <Metadata {...metaData}/>
       <Post post={data.markdownRemark}/>
       <Box my={2}>
         <Pagination prevPageName={data.prevPost && data.prevPost.frontmatter.title}
@@ -46,6 +56,16 @@ export const query = graphql`
                 category
                 description
                 tags
+                slug
+                featured_media {
+                    childImageSharp {
+                        fixed(width: 800, height: 400) {
+                            height
+                            width
+                            src
+                        }
+                    }
+                }
             }
         }
         prevPost: markdownRemark(fields: {slug: {eq: $prevPostSlug} }) {
