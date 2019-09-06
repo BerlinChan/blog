@@ -15,6 +15,9 @@ const useStyles = makeStyles(theme => ({
   date: {
     marginRight: theme.spacing(1),
   },
+  category: {
+    marginRight: theme.spacing(.5),
+  },
   tagList: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -34,8 +37,8 @@ const useStyles = makeStyles(theme => ({
 const Post = ({ isArchivedBlogPost, post, children }) => {
   const classes = useStyles()
   const { url: siteUrl, archivedBlogUrl, UTC } = useSiteMetadata()
-  const { categorySlug, tagSlugs } = post.fields
-  const { category, tags, title, date, slug, description } = post.frontmatter
+  const { categorySlugs, tagSlugs } = post.fields
+  const { categories, tags, title, date, slug, description } = post.frontmatter
 
   return (
     <React.Fragment>
@@ -44,11 +47,19 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
                   className={classes.date}>
         {moment.utc(date).utcOffset(UTC).format('YYYY-MM-DD HH:mm')}
       </Typography>
-      <Typography variant={'body1'} display={'inline'} color="textSecondary">
-        <Link component={GatsbyLink} to={categorySlug}>
-          {category}
-        </Link>
-      </Typography>
+      {categorySlugs.map((categorySlug, index) =>
+        <Typography variant={'body1'} display={'inline'} color="textSecondary"
+                    className={classes.category} key={index}>
+          {isArchivedBlogPost ?
+            <Link href={`${archivedBlogUrl}${categorySlug}`} target={'_blank'} rel="noopener">
+              {categories[index]}
+            </Link> :
+            <Link component={GatsbyLink} to={categorySlug}>
+              {categories[index]}
+            </Link>
+          }
+        </Typography>
+      )}
 
       {children}
 

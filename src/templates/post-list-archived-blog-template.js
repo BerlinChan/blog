@@ -23,12 +23,12 @@ const PostListTemplate = ({ data, pageContext }) => {
         node: {
           fields: {
             slug: node.path,
-            categorySlug: '',
+            categorySlugs: (node.categories || []).map(category => category.path),
           },
           frontmatter: {
             title: node.title,
             date: node.date,
-            category: '',
+            categories: (node.categories || []).map(category => category.name),
             description: node.excerpt,
             featured_media: node.featured_media && node.featured_media.source_url && {
               childImageSharp: {

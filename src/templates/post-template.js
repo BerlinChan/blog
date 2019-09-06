@@ -50,13 +50,13 @@ export const query = graphql`
             html
             fields {
                 slug
-                categorySlug
+                categorySlugs
                 tagSlugs
             }
             frontmatter {
                 title
                 date
-                category
+                categories
                 description
                 tags
                 slug

@@ -27,6 +27,9 @@ const useStyles = makeStyles(theme => ({
   date: {
     marginRight: theme.spacing(1),
   },
+  category: {
+    marginRight: theme.spacing(.5),
+  },
 }))
 
 const PostList = ({ edges }) => {
@@ -44,9 +47,12 @@ const PostList = ({ edges }) => {
                           className={classes.date} display={'inline'}>
                 {moment.utc(node.frontmatter.date).utcOffset(UTC).format('YYYY-MM-DD')}
               </Typography>
-              <Typography variant="subtitle1" color="textSecondary" display={'inline'}>
-                {node.frontmatter.category}
-              </Typography>
+              {node.frontmatter.categories.map((category, index) =>
+                <Typography variant="subtitle1" color="textSecondary" display={'inline'}
+                            className={classes.category} key={index}>
+                  {category}
+                </Typography>
+              )}
               <Typography component="h2" variant="h5">
                 {node.frontmatter.title}
               </Typography>

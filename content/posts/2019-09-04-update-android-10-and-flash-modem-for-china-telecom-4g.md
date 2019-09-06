@@ -6,7 +6,8 @@ featured_top: false
 featured_media: '../../static/media/2019/09/android-10-featured.jpg'
 draft: false
 slug: "/2019/09/update-android-10-and-flash-modem-for-china-telecom-4g"
-category: "小玩意"
+categories: 
+    - "小玩意"
 tags:
     - "手机"
     - "刷机"

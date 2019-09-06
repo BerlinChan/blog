@@ -10,7 +10,7 @@ import Content from '../components/Content'
 
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, archivedBlogUrl } = useSiteMetadata()
-  const { title: postTitle, excerpt: postDescription, content, path, date, tags } = data.archivedBlogPostJson
+  const { title: postTitle, excerpt: postDescription, content, path, date, tags, categories } = data.archivedBlogPostJson
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`}>
@@ -18,13 +18,13 @@ const PostTemplate = ({ data }) => {
         frontmatter: {
           title: postTitle,
           date: date,
-          category: '',
+          categories: (categories || []).map(category => category.name),
           description: postDescription,
           tags: (tags || []).map(tag => tag.name),
         },
         fields: {
           slug: path,
-          categorySlug: '',
+          categorySlugs: (categories || []).map(category => category.path),
           tagSlugs: (tags || []).map(tag => tag.path),
         },
       }}>
@@ -39,26 +39,26 @@ const PostTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query ArchivedBlogPostByPath($slug: String!) {
-    archivedBlogPostJson(path: {eq: $slug}) {
-      categories {
-        path
-        name
-      }
-      tags {
-        name
-        path
-      }
-      featured_media {
-        source_url
-      }
-      path
-      date
-      excerpt
-      title
-      content
+    query ArchivedBlogPostByPath($slug: String!) {
+        archivedBlogPostJson(path: {eq: $slug}) {
+            categories {
+                path
+                name
+            }
+            tags {
+                name
+                path
+            }
+            featured_media {
+                source_url
+            }
+            path
+            date
+            excerpt
+            title
+            content
+        }
     }
-  }
 `
 
 export default PostTemplate

@@ -7,7 +7,6 @@
 
 ## TODO
 - [ ] active link
-- [ ] 修改 Schema，post categories 支持多个分类
 - [ ] description meta
 - [ ] youku.com 视频替换
 

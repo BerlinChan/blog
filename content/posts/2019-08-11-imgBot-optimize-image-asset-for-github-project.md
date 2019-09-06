@@ -6,7 +6,8 @@ featured_top: false
 featured_media: '../../static/media/2019/08/github-imgbot.png'
 draft: false
 slug: "/2019/08/imgBot-optimize-image-asset-for-github-project"
-category: "前端"
+categories: 
+    - "前端"
 tags:
     - "前端"
     - "性能"

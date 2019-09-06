@@ -6,7 +6,8 @@ featured_top: true
 featured_media: "../../static/media/2019/08/unbox-xbox-one-x-featured-media.jpg"
 draft: false
 slug: "/2019/08/talk-about-xbox-1x-after-1-year"
-category: "小玩意"
+categories: 
+    - "小玩意"
 tags:
     - "xbox"
     - "游戏"

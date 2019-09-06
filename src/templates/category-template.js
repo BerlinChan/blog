@@ -40,20 +40,20 @@ export const query = graphql`
         allMarkdownRemark(
             limit: $postsLimit,
             skip: $postsOffset,
-            filter: { frontmatter: { category: { eq: $category }, template: { eq: "post" }, draft: { ne: true } } },
+            filter: { frontmatter: { categories: { in: [$category] }, template: { eq: "post" }, draft: { ne: true } } },
             sort: { order: DESC, fields: [frontmatter___date] }
         ){
             edges {
                 node {
                     fields {
-                        categorySlug
                         slug
+                        categorySlugs
                     }
                     frontmatter {
-                        date
-                        description
-                        category
                         title
+                        date
+                        categories
+                        description
                         featured_media {
                             childImageSharp {
                                 fixed {

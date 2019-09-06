@@ -6,7 +6,8 @@ featured_top: false
 featured_media: "../../static/media/2019/08/wordpress-to-gatsby.png"
 draft: false
 slug: "/2019/08/migrate-from-wordpress-to-gatsby"
-category: "前端"
+categories: 
+    - "前端"
 tags:
     - "迁移"
     - "blog"

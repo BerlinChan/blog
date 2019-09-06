@@ -110,13 +110,13 @@ export const query = graphql`
                 node {
                     fields {
                         slug
-                        categorySlug
+                        categorySlugs
                     }
                     frontmatter {
                         description
                         slug
                         title
-                        category
+                        categories
                         date
                         featured_media {
                             childImageSharp {

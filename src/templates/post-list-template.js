@@ -41,12 +41,12 @@ export const query = graphql`
                 node {
                     fields {
                         slug
-                        categorySlug
+                        categorySlugs
                     }
                     frontmatter {
                         title
                         date
-                        category
+                        categories
                         description
                         featured_media {
                             childImageSharp {

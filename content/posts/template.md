@@ -6,7 +6,13 @@ featured_top: false
 featured_media: '../../static/media/2019/08/github-imgbot.png'
 draft: true
 slug: "/2019/08/imgBot-optimize-image-asset-for-github-pages-project"
-category: "前端 小玩意 观点 短片 摄影 旅游 文化"
+categories: 
+    - "前端"
+    - "小玩意"
+    - "观点"
+    - "短片"
+    - "摄影"
+    - "旅游"
 tags:
     - "前端"
 description: ""
