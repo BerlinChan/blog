@@ -6,7 +6,7 @@ module.exports = {
   subtitle: '',
   UTC: '+08',
   postsPerPage: 6,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-43244265-2',
   disqusShortname: 'berlinchan',
   menu: [
     {

@@ -8,6 +8,7 @@
 ## TODO
 - [ ] get slug path from frontmatter date
 - [ ] description meta on page
+- [ ] draw menu always show on mobile device screen
 - [ ] youku.com 视频替换
 
 ## LICENSE
