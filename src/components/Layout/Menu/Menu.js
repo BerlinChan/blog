@@ -51,7 +51,8 @@ export default () => {
                 {categories.map((category, index) => <MenuItem key={index}>
                   <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}
                         display="block" underline={'none'}
-                        className={classes.menuLink} activeClassName={classes.activeLink} noWrap>
+                        className={classes.menuLink + (window.location.pathname === encodeURI(`/category/${kebabCase(category.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}
+                        noWrap>
                     {category.fieldValue}
                   </Link>
                 </MenuItem>)}

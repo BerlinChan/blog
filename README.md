@@ -6,8 +6,8 @@
 [https://www.berlinchan.com/](https://www.berlinchan.com/)
 
 ## TODO
-- [ ] active link
-- [ ] description meta
+- [ ] get slug path from frontmatter date
+- [ ] description meta on page
 - [ ] youku.com 视频替换
 
 ## LICENSE

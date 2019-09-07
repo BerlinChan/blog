@@ -49,8 +49,8 @@ export default () => {
         {categories.map((category, index) =>
           <ListItem button component={GatsbyLink}
                     to={`/category/${kebabCase(category.fieldValue)}/`}
-                    activeClassName={classes.activeLink}
-                    key={index} className={classes.nested}>
+                    className={classes.nested + (window.location.pathname === encodeURI(`/category/${kebabCase(category.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}
+                    key={index}>
             <ListItemText primary={category.fieldValue}/>
           </ListItem>)}
         <ListItem button component={GatsbyLink}
