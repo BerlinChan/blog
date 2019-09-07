@@ -8,6 +8,7 @@ draft: false
 slug: "/2019/08/talk-about-xbox-1x-after-1-year"
 categories: 
     - "小玩意"
+    - "短片"
 tags:
     - "xbox"
     - "游戏"
@@ -54,12 +55,13 @@ description: "主机新用户开箱Xbox One X，谈为什么选它，和使用�
 | Battle Field 5    |   主线过半，了解二战的好材料  |
 | Metro 2033 Redux    |   独特的 RPG FPS，喜欢小说的末日废土故事背景，主线通关   |
 | Metro Last Light Redux    |   主线通关   |
+| Hellblade: Senua's sacrifice    |   Game Pass 试用时玩的，被未修复的 [torch bug 卡住剧情](https://www.youtube.com/watch?v=PZsMbxvDjLQ)玩不下去。环境氛围音效动画非常棒，带耳机听[萦绕在主角脑海的耳语](https://www.hellblade.com/development-diary-24-hearing-voices/)都会有高潮，喜欢[凯尔特、北欧神话背景故事](https://www.youtube.com/watch?v=KQUwYYS4QyE)，被主角 Senua 的勇敢和对他逝去爱人迪里恩的爱所感动。[Unread Engine 的运动捕捉实时渲染](https://youtu.be/JbQSpfWUs4I?t=273)效果超棒。   |
 | Overcooked    |   在朋友 Switch 上玩了的，准备再买个手柄来和女朋友一起玩    |
 
 ## 值得关注的
 - [攻壳Gamker唯一官方频道](https://www.youtube.com/channel/UCLgGLSFMZQB8c0WGcwE49Gw)，有很多对游戏的深刻解读
-- [游研社YYSTV](https://www.youtube.com/channel/UCnq0zNFkSa8YFc3f1-7Q3mg)，游研社YYSTV，有很多对游戏的深刻解读
-- [游戏早知道](http://www.yxzzd.com/)，游戏早知道网站，最新折扣第一时间知晓，经常看到小编在凌晨发微信
+- [游研社YYSTV](https://www.youtube.com/channel/UCnq0zNFkSa8YFc3f1-7Q3mg)，有很多对游戏的深刻解读
+- [游戏早知道](http://www.yxzzd.com/)，最新折扣第一时间知晓，一边玩游戏一边捂好钱包，经常看到小编在凌晨发微信文章
 
 ## Xbox 近况照片
 ![xbox-and-wii](../../static/media/2019/08/xbox-and-wii.jpg)
