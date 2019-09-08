@@ -51,3 +51,9 @@ Google Photos APP 中已经自动适配的黑色主题，但是 Gmail 却还没�
 
 底部左右滑动手势导航，交互跟之前有点差别，关键是流畅度上来了，操作体验非常好。
 之前的总是滑超前一个，要么卡顿突然到后一个，中间要切换的经常三四次切换不到，最后直接向上滑打开所有最近应用然后点击选择。
+
+## 更新：APP后台存取位置提示
+会提示哪些 APP 在后台访问定位，如下图：
+![android-10-access-location-backstage-tips](../../static/media/2019/09/android-10-access-location-backstage-tips.jpg)
+
+用了这4天，提示的有DiDi、微信、GoPro、豌豆荚。针对后台访问定位操作可选允许、仅在运行时允许和禁用。
