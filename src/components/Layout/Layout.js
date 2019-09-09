@@ -25,6 +25,7 @@ const Layout = ({ title, children, featuredContent, noSidebar }) => {
     <Helmet>
       <html lang="zh-Hans" prefix="og: http://ogp.me/ns#"/>
       <title>{title}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     </Helmet>
     <Header/>
     <Container maxWidth="lg">
