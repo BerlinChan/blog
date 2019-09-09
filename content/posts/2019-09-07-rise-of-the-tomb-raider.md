@@ -1,5 +1,5 @@
 ---
-title: 通关《古墓丽影-崛起》感受
+title: 游戏《古墓丽影-崛起》通关感受
 date: "2019-09-08T13:04:37.121Z"
 template: "post"
 featured_top: true
@@ -49,3 +49,4 @@ description: "有中文语音的“古墓丽影崛起”，对我了解剧情和
 
 ![rise-of-the-tomb-raider-constantine](../../static/media/2019/09/rise-of-the-tomb-raider-constantine.jpg)
 ![rise-of-the-tomb-raider-all-equipment](../../static/media/2019/09/rise-of-the-tomb-raider-all-equipment.jpg)
+![rise-of-the-tomb-raider-skill-upgrade](../../static/media/2019/09/rise-of-the-tomb-raider-skill-upgrade.jpg)
