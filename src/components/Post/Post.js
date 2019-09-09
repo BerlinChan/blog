@@ -13,10 +13,10 @@ import IconButton from '@material-ui/core/IconButton'
 
 const useStyles = makeStyles(theme => ({
   date: {
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(2),
   },
   category: {
-    marginRight: theme.spacing(.5),
+    marginRight: theme.spacing(1),
   },
   tagList: {
     display: 'flex',

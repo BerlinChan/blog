@@ -55,7 +55,7 @@ description: "主机新用户开箱Xbox One X，谈为什么选它，和使用�
 | Battle Field 5    |   主线过半，了解二战的好材料  |
 | Metro 2033 Redux    |   独特的 RPG FPS，喜欢小说的末日废土故事背景，主线通关   |
 | Metro Last Light Redux    |   主线通关   |
-| Hellblade: Senua's sacrifice    |   Game Pass 试用时玩的，被未修复的 [torch bug 卡住剧情](https://www.youtube.com/watch?v=PZsMbxvDjLQ)玩不下去。环境氛围音效动画非常棒，带耳机听[萦绕在主角脑海的耳语](https://www.hellblade.com/development-diary-24-hearing-voices/)都会有高潮，喜欢[凯尔特、北欧神话背景故事](https://www.youtube.com/watch?v=KQUwYYS4QyE)，被主角 Senua 的勇敢和对他逝去爱人迪里恩的爱所感动。[Unread Engine 的运动捕捉实时渲染](https://youtu.be/JbQSpfWUs4I?t=273)效果超棒。   |
+| Hellblade: Senua's sacrifice    |   Game Pass 试用时玩的，被未修复的 [torch bug 卡住剧情](https://www.youtube.com/watch?v=PZsMbxvDjLQ)玩不下去。很多感受[单独写了篇文章](/2019/09/hellblade-senuas-sacrifice)   |
 | Overcooked    |   在朋友 Switch 上玩了的，准备再买个手柄来和女朋友一起玩    |
 
 ## 值得关注的

@@ -6,7 +6,6 @@
 [https://www.berlinchan.com/](https://www.berlinchan.com/)
 
 ## TODO
-- [ ] get slug path from frontmatter date
 - [ ] sort order tags by count
 - [ ] 存档文章列表页完全刷新 bug
 - [ ] description meta on page
