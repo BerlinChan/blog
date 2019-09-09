@@ -1,5 +1,5 @@
 ---
-title: 通关《古墓丽影-崛起》感受
+title: 游戏《古墓丽影-崛起》通关感受
 date: "2019-09-08T13:04:37.121Z"
 template: "post"
 featured_top: true
@@ -43,9 +43,10 @@ description: "有中文语音的“古墓丽影崛起”，对我了解剧情和
 过场动画与游戏之间过度自然
 攀爬跑动潜水操作手感好，在水中快速游泳，攀爬时跳跃加速
 升级系统，武器装备升级、人物技能升级、古钱币购买
-秘法宝钱购买，索道攀爬辅助、手枪瞄准、武器升级
+钱币秘宝在补给小屋购买，索道攀爬辅助、手枪瞄准、武器升级
 没有亲手了结康斯坦丁，他被仇恨与野心吞噬，扭曲了思想走入歧途，这样的人会自取灭亡。
 对于永生的探寻，最后在基特城阻止安娜带走神圣之源的交谈中，劳拉说，死亡是生命的一部分，把对永生问题的真理说出来
 
 ![rise-of-the-tomb-raider-constantine](../../static/media/2019/09/rise-of-the-tomb-raider-constantine.jpg)
 ![rise-of-the-tomb-raider-all-equipment](../../static/media/2019/09/rise-of-the-tomb-raider-all-equipment.jpg)
+![rise-of-the-tomb-raider-skill-upgrade](../../static/media/2019/09/rise-of-the-tomb-raider-skill-upgrade.jpg)
