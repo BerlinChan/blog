@@ -43,7 +43,10 @@ Google Photos APP 中已经自动适配的黑色主题，但是 Gmail 却还没�
 ## 问题
 之后按照 [TWRP官网](https://twrp.me/google/googlepixel.html)安装了 3.3.0-0，
 刷完后进入执行备份的时候会报错 `Failed to mount /system` `Failed to mount /vender`，无法备份这两个目录，也暂时没有研究到底怎么回事。
+
 ![android-10-twrp-failed-mount-system-vendor](../../static/media/2019/09/android-10-twrp-failed-mount-system-vendor.jpg)
+
+_更新：后来从[官网下载 ROM](https://developers.google.com/android/images) 后线刷重置再刷入 TWRP 也会报这两个错，推测是 TWRP 的兼容性问题。_
 
 ## 更新：使用一天感受
 流畅度比之前的9版好了不是一点点！体现在底部左右滑动切换不同 APP 上尤为明显，在五六个 APP 中切换几乎毫无卡顿，
