@@ -30,6 +30,7 @@ const useStyles = makeStyles(theme => ({
 const Categories = (props) => {
   const classes = useStyles()
   const categories = useCategoriesList()
+  const windowGlobal = typeof window !== 'undefined' && window
 
   return <Box {...props}>
     <Box className={classes.title}>
@@ -41,7 +42,7 @@ const Categories = (props) => {
     {categories.map((category, index) =>
       <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}
             display="block" variant="body1" noWrap key={index}
-            className={classes.link} activeClassName={classes.activeLink}>
+            className={classes.link + (windowGlobal && windowGlobal.location.pathname === encodeURI(`/category/${kebabCase(category.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}>
         {`${category.fieldValue} (${category.totalCount})`}
       </Link>)}
   </Box>

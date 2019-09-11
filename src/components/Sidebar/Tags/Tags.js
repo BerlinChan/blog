@@ -17,13 +17,13 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(.5, 1),
     backgroundColor: grey[200],
   },
-  tagLink: {
-    padding: theme.spacing(1, 1, 0, 0),
-    marginRight: theme.spacing(3),
-  },
   listBox: {
+    padding: theme.spacing(1),
     display: 'flex',
     flexWrap: 'wrap',
+  },
+  tagLink: {
+    margin: theme.spacing(0, 3, .5, 0),
   },
   activeLink: {
     color: theme.palette.action.active,
@@ -32,6 +32,7 @@ const useStyles = makeStyles(theme => ({
 const Tags = (props) => {
   const classes = useStyles()
   const tagsList = useTagsList()
+  const windowGlobal = typeof window !== 'undefined' && window
 
   return <Box {...props}>
     <Box className={classes.title}>
@@ -44,7 +45,7 @@ const Tags = (props) => {
       {tagsList.map((tag, index) =>
         <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}
               variant="body1" noWrap key={index}
-              className={classes.tagLink} activeClassName={classes.activeLink}>
+              className={classes.tagLink + (windowGlobal && windowGlobal.location.pathname === encodeURI(`/tag/${kebabCase(tag.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}>
           {tag.fieldValue}
         </Link>)}
     </Box>

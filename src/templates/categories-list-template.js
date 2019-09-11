@@ -18,7 +18,8 @@ const CategoriesListTemplate = () => {
       <ul>
         {categories.map((category, index) => (
           <li key={index}>
-            <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}>
+            <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}
+                  variant={'body1'}>
               {category.fieldValue} ({category.totalCount})
             </Link>
           </li>
