@@ -18,7 +18,8 @@ const TagsListTemplate = () => {
       <ul>
         {tags.map((tag, index) => (
           <li key={index}>
-            <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}>
+            <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}
+                  variant={'body1'}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
           </li>

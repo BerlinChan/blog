@@ -8,6 +8,7 @@
 ## TODO
 - [ ] sort order tags by count
 - [ ] 存档文章列表页完全刷新 bug
+- [ ] lighthouse scroll enhance
 - [ ] description meta on page
 - [ ] draw menu always show on mobile device screen
 - [ ] youku.com 视频替换
