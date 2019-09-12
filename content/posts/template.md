@@ -5,7 +5,7 @@ template: "post"
 featured_top: false
 featured_media: '../../static/media/2019/08/github-imgbot.png'
 draft: true
-slug: "/2019/08/imgBot-optimize-image-asset-for-github-pages-project"
+slug: "/2019/08/post-slug"
 categories: 
     - "前端"
     - "小玩意"
@@ -14,7 +14,7 @@ categories:
     - "摄影"
     - "旅游"
 tags:
-    - "前端"
+    - "tag"
 description: ""
 ---
 
