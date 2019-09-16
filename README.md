@@ -6,11 +6,7 @@
 [https://www.berlinchan.com/](https://www.berlinchan.com/)
 
 ## TODO
-- [ ] write about page
-- [ ] sort order tags by count
 - [ ] lighthouse scroll enhance
-- [ ] description meta on page
-- [ ] draw menu always show on mobile device screen
 - [ ] youku.com 视频替换
 
 ## LICENSE

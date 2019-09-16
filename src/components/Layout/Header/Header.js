@@ -13,6 +13,8 @@ import MenuDraw from '../MenuDraw'
 import { useSiteMetadata } from '../../../hooks'
 import { Link as GatsbyLink, withPrefix } from 'gatsby'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger/useScrollTrigger'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
 
 const useStyles = makeStyles(theme => ({
   avatar: {
@@ -54,6 +56,7 @@ const HideOnScroll = (props) => {
 }
 
 export default (props) => {
+  const [openDraw, setOpenDraw] = React.useState(false)
   const classes = useStyles()
   const { title: siteTitle, author: { name, photo } } = useSiteMetadata()
 
@@ -75,13 +78,17 @@ export default (props) => {
                 <Menu/>
               </Hidden>
               <Hidden smUp>
-                <MenuDraw/>
+                <IconButton edge="end" color="inherit" aria-label="menu"
+                            onClick={() => setOpenDraw(true)}>
+                  <MenuIcon/>
+                </IconButton>
               </Hidden>
             </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
       <Toolbar className={classes.toolbarBottom}/>
+      <MenuDraw openDraw={openDraw} setOpenDraw={setOpenDraw}/>
     </React.Fragment>
   )
 }
