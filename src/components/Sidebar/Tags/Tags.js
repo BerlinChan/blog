@@ -32,12 +32,15 @@ const useStyles = makeStyles(theme => ({
 const Tags = (props) => {
   const classes = useStyles()
   const tagsList = useTagsList()
+    .map(tag => ({ ...tag, order: Math.random() }))
+    .sort((a, b) => a.order - b.order)
+    .slice(0, 20)
   const windowGlobal = typeof window !== 'undefined' && window
 
   return <Box {...props}>
     <Box className={classes.title}>
       <Typography variant="subtitle1">标签</Typography>
-      <IconButton component={GatsbyLink} to={'/tags'} aria-label="more" size="small">
+      <IconButton component={GatsbyLink} to={'/tags'} aria-label="more" size="small" title={'全部'}>
         <MoreHorizIcon/>
       </IconButton>
     </Box>

@@ -35,7 +35,7 @@ const Categories = (props) => {
   return <Box {...props}>
     <Box className={classes.title}>
       <Typography variant="subtitle1">分类</Typography>
-      <IconButton component={GatsbyLink} to={'/categories'} aria-label="more" size="small">
+      <IconButton component={GatsbyLink} to={'/categories'} aria-label="more" size="small" title={'全部'}>
         <MoreHorizIcon/>
       </IconButton>
     </Box>
