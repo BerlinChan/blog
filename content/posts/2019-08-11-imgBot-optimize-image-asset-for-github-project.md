@@ -1,18 +1,17 @@
 ---
 title: 使用 ImgBot 自动为 Github 项目优化图片
-date: "2019-08-11T10:46:37.121Z"
-template: "post"
+date: 2019-08-11T10:46:37.121Z
+template: post
 featured_top: false
-featured_media: '../../static/media/2019/08/github-imgbot.png'
+featured_media: ../../static/media/2019/08/github-imgbot.png
 draft: false
-slug: "/2019/08/imgBot-optimize-image-asset-for-github-project"
+slug: /2019/08/imgBot-optimize-image-asset-for-github-project
 categories: 
-    - "前端"
+    - 前端
 tags:
-    - "前端"
-    - "性能"
-    - "Github"
-description: "用 Github Pages 做 blog 时，经常会插入很多图片，利用 ImgBot 可以自动为我们优化图片大小，加快图片加载"
+    - 性能
+    - Github
+description: 用 Github Pages 做 blog 时，经常会插入很多图片，利用 ImgBot 可以自动为我们优化图片大小，加快图片加载
 ---
 
 我在建[旧站博物馆](https://github.com/BerlinChan/museum)时，旧站内容中有不少图片，数量巨大不便于逐个处理，部分人工筛选和压缩后在 [Github Marketplace](https://github.com/marketplace) 中看到了这个 [ImgBot](https://github.com/marketplace/imgbot)。
