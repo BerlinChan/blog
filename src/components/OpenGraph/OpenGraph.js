@@ -2,14 +2,13 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useSiteMetadata } from '../../hooks'
 
-const Metadata = (props) => {
+const OpenGraph = (props) => {
   const { title: siteTitle, author: { name: siteAuthorName } } = useSiteMetadata()
   const { title, url, description, type, image } = props
 
   return (
     <Helmet>
       {description && <meta name="description" content={description}/>}
-      <meta name="author" content={siteAuthorName}/>
 
       {/* Open Graph for Facebook & Twitter */}
       {url && <meta property="og:url" content={url}/>}
@@ -31,4 +30,4 @@ const Metadata = (props) => {
   )
 }
 
-export default Metadata
+export default OpenGraph

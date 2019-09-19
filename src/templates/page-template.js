@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
 import Typography from '@material-ui/core/Typography'
 import Content from '../components/Content'
-import Metadata from '../components/Metadata'
+import OpenGraph from '../components/OpenGraph'
 
 const PageTemplate = ({ data }) => {
   const { url: siteUrl, title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
@@ -19,7 +19,7 @@ const PageTemplate = ({ data }) => {
 
   return (
     <Layout title={`${pageTitle} - ${siteTitle}`} noSidebar>
-      <Metadata {...metaData}/>
+      <OpenGraph {...metaData}/>
       <Typography component={'h2'} variant={'h4'} gutterBottom>
         {pageTitle}
       </Typography>

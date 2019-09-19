@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Metadata from '../components/Metadata'
+import OpenGraph from '../components/OpenGraph'
 import Post from '../components/Post'
 import Content from '../components/Content'
 import Pagination from '../components/Pagination'
@@ -27,7 +27,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`}>
-      <Metadata {...metaData}/>
+      <OpenGraph {...metaData}/>
       <Post post={data.markdownRemark}>
         <Content html={data.markdownRemark.html}/>
       </Post>
