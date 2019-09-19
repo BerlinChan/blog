@@ -11,7 +11,7 @@ const PageTemplate = ({ data }) => {
   const { html: pageBody } = data.markdownRemark
   const { title: pageTitle, description: pageDescription, slug } = data.markdownRemark.frontmatter
   const metaData = {
-    title: pageTitle,
+    title: `${pageTitle} | ${siteTitle}`,
     url: `${siteUrl}${slug}`,
     description: pageDescription !== null ? pageDescription : siteSubtitle,
     type: 'article',

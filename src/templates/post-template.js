@@ -14,7 +14,7 @@ const PostTemplate = ({ data }) => {
   const { title: postTitle, description: postDescription, featured_media } = data.markdownRemark.frontmatter
   const { slug } = data.markdownRemark.fields
   const metaData = {
-    title: postTitle,
+    title: `${postTitle} | ${siteTitle}`,
     url: `${siteUrl}${slug}`,
     description: postDescription !== null ? postDescription : siteSubtitle,
     type: 'article',

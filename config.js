@@ -30,6 +30,7 @@ module.exports = {
       twitter: 'https://www.twitter.com/BerlinChanCom',
       facebook: 'https://www.facebook.com/berlinchancom',
       github: 'https://github.com/BerlinChan',
+      linkedIn: 'https://www.linkedin.com/in/berlinchan',
       youtube: 'https://www.youtube.com/user/berlinchancom',
       email: 'mailto:berlinchancom@gmail.com',
       rss: '/rss.xml',
