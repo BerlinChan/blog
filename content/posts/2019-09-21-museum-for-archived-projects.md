@@ -1,21 +1,21 @@
 ---
-title: 
+title: 旧站博物馆——我的个人项目回顾
 date: 2019-09-21T10:46:37.121Z
 template: post
 featured_top: false
 featured_media: ../../static/media/2019/09/museum-cover.jpg
 draft: true
-slug: /2019/08/post-slug
+slug: /2019/09/museum-for-archived-projects
 categories: 
     - 前端
-    - 小玩意
     - 观点
-    - 短片
-    - 摄影
-    - 旅游
 tags:
-    - tag
+    - 个人项目
+    - 文曲星
+    - 站长
+    - 实践
 description: 
 ---
 
 <!-- endExcerpt -->
+
