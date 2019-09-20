@@ -14,7 +14,7 @@ tags:
 description: 用 Github Pages 做 blog 时，经常会插入很多图片，利用 ImgBot 可以自动为我们优化图片大小，加快图片加载
 ---
 
-我在建[旧站博物馆](https://github.com/BerlinChan/museum)时，旧站内容中有不少图片，数量巨大不便于逐个处理，部分人工筛选和压缩后在 [Github Marketplace](https://github.com/marketplace) 中看到了这个 [ImgBot](https://github.com/marketplace/imgbot)。
+我在建[旧站博物馆](https://github.com/BerlinChan/museum)时，旧站内容中有不少图片，数量巨大不便于逐个处理，部分人工筛选和压缩后，闲逛 [Github Marketplace](https://github.com/marketplace) 时看到了这个 [ImgBot](https://github.com/marketplace/imgbot)。
 
 <!-- endExcerpt -->
 
