@@ -65,6 +65,9 @@ export default () => {
           <IconButton className={classes.snsIcon} href={contacts.facebook} target="_blank" rel="noopener">
             <SvgIcons name={'facebook'}/>
           </IconButton>
+          <IconButton className={classes.snsIcon} href={contacts.linkedIn} target="_blank" rel="noopener">
+            <SvgIcons name={'linkedIn'}/>
+          </IconButton>
           <IconButton className={classes.snsIcon} href={contacts.github} target="_blank" rel="noopener">
             <SvgIcons name={'github'}/>
           </IconButton>
