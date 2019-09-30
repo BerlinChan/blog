@@ -2,9 +2,9 @@
 title: 钢琴独奏 - Time To Say Goodbye
 date: 2019-09-30T10:46:37.121Z
 template: post
-featured_top: false
-featured_media: ./template.png
-draft: true
+featured_top: true
+featured_media: ./time-to-say-goodbye-cover.jpg
+draft: false
 slug: /2019/09/piano-solo-time-to-say-goodbye
 categories: 
     - 钢琴
