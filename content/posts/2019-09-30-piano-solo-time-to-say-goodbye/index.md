@@ -12,7 +12,7 @@ categories:
 tags:
     - 坚持
     - 理想
-description: 当我离开三峡晚报社，坐上去武汉的火车时，戴上耳机放了这首 Time To Say Goodbye，我知道我会记得这一刻，记得那些坚持。
+description: 六年前，当我离开三峡晚报社，坐上去武汉的火车时，戴上耳机放了这首 Time To Say Goodbye，我知道我会记得这一刻，记得那些坚持。
 ---
 
 <!-- endExcerpt -->
