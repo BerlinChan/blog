@@ -1,11 +1,11 @@
 ---
 title: template
-date: 2019-09-21T10:46:37.121Z
+date: 2019-10-21T10:46:37.121Z
 template: post
 featured_top: false
-featured_media: ./template.png
+featured_media: ./featured_media.png
 draft: true
-slug: /2019/09/template
+slug: /2019/10/template
 categories: 
     - 前端
     - 小玩意
