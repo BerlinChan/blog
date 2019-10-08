@@ -1,4 +1,5 @@
 import React from 'react'
+import _ from 'lodash'
 import { Link as GatsbyLink } from 'gatsby'
 import { useCategoriesList, useSiteMetadata } from '../../../hooks'
 import { makeStyles } from '@material-ui/core'
@@ -41,7 +42,7 @@ export default ({ openDraw, setOpenDraw }) => {
       {categories.map((category, index) =>
         <ListItem button component={GatsbyLink}
                   to={`/category/${kebabCase(category.fieldValue)}/`}
-                  className={classes.nested + (windowGlobal && windowGlobal.location.pathname === encodeURI(`/category/${kebabCase(category.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}
+                  className={classes.nested + (_.get(windowGlobal, 'location.pathname') === encodeURI(`/category/${kebabCase(category.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}
                   key={index}>
           <ListItemText primary={category.fieldValue}/>
         </ListItem>)}

@@ -1,4 +1,5 @@
 import React from 'react'
+import _ from 'lodash'
 import { Link as GatsbyLink } from 'gatsby'
 import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
@@ -48,7 +49,7 @@ const Tags = (props) => {
       {tagsList.map((tag, index) =>
         <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}
               variant="body1" noWrap key={index}
-              className={classes.tagLink + (windowGlobal && windowGlobal.location.pathname === encodeURI(`/tag/${kebabCase(tag.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}>
+              className={classes.tagLink + (_.get(windowGlobal, 'location.pathname') === encodeURI(`/tag/${kebabCase(tag.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}>
           {tag.fieldValue}
         </Link>)}
     </Box>

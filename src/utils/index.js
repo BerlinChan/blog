@@ -1,1 +1,1 @@
-export { default as getContactHref } from './get-contact-href'
+export getActiveClass from './get-active-class'
