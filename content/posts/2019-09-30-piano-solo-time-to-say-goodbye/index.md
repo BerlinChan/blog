@@ -19,6 +19,8 @@ description: 六年前，当我离开三峡晚报社，坐上去武汉的火车�
 
 `video: https://www.youtube.com/watch?v=q0chGWzSBrU`
 
+[在腾讯视频上](https://v.qq.com/x/page/l3005rsphgm.html)
+
 ## 背景
 六年前，当我离开三峡晚报社，坐上去武汉的火车时，新闻理想早已崩溃。
 
@@ -38,3 +40,5 @@ description: 六年前，当我离开三峡晚报社，坐上去武汉的火车�
 
 ## 指法键盘顶视图
 `video: https://www.youtube.com/watch?v=_Fr9E7YXhTg`
+
+[在腾讯视频上](https://v.qq.com/x/page/f3005i51n2a.html)
