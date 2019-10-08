@@ -1,10 +1,10 @@
 import React from 'react'
-import _ from 'lodash'
 import { Link as GatsbyLink } from 'gatsby'
 import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 import { useTagsList } from '../../../hooks'
 import kebabCase from 'lodash/kebabCase'
+import get from 'lodash/get'
 import Box from '@material-ui/core/Box'
 import { makeStyles } from '@material-ui/core'
 import { grey } from '@material-ui/core/colors'
@@ -49,7 +49,7 @@ const Tags = (props) => {
       {tagsList.map((tag, index) =>
         <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}
               variant="body1" noWrap key={index}
-              className={classes.tagLink + (_.get(windowGlobal, 'location.pathname') === encodeURI(`/tag/${kebabCase(tag.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}>
+              className={classes.tagLink + (get(windowGlobal, 'location.pathname') === encodeURI(`/tag/${kebabCase(tag.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}>
           {tag.fieldValue}
         </Link>)}
     </Box>

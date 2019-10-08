@@ -1,5 +1,5 @@
 import React from 'react'
-import _ from 'lodash'
+import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import OpenGraph from '../components/OpenGraph'
@@ -33,10 +33,10 @@ const PostTemplate = ({ data }) => {
         <Content html={data.markdownRemark.html}/>
       </Post>
       <Box my={2}>
-        <Pagination prevPageName={_.get(data, 'prevPost.frontmatter.title')}
-                    nextPageName={_.get(data, 'nextPost.frontmatter.title')}
-                    prevPagePath={_.get(data, 'prevPost.fields.slug')}
-                    nextPagePath={_.get(data, 'nextPost.fields.slug')}
+        <Pagination prevPageName={get(data, 'prevPost.frontmatter.title')}
+                    nextPageName={get(data, 'nextPost.frontmatter.title')}
+                    prevPagePath={get(data, 'prevPost.fields.slug')}
+                    nextPagePath={get(data, 'nextPost.fields.slug')}
         />
       </Box>
       <Comments postSlug={slug} postTitle={postTitle}/>

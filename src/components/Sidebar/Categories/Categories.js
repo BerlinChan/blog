@@ -1,10 +1,10 @@
 import React from 'react'
-import _ from 'lodash'
 import { Link as GatsbyLink } from 'gatsby'
 import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
 import { useCategoriesList } from '../../../hooks'
 import kebabCase from 'lodash/kebabCase'
+import get from 'lodash/get'
 import Box from '@material-ui/core/Box'
 import { grey } from '@material-ui/core/colors'
 import { makeStyles } from '@material-ui/core'
@@ -43,7 +43,7 @@ const Categories = (props) => {
     {categories.map((category, index) =>
       <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}
             display="block" variant="body1" noWrap key={index}
-            className={classes.link + (_.get(windowGlobal, 'location.pathname') === encodeURI(`/category/${kebabCase(category.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}>
+            className={classes.link + (get(windowGlobal, 'location.pathname') === encodeURI(`/category/${kebabCase(category.fieldValue)}/`) ? ` ${classes.activeLink}` : '')}>
         {`${category.fieldValue} (${category.totalCount})`}
       </Link>)}
   </Box>

@@ -1,5 +1,5 @@
 import React from 'react'
-import _ from 'lodash'
+import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Pagination from '../components/Pagination'
@@ -31,7 +31,7 @@ const PostListTemplate = ({ data, pageContext }) => {
             date: node.date,
             categories: (node.categories || []).map(category => category.name),
             description: node.excerpt,
-            featured_media: _.get(node, 'featured_media.source_url') && {
+            featured_media: get(node, 'featured_media.source_url') && {
               childImageSharp: {
                 fixed: {
                   src: node.featured_media.source_url
