@@ -6,8 +6,6 @@
 [https://www.berlinchan.com/](https://www.berlinchan.com/)
 
 ## TODO
-- [ ] meta viewport duplicate
-- [ ] archived post Open Graph meta & share
 - [ ] active link with slash tail
 - [ ] lighthouse scroll enhance
 - [ ] youku.com 视频替换

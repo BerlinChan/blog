@@ -7,15 +7,29 @@ import Box from '@material-ui/core/Box'
 import Post from '../components/Post'
 import Comments from '../components/Comments'
 import Content from '../components/Content'
+import OpenGraph from '../components/OpenGraph'
 
 const PostTemplate = ({ data }) => {
-  const { title: siteTitle, archivedBlogUrl } = useSiteMetadata()
-  const { title: postTitle, excerpt: postDescription, content, path, date, tags, categories } = data.archivedBlogPostJson
+  const { url: siteUrl, title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
+  const { title: postTitle, excerpt: postDescription, content, path, date, tags, categories,featured_media } = data.archivedBlogPostJson
+  const openGraph = {
+    title: `${postTitle} | ${siteTitle}`,
+    url: `${siteUrl}${path}`,
+    description: postDescription !== null ? postDescription : siteSubtitle,
+    type: 'article',
+  }
+  if (featured_media) {
+    openGraph.image = {
+      url: `${siteUrl}${featured_media.source_url}`,
+    }
+  }
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`}>
+      <OpenGraph {...openGraph}/>
       <Post isArchivedBlogPost post={{
         frontmatter: {
+          slug: path,
           title: postTitle,
           date: date,
           categories: (categories || []).map(category => category.name),

@@ -14,21 +14,23 @@ const PostTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle, url: siteUrl } = useSiteMetadata()
   const { title: postTitle, description: postDescription, featured_media } = data.markdownRemark.frontmatter
   const { slug } = data.markdownRemark.fields
-  const metaData = {
+  const openGraph = {
     title: `${postTitle} | ${siteTitle}`,
     url: `${siteUrl}${slug}`,
     description: postDescription !== null ? postDescription : siteSubtitle,
     type: 'article',
-    image: {
+  }
+  if (featured_media) {
+    openGraph.image = {
       url: `${siteUrl}${featured_media.childImageSharp.fixed.src}`,
       width: featured_media.childImageSharp.fixed.width,
       height: featured_media.childImageSharp.fixed.height,
-    },
+    }
   }
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`}>
-      <OpenGraph {...metaData}/>
+      <OpenGraph {...openGraph}/>
       <Post post={data.markdownRemark}>
         <Content html={data.markdownRemark.html}/>
       </Post>
