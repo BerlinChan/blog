@@ -37,7 +37,6 @@ const PostTemplate = ({ data }) => {
           tags: (tags || []).map(tag => tag.name),
         },
         fields: {
-          slug: path,
           categorySlugs: (categories || []).map(category => category.path),
           tagSlugs: (tags || []).map(tag => tag.path),
         },
