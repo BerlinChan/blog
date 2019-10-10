@@ -1,5 +1,5 @@
 ---
-title: template
+title: 武汉物价飞涨早点吃不起了
 date: 2019-10-10T12:46:37.121Z
 template: post
 featured_top: false
