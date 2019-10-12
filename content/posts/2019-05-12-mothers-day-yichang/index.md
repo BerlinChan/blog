@@ -12,7 +12,7 @@ categories:
 tags:
     - 节日
     - 家庭
-description: 母亲节和夫人回去宜昌，陪妈妈看电影逛街吃小吃，妈妈好开心！
+description: 母亲节和夫人回去宜昌，陪妈妈看电影逛街吃小吃，妈妈好开心！还骑车闲逛了西坝。
 ---
 
 <!-- endExcerpt -->
