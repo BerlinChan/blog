@@ -23,7 +23,7 @@
     "@material-ui/icons": "^4.4.3",
     "@material-ui/styles": "^4.5.0",
     "classnames": "^2.2.6",
-    "gatsby": "^2.15.35",
+    "gatsby": "^2.15.36",
     "gatsby-background-image": "^0.8.15",
     "gatsby-link": "^2.2.20",
     "gatsby-plugin-catch-links": "^2.1.13",
