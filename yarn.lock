@@ -5737,10 +5737,10 @@ gatsby-background-image@^0.8.15:
     prop-types "^15.7.2"
     short-uuid "^3.1.1"
 
-gatsby-cli@^2.8.3:
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.8.3.tgz#42d147b345712ec0486649137f8647760a83475e"
-  integrity sha512-HJUIuRz9CR2q/Yxm79ps79Kh5dtuUDytnGdPlsO8HiYVO7vZUxDEUW/5rYxBpiLqL17uUL/UFFuLfhm/F/xuCQ==
+gatsby-cli@^2.8.5:
+  version "2.8.5"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.8.5.tgz#5c11a455c73cca949fab6b0a7ca46cd8c10ee3d7"
+  integrity sha512-kkbVnCxSrqJDMq/H3FaqG4ptJSt+8etMTfrHDWy/Ju0GbhSmuW66jB/JVlOzsAY0BjHpGik4+bT/OmRmmbKmIQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/runtime" "^7.6.3"
@@ -5984,13 +5984,13 @@ gatsby-remark-copy-linked-files@^2.1.28:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-embed-video@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-2.0.0.tgz#6b5bf6b81b864cc844ce99226752176f11979ef2"
-  integrity sha512-ZpPCDs0IkaO1XdYcCdwaTPtWvXb63znUiCKoMiI1yWRsrwJ47iGF6SFJqFUFFs/3V3x2yzkRVr2RYXGZRgLjfQ==
+gatsby-remark-embed-video@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-2.0.1.tgz#d7b5a8ecbde9ec8fc33fb2e569b87b2af35cb278"
+  integrity sha512-V+cW4Ev+iXb0jmqfqKpcdPRn9vsKahIdj9sAUj26Ox4rooknWCjhayBdxT51BM2u7P2u3ck3Ty96PnqW7e/Mog==
   dependencies:
     get-video-id "^3.1.4"
-    remark-burger "^1.0.0"
+    remark-burger "^1.0.1"
     unist-util-visit "^2.0.0"
 
 gatsby-remark-external-links@^0.0.4:
@@ -6129,10 +6129,10 @@ gatsby-transformer-remark@^2.6.30:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.4.1"
 
-gatsby-transformer-sharp@^2.2.23:
-  version "2.2.23"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.23.tgz#225050f3bf23ea13a9da46667cc7980ce4090e65"
-  integrity sha512-Xd2Ydn6vrfpyElfRtiFqidHWhbXI28NS/sm9olOS1AJzSvonJ/UdQKQFhoGkgZ+JyWlo+yZfFmXMCSDr7pyVpQ==
+gatsby-transformer-sharp@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.3.0.tgz#15fed043a73a43d8b7e7512a6de72614ed28b11b"
+  integrity sha512-AW8Ds4CiJEcqKjCjbKfnrqRcwRAX2scybe5Lvv+9klSZcSTlDtsB4sSpKQbBOrLeMOmrRan4zoC0vPc1Ccut9g==
   dependencies:
     "@babel/runtime" "^7.6.3"
     bluebird "^3.7.0"
@@ -6142,10 +6142,10 @@ gatsby-transformer-sharp@^2.2.23:
     semver "^5.7.1"
     sharp "^0.23.1"
 
-gatsby@^2.16.5:
-  version "2.16.5"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.16.5.tgz#155376fd8d797ba111772d168daecd4a5ba036ef"
-  integrity sha512-ga7WX773yCouxVPTUgswkjnHkFMWsIuHyOfGzprqdI8EJ74oEkBfcDUZTntbXDuP20IUGomve6sUOJLwZMdReA==
+gatsby@^2.17.4:
+  version "2.17.4"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.17.4.tgz#0f23ed27dfdd7ae9904e631835e0910a574db0cc"
+  integrity sha512-U5DMlIn1MM7n187LF5lFVcSxQyBq+p9QU+fj/xInLBlnT4uIyl1/2hPhG/26tLn0FKulJbYOu8U0HgAK7UmSyw==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.6.4"
@@ -6207,7 +6207,7 @@ gatsby@^2.16.5:
     flat "^4.1.0"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^2.8.3"
+    gatsby-cli "^2.8.5"
     gatsby-core-utils "^1.0.15"
     gatsby-graphiql-explorer "^0.2.25"
     gatsby-link "^2.2.22"
@@ -11430,10 +11430,10 @@ relay-runtime@2.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-burger@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/remark-burger/-/remark-burger-1.0.0.tgz#6cddfe0cecea5c9a96ba2a2edc52f4e9e93daa61"
-  integrity sha512-5kmsrdSwajpC92puE52TWdQub1m3K/Phuwp0oyLieMDabbUUqM+/1TaukHx0KrOUwjSRYCvCeaW3ROCoX+xhmw==
+remark-burger@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/remark-burger/-/remark-burger-1.0.1.tgz#cda57d4bc1e952ae86b2407fbcf36492ab352106"
+  integrity sha512-F91SyEzat4hBkWsWElHIvMcCQuWoSeZXTuR4DmLvhUIjYkzzVLaX6GRxhkiDrZb/9asvTrYzwEr9HvxN1tqs9Q==
 
 remark-parse@^1.1.0:
   version "1.1.0"
