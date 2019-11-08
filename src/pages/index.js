@@ -11,7 +11,7 @@ import Divider from '@material-ui/core/Divider'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import PostList from '../components/PostList'
 import Pagination from '../components/Pagination'
-import {Link as GatsbyLink} from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
 const useStyles = makeStyles(theme => ({
