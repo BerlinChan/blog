@@ -4,7 +4,7 @@ date: 2019-11-21T10:46:37.121Z
 template: post
 featured_top: true
 featured_media: ./Matrix.jpg
-draft: true
+draft: false
 slug: /2019/10/building-an-encrypted-messenger-with-javascript
 categories: 
     - 前端
@@ -25,20 +25,25 @@ description:
 密码学很重要。没有密码学，就没有 Internet —— 在线发送的数据就像在拥挤的房间里大声喊叫一样容易被截获。
 密码学也是当前时事中的主要话题，在[执法调查](https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute)和[政府立法](https://www.politico.com/tipsheets/morning-cybersecurity/2017/11/10/texas-shooting-could-revive-encryption-legislation-223290)中日益发挥中心作用。
 
-Encryption is an invaluable tool for journalists, activists, nation-states, businesses, and everyday people who need to protect their data from the ever-present threat of hackers, spies, and advertising agencies.
+对于记者、活动人士、国家、企业和需要保护数据不受黑客、间谍和广告机构威胁的普通人来说，加密是一种无价的工具。
 
-An understanding of how to utilize strong encryption is essential for modern software development. We will not be delving much into the underlying math and theory of cryptography for this tutorial; instead, the focus will be on how to harness these techniques for your own applications.
+了解如何利用强加密对于现代软件开发至关重要。
+在本教程中，我们不会深入研究底层的数学和密码学理论；相反，重点将放在如何为您自己的应用程序利用这些技术。
 
-![Screenshot 5](https://cdn.patricktriest.com/blog/images/posts/e2e-chat/screenshot_5.png)
+![Screenshot 5](./screenshot_5.png)
 
-In this tutorial, we will walk through the basic concepts and implementation of an end-to-end 2048-bit [RSA encrypted](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) messenger. We'll be utilizing [Vue.js](https://vuejs.org/) for coordinating the frontend functionality along with a [Node.js](https://nodejs.org/en/) backend using [Socket.io](https://socket.io/) for sending messages between users.
+在本教程中，我们将介绍端到端 2048位 [RSA加密](https://en.wikipedia.org/wiki/RSA_(cryptosystem))消息工具的基本概念和实现。
+我们将利用 [Vue.js](https://vuejs.org/) 协调前端功能，在 [Node.js](https://nodejs.org/en/) 后端环境中使用 [Socket.io](https://socket.io/)，以便在用户之间发送消息。
 
-*   Live Preview - [https://chat.patricktriest.com](https://chat.patricktriest.com)
-*   Github Repository - [https://github.com/triestpa/Open-Cryptochat](https://github.com/triestpa/Open-Cryptochat)
+* 演示 - [https://chat.patricktriest.com](https://chat.patricktriest.com)
+* Github 仓库 - [https://github.com/triestpa/Open-Cryptochat](https://github.com/triestpa/Open-Cryptochat)
 
-The concepts that we are covering in this tutorial are implemented in Javascript and are mostly intended to be platform-agnostic. We will be building a traditional browser-based web app, but you can adapt this code to work within a pre-built desktop (using [Electron](https://electronjs.org/)) or mobile ( [React Native](https://facebook.github.io/react-native/), [Ionic](https://ionicframework.com/), [Cordova](https://cordova.apache.org/)) application binary if you are concerned about browser-based application security.<sup class="footnote-ref">[[1]](#fn1)</sup> Likewise, implementing similar functionality in another programming language should be relatively straightforward since most languages have reputable open-source encryption libraries available; the base syntax will change but the core concepts remain universal.
+本教程中所涉及的概念是用 Javascript 实现的，该语言具有平台无关特性。
+我们将构建一个传统的基于浏览器的 Web 应用，但是如果您担心基于浏览器应用程序的安全性，可以修改此代码以使其在预构建的桌面（使用 [Electron](https://electronjs.org/)）或移动应用程序（[React Native](https://facebook.github.io/react-native/)，[Ionic](https://ionicframework.com/)，[Cordova](https://cordova.apache.org/)）二进制文件中工作。<sup>[[1]](#fn1)</sup>
+用另一种编程语言实现类似的功能应该也简单，因为大多数语言都有著名的开源加密库可用；
+虽然语法会不同但核心概念是相同的。
 
-> Disclaimer - This is meant to be a primer in end-to-end encryption implementation, not a definitive guide to building the Fort Knox of browser chat applications. I've worked to provide useful information on adding cryptography to your Javascript applications, but I cannot 100% guarantee the security of the resulting app. There's a lot that can go wrong at all stages of the process, especially at the stages not covered by this tutorial such as setting up web hosting and securing the server(s). If you are a security expert, and you find vulnerabilities in the tutorial code, please feel free to reach out to me by email ([<span class="__cf_email__" data-cfemail="d6a6b7a2a4bfb5bdf8a2a4bfb3a5a296b1bbb7bfbaf8b5b9bb">[email protected]</span>](/cdn-cgi/l/email-protection#ccbcadb8bea5afa7e2b8bea5a9bfb88caba1ada5a0e2afa3a1)) or in the comments section below.
+> 免责声明 - This is meant to be a primer in end-to-end encryption implementation, not a definitive guide to building the Fort Knox of browser chat applications. I've worked to provide useful information on adding cryptography to your Javascript applications, but I cannot 100% guarantee the security of the resulting app. There's a lot that can go wrong at all stages of the process, especially at the stages not covered by this tutorial such as setting up web hosting and securing the server(s). If you are a security expert, and you find vulnerabilities in the tutorial code, please feel free to reach out to me by email ([<span class="__cf_email__" data-cfemail="d6a6b7a2a4bfb5bdf8a2a4bfb3a5a296b1bbb7bfbaf8b5b9bb">[email protected]</span>](/cdn-cgi/l/email-protection#ccbcadb8bea5afa7e2b8bea5a9bfb88caba1ada5a0e2afa3a1)) or in the comments section below.
 
 ## 1 - Project Setup
 
@@ -1017,14 +1022,11 @@ There are lots of ways to build up the app from here:
 
 Feel free to comment below with questions, responses, and/or feedback on the tutorial.
 
-* * *
+***
 
-<section class="footnotes">
-
+<a id="fn1"></a>
 1.  **Security Implications Of Browser Based Encryption**  
 
     Please remember to be careful. The use of these protocols in a browser-based Javascript app is a great way to experiment and understand how they work in practice, but this app is not a suitable replacement for established, peer-reviewed encryption protocol implementations such as [OpenSSL](https://en.wikipedia.org/wiki/OpenSSL) and [GnuPG](https://en.wikipedia.org/wiki/GNU_Privacy_Guard).  
 
     Client-side browser Javascript encryption is a controversial topic among security experts due to the vulnerabilities present in web application delivery versus pre-packaged software distributions that run outside the browser. Many of these issues can be mitigated by utilizing HTTPS to prevent man-in-the-middle resource injection attacks, and by avoiding persistent storage of unencrypted sensitive data within the browser, but it is important to stay aware of potential vulnerabilities in the web platform. [↩︎](#fnref1)
-
-</section>
