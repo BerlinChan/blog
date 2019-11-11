@@ -4,7 +4,7 @@ date: 2019-11-21T10:46:37.121Z
 template: post
 featured_top: true
 featured_media: ./Matrix.jpg
-draft: true
+draft: false
 slug: /2019/10/building-an-encrypted-messenger-with-javascript
 categories: 
     - 前端
@@ -457,7 +457,7 @@ io.on('connection', (socket) => {
 
 ```javascript
 created () {
-  // Initialize socket.io
+  // 初始化 socket.io
   this.socket = io()
   this.setupSocketListeners()
 },
@@ -600,7 +600,7 @@ _公钥_ 就像一个有牢不可破锁的公开投信箱。如果有人想给�
 
 `video: https://youtu.be/wXB-V_Keiu8`
 
-## 3 - Crypto Web Worker
+## 3 - 用 Web Worker 处理加密
 
 加密操作往往是计算密集型的。由于 Javascript 是单线程的，在 UI 主线程上处理加密会导致浏览器卡顿几秒钟。
 
@@ -710,252 +710,278 @@ getWebWorkerResponse (messageType, messagePayload) {
 
 ## 4 - 密钥交换
 
-In our app, the first step will be generating a public-private key pair for each user. Then, once the users are in the same chat, we will exchange _public keys_ so that each user can encrypt messages which only the other user can decrypt. Hence, we will always encrypt messages using the recipient's _public key_, and we will always decrypt messages using the recipient's _private key_.
+在我们的应用中，第一步是为每个用户生成一对密钥。
+然后一旦用户进入同一个对话，应用程序会交换用户的 _公钥_，这样每个用户就能解密属于自己的消息，而其他人只能加密。
 
-### 4.0 - Add Server-Side Socket Listener To Transmit Public Keys
+因此，应用程序始终使用接收者的 _公钥_ 来加密消息，使用用户自己的 _私钥_ 解密消息。
 
-On the server-side, we'll need a new socket listener that will receive a public-key from a client and re-broadcast this key to the rest of the room. We'll also add a listener to let clients know when someone has disconnected from the current room.
+### 4.1 - 添加服务器端 Socket 监听器来传递公钥
 
-Add the following listeners to `/app.js` within the `io.on('connection', (socket) => { ... }` callback.
+在服务器端，需要一个 Socket 监听器接收从客户端发来的公钥，并将其广播给聊天室中其他人。
+还需要一个监听器通知客户端，何人何时从当前聊天室中退出。
 
-    /** Broadcast a new publickey to the room */
-    socket.on('PUBLIC_KEY', (key) => {
-      socket.broadcast.to(currentRoom).emit('PUBLIC_KEY', key)
-    })
-
-    /** Broadcast a disconnection notification to the room */
-    socket.on('disconnect', () => {
-      socket.broadcast.to(currentRoom).emit('USER_DISCONNECTED', null)
-    })
+在 `/app.js` 的 `io.on('connection', (socket) => { ... }` 回调中添加监听器。
 
-### 4.1 - Generate Key Pair
+```javascript
+/** 广播公钥到聊天室 */
+socket.on('PUBLIC_KEY', (key) => {
+  socket.broadcast.to(currentRoom).emit('PUBLIC_KEY', key)
+})
+
+/** 广播断开连接到聊天室 */
+socket.on('disconnect', () => {
+  socket.broadcast.to(currentRoom).emit('USER_DISCONNECTED', null)
+})
+```
+
+### 4.2 - 生成密钥对
+
+下一步，替换 `/public/page.js` 中的 `created` 函数，用于初始化 Web Worker 和生成一对密钥。
+
+```javascript
+async created () {
+  this.addNotification('Welcome! Generating a new keypair now.')
+
+  // Initialize crypto webworker thread
+  this.cryptWorker = new Worker('crypto-worker.js')
+
+  // Generate keypair and join default room
+  this.originPublicKey = await this.getWebWorkerResponse('generate-keys')
+  this.addNotification('Keypair Generated')
+
+  // Initialize socketio
+  this.socket = io()
+  this.setupSocketListeners()
+},
+```
 
-Next, we'll replace the `created` function in `/public/page.js` to initialize the web worker and generate a new key pair.
+这里使用 [async/await 语法](https://blog.patricktriest.com/what-is-async-await-why-should-you-care/) 在一行代码中接收 Web Worker 返回的 Promise。
+
+### 4.3 - 添加公钥帮助函数
+
+还要在 `/public/page.js` 添加一些函数用于发送公钥，并将密钥简化为人类可读的标识符。
+
+```javascript
+/** 发送公钥给聊天室中所有用户 */
+sendPublicKey () {
+  if (this.originPublicKey) {
+    this.socket.emit('PUBLIC_KEY', this.originPublicKey)
+  }
+},
+
+/** 获取用于显示的密钥片段 */
+getKeySnippet (key) {
+  return key.slice(400, 416)
+},
+```
+
+### 4.4 - 收发公钥
+
+下面在客户端 Socket 代码中添加一些监听器，用于当有新用户加入聊天室时发送本地公钥，并保存接收到的其他用户的公钥。
+
+在 `/public/page.js` 的 `setupSocketListeners` 函数处添加如下。
+
+```javascript
+// 有新用户加入当前聊天室时，向他发送你的公钥
+this.socket.on('NEW_CONNECTION', () => {
+  this.addNotification('Another user joined the room.')
+  this.sendPublicKey()
+})
+
+// 加入一个聊天室时广播公钥
+this.socket.on('ROOM_JOINED', (newRoom) => {
+  this.currentRoom = newRoom
+  this.addNotification(`Joined Room - ${this.currentRoom}`)
+  this.sendPublicKey()
+})
+
+// 收到公钥时保存之
+this.socket.on('PUBLIC_KEY', (key) => {
+  this.addNotification(`Public Key Received - ${this.getKeySnippet(key)}`)
+  this.destinationPublicKey = key
+})
+
+// 有用户离开聊天室时删除用户对应公钥
+this.socket.on('user disconnected', () => {
+  this.notify(`User Disconnected - ${this.getKeySnippet(this.destinationKey)}`)
+  this.destinationPublicKey = null
+})
+```
+
+### 4.5 - 在 UI 中显示公钥
+
+最后，添加一些 HTML 用于显示两个公钥。
+
+在 `/public/index.html` 的 `<!-- Add Encryption Key UI Here -->` 注释后添加如下。
+
+```html
+<div class="divider"></div>
+<div class="keys full-width">
+  <h1>KEYS</h1>
+  <h2>THEIR PUBLIC KEY</h2>
+  <div class="key red" v-if="destinationPublicKey">
+    <h3>TRUNCATED IDENTIFIER - {{ getKeySnippet(destinationPublicKey) }}</h3>
+    <p>{{ destinationPublicKey }}</p>
+  </div>
+  <h2 v-else>Waiting for second user to join room...</h2>
+  <div class="divider"></div>
+  <h2>YOUR PUBLIC KEY</h2>
+  <div class="key green" v-if="originPublicKey">
+    <h3>TRUNCATED IDENTIFIER - {{ getKeySnippet(originPublicKey) }}</h3>
+    <p>{{ originPublicKey }}</p>
+  </div>
+  <div class="keypair-loader full-width" v-else>
+    <div class="center-x loader"></div>
+    <h2 class="center-text">Generating Keypair...</h2>
+  </div>
+</div>
+```
+
+重启应用程序并刷新 `http://localhost:3000`。
+打开两个浏览器标签页，应该就能成功模拟一次密钥交换。
 
-    async created () {
-      this.addNotification('Welcome! Generating a new keypair now.')
+![Screenshot 4](./screenshot_4.png)
 
-      // Initialize crypto webworker thread
-      this.cryptWorker = new Worker('crypto-worker.js')
+> 在多于两个标签页中打开应用，交换密钥应该会失败。
+> 我们将进一步解决此问题。
 
-      // Generate keypair and join default room
-      this.originPublicKey = await this.getWebWorkerResponse('generate-keys')
-      this.addNotification('Keypair Generated')
+## 5 - 消息加密
 
-      // Initialize socketio
-      this.socket = io()
-      this.setupSocketListeners()
-    },
+现在密钥交换已完成，加密、解密消息就很简单了。
 
-We are using the [async/await syntax](https://blog.patricktriest.com/what-is-async-await-why-should-you-care/) to receive the web worker promise result with a single line of code.
+### 5.1 - 发送前加密消息
 
-### 4.2 - Add Public Key Helper Functions
+替换 `/public/page.js` 中的 `sendMessage` 函数为如下。
 
-We'll also add a few new functions to `/public/page.js` for sending the public key, and to trim down the key to a human-readable identifier.
+```javascript
+/** 加密并发送当前消息 */
+async sendMessage () {
+  // 消息为空时不发送
+  if (!this.draft || this.draft === '') { return }
 
-    /** Emit the public key to all users in the chatroom */
-    sendPublicKey () {
-      if (this.originPublicKey) {
-        this.socket.emit('PUBLIC_KEY', this.originPublicKey)
-      }
-    },
+  // 使用 Immutable.js来避免意外的副作用。
+  let message = Immutable.Map({
+    text: this.draft,
+    recipient: this.destinationPublicKey,
+    sender: this.originPublicKey
+  })
+
+  // 重置输入文本
+  this.draft = ''
+
+  // 立即将(未加密的)消息显示到本地 UI
+  this.addMessage(message.toObject())
+
+  if (this.destinationPublicKey) {
+    // 使用其他用户的公钥加密消息
+    const encryptedText = await this.getWebWorkerResponse(
+      'encrypt', [ message.get('text'), this.destinationPublicKey ])
+    const encryptedMsg = message.set('text', encryptedText)
+
+    // 发送加密的消息
+    this.socket.emit('MESSAGE', encryptedMsg.toObject())
+  }
+},
+```
 
-    /** Get key snippet for display purposes */
-    getKeySnippet (key) {
-      return key.slice(400, 416)
-    },
+### 5.2 - 接收与解密消息
 
-### 4.3 - Send and Receive Public Key
+修改 `/public/page.js` 中的 `message` 监听器，用于解密接收到的消息。
 
-Next, we'll add some listeners to the client-side socket code, in order to send the local public key whenever a new user joins the room, and to save the public key sent by the other user.
+```javascript
+// 解密与显示接收到的消息
+this.socket.on('MESSAGE', async (message) => {
+  // 仅解密用用户公钥加密的消息
+  if (message.recipient === this.originPublicKey) {
+    // 在 Web Worker 线程中解密消息
+    message.text = await this.getWebWorkerResponse('decrypt', message.text)
 
-Add the following to `/public/page.js` within the `setupSocketListeners` function.
+    // 立即将(未加密的)消息显示到本地 UI
+    this.addMessage(message)
+  }
+})
+```
 
-    // When a user joins the current room, send them your public key
-    this.socket.on('NEW_CONNECTION', () => {
-      this.addNotification('Another user joined the room.')
-      this.sendPublicKey()
-    })
+### 5.3 - 显示消息列表
 
-    // Broadcast public key when a new room is joined
-    this.socket.on('ROOM_JOINED', (newRoom) => {
-      this.currentRoom = newRoom
-      this.addNotification(`Joined Room - ${this.currentRoom}`)
-      this.sendPublicKey()
-    })
+修改 `/public/index.html` 中的消息列表 UI(在 `chat-container` 中)，来显示解密的消息和发送者公钥的缩写。
 
-    // Save public key when received
-    this.socket.on('PUBLIC_KEY', (key) => {
-      this.addNotification(`Public Key Received - ${this.getKeySnippet(key)}`)
-      this.destinationPublicKey = key
-    })
+```html
+<div class="message full-width" v-for="message in messages">
+  <p>
+    <span v-bind:class="(message.sender == originPublicKey) ? 'green' : 'red'">{{ getKeySnippet(message.sender) }}</span>
+    > {{ message.text }}
+  </p>
+</div>
+```
 
-    // Clear destination public key if other user leaves room
-    this.socket.on('user disconnected', () => {
-      this.notify(`User Disconnected - ${this.getKeySnippet(this.destinationKey)}`)
-      this.destinationPublicKey = null
-    })
+### 5.4 - 试试看
 
-### 4.4 - Show Public Keys In UI
+重启服务并刷新 `http://localhost:3000`。
+UI 界面应该看起来跟之前没有变化，除了会显示每个消息发送者的公钥片段。
 
-Finally, we'll add some HTML to display the two public keys.
+![Screenshot 5](./screenshot_5.png)  
+![Screenshot 6](./screenshot_6.png)
 
-Add the following to `/public/index.html`, directly below the `<!-- Add Encryption Key UI Here -->` comment.
+在命令行输出中，消息已不再可读 —— 它们现在显示为乱码的加密文本。
 
-    <div class="divider"></div>
-    <div class="keys full-width">
-      <h1>KEYS</h1>
-      <h2>THEIR PUBLIC KEY</h2>
-      <div class="key red" v-if="destinationPublicKey">
-        <h3>TRUNCATED IDENTIFIER - {{ getKeySnippet(destinationPublicKey) }}</h3>
-        <p>{{ destinationPublicKey }}</p>
-      </div>
-      <h2 v-else>Waiting for second user to join room...</h2>
-      <div class="divider"></div>
-      <h2>YOUR PUBLIC KEY</h2>
-      <div class="key green" v-if="originPublicKey">
-        <h3>TRUNCATED IDENTIFIER - {{ getKeySnippet(originPublicKey) }}</h3>
-        <p>{{ originPublicKey }}</p>
-      </div>
-      <div class="keypair-loader full-width" v-else>
-        <div class="center-x loader"></div>
-        <h2 class="center-text">Generating Keypair...</h2>
-      </div>
-    </div>
+## 6 - 聊天室
 
-Try restarting the app and reloading `http://localhost:3000`. You should be able to simulate a successful key exchange by opening two browser tabs.
+你大概已经注意到当前应用程序的一个重大缺陷 —— 如果在第三个标签页中打开该应用会使加密系统挂掉。
+非对称加密被设计用于一对一的场景；无法加密消息 _一次_ 然后被 _两个_ 独立用户解密。
 
-![Screenshot 4](https://cdn.patricktriest.com/blog/images/posts/e2e-chat/screenshot_4.png)
+我们有两个选择 ——
 
-> Having more than two pages with web app running will break the key-exchange. We'll fix this further down.
+1. 若有多个用户，为每个用户加密并发送消息副本。
+2. 限制同一时间聊天室中最多有两个用户。
 
-## 5 - Message Encryption
+由于本教程已经够长了，我们选择第二个简单的选项。
 
-Now that the key-exchange is complete, encrypting and decrypting messages within the web app is rather straight-forward.
+### 6.1 - 服务器端进入聊天室逻辑
 
-### 5.0 - Encrypt Message Before Sending
+为执行 2用户限制，修改 `/app.js` 中的服务器端 `JOIN` Socket 监听器，在 Socket 连接监听器代码块的上面。
 
-Replace the `sendMessage` function in `/public/page.js` with the following.
+```javascript
+// 保存 Socket 连接到的聊天室
+// 如果需要横向扩展应用程序，需将此变量存储在诸如 Redis 之类的持久存储中。
+// 详情见： https://github.com/socketio/socket.io-redis
+let currentRoom = null
 
-    /** Encrypt and emit the current draft message */
-    async sendMessage () {
-      // Don't send message if there is nothing to send
-      if (!this.draft || this.draft === '') { return }
+/** 处理进入聊天室的请求 */
+socket.on('JOIN', (roomName) => {
+  // 获取聊天室信息
+  let room = io.sockets.adapter.rooms[roomName]
 
-      // Use immutable.js to avoid unintended side-effects.
-      let message = Immutable.Map({
-        text: this.draft,
-        recipient: this.destinationPublicKey,
-        sender: this.originPublicKey
-      })
+  // 若聊天室已经有多于 1 的连接，则拒绝进入
+  if (room && room.length > 1) {
+    // 通知用户进入聊天室请求被拒绝
+    io.to(socket.id).emit('ROOM_FULL', null)
 
-      // Reset the UI input draft text
-      this.draft = ''
+    // 通知聊天室有用户进
+    socket.broadcast.to(roomName).emit('INTRUSION_ATTEMPT', null)
+  } else {
+    // 离开当前聊天室
+    socket.leave(currentRoom)
 
-      // Instantly add (unencrypted) message to local UI
-      this.addMessage(message.toObject())
+    // 通知聊天室用户已离开
+    socket.broadcast.to(currentRoom).emit('USER_DISCONNECTED', null)
 
-      if (this.destinationPublicKey) {
-        // Encrypt message with the public key of the other user
-        const encryptedText = await this.getWebWorkerResponse(
-          'encrypt', [ message.get('text'), this.destinationPublicKey ])
-        const encryptedMsg = message.set('text', encryptedText)
+    // 进入新聊天室
+    currentRoom = roomName
+    socket.join(currentRoom)
 
-        // Emit the encrypted message
-        this.socket.emit('MESSAGE', encryptedMsg.toObject())
-      }
-    },
+    // 通知用户进入聊天室成功
+    io.to(socket.id).emit('ROOM_JOINED', currentRoom)
 
-### 5.1 - Receive and Decrypt Message
+    // 通知聊天室用户进入成功
+    socket.broadcast.to(currentRoom).emit('NEW_CONNECTION', null)
+  }
+})
+```
 
-Modify the client-side `message` listener in `/public/page.js` to decrypt the message once it is received.
+修改这段 Socket 逻辑，防止用户进入一个已有两位用户的聊天室。
 
-    // Decrypt and display message when received
-    this.socket.on('MESSAGE', async (message) => {
-      // Only decrypt messages that were encrypted with the user's public key
-      if (message.recipient === this.originPublicKey) {
-        // Decrypt the message text in the webworker thread
-        message.text = await this.getWebWorkerResponse('decrypt', message.text)
-
-        // Instantly add (unencrypted) message to local UI
-        this.addMessage(message)
-      }
-    })
-
-### 5.2 - Display Message List
-
-Modify the message list UI in `/public/index.html` (inside the `chat-container`) to display the decrypted message and the abbreviated public key of the sender.
-
-    <div class="message full-width" v-for="message in messages">
-      <p>
-        <span v-bind:class="(message.sender == originPublicKey) ? 'green' : 'red'">{{ getKeySnippet(message.sender) }}</span>
-        > {{ message.text }}
-      </p>
-    </div>
-
-### 5.3 - Try It Out
-
-Try restarting the server and reloading the page at `http://localhost:3000`. The UI should look mostly unchanged from how it was before, besides displaying the public key snippet of whoever sent each message.
-
-![Screenshot 5](https://cdn.patricktriest.com/blog/images/posts/e2e-chat/screenshot_5.png)  
-![Screenshot 6](https://cdn.patricktriest.com/blog/images/posts/e2e-chat/screenshot_6.png)
-
-In command-line output, the messages are no longer readable - they now display as garbled encrypted text.
-
-## 6 - Chatrooms
-
-You may have noticed a massive flaw in the current app - if we open a third tab running the web app then the encryption system breaks. Asymmetric-encryption is designed to work in one-to-one scenarios; there's no way to encrypt the message _once_ and have it be decryptable by _two_ separate users.
-
-This leaves us with two options -
-
-1.  Encrypt and send a separate copy of the message to each user, if there is more than one.
-2.  Restrict each chat room to only allow two users at a time.
-
-Since this tutorial is already quite long, we'll be going with second, simpler option.
-
-### 6.0 - Server-side Room Join Logic
-
-In order to enforce this new 2-user limit, we'll modify the server-side socket `JOIN` listener in `/app.js`, at the top of socket connection listener block.
-
-    // Store the room that the socket is connected to
-    // If you need to scale the app horizontally, you'll need to store this variable in a persistent store such as Redis.
-    // For more info, see here: https://github.com/socketio/socket.io-redis
-    let currentRoom = null
-
-    /** Process a room join request. */
-    socket.on('JOIN', (roomName) => {
-      // Get chatroom info
-      let room = io.sockets.adapter.rooms[roomName]
-
-      // Reject join request if room already has more than 1 connection
-      if (room && room.length > 1) {
-        // Notify user that their join request was rejected
-        io.to(socket.id).emit('ROOM_FULL', null)
-
-        // Notify room that someone tried to join
-        socket.broadcast.to(roomName).emit('INTRUSION_ATTEMPT', null)
-      } else {
-        // Leave current room
-        socket.leave(currentRoom)
-
-        // Notify room that user has left
-        socket.broadcast.to(currentRoom).emit('USER_DISCONNECTED', null)
-
-        // Join new room
-        currentRoom = roomName
-        socket.join(currentRoom)
-
-        // Notify user of room join success
-        io.to(socket.id).emit('ROOM_JOINED', currentRoom)
-
-        // Notify room that user has joined
-        socket.broadcast.to(currentRoom).emit('NEW_CONNECTION', null)
-      }
-    })
-
-This modified socket logic will prevent a user from joining any room that already has two users.
-
-### 6.1 - Join Room From The Client Side
+### 6.2 - Join Room From The Client Side
 
 Next, we'll modify our client-side `joinRoom` function in `/public/page.js`, in order to reset the state of the chat when switching rooms.
 
@@ -973,7 +999,7 @@ Next, we'll modify our client-side `joinRoom` function in `/public/page.js`, in 
       }
     },
 
-### 6.2 - Add Notifications
+### 6.3 - Add Notifications
 
 Let's create two more client-side socket listeners (within the `setupSocketListeners` function in `/public/page.js`), to notify us whenever a join request is rejected.
 
@@ -991,7 +1017,7 @@ Let's create two more client-side socket listeners (within the `setupSocketListe
       this.addNotification('A third user attempted to join the room.')
     })
 
-### 6.3 - Add Room Join UI
+### 6.4 - Add Room Join UI
 
 Finally, we'll add some HTML to provide an interface for the user to join a room of their choosing.
 
@@ -1004,7 +1030,7 @@ Add the following to `/public/index.html` below the `<!-- Add Room UI Here -->` 
     </div>
     <div class="divider"></div>
 
-### 6.4 - Add Autoscroll
+### 6.5 - Add Autoscroll
 
 An annoying bug remaining in the app is that the notification and chat lists do not yet auto-scroll to display new messages.
 
@@ -1030,7 +1056,7 @@ To auto-scroll the notification and message lists, we'll call `autoscroll` at th
       this.autoscroll(this.$refs.notificationContainer)
     },
 
-### 6.5 - Try it out
+### 6.6 - Try it out
 
 That was the last step! Try restarting the node app and reloading the page at `localhost:3000`. You should now be able to freely switch between rooms, and any attempt to join the same room from a third browser tab will be rejected.
 
