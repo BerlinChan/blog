@@ -18,7 +18,12 @@ description:
 
 <!-- endExcerpt -->
 
-原文链接：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)
+<style type="text/css">
+    pre {max-height: 30em; overflow: auto;}
+</style>
+ 
+_这是一篇翻译。_
+_原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)_
 
 ## 开放加密聊天程序 - 教程
 
@@ -39,19 +44,22 @@ description:
 * Github 仓库 - [https://github.com/triestpa/Open-Cryptochat](https://github.com/triestpa/Open-Cryptochat)
 
 本教程中所涉及的概念是用 Javascript 实现的，该语言具有平台无关特性。
-我们将构建一个传统的基于浏览器的 Web 应用，但是如果您担心基于浏览器应用程序的安全性，可以修改此代码以使其在预构建的桌面（使用 [Electron](https://electronjs.org/)）或移动应用程序（[React Native](https://facebook.github.io/react-native/)，[Ionic](https://ionicframework.com/)，[Cordova](https://cordova.apache.org/)）二进制文件中工作。<sup>[[1]](#fn1)</sup>
+我们将构建一个传统的基于浏览器的 Web 应用，但是如果您担心基于浏览器应用程序的安全性，可以修改此代码以使其在预构建的桌面(使用 [Electron](https://electronjs.org/))或移动应用程序([React Native](https://facebook.github.io/react-native/)，[Ionic](https://ionicframework.com/)，[Cordova](https://cordova.apache.org/))二进制文件中工作。<sup>[[1]](#fn1)</sup>
 用另一种编程语言实现类似的功能应该也简单，因为大多数语言都有著名的开源加密库可用；
 虽然语法会不同但核心概念是相同的。
 
-> 免责声明 - This is meant to be a primer in end-to-end encryption implementation, not a definitive guide to building the Fort Knox of browser chat applications. I've worked to provide useful information on adding cryptography to your Javascript applications, but I cannot 100% guarantee the security of the resulting app. There's a lot that can go wrong at all stages of the process, especially at the stages not covered by this tutorial such as setting up web hosting and securing the server(s). If you are a security expert, and you find vulnerabilities in the tutorial code, please feel free to reach out to me by email ([<span class="__cf_email__" data-cfemail="d6a6b7a2a4bfb5bdf8a2a4bfb3a5a296b1bbb7bfbaf8b5b9bb">[email protected]</span>](/cdn-cgi/l/email-protection#ccbcadb8bea5afa7e2b8bea5a9bfb88caba1ada5a0e2afa3a1)) or in the comments section below.
+> 免责声明 - 本文旨在入门端到端加密的实现，不是构建像诺克斯堡(译注：[Fort Knox](https://zh.wikipedia.org/zh-cn/%E8%AF%BA%E5%85%8B%E6%96%AF%E5%A0%A1))般固若金汤般浏览器聊天应用程序的权威指南。
+>我致力于为您的 Javascript 应用程序提供有关加密的有用信息，但不保证应用的 100% 安全。
+>在构建应用程序过程的各个阶段，有很多可能出现问题的地方，特别是在本教程未涵盖的阶段，例如设置 Web主机和保护服务器安全。
+>如果您是安全专家，并且在教程代码中找到漏洞，请随时通过电子邮件(patrick.triest#gmail.com)或以下评论部分与我联系。
 
-## 1 - Project Setup
+## 1 - 项目设置
 
-### 1.0 - Install Dependencies
+### 1.0 - 安装依赖
 
-You'll need to have [Node.js](https://nodejs.org/en/) (version 6 or higher) installed in order to run the backend for this app.
+你需要安装 [Node.js](https://nodejs.org/en/)(版本 6 或更高) 来运行本应用的后端。
 
-Create an empty directory for the project and add a `package.json` file with the following contents.
+为该项目创建一个空目录，并添加包含如下内容的文件 `package.json`。
 
 ```json
 {
@@ -59,7 +67,7 @@ Create an empty directory for the project and add a `package.json` file with the
   "version": "1.0.0",
   "node":"8.1.4",
   "license": "MIT",
-  "author": "[email protected]",
+  "author": "patrick.triest#gmail.com",
   "description": "End-to-end RSA-2048 encrypted chat application.",
   "main": "app.js",
   "engines": {
@@ -75,45 +83,45 @@ Create an empty directory for the project and add a `package.json` file with the
 }
 ```
 
-Run `npm install` on the command line to install the two Node.js dependencies.
+在命令行中运行 `npm install`，安装两个 Node.js 依赖。
 
-### 1.1 - Create Node.js App
+### 1.1 -创建 Node.js 应用
 
-Create a file called `app.js`, and add the following contents.
+创建文件 `app.js`，添加如下内容。
 
 ```javascript
 const express = require('express')
 
-// Setup Express server
+// 设置 Express 服务器
 const app = express()
 const http = require('http').Server(app)
 
-// Attach Socket.io to server
+// 将 Socket.io 附加到服务器
 const io = require('socket.io')(http)
 
-// Serve web app directory
+// 伺服 Web 应用目录
 app.use(express.static('public'))
 
-// INSERT SOCKET.IO CODE HERE
+// 这里插入 SOCKET.IO 代码
 
-// Start server
+// 启动服务
 const port = process.env.PORT || 3000
 http.listen(port, () => {
   console.log(`Chat server listening on port ${port}.`)
 })
 ```
 
-This is the core server logic. Right now, all it will do is start a server and make all of the files in the local `/public` directory accessible to web clients.
+这就是服务的核心逻辑。现在，它要做的就是启动服务，并使本地 `/public` 目录中的所有文件可供 Web客户端访问。
 
-> In production, I would strongly recommend serving your frontend code separately from the Node.js app, using battle-hardened server software such [Apache](https://httpd.apache.org/) and [Nginx](https://www.nginx.com/), or hosting the website on file storage service such as [AWS S3](https://aws.amazon.com/s3/). For this tutorial, however, using the Express static file server is the simplest way to get the app running.
+> 生产环境中，我强烈建议你将前端代码与 Node.js 后端应用分开伺服，使用 [Apache](https://httpd.apache.org/) 和 [Nginx](https://www.nginx.com/)等久经沙场的服务器软件，或将网站托管在 [AWS S3](https://aws.amazon.com/s3/) 等文件存储服务上。本教程为简单起见，使用 Express 静态文件服务器来跑程序。
 
-### 1.2 - Add Frontend
+### 1.2 - 添加前端
 
-Create a new directory called `public`. This is where we'll put all of the frontend web app code.
+创建新目录 `public`。这里放所有前端应用代码。
 
-##### 1.2.0 - Add HTML Template
+##### 1.2.0 - 添加 HTML 模板
 
-Create a new file, `/public/index.html`, and add these contents.
+新建文件 `/public/index.html`，添加如下内容。
 
 ```html
 <!DOCTYPE html>
@@ -152,14 +160,14 @@ Create a new file, `/public/index.html`, and add these contents.
 </html>
 ```
 
-This template sets up the baseline HTML structure and downloads the client-side JS dependencies. It will also display a simple list of notifications once we add the client-side JS code.
+该模板设置基本 HTML 结构并下载客户端 JS 依赖项。添加客户端JS代码后，它还会显示一个简单的通知列表。
 
-##### 1.2.1 - Create Vue.js App
+##### 1.2.1 - 创建 Vue.js 应用程序
 
-Add the following contents to a new file, `/public/page.js`.
+新建 `/public/page.js` 并添加如下内容。
 
 ```javascript
-/** The core Vue instance controlling the UI */
+/** 控制 UI 的 Vue 实例 */
 const vm = new Vue ({
   el: '#vue-instance',
   data () {
@@ -179,7 +187,7 @@ const vm = new Vue ({
     this.addNotification('Hello World')
   },
   methods: {
-    /** Append a notification message in the UI */
+    /** 在 UI 中追加一条通知消息 */
     addNotification (message) {
       const timestamp = new Date().toLocaleTimeString()
       this.notifications.push({ message, timestamp })
@@ -188,11 +196,11 @@ const vm = new Vue ({
 })
 ```
 
-This script will initialize the Vue.js application and will add a "Hello World" notification to the UI.
+该脚本将初始化 Vue.js 应用，并在 UI 中添加一个 "Hello World" 通知。
 
-##### 1.2.2 - Add Styling
+##### 1.2.2 - 添加样式
 
-Create a new file, `/public/styles.css` and paste in the following stylesheet.
+新建文件 `/public/styles.css`，粘贴进如下样式。
 
 ```scss
 /* Global */
@@ -393,44 +401,46 @@ p { font-size: x-small; }
 }
 ```
 
-We won't really be going into the CSS, but I can assure you that it's all fairly straight-forward.
+我们不会深入讨论 CSS，但我向您保证它是相当简单的。
 
-For the sake of simplicity, we won't bother to add a build system to our frontend. A build system, in my opinion, is just not really necessary for an app this simple (the total gzipped payload of the completed app is under 100kb). You are very welcome (and encouraged, since it will allow the app to be backwards compatible with outdated browsers) to add a build system such as [Webpack](https://webpack.js.org/), [Gulp](https://gulpjs.com/), or [Rollup](https://rollupjs.org/) to the application if you decide to fork this code into your own project.
+为了简单起见，我们不需要在前端中添加构建系统。在我看来，对于一个如此简单的应用程序来说，构建系统并不是必须的(完成应用程序的gzip 压缩总负载小于 100kb)。
+非常欢迎(并鼓励，因为它将允许应用程序向后兼容过时的浏览器)添加一个构建系统，如 [Webpack](https://webpack.js.org/)、 [Gulp](https://gulpjs.com/) 或 [Rollup](https://rollupjs.org/)，如果您决定将此代码应用到您自己的项目中。
 
-### 1.3 - Try it out
+### 1.3 - 试试看
 
-Try running `npm start` on the command-line. You should see the command-line output `Chat server listening on port 3000.`. Open `http://localhost:3000` in your browser, and you should see a very dark, empty web app displaying "Hello World" on the right side of the page.
+在命令行中运行 `npm start`。你应该能看到命令行输出 `Chat server listening on port 3000.`。
+在浏览器中访问 [`http://localhost:3000`](http://localhost:3000)，你应该能看到一个空的黑色界面，在页面上显示 "Hello World"。
 
-![Screenshot 1](https://cdn.patricktriest.com/blog/images/posts/e2e-chat/screenshot_1.png)
+![Screenshot 1](./screenshot_1.png)
 
-## 2 - Basic Messaging
+## 2 - 基础消息收发
 
-Now that the baseline project scaffolding is in place, we'll start by adding basic (unencrypted) real-time messaging.
+现在基础项目脚手架就绪，我们将开始添加基础的(非加密)实时消息收发。
 
-### 2.0 - Setup Server-Side Socket Listeners
+### 2.0 - 设置服务器端 Socket 监听器
 
-In `/app.js`, add the follow code directly below the `// INSERT SOCKET.IO CODE HERE` marker.
+在文件 `/app.js` 的注释 `// 这里插入 SOCKET.IO 代码` 处，添加如下代码。
 
 ```javascript
-/** Manage behavior of each client socket connection */
+/** 管理每个客户端 socket 连接的行为 */
 io.on('connection', (socket) => {
   console.log(`User Connected - Socket ID ${socket.id}`)
 
-  // Store the room that the socket is connected to
+  // 储存 socket 连接到的聊天室
   let currentRoom = 'DEFAULT'
 
-  /** Process a room join request. */
+  /** 处理加入聊天室的请求. */
   socket.on('JOIN', (roomName) => {
     socket.join(currentRoom)
 
-    // Notify user of room join success
+    // 通知用户，加入聊天室成功
     io.to(socket.id).emit('ROOM_JOINED', currentRoom)
 
-    // Notify room that user has joined
+    // 通知聊天室，用户加入成功
     socket.broadcast.to(currentRoom).emit('NEW_CONNECTION', null)
   })
 
-  /** Broadcast a received message to the room */
+  /** 在聊天室广播一条收到的消息 */
   socket.on('MESSAGE', (msg) => {
     console.log(`New Message - ${msg.text}`)
     socket.broadcast.to(currentRoom).emit('MESSAGE', msg)
@@ -438,11 +448,12 @@ io.on('connection', (socket) => {
 })
 ```
 
-This code-block will create a connection listener that will manage any clients who connect to the server from the front-end application. Currently, it just adds them to a `DEFAULT` chat room, and retransmits any message that it receives to the rest of the users in the room.
+此代码块将创建一个连接监听器，管理从前端应用程序连接到服务器的所有客户端。
+目前，它只将用户添加到 `DEFAULT` 聊天室中，然后将接收到的所有消息重新发送给聊天室中的其他用户。
 
-### 2.1 - Setup Client-Side Socket Listeners
+### 2.1 - 设置客户端 Socket 监听器
 
-Within the frontend, we'll add some code to connect to the server. Replace the `created` function in `/public/page.js` with the following.
+在前端中，我们将添加一些连接到服务器的代码，用如下代码替换文件 `/public/page.js` 中的 `created` 函数。
 
 ```javascript
 created () {
@@ -452,122 +463,138 @@ created () {
 },
 ```
 
-Next, we'll need to add a few custom functions to manage the client-side socket connection and to send/receive messages. Add the following to `/public/page.js` inside the `methods` block of the Vue app object.
+接着，我们需要添加一些自定义函数来管理客户端 socket 连接并收发消息。
+在文件 `/public/page.js` 中 Vue 应用的 `methods` 代码块中添加如下。
 
 ```javascript
-/** Setup Socket.io event listeners */
+/** 设置 Socket.io 事件监听器 */
 setupSocketListeners () {
-  // Automatically join default room on connect
+  // 连接时自动加入默认聊天室
   this.socket.on('connect', () => {
     this.addNotification('Connected To Server.')
     this.joinRoom()
   })
 
-  // Notify user that they have lost the socket connection
+  // 通知用户丢失 socket 连接
   this.socket.on('disconnect', () => this.addNotification('Lost Connection'))
 
-  // Display message when recieved
+  // 接收消息并显示
   this.socket.on('MESSAGE', (message) => {
     this.addMessage(message)
   })
 },
 
-/** Send the current draft message */
+/** 发送消息 */
 sendMessage () {
-  // Don't send message if there is nothing to send
+  // 消息为空时不发送
   if (!this.draft || this.draft === '') { return }
 
   const message = this.draft
 
-  // Reset the UI input draft text
+  // 重置输入文本
   this.draft = ''
 
-  // Instantly add message to local UI
+  // 将消息立即显示到本地 UI
   this.addMessage(message)
 
-  // Emit the message
+  // 发送消息
   this.socket.emit('MESSAGE', message)
 },
 
-/** Join the chatroom */
+/** 加入聊天室 */
 joinRoom () {
   this.socket.emit('JOIN')
 },
 
-/** Add message to UI */
+/** 将消息添加到 UI */
 addMessage (message) {
   this.messages.push(message)
 },
 ```
 
-### 2.2 - Display Messages in UI
+### 2.2 - 将消息显示到 UI
 
-Finally, we'll need to provide a UI to send and display messages.
+最后，我们需要为发送与显示消息提供一个 UI。
 
-In order to display all messages in the current chat, add the following to `/public/index.html` after the `<!-- Add Chat Container Here -->` comment.
+为在当前聊天中显示所有消息，在文件 `/public/index.html` 的 `<!-- Add Chat Container Here -->` 注释处添加如下。
 
-    <div class="chat-container full-width" ref="chatContainer">
-      <div class="message-list">
-        <div class="message full-width" v-for="message in messages">
-          <p>
-          > {{ message }}
-          </p>
-        </div>
-      </div>
+```html
+<div class="chat-container full-width" ref="chatContainer">
+  <div class="message-list">
+    <div class="message full-width" v-for="message in messages">
+      <p>
+      > {{ message }}
+      </p>
     </div>
+  </div>
+</div>
+```
 
-To add a text input bar for the user to write messages in, add the following to `/public/index.html`, after the `<!-- Add Bottom Bar Here -->` comment.
+添加一个文本输入框让用户输入消息，在 `/public/index.html` 的 `<!-- Add Bottom Bar Here -->` 注释处添加如下。
 
-    <div class="bottom-bar full-width">
-      > <input class="message-input" type="text" placeholder="Message" v-model="draft" @keyup.enter="sendMessage()">
-    </div>
+```html
+<div class="bottom-bar full-width">
+  > <input class="message-input" type="text" placeholder="Message" v-model="draft" @keyup.enter="sendMessage()">
+</div>
+```
 
-Now, restart the server and open `http://localhost:3000` in two separate tabs/windows. Try sending messages back and forth between the tabs. In the command-line, you should be able to see a server log of messages being sent.
+现在重启服务，在浏览器的两个不同页签或窗口中打开 [`http://localhost:3000`](http://localhost:3000)。
+尝试在页签之间来回发送消息。在命令行中，您应该能够看到正在发送的消息的服务器日志。
 
-![Screenshot 2](https://cdn.patricktriest.com/blog/images/posts/e2e-chat/screenshot_2.png)  
-![Screenshot 3](https://cdn.patricktriest.com/blog/images/posts/e2e-chat/screenshot_3.png)
+![Screenshot 2](./screenshot_2.png)  
+![Screenshot 3](./screenshot_3.png)
 
-## Encryption 101
+## 数据加密 101
 
-Cool, now we have a real-time messaging application. Before adding end-to-end encryption, it's important to have a basic understanding of how asymmetric encryption works.
+Cool, 现在我们有了一个实时消息收发应用。在添加端到端加密之前，必须对非对称加密的工作原理有基本的了解。
 
-#### Symetric Encryption & One Way Functions
+#### 对称加密 与 单向函数
 
-Let's say we're trading secret numbers. We're sending the numbers through a third party, but we don't want the third party to know which number we are exchanging.
+假设我们在交换一个秘密数字。我们通过第三方发送这个数字，但不想让第三方知道数字是什么。
 
-In order to accomplish this, we'll exchange a shared secret first - let's use `7`.
+为实现这一点，我们先共享一个密钥 —— 就用 `7`。
 
-To encrypt the message, we'll first multiply our shared secret (`7`) by a random number `n`, and add a value `x` to the result. In this equation, `x` represents the number that we want to send and `y` represents the encrypted result.
+为了加密消息，先用一个随机数字 `n` 与密钥(`7`)相乘，再与 `x` 相加。
+该等式中，`x` 表示我们要发送的数字，`y` 表示加密后的结果。
 
 `(7 * n) + x = y`
 
-We can then use modular arithmetic in order to transform an encrypted input into the decrypted output.
+然后，我们可以使用模运算将加密的输入转换为解密的输出。
 
 `y mod 7 = x`
 
-Here, `y` as the exposed (encrypted) message and `x` is the original unencrypted message.
+这里，`y` 是公开的(加密的)消息，`x` 是原始的未加密消息。
 
-If one of us wants to exchange the number `2`, we could compute `(7*4) + 2` and send `30` as a message. We both know the secret key (`7`), so we'll both be able to calculate `30 mod 7` and determine that `2` was the original number.
+如果一方想交换数字 `2`，我们可以计算 `(7*4) + 2` 并发送 `30` 作为消息。
+我们都知道密钥 (`7`)，所以都能计算 `30 mod 7`，并确定 `2` 是原始的数字。
 
-The original number (`2`), is effectively hidden from anyone listening in the middle since the only message passed between us was `30`. If a third party is able to retrieve both the unencrypted result (`30`) and the encrypted value (`2`), they would still not know the value of the secret key. In this example, `30 mod 14` and `30 mod 28` are also equal to `2`, so an interceptor could not know for certain whether the secret key is `7`, `14`, or `28`, and therefore could not dependably decipher the next message.
+原始数字(`2`)实际上是隐藏起来的，因为我们传递的唯一消息是 `30`。
+就算第三方能同时得到加密的结果(`30`)和加密的未数字(`2`)，他仍然不知道密钥的值。
+本例中，`30 mod 14` 与 `30 mod 28` 都等于 `2`，所以中间人并不能确定密钥是 `7`，`14`还是 `28`，因此无法可靠地破译下一条消息。
 
-Modulo is thus considered a "one-way" function since it cannot be trivially reversed.
+因此，取模(Modulo)运算被认为是一个“单向”函数，因为它不能被简单地逆运算。
 
-Modern encryption algorithms are, to vastly simplify and generalize, very complex applications of this general principle. Through the use of large prime numbers, modular exponentiation, long private keys, and multiple rounds of cipher transformations, these algorithms generally take a very inconvenient amount a time (1+ million years) to crack.
+现代加密算法就是对该通用原理的复杂化应用。
+通过使用大质数(large prime numbers)，模幂(modular exponentiation)，长私钥和多轮密码转换，破解这些算法通常要花费非常长的时间(1+百万年)。
 
-> Quantum computers could, theoretically, crack these ciphers more quickly. You can read more about this [here](https://www.infoworld.com/article/3040991/security/mits-new-5-atom-quantum-computer-could-make-todays-encryption-obsolete.html). This technology is still in its infancy, so we probably don't need to worry about encrypted data being compromised in this manner just yet.
+> 理论上，量子计算机可以很快破解。详情见 [这里](https://www.infoworld.com/article/3040991/security/mits-new-5-atom-quantum-computer-could-make-todays-encryption-obsolete.html)。
+> 这项技术还处于起步阶段，所以我们可能还无需担心加密数据会以这种方式泄露。
 
-The above example assumes that both parties were able to exchange a secret (in this case `7`) ahead of time. This is called _symmetric encryption_ since the same secret key is used for both encrypting and decrypting the message. On the internet, however, this is often not a viable option - we need a way to send encrypted messages without requiring offline coordination to decide on a shared secret. This is where asymmetric encryption comes into play.
+上面的示例假设双方都可以提前交换密钥(本例中为7)。这被称为 _对称加密_，因为加密和解密消息都使用相同的密钥。
+然而，在 Internet 上，这通常不是可行 —— 我们需要一种不必离线协调获取共享密钥，而加密消息的方法。
+这就是非对称加密发挥作用的地方。
 
-#### Public Key Cryptography
+#### 公钥加密
 
-In contrast to symmetric encryption, public key cryptography (asymmetric encryption) uses pairs of keys (one public, one private) instead of a single shared secret - _public keys_ are for encrypting data, and _private keys_ are for decrypting data.
+与对称加密使用一个共享密钥不同，公钥加密(非对称加密)使用一对密钥(公钥、私钥)，_公钥_ 用于加密数据，_私钥_ 用于解密。
 
-A _public key_ is like an open box with an unbreakable lock. If someone wants to send you a message, they can place that message in your public box, and close the lid to lock it. The message can now be sent, to be delivered by an untrusted party without needing to worry about the contents being exposed. Once I receive the box, I'll unlock it with my _private key_ - the only existing key which can open that box.
+_公钥_ 就像一个有牢不可破锁的公开投信箱。如果有人想给你发消息，就将消息投入这个公开信箱，然后盖上盖子把它锁上。
+这信箱就能让不被信任的第三方传递发送，而不必担心内容被曝光。
+一旦我收到信箱，我会用我的 _私钥_ ——只有我有，来打开信箱。
 
-Exchanging _public keys_ is like exchanging those boxes - each private key is kept safe with the original owner, so the contents of the box are safe in transit.
+交换 _公钥_ 就像交换这些公开信箱，但 _私钥_ 仅由信箱所有者保管，所以在信箱传递过程中能保证内容的安全。
 
-This is, of course, a bare-bones simplification of how public key cryptography works. If you're curious to learn more (especially regarding the history and mathematical basis for these techniques) I would strongly recommend starting with these two videos.
+当然，这是对公钥加密原理的一个简化解释。如果你好奇(特别是关于这些技术的历史和数学基础)，我强烈推荐你从这两个视频开始。
 
 `video: https://youtu.be/YEBfamv-_do`
 
@@ -575,100 +602,113 @@ This is, of course, a bare-bones simplification of how public key cryptography w
 
 ## 3 - Crypto Web Worker
 
-Cryptographic operations tend to be computationally intensive. Since Javascript is single-threaded, doing these operations on the main UI thread will cause the browser to freeze for a few seconds.
+加密操作往往是计算密集型的。由于 Javascript 是单线程的，在 UI 主线程上处理加密会导致浏览器卡顿几秒钟。
 
-> Wrapping the operations in a promise will not help, since promises are for managing asynchronous operations on a single-thread, and do not provide any performance benefit for computationally intensive tasks.
+> 将加密操作包装在 Promise 中也没用，因为 Promise 是在单线程中管理异步操作，
+> 而不是改善计算密集型任务的性能。
 
-In order to keep the application performant, we will use a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) to perform cryptographic computations on a separate browser thread. We'll be using [JSEncrypt](https://github.com/travist/jsencrypt), a reputable Javascript RSA implementation originating from Stanford. Using JSEncrypt, we'll create a few helper functions for encryption, decryption, and key pair generation.
+为保证应用程序的性能，我们采用 [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) 在浏览器单独的线程中执行加密运算。
+我们将使用 [JSEncrypt](https://github.com/travist/jsencrypt)，这是一个源自斯坦福的著名 Javascript RSA 实现。
+使用 JSEncrypt 来创建一些帮助函数，用于加密、解密与生成密钥对。
 
-### 3.0 - Create Web Worker To Wrap the JSencrypt Methods
+### 3.0 - 创建 Web Worker 来包装 JSEncrypt 方法
 
-Add a new file called `crypto-worker.js` in the `public` directory. This file will store our web worker code in order to perform encryption operations on a separate browser thread.
+在目录 `public` 中新建文件 `crypto-worker.js`。
+这个文件存放 Web Worker 的代码，以便在一个单独的浏览器线程上执行加密操作。
 
-    self.window = self // This is required for the jsencrypt library to work within the web worker
+```javascript
+self.window = self // 在 Web Worker 中使用 JSEncrypt 库，这行是必须的
 
-    // Import the jsencrypt library
-    self.importScripts('https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/2.3.1/jsencrypt.min.js');
+// 导入 JSEncrypt 库
+self.importScripts('https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/2.3.1/jsencrypt.min.js');
 
-    let crypt = null
-    let privateKey = null
+let crypt = null
+let privateKey = null
 
-    /** Webworker onmessage listener */
-    onmessage = function(e) {
-      const [ messageType, messageId, text, key ] = e.data
-      let result
-      switch (messageType) {
-        case 'generate-keys':
-          result = generateKeypair()
-          break
-        case 'encrypt':
-          result = encrypt(text, key)
-          break
-        case 'decrypt':
-          result = decrypt(text)
-          break
+/** Web Worker onmessage 监听器 */
+onmessage = function(e) {
+  const [ messageType, messageId, text, key ] = e.data
+  let result
+  switch (messageType) {
+    case 'generate-keys':
+      result = generateKeypair()
+      break
+    case 'encrypt':
+      result = encrypt(text, key)
+      break
+    case 'decrypt':
+      result = decrypt(text)
+      break
+  }
+
+  // 返回结果给 UI 线程
+  postMessage([ messageId, result ])
+}
+
+/** 生成与储存密钥对 */
+function generateKeypair () {
+  crypt = new JSEncrypt({default_key_size: 2056})
+  privateKey = crypt.getPrivateKey()
+
+  // 仅返回公钥，隐藏私钥
+  return crypt.getPublicKey()
+}
+
+/** 使用目标公钥加密字符串 */
+function encrypt (content, publicKey) {
+  crypt.setKey(publicKey)
+  return crypt.encrypt(content)
+}
+
+/** 使用本地私钥解密字符串 */
+function decrypt (content) {
+  crypt.setKey(privateKey)
+  return crypt.decrypt(content)
+}
+```
+
+该 Web Worker 在 `onmessage` 监听器中接收来自 UI 线程的消息，执行请求的操作，并返回结果到 UI 线程。
+私钥永远不会直接暴露给 UI 线程，这有助于减少跨站点脚本攻击([XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)))中私钥被盗的可能性。
+
+### 3.1 - 配置 Vue 应用程序与 Web Worker 通讯
+
+下面，我们配置 UI controller 与 Web Worker 通讯。
+使用事件侦听器按顺序的调用/响应通信很难同步。
+为了简化，我们创建一个工具函数，将整个通讯周期包装到 Promise 中。
+在 `/public/page.js` 中的 `methods` 代码块中添加如下。
+
+```javascript
+/** 向 Web Worker 发消息，返回一个包含结果的 Promise。 */
+getWebWorkerResponse (messageType, messagePayload) {
+  return new Promise((resolve, reject) => {
+    // 生成一个随机消息 id 来标识相应的事件回调
+    const messageId = Math.floor(Math.random() * 100000)
+
+    // 发送消息给 Web Worker
+    this.cryptWorker.postMessage([messageType, messageId].concat(messagePayload))
+
+    // 为 Web Worker 消息事件创建句柄
+    const handler = function (e) {
+      // 仅处理消息 id 匹配的消息
+      if (e.data[0] === messageId) {
+        // 监听器被调用后移除之
+        e.currentTarget.removeEventListener(e.type, handler)
+
+        // Resolve the promise with the message payload.
+        resolve(e.data[1])
       }
-
-      // Return result to the UI thread
-      postMessage([ messageId, result ])
     }
 
-    /** Generate and store keypair */
-    function generateKeypair () {
-      crypt = new JSEncrypt({default_key_size: 2056})
-      privateKey = crypt.getPrivateKey()
+    // 将句柄分配给 Web Worker 'message' 事件。
+    this.cryptWorker.addEventListener('message', handler)
+  })
+}
+```
 
-      // Only return the public key, keep the private key hidden
-      return crypt.getPublicKey()
-    }
+该代码允许我们在 Web Worker 线程中触发一个操作，并在 Promise 中接收返回结果。
+在将调用/响应处理外包给 Web Worker 的任何项目中，这都是非常有用的帮助函数。
 
-    /** Encrypt the provided string with the destination public key */
-    function encrypt (content, publicKey) {
-      crypt.setKey(publicKey)
-      return crypt.encrypt(content)
-    }
-
-    /** Decrypt the provided string with the local private key */
-    function decrypt (content) {
-      crypt.setKey(privateKey)
-      return crypt.decrypt(content)
-    }
-
-This web worker will receive messages from the UI thread in the `onmessage` listener, perform the requested operation, and post the result back to the UI thread. The private encryption key is never directly exposed to the UI thread, which helps to mitigate the potential for key theft from a [cross-site scripting (XSS) attack](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)).
-
-### 3.1 - Configure Vue App To Communicate with Web Worker
-
-Next, we'll configure the UI controller to communicate with the web worker. Sequential call/response communications using event listeners can be painful to synchronize. To simplify this, we'll create a utility function that wraps the entire communication lifecycle in a promise. Add the following code to the `methods` block in `/public/page.js`.
-
-    /** Post a message to the web worker and return a promise that will resolve with the response.  */
-    getWebWorkerResponse (messageType, messagePayload) {
-      return new Promise((resolve, reject) => {
-        // Generate a random message id to identify the corresponding event callback
-        const messageId = Math.floor(Math.random() * 100000)
-
-        // Post the message to the webworker
-        this.cryptWorker.postMessage([messageType, messageId].concat(messagePayload))
-
-        // Create a handler for the webworker message event
-        const handler = function (e) {
-          // Only handle messages with the matching message id
-          if (e.data[0] === messageId) {
-            // Remove the event listener once the listener has been called.
-            e.currentTarget.removeEventListener(e.type, handler)
-
-            // Resolve the promise with the message payload.
-            resolve(e.data[1])
-          }
-        }
-
-        // Assign the handler to the webworker 'message' event.
-        this.cryptWorker.addEventListener('message', handler)
-      })
-    }
-
-This code will allow us to trigger an operation on the web worker thread and receive the result in a promise. This can be a very useful helper function in any project that outsources call/response processing to web workers.
-
-## 4 - Key Exchange
+## 4 - 密钥交换
 
 In our app, the first step will be generating a public-private key pair for each user. Then, once the users are in the same chat, we will exchange _public keys_ so that each user can encrypt messages which only the other user can decrypt. Hence, we will always encrypt messages using the recipient's _public key_, and we will always decrypt messages using the recipient's _private key_.
 
