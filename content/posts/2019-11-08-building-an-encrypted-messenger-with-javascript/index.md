@@ -55,7 +55,7 @@ _原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-j
 
 ## 1 - 项目设置
 
-### 1.0 - 安装依赖
+### 1.1 - 安装依赖
 
 你需要安装 [Node.js](https://nodejs.org/en/)(版本 6 或更高) 来运行本应用的后端。
 
@@ -85,7 +85,7 @@ _原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-j
 
 在命令行中运行 `npm install`，安装两个 Node.js 依赖。
 
-### 1.1 -创建 Node.js 应用
+### 1.2 -创建 Node.js 应用
 
 创建文件 `app.js`，添加如下内容。
 
@@ -115,7 +115,7 @@ http.listen(port, () => {
 
 > 生产环境中，我强烈建议你将前端代码与 Node.js 后端应用分开伺服，使用 [Apache](https://httpd.apache.org/) 和 [Nginx](https://www.nginx.com/)等久经沙场的服务器软件，或将网站托管在 [AWS S3](https://aws.amazon.com/s3/) 等文件存储服务上。本教程为简单起见，使用 Express 静态文件服务器来跑程序。
 
-### 1.2 - 添加前端
+### 1.3 - 添加前端
 
 创建新目录 `public`。这里放所有前端应用代码。
 
@@ -406,7 +406,7 @@ p { font-size: x-small; }
 为了简单起见，我们不需要在前端中添加构建系统。在我看来，对于一个如此简单的应用程序来说，构建系统并不是必须的(完成应用程序的gzip 压缩总负载小于 100kb)。
 非常欢迎(并鼓励，因为它将允许应用程序向后兼容过时的浏览器)添加一个构建系统，如 [Webpack](https://webpack.js.org/)、 [Gulp](https://gulpjs.com/) 或 [Rollup](https://rollupjs.org/)，如果您决定将此代码应用到您自己的项目中。
 
-### 1.3 - 试试看
+### 1.4 - 试试看
 
 在命令行中运行 `npm start`。你应该能看到命令行输出 `Chat server listening on port 3000.`。
 在浏览器中访问 [`http://localhost:3000`](http://localhost:3000)，你应该能看到一个空的黑色界面，在页面上显示 "Hello World"。
@@ -417,7 +417,7 @@ p { font-size: x-small; }
 
 现在基础项目脚手架就绪，我们将开始添加基础的(非加密)实时消息收发。
 
-### 2.0 - 设置服务器端 Socket 监听器
+### 2.1 - 设置服务器端 Socket 监听器
 
 在文件 `/app.js` 的注释 `// 这里插入 SOCKET.IO 代码` 处，添加如下代码。
 
@@ -451,7 +451,7 @@ io.on('connection', (socket) => {
 此代码块将创建一个连接监听器，管理从前端应用程序连接到服务器的所有客户端。
 目前，它只将用户添加到 `DEFAULT` 聊天室中，然后将接收到的所有消息重新发送给聊天室中的其他用户。
 
-### 2.1 - 设置客户端 Socket 监听器
+### 2.2 - 设置客户端 Socket 监听器
 
 在前端中，我们将添加一些连接到服务器的代码，用如下代码替换文件 `/public/page.js` 中的 `created` 函数。
 
@@ -512,7 +512,7 @@ addMessage (message) {
 },
 ```
 
-### 2.2 - 将消息显示到 UI
+### 2.3 - 将消息显示到 UI
 
 最后，我们需要为发送与显示消息提供一个 UI。
 
@@ -611,7 +611,7 @@ _公钥_ 就像一个有牢不可破锁的公开投信箱。如果有人想给�
 我们将使用 [JSEncrypt](https://github.com/travist/jsencrypt)，这是一个源自斯坦福的著名 Javascript RSA 实现。
 使用 JSEncrypt 来创建一些帮助函数，用于加密、解密与生成密钥对。
 
-### 3.0 - 创建 Web Worker 来包装 JSEncrypt 方法
+### 3.1 - 创建 Web Worker 来包装 JSEncrypt 方法
 
 在目录 `public` 中新建文件 `crypto-worker.js`。
 这个文件存放 Web Worker 的代码，以便在一个单独的浏览器线程上执行加密操作。
@@ -670,7 +670,7 @@ function decrypt (content) {
 该 Web Worker 在 `onmessage` 监听器中接收来自 UI 线程的消息，执行请求的操作，并返回结果到 UI 线程。
 私钥永远不会直接暴露给 UI 线程，这有助于减少跨站点脚本攻击([XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)))中私钥被盗的可能性。
 
-### 3.1 - 配置 Vue 应用程序与 Web Worker 通讯
+### 3.2 - 配置 Vue 应用程序与 Web Worker 通讯
 
 下面，我们配置 UI controller 与 Web Worker 通讯。
 使用事件侦听器按顺序的调用/响应通信很难同步。
