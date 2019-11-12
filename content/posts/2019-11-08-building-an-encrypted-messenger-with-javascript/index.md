@@ -15,7 +15,7 @@ tags:
     - 安全
     - 教程
     - 翻译
-description: 译文。通过用 Node、Javascript 实现一个端到端加密聊天程序，解释非对称加密 RSA 如何工作。
+description: 译文。通过用 Node、Javascript 实现一个端到端加密聊天程序，解释非对称加密 RSA 如何工作以及如何使用。
 ---
 
 <!-- endExcerpt -->
