@@ -1,19 +1,21 @@
 ---
-title: 在 Javascript 中使用公钥加密的介绍
-date: 2019-11-21T10:46:37.121Z
+title: 在 Javascript 中使用非对称加密的介绍
+date: 2019-11-12T10:46:37.121Z
 template: post
 featured_top: true
 featured_media: ./Matrix.jpg
-draft: true
+draft: false
 slug: /2019/10/building-an-encrypted-messenger-with-javascript
 categories: 
     - 前端
 tags:
     - Javascript
     - Node.js
+    - 加密
+    - 安全
     - 教程
     - 翻译
-description: 
+description: 译文。通过用 Node、Javascript 实现一个端到端加密聊天程序，解释非对称加密 RSA 如何工作。
 ---
 
 <!-- endExcerpt -->
@@ -25,7 +27,7 @@ description:
 _这是一篇翻译。_
 _原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)_
 
-## 开放加密聊天程序 - 教程
+## 端到端加密聊天程序 - 教程
 
 密码学很重要。没有密码学，就没有 Internet —— 在线发送的数据就像在拥挤的房间里大声喊叫一样容易被截获。
 密码学也是当前时事中的主要话题，在[执法调查](https://en.wikipedia.org/wiki/FBI%E2%80%93Apple_encryption_dispute)和[政府立法](https://www.politico.com/tipsheets/morning-cybersecurity/2017/11/10/texas-shooting-could-revive-encryption-legislation-223290)中日益发挥中心作用。
@@ -33,25 +35,25 @@ _原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-j
 对于记者、活动人士、国家、企业和需要保护数据不受黑客、间谍和广告机构威胁的普通人来说，加密是一种无价的工具。
 
 了解如何利用强加密对于现代软件开发至关重要。
-在本教程中，我们不会深入研究底层的数学和密码学理论；相反，重点将放在如何为您自己的应用程序利用这些技术。
+在本教程中，我们不会深入研究底层的数学和密码学理论；相反，重点将放在如何在您自己的应用程序利用这些技术。
 
 ![Screenshot 5](./screenshot_5.png)
 
-在本教程中，我们将介绍端到端 2048位 [RSA加密](https://en.wikipedia.org/wiki/RSA_(cryptosystem))消息工具的基本概念和实现。
-我们将利用 [Vue.js](https://vuejs.org/) 协调前端功能，在 [Node.js](https://nodejs.org/en/) 后端环境中使用 [Socket.io](https://socket.io/)，以便在用户之间发送消息。
+本教程中，我们将介绍端到端 2048位 [RSA加密](https://en.wikipedia.org/wiki/RSA_(cryptosystem))消息收发工具的基本概念和实现。
+我们将利用 [Vue.js](https://vuejs.org/) 协调前端功能，在 [Node.js](https://nodejs.org/en/) 后端环境中使用 [Socket.io](https://socket.io/)，用于在用户间收发消息。
 
 * 演示 - [https://chat.patricktriest.com](https://chat.patricktriest.com)
 * Github 仓库 - [https://github.com/triestpa/Open-Cryptochat](https://github.com/triestpa/Open-Cryptochat)
 
-本教程中所涉及的概念是用 Javascript 实现的，该语言具有平台无关特性。
-我们将构建一个传统的基于浏览器的 Web 应用，但是如果您担心基于浏览器应用程序的安全性，可以修改此代码以使其在预构建的桌面(使用 [Electron](https://electronjs.org/))或移动应用程序([React Native](https://facebook.github.io/react-native/)，[Ionic](https://ionicframework.com/)，[Cordova](https://cordova.apache.org/))二进制文件中工作。<sup>[[1]](#fn1)</sup>
+本教程涉及的概念用 Javascript 实现，该语言具有平台无关特性。
+我们将构建一个传统的基于浏览器的 Web 应用，但是如果您担心基于浏览器应用程序的安全性，可以修改此代码以使其在预构建的桌面(使用 [Electron](https://electronjs.org/))或移动应用程序([React Native](https://facebook.github.io/react-native/)，[Ionic](https://ionicframework.com/)，[Cordova](https://cordova.apache.org/))二进制文件中工作。<sup>[[1]](#fn1)</sup><a id="fnref1"></a>
 用另一种编程语言实现类似的功能应该也简单，因为大多数语言都有著名的开源加密库可用；
-虽然语法会不同但核心概念是相同的。
+虽然语法不同，但核心概念是相同的。
 
-> 免责声明 - 本文旨在入门端到端加密的实现，不是构建像诺克斯堡(译注：[Fort Knox](https://zh.wikipedia.org/zh-cn/%E8%AF%BA%E5%85%8B%E6%96%AF%E5%A0%A1))般固若金汤般浏览器聊天应用程序的权威指南。
->我致力于为您的 Javascript 应用程序提供有关加密的有用信息，但不保证应用的 100% 安全。
->在构建应用程序过程的各个阶段，有很多可能出现问题的地方，特别是在本教程未涵盖的阶段，例如设置 Web主机和保护服务器安全。
->如果您是安全专家，并且在教程代码中找到漏洞，请随时通过电子邮件(patrick.triest#gmail.com)或以下评论部分与我联系。
+> 免责声明 - 本文旨在入门端到端加密的实现，不是构建像诺克斯堡(译注：[Fort Knox](https://zh.wikipedia.org/zh-cn/%E8%AF%BA%E5%85%8B%E6%96%AF%E5%A0%A1))般固若金汤般浏览器聊天应用程序的权威指南。  
+> 我致力于为您的 Javascript 应用程序提供有关加密的有用信息，但不保证应用的 100% 安全。  
+> 在构建应用程序过程的各个阶段，有很多可能出现问题的地方，特别是在本教程未涵盖的阶段，例如设置 Web主机和保护服务器安全。  
+> 如果您是安全专家，且在教程代码中找到漏洞，请随时通过邮件(patrick.triest#gmail.com)或下面评论部分与我联系。
 
 ## 1 - 项目设置
 
@@ -85,7 +87,7 @@ _原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-j
 
 在命令行中运行 `npm install`，安装两个 Node.js 依赖。
 
-### 1.2 -创建 Node.js 应用
+### 1.2 - 创建 Node.js 应用
 
 创建文件 `app.js`，添加如下内容。
 
@@ -113,7 +115,7 @@ http.listen(port, () => {
 
 这就是服务的核心逻辑。现在，它要做的就是启动服务，并使本地 `/public` 目录中的所有文件可供 Web客户端访问。
 
-> 生产环境中，我强烈建议你将前端代码与 Node.js 后端应用分开伺服，使用 [Apache](https://httpd.apache.org/) 和 [Nginx](https://www.nginx.com/)等久经沙场的服务器软件，或将网站托管在 [AWS S3](https://aws.amazon.com/s3/) 等文件存储服务上。本教程为简单起见，使用 Express 静态文件服务器来跑程序。
+> 生产环境中，我强烈建议你将前端代码与 Node.js 后端应用分开伺服，使用 [Apache](https://httpd.apache.org/) 和 [Nginx](https://www.nginx.com/) 等久经沙场的服务器软件，或将网站托管在 [AWS S3](https://aws.amazon.com/s3/) 等文件存储服务上。本教程为简单起见，使用 Express 静态文件服务器来伺服前端程序。
 
 ### 1.3 - 添加前端
 
@@ -160,7 +162,7 @@ http.listen(port, () => {
 </html>
 ```
 
-该模板设置基本 HTML 结构并下载客户端 JS 依赖项。添加客户端JS代码后，它还会显示一个简单的通知列表。
+该模板设置基础 HTML 结构并下载客户端 JS 依赖项。等添加客户端 JS 代码后，它还会显示一个简单的通知列表。
 
 ##### 1.2.1 - 创建 Vue.js 应用程序
 
@@ -196,7 +198,7 @@ const vm = new Vue ({
 })
 ```
 
-该脚本将初始化 Vue.js 应用，并在 UI 中添加一个 "Hello World" 通知。
+该脚本将初始化 Vue.js 应用，并在 UI 中显示一个 "Hello World" 通知。
 
 ##### 1.2.2 - 添加样式
 
@@ -401,21 +403,21 @@ p { font-size: x-small; }
 }
 ```
 
-我们不会深入讨论 CSS，但我向您保证它是相当简单的。
+这里不深入讨论 CSS，但我向您保证它相当简单。
 
-为了简单起见，我们不需要在前端中添加构建系统。在我看来，对于一个如此简单的应用程序来说，构建系统并不是必须的(完成应用程序的gzip 压缩总负载小于 100kb)。
-非常欢迎(并鼓励，因为它将允许应用程序向后兼容过时的浏览器)添加一个构建系统，如 [Webpack](https://webpack.js.org/)、 [Gulp](https://gulpjs.com/) 或 [Rollup](https://rollupjs.org/)，如果您决定将此代码应用到您自己的项目中。
+简单起见，我们不需要在前端中添加构建系统。在我看来，对于一个如此简单的应用程序来说，构建系统并不是必须的(完成应用程序的 gzip 压缩总负载小于 100kb)。
+非常欢迎(并鼓励，因为它将允许应用程序向后兼容过时的浏览器)你添加一个构建系统，如 [Webpack](https://webpack.js.org/)、 [Gulp](https://gulpjs.com/) 或 [Rollup](https://rollupjs.org/)，如果您决定将此代码应用到您自己的项目中。
 
 ### 1.4 - 试试看
 
-在命令行中运行 `npm start`。你应该能看到命令行输出 `Chat server listening on port 3000.`。
-在浏览器中访问 [`http://localhost:3000`](http://localhost:3000)，你应该能看到一个空的黑色界面，在页面上显示 "Hello World"。
+在命令行中运行 `npm start`。应该能看到命令行输出 `Chat server listening on port 3000.`。
+在浏览器中访问 [`http://localhost:3000`](http://localhost:3000)，应该能看到一个空的黑色界面，在页面上显示 "Hello World"。
 
 ![Screenshot 1](./screenshot_1.png)
 
 ## 2 - 基础消息收发
 
-现在基础项目脚手架就绪，我们将开始添加基础的(非加密)实时消息收发。
+现在项目脚手架已就绪，我们将开始添加基础的(非加密)实时消息收发功能。
 
 ### 2.1 - 设置服务器端 Socket 监听器
 
@@ -463,7 +465,7 @@ created () {
 },
 ```
 
-接着，我们需要添加一些自定义函数来管理客户端 socket 连接并收发消息。
+接着，我们要添加一些自定义函数来管理客户端 Socket 连接并收发消息。
 在文件 `/public/page.js` 中 Vue 应用的 `methods` 代码块中添加如下。
 
 ```javascript
@@ -514,7 +516,7 @@ addMessage (message) {
 
 ### 2.3 - 将消息显示到 UI
 
-最后，我们需要为发送与显示消息提供一个 UI。
+最后，我们为发送与显示消息提供一个 UI。
 
 为在当前聊天中显示所有消息，在文件 `/public/index.html` 的 `<!-- Add Chat Container Here -->` 注释处添加如下。
 
@@ -538,8 +540,8 @@ addMessage (message) {
 </div>
 ```
 
-现在重启服务，在浏览器的两个不同页签或窗口中打开 [`http://localhost:3000`](http://localhost:3000)。
-尝试在页签之间来回发送消息。在命令行中，您应该能够看到正在发送的消息的服务器日志。
+现在重启服务，在浏览器的两个不同标签页或窗口中打开 [`http://localhost:3000`](http://localhost:3000)。
+尝试在标签页之间来回发送消息。在命令行中，您应该能够看到正在发送的消息的服务器日志。
 
 ![Screenshot 2](./screenshot_2.png)  
 ![Screenshot 3](./screenshot_3.png)
@@ -589,7 +591,7 @@ Cool, 现在我们有了一个实时消息收发应用。在添加端到端加�
 与对称加密使用一个共享密钥不同，公钥加密(非对称加密)使用一对密钥(公钥、私钥)，_公钥_ 用于加密数据，_私钥_ 用于解密。
 
 _公钥_ 就像一个有牢不可破锁的公开投信箱。如果有人想给你发消息，就将消息投入这个公开信箱，然后盖上盖子把它锁上。
-这信箱就能让不被信任的第三方传递发送，而不必担心内容被曝光。
+这时信箱就能让不被信任的第三方传递发送，而不必担心内容被曝光。
 一旦我收到信箱，我会用我的 _私钥_ ——只有我有，来打开信箱。
 
 交换 _公钥_ 就像交换这些公开信箱，但 _私钥_ 仅由信箱所有者保管，所以在信箱传递过程中能保证内容的安全。
@@ -602,10 +604,9 @@ _公钥_ 就像一个有牢不可破锁的公开投信箱。如果有人想给�
 
 ## 3 - 用 Web Worker 处理加密
 
-加密操作往往是计算密集型的。由于 Javascript 是单线程的，在 UI 主线程上处理加密会导致浏览器卡顿几秒钟。
+加密操作往往是计算密集型的。由于 Javascript 是单线程，在 UI 主线程上处理加密会导致浏览器卡顿几秒钟。
 
-> 将加密操作包装在 Promise 中也没用，因为 Promise 是在单线程中管理异步操作，
-> 而不是改善计算密集型任务的性能。
+> 将加密操作包装在 Promise 中也没用，因为 Promise 是在单线程中管理异步操作，而不是改善计算密集型任务的性能。
 
 为保证应用程序的性能，我们采用 [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) 在浏览器单独的线程中执行加密运算。
 我们将使用 [JSEncrypt](https://github.com/travist/jsencrypt)，这是一个源自斯坦福的著名 Javascript RSA 实现。
@@ -668,13 +669,13 @@ function decrypt (content) {
 ```
 
 该 Web Worker 在 `onmessage` 监听器中接收来自 UI 线程的消息，执行请求的操作，并返回结果到 UI 线程。
-私钥永远不会直接暴露给 UI 线程，这有助于减少跨站点脚本攻击([XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)))中私钥被盗的可能性。
+私钥永远不会直接暴露给 UI 线程，这有助于减少跨站脚本攻击([XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)))中私钥被盗的可能性。
 
 ### 3.2 - 配置 Vue 应用程序与 Web Worker 通讯
 
 下面，我们配置 UI controller 与 Web Worker 通讯。
 使用事件侦听器按顺序的调用/响应通信很难同步。
-为了简化，我们创建一个工具函数，将整个通讯周期包装到 Promise 中。
+为简化，我们创建一个工具函数，将整个通讯周期包装到 Promise 中。
 在 `/public/page.js` 中的 `methods` 代码块中添加如下。
 
 ```javascript
@@ -842,8 +843,7 @@ this.socket.on('user disconnected', () => {
 
 ![Screenshot 4](./screenshot_4.png)
 
-> 在多于两个标签页中打开应用，交换密钥应该会失败。
-> 我们将进一步解决此问题。
+> 在多于两个标签页中打开应用，交换密钥应该会失败。我们将进一步解决此问题。
 
 ## 5 - 消息加密
 
@@ -917,7 +917,7 @@ this.socket.on('MESSAGE', async (message) => {
 
 ### 5.4 - 试试看
 
-重启服务并刷新 `http://localhost:3000`。
+重启服务并刷新 [`http://localhost:3000`](http://localhost:3000)。
 UI 界面应该看起来跟之前没有变化，除了会显示每个消息发送者的公钥片段。
 
 ![Screenshot 5](./screenshot_5.png)  
@@ -928,18 +928,18 @@ UI 界面应该看起来跟之前没有变化，除了会显示每个消息发�
 ## 6 - 聊天室
 
 你大概已经注意到当前应用程序的一个重大缺陷 —— 如果在第三个标签页中打开该应用会使加密系统挂掉。
-非对称加密被设计用于一对一的场景；无法加密消息 _一次_ 然后被 _两个_ 独立用户解密。
+非对称加密被设计用于一对一的场景；无法加密消息 _一次_ 然后分别被 _两个_ 用户解密。
 
-我们有两个选择 ——
+两个选择 ——
 
-1. 若有多个用户，为每个用户加密并发送消息副本。
+1. 若有多个用户，为每个用户分别加密并发送消息副本。
 2. 限制同一时间聊天室中最多有两个用户。
 
 由于本教程已经够长了，我们选择第二个简单的选项。
 
-### 6.1 - 服务器端进入聊天室逻辑
+### 6.1 - 进入聊天室的服务器端逻辑
 
-为执行 2用户限制，修改 `/app.js` 中的服务器端 `JOIN` Socket 监听器，在 Socket 连接监听器代码块的上面。
+为执行两个用户限制，修改 `/app.js` 中的服务器端 `JOIN` Socket 监听器，在 Socket 连接监听器代码块的上面加入如下。
 
 ```javascript
 // 保存 Socket 连接到的聊天室
@@ -981,118 +981,132 @@ socket.on('JOIN', (roomName) => {
 
 修改这段 Socket 逻辑，防止用户进入一个已有两位用户的聊天室。
 
-### 6.2 - Join Room From The Client Side
+### 6.2 - 通过客户端进入聊天室
 
-Next, we'll modify our client-side `joinRoom` function in `/public/page.js`, in order to reset the state of the chat when switching rooms.
+修改客户端 `/public/page.js` 中的 `joinRoom` 函数，使切换聊天室时重置聊天状态。
 
-    /** Join the specified chatroom */
-    joinRoom () {
-      if (this.pendingRoom !== this.currentRoom && this.originPublicKey) {
-        this.addNotification(`Connecting to Room - ${this.pendingRoom}`)
+```javascript
+/** 进入指定的聊天室 */
+joinRoom () {
+  if (this.pendingRoom !== this.currentRoom && this.originPublicKey) {
+    this.addNotification(`Connecting to Room - ${this.pendingRoom}`)
 
-        // Reset room state variables
-        this.messages = []
-        this.destinationPublicKey = null
+    // 重置聊天室状态变量
+    this.messages = []
+    this.destinationPublicKey = null
 
-        // Emit room join request.
-        this.socket.emit('JOIN', this.pendingRoom)
-      }
-    },
+    // 发送进入聊天室请求
+    this.socket.emit('JOIN', this.pendingRoom)
+  }
+},
+```
 
-### 6.3 - Add Notifications
+### 6.3 - 添加通知
 
-Let's create two more client-side socket listeners (within the `setupSocketListeners` function in `/public/page.js`), to notify us whenever a join request is rejected.
+创建两个客户端 Socket 监听器(在 `/public/page.js` 的 `setupSocketListeners` 函数中)，当进入聊天室请求被拒绝时发出通知。
 
-    // Notify user that the room they are attempting to join is full
-    this.socket.on('ROOM_FULL', () => {
-      this.addNotification(`Cannot join ${this.pendingRoom}, room is full`)
+```javascript
+// 通知用户试图加入的聊天室已满
+this.socket.on('ROOM_FULL', () => {
+  this.addNotification(`Cannot join ${this.pendingRoom}, room is full`)
 
-      // Join a random room as a fallback
-      this.pendingRoom = Math.floor(Math.random() * 1000)
-      this.joinRoom()
-    })
+  // 加入一个随机聊天室作为后备
+  this.pendingRoom = Math.floor(Math.random() * 1000)
+  this.joinRoom()
+})
 
-    // Notify room that someone attempted to join
-    this.socket.on('INTRUSION_ATTEMPT', () => {
-      this.addNotification('A third user attempted to join the room.')
-    })
+// 通知聊天室有人试图加入
+this.socket.on('INTRUSION_ATTEMPT', () => {
+  this.addNotification('A third user attempted to join the room.')
+})
+```
 
-### 6.4 - Add Room Join UI
+### 6.4 - 添加进入聊天室 UI
 
-Finally, we'll add some HTML to provide an interface for the user to join a room of their choosing.
+最后，添加一些 HTML，为用户提供一个界面来加入他们选择的房间。
 
-Add the following to `/public/index.html` below the `<!-- Add Room UI Here -->` comment.
+在 `/public/index.html` 的 `<!-- Add Room UI Here -->` 注释处添加如下。
 
-    <h1>CHATROOM</h1>
-    <div class="room-select">
-      <input type="text" class="full-width" placeholder="Room Name" id="room-input" v-model="pendingRoom" @keyup.enter="joinRoom()">
-      <input class="yellow-button full-width" type="submit" v-on:click="joinRoom()" value="JOIN">
-    </div>
-    <div class="divider"></div>
+```html
+<h1>CHATROOM</h1>
+<div class="room-select">
+  <input type="text" class="full-width" placeholder="Room Name" id="room-input" v-model="pendingRoom" @keyup.enter="joinRoom()">
+  <input class="yellow-button full-width" type="submit" v-on:click="joinRoom()" value="JOIN">
+</div>
+<div class="divider"></div>
+```
 
-### 6.5 - Add Autoscroll
+### 6.5 - 自动滚动
 
-An annoying bug remaining in the app is that the notification and chat lists do not yet auto-scroll to display new messages.
+应用程序中还有个烦人的 bug，即通知和聊天列表尚未自动滚动以显示新消息。
 
-In `/public/page.js`, add the following function to the `methods` block.
+在 `/public/page.js` 的 `methods` 代码块中添加如下函数。
 
-    /** Autoscoll DOM element to bottom */
-    autoscroll (element) {
-      if (element) { element.scrollTop = element.scrollHeight }
-    },
+```javascript
+/** 自动滚动 DOM 元素到底部 */
+autoscroll (element) {
+  if (element) { element.scrollTop = element.scrollHeight }
+},
+```
 
-To auto-scroll the notification and message lists, we'll call `autoscroll` at the end of their respective `add` methods.
+要自动滚动通知和消息列表，我们将在 `add` 方法的末尾调用 `autoscroll`。
 
-    /** Add message to UI and scroll the view to display the new message. */
-    addMessage (message) {
-      this.messages.push(message)
-      this.autoscroll(this.$refs.chatContainer)
-    },
+```javascript
+/** 将消息添加到 UI 并滚动视图以显示新消息。 */
+addMessage (message) {
+  this.messages.push(message)
+  this.autoscroll(this.$refs.chatContainer)
+},
 
-    /** Append a notification message in the UI */
-    addNotification (message) {
-      const timestamp = new Date().toLocaleTimeString()
-      this.notifications.push({ message, timestamp })
-      this.autoscroll(this.$refs.notificationContainer)
-    },
+/** 在 UI 中添加通知消息 */
+addNotification (message) {
+  const timestamp = new Date().toLocaleTimeString()
+  this.notifications.push({ message, timestamp })
+  this.autoscroll(this.$refs.notificationContainer)
+},
+```
 
-### 6.6 - Try it out
+### 6.6 - 试试看
 
-That was the last step! Try restarting the node app and reloading the page at `localhost:3000`. You should now be able to freely switch between rooms, and any attempt to join the same room from a third browser tab will be rejected.
+最后一步！重启 Node 应用程序并刷新 [`localhost:3000`](http://localhost:3000)。
+现在应该可以自由地在不同聊天室间切换，从第三个浏览器标签页加入同一聊天室的任何尝试都将被拒绝。
 
-![Screenshot 7](https://cdn.patricktriest.com/blog/images/posts/e2e-chat/screenshot_7.png)
+![Screenshot 7](./screenshot_7.png)
 
-## 7 - What next?
+## 7 - 接下来？
 
-Congrats! You have just built a completely functional end-to-end encrypted messaging app.
+恭喜！您已经构建了一个功能完整的端到端加密消息收发应用程序。
 
-Github Repository - [https://github.com/triestpa/Open-Cryptochat](https://github.com/triestpa/Open-Cryptochat)  
-Live Preview - [https://chat.patricktriest.com](https://chat.patricktriest.com)
+- 演示 - [https://chat.patricktriest.com](https://chat.patricktriest.com)
+- Github 仓库 - [https://github.com/triestpa/Open-Cryptochat](https://github.com/triestpa/Open-Cryptochat)
 
-Using this baseline source code you could deploy a private messaging app on your own servers. In order to coordinate which room to meet in, one slick option could be using a time-based pseudo-random number generator (such as [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)), with a shared seed between you and a second party (I've got a Javascript "Google Authenticator" clone tutorial in the works - stay tuned).
+以该代码为基础，您可以在自己的服务器上部署一个私有消息收发应用程序。
+为协调在哪个聊天室见面，一个巧妙的选择是使用基于时间的伪随机数生成器(如 [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en))，
+你和对方共享一个 seed(Javascript "Google Authenticator" 教程我正在写，保持关注)。
 
-### Further Improvements
+### 更进一步
 
-There are lots of ways to build up the app from here:
+以此为起点可以做很多应用：
 
-*   Group chats, by storing multiple public keys, and encrypting the message for each user individually.
-*   Multimedia messages, by encrypting a byte-array containing the media file.
-*   Import and export key pairs as local files.
-*   Sign messages with the private key for sender identity verification. This is a trade-off because it increases the difficulty of fabricating messages, but also undermines the goal of "deniable authentication" as outlined in the [OTR messaging standard](https://en.wikipedia.org/wiki/Off-the-Record_Messaging).
-*   Experiment with different encryption systems such as:
-    *   [**AES**](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) - Symmetric encryption, with a shared secret between the users. This is the only publicly available algorithm that is in use by the NSA and US Military.
-    *   [**ElGamal**](https://en.wikipedia.org/wiki/ElGamal_encryption) - Similar to RSA, but with smaller cyphertexts, faster decryption, and slower encryption. This is the core algorithm that is used in [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy).
-    *   Implement a [**Diffie-Helman**](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) key exchange. This is a technique of using asymmetric encryption (such as ElGamal) to exchange a shared secret, such as a symmetric encryption key (for AES). Building this on top of our existing project and exchanging a new shared secret before each message is a good way to improve the security of the app (see [Perfect Forward Security](https://en.wikipedia.org/wiki/Forward_secrecy)).
-*   Build an app for virtually any use-case where intermediate servers should never have unencrypted access to the transmitted data, such as password-managers and P2P (peer-to-peer) networks.
-*   Refactor the app for [React Native](https://facebook.github.io/react-native/), [Ionic](https://ionicframework.com/), [Cordova](https://cordova.apache.org/), or [Electron](https://electronjs.org/) in order to provide a secure pre-built application bundle for mobile and/or desktop environments.
+* 群聊，通过存储多个公钥，并分别为每个用户加密消息。
+* 多媒体消息，通过加密一个包含媒体文件的字节数组。
+* 将密钥对导入和导出为本地文件。
+* 使用发送方身份验证的私钥对消息进行签名。这是一种折衷，因为它增加了伪造消息的难度，但也破坏了 OTR消息传递标准([OTR messaging standard](https://en.wikipedia.org/wiki/Off-the-Record_Messaging))中概述的“可拒绝身份验证”的目标。
+* 尝试不同的加密系统，如：
+    * [**AES**](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) - 对称加密，用户之间共享秘密。这是 NSA 和美国军方使用的唯一公开可用的算法。
+    * [**ElGamal**](https://en.wikipedia.org/wiki/ElGamal_encryption) - 类似于 RSA，但具有更小的密码文本、更快的解密和更慢的加密。这是在PGP中使用的核心算法。
+    * 实现一个  [**Diffie-Helman**](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) 密钥交换。这是一种使用非对称加密(例如 ElGamal)交换共享密钥的技术。在现有项目基础上构建，并在发送每条消息之前交换新的共享密钥是提高应用程序安全性的一种好方法(请参阅 [Perfect Forward Security](https://en.wikipedia.org/wiki/Forward_secrecy))。
+* 建立一个应用程序，在任何情况下，中间服务器绝不应有未加密的访问，如密码管理器和 P2P(点对点) 网络。
+* 为 [React Native](https://facebook.github.io/react-native/)，[Ionic](https://ionicframework.com/)，[Cordova](https://cordova.apache.org/) 或 [Electron](https://electronjs.org/) 重构应用程序，以便为移动和/或桌面环境提供安全的预构建应用程序包。
 
-Feel free to comment below with questions, responses, and/or feedback on the tutorial.
+请在下面随意评论有关本教程的问题，反馈和/或反馈。
 
 ***
 
 <a id="fn1"></a>
-1.  **Security Implications Of Browser Based Encryption**  
+1. **基于浏览器的加密安全隐患**  
 
-    Please remember to be careful. The use of these protocols in a browser-based Javascript app is a great way to experiment and understand how they work in practice, but this app is not a suitable replacement for established, peer-reviewed encryption protocol implementations such as [OpenSSL](https://en.wikipedia.org/wiki/OpenSSL) and [GnuPG](https://en.wikipedia.org/wiki/GNU_Privacy_Guard).  
+请谨记。在基于浏览器的 Javascript 应用程序中使用这些协议是试验和了解它们在实际中如何工作的好方法，但此应用程序不适合替代已建立的，经过同行评审的加密协议实现，例如 [OpenSSL](https://en.wikipedia.org/wiki/OpenSSL) 和 [GnuPG](https://en.wikipedia.org/wiki/GNU_Privacy_Guard)。
 
-    Client-side browser Javascript encryption is a controversial topic among security experts due to the vulnerabilities present in web application delivery versus pre-packaged software distributions that run outside the browser. Many of these issues can be mitigated by utilizing HTTPS to prevent man-in-the-middle resource injection attacks, and by avoiding persistent storage of unencrypted sensitive data within the browser, but it is important to stay aware of potential vulnerabilities in the web platform. [↩︎](#fnref1)
+客户端浏览器 Javascript 加密在安全专家中是个有争议的话题，因为 Web 应用程序交付相比在浏览器外运行的预打包软件存在漏洞。
+可通过使用 HTTPS 防止中间人资源注入攻击，并通过避免在浏览器中持久存储未加密的敏感数据来缓解这些问题，但务必注意 Web 平台中潜在的漏洞。[↩](#fnref1)
