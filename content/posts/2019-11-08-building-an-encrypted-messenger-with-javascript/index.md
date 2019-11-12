@@ -24,8 +24,10 @@ description: 译文。通过用 Node、Javascript 实现一个端到端加密聊
     pre {max-height: 30em; overflow: auto;}
 </style>
  
-_这是一篇翻译。_
-_原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)_
+这是一篇翻译。  
+原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)  
+作者：[Patrick Triest](https://blog.patricktriest.com/author/patrick/)
+---
 
 ## 端到端加密聊天程序 - 教程
 
