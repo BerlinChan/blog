@@ -10,7 +10,7 @@ categories:
     - "小玩意"
     - "短片"
 tags:
-    - "xbox"
+    - "Xbox"
     - "游戏"
     - "主机"
     - "开箱"

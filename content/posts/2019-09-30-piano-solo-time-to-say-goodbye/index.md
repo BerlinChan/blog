@@ -11,7 +11,7 @@ categories:
     - 短片
 tags:
     - 演奏
-    - 教学
+    - 教程
     - 理想
 description: 六年前，当我离开三峡晚报社，坐上去武汉的火车时，戴上耳机放了这首 Time To Say Goodbye，我知道我会记得这离别时刻，记得这些坚持。
 ---

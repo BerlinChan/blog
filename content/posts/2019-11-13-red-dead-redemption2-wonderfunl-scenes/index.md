@@ -12,7 +12,7 @@ categories:
 tags:
     - Xbox
     - 游戏
-    - 荒野大镖客2
+    - 荒野大镖客
 description: 我们的时代过去了
 ---
 
@@ -20,8 +20,8 @@ description: 我们的时代过去了
 
 _点击图片查看完整 4K 分辨率_
 
-![](./2019-11-13-red-dead-redemption2-1.jpg)
+![大战在即](./2019-11-13-red-dead-redemption2-1.jpg)
 
 我们的时代过去了
 
-![](./2019-11-13-red-dead-redemption2-2.jpg)
+![格格不入](./2019-11-13-red-dead-redemption2-2.jpg)
