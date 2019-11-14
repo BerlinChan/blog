@@ -8,11 +8,11 @@ draft: false
 slug: /2019/11/building-an-encrypted-messenger-with-javascript
 categories: 
     - 前端
+    - 安全
 tags:
     - Javascript
     - Node.js
     - 加密
-    - 安全
     - 教程
     - 翻译
 description: 译文。通过用 Node、Javascript 实现一个端到端加密聊天程序，解释非对称加密 RSA 如何工作以及如何使用。
@@ -25,8 +25,9 @@ description: 译文。通过用 Node、Javascript 实现一个端到端加密聊
 </style>
  
 这是一篇翻译。  
-原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)  
-作者：[Patrick Triest](https://blog.patricktriest.com/author/patrick/)
+作者：[Patrick Triest](https://blog.patricktriest.com/author/patrick/)  
+原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)
+
 ---
 
 ## 端到端加密聊天程序 - 教程
