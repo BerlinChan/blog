@@ -12,6 +12,7 @@ tags:
     - Windows
     - checksum
     - 工具
+    - 翻译
 description: 如果只是确定一个下载文件的校验和，实际上不必安装另外的实用工具，Win 10 自带的命令 CertUtil 就能搞定。
 ---
 
