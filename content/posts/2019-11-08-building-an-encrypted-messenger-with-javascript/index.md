@@ -1113,3 +1113,9 @@ addNotification (message) {
 
 客户端浏览器 Javascript 加密在安全专家中是个有争议的话题，因为 Web 应用程序交付相比在浏览器外运行的预打包软件存在漏洞。
 可通过使用 HTTPS 防止中间人资源注入攻击，并通过避免在浏览器中持久存储未加密的敏感数据来缓解这些问题，但务必注意 Web 平台中潜在的漏洞。[↩](#fnref1)
+
+---
+
+相关：
+- [prism-break.org 推荐的加密通信软件](https://prism-break.org/zh-CN/)
+- [你真的了解端到端加密么？](https://github.com/mdrights/Digital-rights/blob/master/E%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93/2019-09-21-%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%8A%A0%E5%AF%86%E4%B9%88.md)
