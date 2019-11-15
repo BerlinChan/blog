@@ -1117,5 +1117,8 @@ addNotification (message) {
 ---
 
 相关参考：
+- [RSA算法原理（一） - 阮一峰](https://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html)
+- [JSEncrypt - OpenSSL RSA 加密的 Javascript 实现](http://travistidwell.com/jsencrypt/)
 - [prism-break.org 推荐的加密通信软件](https://prism-break.org/zh-CN/)
 - [你真的了解端到端加密么？](https://github.com/mdrights/Digital-rights/blob/master/E%E5%8A%A0%E5%AF%86%E6%8A%80%E8%A1%93/2019-09-21-%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%8A%A0%E5%AF%86%E4%B9%88.md)
+- [OpenPGP.js - OpenPGP 的 Javascript 实现](https://openpgpjs.org/)
