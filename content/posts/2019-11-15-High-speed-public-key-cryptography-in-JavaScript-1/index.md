@@ -183,6 +183,6 @@ _TweetNaCL.js 使用共享密钥解密的例子_
 > 使用 _XSalsa20_ 而不是 _RSA_，_CPU_ 使用和 _电池_ 消耗降低到历史最低，同时保持强大的 _256位安全_ 级别。
 > —— 给你 App 的建议 ;)
 
-使用 _TweetNaCL.js_ 进行 **_数字签名_** 将在该系列的第二篇文章中进行讨论：[在此处阅读](/@kyberneees/high-speed-public-key-cryptography-in-javascript-part-2-digital-signatures-3e58876d1dff)。
+使用 _TweetNaCL.js_ 进行 **_数字签名_** 将在该系列的第二篇文章中进行讨论：[在此处阅读](https://medium.com/@kyberneees/high-speed-public-key-cryptography-in-javascript-part-2-digital-signatures-3e58876d1dff)。
 
 一如既往地感谢您的留言与反馈!
