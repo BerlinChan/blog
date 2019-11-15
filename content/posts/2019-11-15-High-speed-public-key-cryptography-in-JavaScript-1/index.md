@@ -73,6 +73,8 @@ NaCL 被证明是安全的，因为从理论上讲，暴力破解 Salsa20 比相
 
 # 开启 JavaScript 加密之旅
 
+译注：可直接运行的 [Demo 下载](TweetNaClJsDemo.zip)
+
 ## Bob 加密消息给 Alice
 
 ```javascript
