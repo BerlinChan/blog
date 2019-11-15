@@ -19,8 +19,9 @@ description: 如果只是确定一个下载文件的校验和，实际上不必�
 <!-- endExcerpt -->
 
 这是一篇翻译。  
+原文：[https://onthefencedevelopment.com/2017/08/15/windows-10-builtin-md5-checksum-calculator/](https://onthefencedevelopment.com/2017/08/15/windows-10-builtin-md5-checksum-calculator/)  
 作者：[On The Fence Development](https://onthefencedevelopment.com/)  
-原文：[https://onthefencedevelopment.com/2017/08/15/windows-10-builtin-md5-checksum-calculator/](https://onthefencedevelopment.com/2017/08/15/windows-10-builtin-md5-checksum-calculator/)
+翻译：陈柏林
 
 ---
 

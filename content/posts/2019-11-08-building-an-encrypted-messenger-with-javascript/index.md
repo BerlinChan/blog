@@ -25,8 +25,9 @@ description: 译文。通过用 Node、Javascript 实现一个端到端加密聊
 </style>
  
 这是一篇翻译。  
+原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)  
 作者：[Patrick Triest](https://blog.patricktriest.com/author/patrick/)  
-原文：[https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/](https://blog.patricktriest.com/building-an-encrypted-messenger-with-javascript/)
+翻译：陈柏林
 
 ---
 

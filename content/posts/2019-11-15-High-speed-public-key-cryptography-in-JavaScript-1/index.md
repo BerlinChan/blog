@@ -19,8 +19,9 @@ description: 本文介绍了如何在 JavaScript 中使用 TweetNaCL.js 库来�
 <!-- endExcerpt -->
 
 这是一篇翻译。  
+原文：[https://medium.com/sharenowtech/high-speed-public-key-cryptography-in-javascript-part-1-3eefb6f91f77](https://medium.com/sharenowtech/high-speed-public-key-cryptography-in-javascript-part-1-3eefb6f91f77)  
 作者：[Rolando Santamaria Maso](https://medium.com/@kyberneees)  
-原文：[https://medium.com/sharenowtech/high-speed-public-key-cryptography-in-javascript-part-1-3eefb6f91f77](https://medium.com/sharenowtech/high-speed-public-key-cryptography-in-javascript-part-1-3eefb6f91f77)
+翻译：陈柏林
 
 ---
 
