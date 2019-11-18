@@ -977,7 +977,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.7.1", "@babel/runtime@^7.7.2":
+"@babel/runtime@^7.6.3", "@babel/runtime@^7.7.1", "@babel/runtime@^7.7.2":
   version "7.7.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.2.tgz#111a78002a5c25fc8e3361bedc9529c696b85a6a"
   integrity sha512-JONRbXbTXc9WQE2mAZd1p0Z3DZ/6vaQIkgYMSTP3KjRCyd7rCZCcfhCyX+YjwcKxcZ82UrxbRD358bpExNgrjw==
@@ -1617,7 +1617,7 @@
   resolved "https://registry.npm.taobao.org/@types/tmp/download/@types/tmp-0.0.32.tgz#0d3cb31022f8427ea58c008af32b80da126ca4e3"
   integrity sha1-DTyzECL4Qn6ljACK8yuA2hJspOM=
 
-"@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.3":
+"@types/unist@*", "@types/unist@^2.0.0":
   version "2.0.3"
   resolved "https://registry.npm.taobao.org/@types/unist/download/@types/unist-2.0.3.tgz#9c088679876f374eb5983f150d4787aa6fb32d7e"
   integrity sha1-nAiGeYdvN061mD8VDUeHqm+zLX4=
@@ -6111,11 +6111,20 @@ gatsby-remark-copy-linked-files@^2.1.29:
 
 gatsby-remark-embed-video@^2.0.1:
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-embed-video/-/gatsby-remark-embed-video-2.0.1.tgz#d7b5a8ecbde9ec8fc33fb2e569b87b2af35cb278"
-  integrity sha512-V+cW4Ev+iXb0jmqfqKpcdPRn9vsKahIdj9sAUj26Ox4rooknWCjhayBdxT51BM2u7P2u3ck3Ty96PnqW7e/Mog==
+  resolved "https://registry.npm.taobao.org/gatsby-remark-embed-video/download/gatsby-remark-embed-video-2.0.1.tgz#d7b5a8ecbde9ec8fc33fb2e569b87b2af35cb278"
+  integrity sha1-17Wo7L3p7I/DP7Llabh7KvNcsng=
   dependencies:
     get-video-id "^3.1.4"
     remark-burger "^1.0.1"
+    unist-util-visit "^2.0.0"
+
+gatsby-remark-embedder@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.npm.taobao.org/gatsby-remark-embedder/download/gatsby-remark-embedder-1.5.0.tgz#018bdcd5fa57bd83fba8dc899f8aab4d27cf9599"
+  integrity sha1-AYvc1fpXvYP7qNyJn4qrTSfPlZk=
+  dependencies:
+    "@babel/runtime" "^7.6.3"
+    node-fetch "^2.6.0"
     unist-util-visit "^2.0.0"
 
 gatsby-remark-external-links@^0.0.4:
@@ -6492,8 +6501,8 @@ get-value@^2.0.3, get-value@^2.0.6:
 
 get-video-id@^3.1.4:
   version "3.1.4"
-  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.1.4.tgz#9bffb8b607aa0379f0f8a927eae7df13b5e414a3"
-  integrity sha512-XOZ60NZ60ozTtoWtPPpA3TC9JgDXgcd5nTfYwjBhZWAx3w48HRq6EqKp2bUJ/3F+BWgiMMHg4IkQ+acO6LxfMQ==
+  resolved "https://registry.npm.taobao.org/get-video-id/download/get-video-id-3.1.4.tgz#9bffb8b607aa0379f0f8a927eae7df13b5e414a3"
+  integrity sha1-m/+4tgeqA3nw+Kkn6uffE7XkFKM=
   dependencies:
     get-src "^1.0.1"
 
@@ -9562,11 +9571,6 @@ normalize-scroll-left@^0.2.0:
   resolved "https://registry.npm.taobao.org/normalize-scroll-left/download/normalize-scroll-left-0.2.0.tgz#9445d74275f303cc661e113329aefa492f58114c"
   integrity sha1-lEXXQnXzA8xmHhEzKa76SS9YEUw=
 
-normalize-scss@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.npm.taobao.org/normalize-scss/download/normalize-scss-7.0.1.tgz#74485e82bb5d0526371136422a09fdb868ffc1a4"
-  integrity sha1-dEhegrtdBSY3ETZCKgn9uGj/waQ=
-
 normalize-url@1.9.1, normalize-url@^1.0.0:
   version "1.9.1"
   resolved "https://registry.npm.taobao.org/normalize-url/download/normalize-url-1.9.1.tgz#2cc0d66b31ea23036458436e3620d85954c66c3c"
@@ -11550,8 +11554,8 @@ relay-runtime@2.0.0:
 
 remark-burger@^1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/remark-burger/-/remark-burger-1.0.1.tgz#cda57d4bc1e952ae86b2407fbcf36492ab352106"
-  integrity sha512-F91SyEzat4hBkWsWElHIvMcCQuWoSeZXTuR4DmLvhUIjYkzzVLaX6GRxhkiDrZb/9asvTrYzwEr9HvxN1tqs9Q==
+  resolved "https://registry.npm.taobao.org/remark-burger/download/remark-burger-1.0.1.tgz#cda57d4bc1e952ae86b2407fbcf36492ab352106"
+  integrity sha1-zaV9S8HpUq6GskB/vPNkkqs1IQY=
 
 remark-parse@^1.1.0:
   version "1.1.0"
@@ -13662,9 +13666,9 @@ unist-util-is@^3.0.0:
   integrity sha1-2ehDgcJGjoJinkpb6dfQWi3TJM0=
 
 unist-util-is@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.0.0.tgz#85672993f0d88a8bffb45137aba003ee8da11a38"
-  integrity sha512-E5JLUKRQlAYiJmN2PVBdSz01R3rUKRSM00X+0DB/yLqxdLu6wZZkRdTIsxDp9X+bkxh8Eq+O2YYRbZvLZtQT1A==
+  version "4.0.1"
+  resolved "https://registry.npm.taobao.org/unist-util-is/download/unist-util-is-4.0.1.tgz#ae3e39b9ad1b138c8e3b9d2f4658ad0031be4610"
+  integrity sha1-rj45ua0bE4yOO50vRlitADG+RhA=
 
 unist-util-modify-children@^1.0.0:
   version "1.1.4"
@@ -13719,11 +13723,11 @@ unist-util-visit-parents@^2.0.0, unist-util-visit-parents@^2.1.2:
     unist-util-is "^3.0.0"
 
 unist-util-visit-parents@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-3.0.0.tgz#dd4cdcd86d505ec7a81bdc01bc790f9def742bee"
-  integrity sha512-H3K8d81S4V3XVXVwLvrLGk+R5VILryfUotD06/R/rLsTsPLGjkn6gIP8qEEVITcuIySNYj0ocJLsePjm9F/Vcg==
+  version "3.0.1"
+  resolved "https://registry.npm.taobao.org/unist-util-visit-parents/download/unist-util-visit-parents-3.0.1.tgz#666883dc8684c6eec04a7e9781cdcd8b4888319f"
+  integrity sha1-ZmiD3IaExu7ASn6Xgc3Ni0iIMZ8=
   dependencies:
-    "@types/unist" "^2.0.3"
+    "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
 unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.3, unist-util-visit@^1.4.1:
@@ -13734,9 +13738,9 @@ unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.3, unist
     unist-util-visit-parents "^2.0.0"
 
 unist-util-visit@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.0.tgz#1fdae5ea88251651bfe49b7e84390d664fc227c5"
-  integrity sha512-kiTpWKsF54u/78L/UU/i7lxrnqGiEWBgqCpaIZBYP0gwUC+Akq0Ajm4U8JiNIoQNfAioBdsyarnOcTEAb9mLeQ==
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/unist-util-visit/download/unist-util-visit-2.0.1.tgz#b4e1c1cb414250c6b3cb386b8e461d79312108ae"
+  integrity sha1-tOHBy0FCUMazyzhrjkYdeTEhCK4=
   dependencies:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
