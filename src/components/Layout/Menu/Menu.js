@@ -44,7 +44,7 @@ export default () => {
     >文章</Link>
     <Popper open={Boolean(anchorEl)} anchorEl={anchorEl} transition disablePortal>
       {({ TransitionProps }) => (
-        <Grow {...TransitionProps} style={{ transformOrigin: 'center bottom' }}>
+        <Grow {...TransitionProps} style={{ transformOrigin: 'center top' }}>
           <Paper id="menu-list-grow" onMouseLeave={handleArticleMenuClose}>
             <ClickAwayListener onClickAway={handleArticleMenuClose}>
               <MenuList className={classes.menuDropdown}>
