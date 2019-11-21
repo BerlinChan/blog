@@ -4,7 +4,7 @@ date: 2019-11-22T10:46:37.121Z
 template: post
 featured_top: false
 featured_media: ./featured_media.png
-draft: true
+draft: false
 slug: /2019/11/TypeScript-Pro-tips-with-React
 categories: 
     - 前端
@@ -91,7 +91,7 @@ description:
 **_Why?_**
 
 默认情况下，类中所有成员都是 `public` 的(并且在运行时始终是 public，TS 中的 private/protected 仅在编译时才"隐藏"特定的类属性/方法)。
-不要给你的代码库引入额外的混乱。修饰符 `public` 也不是"有效/惯用的 javascript"
+不要给你的代码库引入额外的混乱。修饰符 `public` 也不是有效/惯用的 Javascript。
 
 # 2. 不要在 Component class 上使用 `private` 修饰符
 
@@ -112,28 +112,30 @@ description:
 修饰符 `private` 不会在运行时将属性/方法设置为私有，这只是 TypeScript 在编译时的模拟。
 也不要天真地，使用众所周知的把戏来设置"私有"，比如：
 
-* name starting with underscore 👉 `_someProp`
-* or if you really wanna make those properties private use `Symbol` for defining those. ( [real runtime private properties are coming to ECMAscript](https://github.com/bloomberg/TypeScript/pull/6) )
+* 名称以下划线开头 👉 `_someProp`
+* 或者，如果您真的想将这些属性设为私有，请使用 `Symbol` 来定义它们。([真正的运行时私有属性将在 ECMAScript 中推出](https://github.com/bloomberg/TypeScript/pull/6))
 
-In reality, you should almost never need to work directly with React Component instance nor accessing its class properties.
+实际上，您几乎永远不需要直接使用 React Component 实例或访问其类属性。
 
-# 3. Don’t use `protected` accessor within Component class
+# 3. 不要在 Component class 上使用 `protected` 修饰符
 
 **_Don’t:_**
+
 ![](./0_fSJeOPAJb2V6SaW6.png)
 
 **_Do:_**
+
 ![](./0_mWYzXZigm-BfswMF.png)
 
 **_Why:_**
 
-Using `protected` is an immediate "RED ALERT" 🚨🚨🚨 in terms of functional patterns leverage with React. There are more effective patterns like this for extending behaviour of some component. You can use:
+在 React 中使用 `protected` 是"红色警报" 🚨🚨🚨，这不符合 React 的函数式模式。还有更有效的模式来扩展某些组件的行为。比如：
 
-*   just extract the logic to separate component and use it as seen above
-*   **HoC** (high order function) and **functional composition**.
-*   **CaaF** ( children as a function )
+* 提取逻辑以分离组件，并如上所示使用它
+* **HoC** (高阶组件) 与 **functional composition**。
+* **CaaF** ( children as a function )
 
-# 4. Don’t use `enum`
+# 4. 不要使用 `enum`
 
 **_Don’t:_**
 
@@ -141,19 +143,19 @@ Using `protected` is an immediate "RED ALERT" 🚨🚨🚨 in terms of functiona
 
 **_Good:_**
 
-If you need to support runtime enums use following pattern:
+如果需要支持运行时枚举值，请使用以下模式：
 
 ![](./0_S4WZZK9aNBu3AE0-.png)
 
 **_Better:_**
 
-If you don’t need to support runtime enums, all you need to use are type literals:
+如果不需要支持运行时枚举值，就用类型字面量就行了：
 
 ![](./0_G8utY7zNyhDjBwAj.png)
 
 **_Why?:_**
 
-To use `enum` within TypeScript might be very tempting, especially if you're coming from language like C# or Java. But there are better ways how to interpret both with well known JS idiomatic patterns or as can be seen in "Better" example just by using compile time type literals.
+在 TypeScript 中使用 `enum` 可能非常诱人，特别是如果您来自 c# 或 Java 这样的语言。但还有更好的方法，既可以使用 JS 惯用模式，又如在 "Better"示例中看到的，只使用编译时类型字面量。
 
 *   Enums compiled output generates unnecessary boilerplate (which can be mitigated with `const enum` though. Also string enums are better in this one)
 
