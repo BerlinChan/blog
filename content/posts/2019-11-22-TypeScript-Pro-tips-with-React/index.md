@@ -82,33 +82,35 @@ description:
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*aw05SupahLjLgNhM.png)
+![](./0_aw05SupahLjLgNhM.png)
 
 **_Do:_**
 
-![](https://miro.medium.com/0*FslMKpSggpqv13j_.png)
+![](./0_FslMKpSggpqv13j_.png)
 
 **_Why?_**
 
-All members within class are `public` by default (and always public in runtime, TS private/protected will "hide" particular class properties/methods only during compile time). Don't introduce extra churn to your codebase. Also using `public`accessor is not "valid/idiomatic javascript"
+默认情况下，类中所有成员都是 `public` 的(并且在运行时始终是 public，TS 中的 private/protected 仅在编译时才"隐藏"特定的类属性/方法)。
+不要给你的代码库引入额外的混乱。修饰符 `public` 也不是"有效/惯用的 javascript"
 
-# 2. Don’t use `private` accessor within Component class
+# 2. 不要在 Component class 上使用 `private` 修饰符
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*d2ukQqnm742BWHlB.png)
+![](./0_d2ukQqnm742BWHlB.png)
 
 **_Good:_**
 
-![](https://miro.medium.com/0*14yiB1kycpSNm7oh.png)
+![](./0_14yiB1kycpSNm7oh.png)
 
 **_Better:_**
 
-![](https://miro.medium.com/0*YKn44QMpDM5KGrFR.png)
+![](./0_YKn44QMpDM5KGrFR.png)
 
 **_Why:_**
 
-`private` accessor won't make your properties/methods on class private during runtime. It's just TypeScript "emulation during compile time". Don't get fooled and make things "private" by using well known patterns like:
+修饰符 `private` 不会在运行时将属性/方法设置为私有，这只是 TypeScript 在编译时的模拟。
+也不要天真地，使用众所周知的把戏来设置"私有"，比如：
 
 * name starting with underscore 👉 `_someProp`
 * or if you really wanna make those properties private use `Symbol` for defining those. ( [real runtime private properties are coming to ECMAscript](https://github.com/bloomberg/TypeScript/pull/6) )
@@ -118,10 +120,10 @@ In reality, you should almost never need to work directly with React Component i
 # 3. Don’t use `protected` accessor within Component class
 
 **_Don’t:_**
-![](https://miro.medium.com/0*fSJeOPAJb2V6SaW6.png)
+![](./0_fSJeOPAJb2V6SaW6.png)
 
 **_Do:_**
-![](https://miro.medium.com/0*mWYzXZigm-BfswMF.png)
+![](./0_mWYzXZigm-BfswMF.png)
 
 **_Why:_**
 
@@ -135,19 +137,19 @@ Using `protected` is an immediate "RED ALERT" 🚨🚨🚨 in terms of functiona
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*Jd1KyHV4EsG1CXhe.png)
+![](./0_Jd1KyHV4EsG1CXhe.png)
 
 **_Good:_**
 
 If you need to support runtime enums use following pattern:
 
-![](https://miro.medium.com/0*S4WZZK9aNBu3AE0-.png)
+![](./0_S4WZZK9aNBu3AE0-.png)
 
 **_Better:_**
 
 If you don’t need to support runtime enums, all you need to use are type literals:
 
-![](https://miro.medium.com/0*G8utY7zNyhDjBwAj.png)
+![](./0_G8utY7zNyhDjBwAj.png)
 
 **_Why?:_**
 
@@ -155,11 +157,11 @@ To use `enum` within TypeScript might be very tempting, especially if you're com
 
 *   Enums compiled output generates unnecessary boilerplate (which can be mitigated with `const enum` though. Also string enums are better in this one)
 
-![](https://miro.medium.com/0*yJDtcFMPbfBaYOgN.png)
+![](./0_yJDtcFMPbfBaYOgN.png)
 
 *   Non string Enums don’t narrow to proper number type literal, which can introduce unhandled bug within your app
 
-![](https://miro.medium.com/0*H0k0oMAedTpvytMt.png)
+![](./0_H0k0oMAedTpvytMt.png)
 
 *   It’s not standard/idiomatic JavaScript (although `enum` is reserved word in ECMA standard)
 *   Cannot be used with [babel for transpiling](https://babeljs.io/docs/en/babel-plugin-transform-typescript) 👀
@@ -183,17 +185,17 @@ If you need to support runtime enums for various reasons, you can leverage small
 
 [](https://github.com/Hotell/rex-tils?source=post_page-----5799488d6680----------------------)
 
-![](https://miro.medium.com/0*UI7jYPmEmo_YmN9R.png)
+![](./0_UI7jYPmEmo_YmN9R.png)
 
 # 5. Don’t use `constructor` for class Components
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*KgbbvDlCjW2887V0.png)
+![](./0_KgbbvDlCjW2887V0.png)
 
 **_Do:_**
 
-![](https://miro.medium.com/0*OKQ-h5NIfbiH8OQD.png)
+![](./0_OKQ-h5NIfbiH8OQD.png)
 
 **_Why:_**
 
@@ -216,21 +218,21 @@ Of course you may ask, what if I need to introduce some logic to initialize comp
 Answer to your question is rather straightforward.
 
 Just define a pure function outside the component with your custom logic (as a “side effect” you’ll get easily tested code as well 👌).
-![](https://miro.medium.com/0*4BzHqtQANnDa6SxB.png)
+![](./0_4BzHqtQANnDa6SxB.png)
 
 # 6. Don’t use decorators for class Components
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*I-Rmpzl6PD3pqQH-.png)
+![](./0_I-Rmpzl6PD3pqQH-.png)
 
 **_Good:_**
 
-![](https://miro.medium.com/0*46OfZaXO2t8fNiii.png)
+![](./0_46OfZaXO2t8fNiii.png)
 
 **_Better:_**
 
-![](https://miro.medium.com/0*M9e7qCHHYTIKeP3i.png)
+![](./0_M9e7qCHHYTIKeP3i.png)
 
 **_Why:_**
 
@@ -247,11 +249,11 @@ Decorators are parasitic 🐛 👀 🤢
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*7AeVyIGXsM2Hjrci.png)
+![](./0_7AeVyIGXsM2Hjrci.png)
 
 **_Do:_**
 
-![](https://miro.medium.com/0*alQomDRlTvFT1sy_.png)
+![](./0_alQomDRlTvFT1sy_.png)
 
 **_Why:_**
 
@@ -263,11 +265,11 @@ Decorators are parasitic 🐛 👀 🤢
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*317jNiOyOrw4zVQ8.png)
+![](./0_317jNiOyOrw4zVQ8.png)
 
 **_Do:_**
 
-![](https://miro.medium.com/0*_bcKItGUN6Yrjmo0.png)
+![](./0__bcKItGUN6Yrjmo0.png)
 
 Why:
 
@@ -302,17 +304,17 @@ We can use following types for annotating `children`:
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*bxW6EaOWIzAuqgh4.png)
+![](./0_bxW6EaOWIzAuqgh4.png)
 
 **_Good:_**
 
-![](https://miro.medium.com/0*nIERm4oLNn4DBHyy.png)
+![](./0_nIERm4oLNn4DBHyy.png)
 
 **_Better:_**
 
 By making freezing initialState/defaultProps, type system will infer correct `readonly` types (when someone would accidentally set some value, he would get compile error). Also marking both `static defaultProps` and `state` as `readonly` within the class, is a nice touch, to prevent us from making any runtime errors when incorrectly setting state via `this.state = {...}`
 
-![](https://miro.medium.com/0*Pi__bGpv1hAjdzso.png)
+![](./0_Pi__bGpv1hAjdzso.png)
 
 **_Why:_**
 
@@ -327,23 +329,23 @@ Use `as` operator to cast your properties within the constant.
 
 _Example:_
 
-![](https://miro.medium.com/0*dX-rKTwl41WBs7yT.png)
+![](./0_dX-rKTwl41WBs7yT.png)
 
 # How to infer state type if I wanna use derived state from props?
 
 Easy 😎… We will use pattern introduced in tip no. 5 with power of conditional types _(in particular, standard_ `_lib.d.ts_``_ReturnType_`_mapped type, which infers return type of any function ✌️)_
 
-![](https://miro.medium.com/0*zIpRuqxseB9Iwwvz.png)
+![](./0_zIpRuqxseB9Iwwvz.png)
 
 # 10. When using function factories instead of classes for models/entities, leverage declaration merging by exporting both type and implementation
 
 **_Don’t:_**
 
-![](https://miro.medium.com/0*u7HjFTOlUrmr01Lo.png)
+![](./0_u7HjFTOlUrmr01Lo.png)
 
 **_Do:_**
 
-![](https://miro.medium.com/0*hh_u9ydg91Tpmsdi.png)
+![](./0_hh_u9ydg91Tpmsdi.png)
 
 **_Why:_**
 
@@ -355,11 +357,11 @@ Easy 😎… We will use pattern introduced in tip no. 5 with power of condition
 
 **Don’t:**
 
-![](https://miro.medium.com/0*HTmX9LNZqFaZI5qb.png)
+![](./0_HTmX9LNZqFaZI5qb.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*VbsDVTw5LVIAzjHj.png)
+![](./0_VbsDVTw5LVIAzjHj.png)
 
 To support recommended behaviour you need to set following config within your _tsconfig.json_ file:
 
@@ -378,7 +380,7 @@ To support recommended behaviour you need to set following config within your _t
 
 **Consider:**
 
-![](https://miro.medium.com/0*scHceQwh9cqJLVkl.png)
+![](./0_scHceQwh9cqJLVkl.png)
 
 > **NOTE:**
 > 
@@ -412,11 +414,11 @@ If you wanna use the “consider section pattern” in whole project without def
 
 **Don’t:**
 
-![](https://miro.medium.com/0*f_Au9Ca8yzXVdg-T.png)
+![](./0_f_Au9Ca8yzXVdg-T.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*oHwCQux9LEVURS6O.png)
+![](./0_oHwCQux9LEVURS6O.png)
 
 **Why:**
 
@@ -425,17 +427,17 @@ If you wanna use the “consider section pattern” in whole project without def
 
 If you really need some kind of namespacing within your module, just use idiomatic JavaScript, like in following example:
 
-![](https://miro.medium.com/0*8YwUI-Na5lWmEYj5.png)
+![](./0_8YwUI-Na5lWmEYj5.png)
 
 # 13. Don’t use ES2015 module imports when importing types without any run-time code
 
 **Don’t:**
 
-![](https://miro.medium.com/0*m7FgLLs6We5ltLNO.png)
+![](./0_m7FgLLs6We5ltLNO.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*35EZ6CGFo95RIobt.png)
+![](./0_35EZ6CGFo95RIobt.png)
 
 > **NOTE:**
 > 
@@ -475,11 +477,11 @@ If you really need some kind of namespacing within your module, just use idiomat
 
 **Don’t:**
 
-![](https://miro.medium.com/0*pHSvsCY3-_4UeXpi.png)
+![](./0_pHSvsCY3-_4UeXpi.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*FDI6P3sWKYxyXz6P.png)
+![](./0_FDI6P3sWKYxyXz6P.png)
 
 **Why:**
 
@@ -491,17 +493,17 @@ If you really need some kind of namespacing within your module, just use idiomat
 > 
 > If you’re leveraging declaration merging as part of your API, define type after implementation:
 
-![](https://miro.medium.com/0*QFqSLhVmBmxf9hOu.png)
+![](./0_QFqSLhVmBmxf9hOu.png)
 
 # 16. Don’t use method declaration within interface/type alias
 
 **Don’t:**
 
-![](https://miro.medium.com/0*Jv_hPkemEysaOjn3.png)
+![](./0_Jv_hPkemEysaOjn3.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*uHxLB63QjcPeVQI6.png)
+![](./0_uHxLB63QjcPeVQI6.png)
 
 **Why:**
 
@@ -513,11 +515,11 @@ If you really need some kind of namespacing within your module, just use idiomat
 
 **Don’t:**
 
-![](https://miro.medium.com/0*D8P6ME4BpmvxlEkI.png)
+![](./0_D8P6ME4BpmvxlEkI.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*ftKU11Ebb_aoJGUI.png)
+![](./0_ftKU11Ebb_aoJGUI.png)
 
 **Why:**
 
@@ -528,11 +530,11 @@ If you really need some kind of namespacing within your module, just use idiomat
 
 **Don’t:**
 
-![](https://miro.medium.com/0*5tRg3YegJVEfnBMH.png)
+![](./0_5tRg3YegJVEfnBMH.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*NxaXaT9M472vPZpF.png)
+![](./0_NxaXaT9M472vPZpF.png)
 
 **Why:**
 
@@ -544,11 +546,11 @@ If you really need some kind of namespacing within your module, just use idiomat
 
 **Don’t:**
 
-![](https://miro.medium.com/0*fi4eRHgSDpb2C8RK.png)
+![](./0_fi4eRHgSDpb2C8RK.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*T89MMvY43QBcaqqY.png)
+![](./0_T89MMvY43QBcaqqY.png)
 
 **Why:**
 
@@ -567,11 +569,11 @@ interface State extends typeof initialState {}</span>
 
 **Don’t:**
 
-![](https://miro.medium.com/0*ocDGBGka8_fnuKGc.png)
+![](./0_ocDGBGka8_fnuKGc.png)
 
 **Do:**
 
-![](https://miro.medium.com/0*2fjN9AaU4NJH4wLj.png)
+![](./0_2fjN9AaU4NJH4wLj.png)
 
 **Why:**
 
