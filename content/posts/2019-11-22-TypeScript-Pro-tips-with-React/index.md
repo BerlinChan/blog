@@ -4,7 +4,7 @@ date: 2019-11-22T10:46:37.121Z
 template: post
 featured_top: false
 featured_media: ./featured_media.png
-draft: false
+draft: true
 slug: /2019/11/TypeScript-Pro-tips-with-React
 categories: 
     - 前端
