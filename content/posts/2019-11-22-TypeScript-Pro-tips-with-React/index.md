@@ -12,12 +12,12 @@ tags:
     - 翻译
     - 提示
     - TypeScript
-description: 
+description: 译文。
 ---
 
 <!-- endExcerpt -->
 
-这是一篇翻译。  
+这是一篇翻译。[未翻译完](#翻译中的事)。  
 原文：[10++ TypeScript Pro tips/patterns with (or without) React](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)  
 作者：[Martin Hochel](https://medium.com/@martin_hotell)  
 翻译：陈柏林
@@ -314,9 +314,9 @@ _Example:_
 
 ![](./0_dX-rKTwl41WBs7yT.png)
 
-# How to infer state type if I wanna use derived state from props?
+### 从 props 派生 state 时，如何使用自动推断类型？
 
-Easy 😎… We will use pattern introduced in tip no. 5 with power of conditional types _(in particular, standard_ `_lib.d.ts_``_ReturnType_`_mapped type, which infers return type of any function ✌️)_
+很容易 😎…… 用技巧 5 中的按条件分支生成类型(标准库 `lib.d.ts` `ReturnType` 映射的类型，推断任何函数的返回类型 ✌)。
 
 ![](./0_zIpRuqxseB9Iwwvz.png)
 
@@ -332,11 +332,11 @@ Easy 😎… We will use pattern introduced in tip no. 5 with power of condition
 
 ### Why?
 
-*   Less Boilerplate
-*   One token for both type and implementation / Smaller API
-*   Both type and implementation are in sync and most importantly, implementation is the source of truth
+* 更少模板代码
+* One token for both type and implementation / Smaller API
+* 类型与实现保持同步，更重要的是，实现就是真实来源
 
-## 11. Use default import to import `React`
+## 11. 使用 default import 导入 `React`
 
 ### Don’t
 
@@ -346,7 +346,7 @@ Easy 😎… We will use pattern introduced in tip no. 5 with power of condition
 
 ![](./0_VbsDVTw5LVIAzjHj.png)
 
-To support recommended behaviour you need to set following config within your _tsconfig.json_ file:
+为支持推荐的行为，需在 `tsconfig.json` 中添加如下设置：
 
 ```json
 {  
@@ -365,10 +365,8 @@ To support recommended behaviour you need to set following config within your _t
 
 ![](./0_scHceQwh9cqJLVkl.png)
 
-> ### NOTE
-> 
-> - With this style, syntax sugar for using Fragments 👉 `<></>` won't work. You need to import them explicitly and use via `<Fragment>...</Fragment>`.
-> 
+> **备注**  
+> - 这种写法风格里，`Fragments` 的语法糖 👉 `<></>` 无效。需要显式导入并这样使用 `<Fragment>...</Fragment>`。
 > - I like this approach more as it’s explicit and I can add `key` whenever I want without introducing "too much" changes while doing refactoring.
 
 If you wanna use the “consider section pattern” in whole project without defining jsx pragma per file, you need to set following config within your tsconfig.json file:
@@ -430,8 +428,8 @@ If you really need some kind of namespacing within your module, just use idiomat
 
 ### Why?
 
-*   Your code is explicit for both human and machine. If you don’t use any run-time code, annotate your code via only via `import('path')`
-*   [check this great post from David East](https://davidea.st/articles/typescript-2-9-import-types) to learn more
+* Your code is explicit for both human and machine. If you don’t use any run-time code, annotate your code via only via `import('path')`
+* [check this great post from David East](https://davidea.st/articles/typescript-2-9-import-types) to learn more
 
 ## 14. Don’t use camelCase/PascalCase for file names
 
@@ -644,7 +642,7 @@ const GenericComponent: FC<Props<T extends object>> = (props) => {
 
 * * *
 
-# Summary
+## Summary
 
 That’s it for today! Hope you gonna apply those patterns sooner than later within your code base or even better use them as part of your project style guide. If you do please lemme know how it goes ! 😎
 
@@ -663,10 +661,14 @@ As always, don’t hesitate to ping me if you have any questions here or on Twit
 
 ---
 
-原文最初写于 2018-10-29，自那以后 Typescript 和 React 都有很多更新，文中有些内容已不再适用，例如：
+## 翻译中的事
+原文最初写于 2018-10-29，自那以后 Typescript 和 React 都有很多更新，文中有些内容已不再适用。而且我觉得本文中有些建议，包括 Typescript 本身，过于追求了严格和限制，反而丧失 Javascript 的灵活优势(双刃剑吧)。没有深入使用过，所以还抱着怀疑的态度在学习中。
+
+技术文章有很多术语，翻译后反而不容易理解，原有单词放在英语语境中反而容易理解，有时候一整句保留所有术语后，翻译出来的中文就是几个"的"、"在"、"上"、"使用"，都怀疑还有没有必要翻译。
+
+有部分类容我反复结合上下文理解，但仍不会通畅翻译，就保留了原文。
 
 ## 相关：
 
-- 最近入门 TypeScript 却一直在想，是否必要用它
 - [TypeScript 入门教程](https://ts.xcatliu.com/)
 - [Typescript 中的 interface 和 type 到底有什么区别](https://juejin.im/post/5c2723635188252d1d34dc7d)
