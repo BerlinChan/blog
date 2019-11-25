@@ -66,4 +66,5 @@ CertUtil -hashfile <path to file> MD5
 ---
 
 ## 相关文章
+- [Linux sha256sum command](https://www.computerhope.com/unix/sha256sum.htm)
 - [扫盲文件完整性校验——关于散列值和数字签名](https://program-think.blogspot.com/2013/02/file-integrity-check.html)
