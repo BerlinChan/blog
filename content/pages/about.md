@@ -40,7 +40,7 @@ Smarter Everyday、Corridor Digital、NiceChord、Gameker、超粒方、Kai W…
 ## 联系
 
 - Mail: berlinchancom@gmail.com
-- GPG fingerprint: [84AE34C5646D7803004BFA98C35C4C97DAB7079F](https://keys.openpgp.org/search?q=berlinchancom%40gmail.com)
+- PGP fingerprint: [84AE34C5646D7803004BFA98C35C4C97DAB7079F](https://keys.openpgp.org/search?q=berlinchancom%40gmail.com)
 - Social 请见页面底部
 
 ## 开发资源

@@ -37,5 +37,6 @@ https://www.gnupg.org/software/swlist.html
 
 4. WARNING: signing subkey ... is not cross-certified
 
-https://gnupg.org/faq/subkey-cross-certify.html
+警告：签名的子密钥 ... 未经交叉验证
 
+https://gnupg.org/faq/subkey-cross-certify.html
