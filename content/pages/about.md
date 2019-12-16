@@ -35,7 +35,7 @@ Smarter Everyday、Corridor Digital、NiceChord、Gameker、超粒方、Kai W…
 - 2015.9 腾讯大楚网编辑
 - 2014.12 三峡晚报摄影记者
 - 2012.3 搜房网编辑
-- 2010.7 武汉体育学院 表演专业 本科毕业
+- 2010.7 武汉体育学院 表演专业
 
 ## 联系
 
