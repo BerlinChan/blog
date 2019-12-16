@@ -5,7 +5,7 @@ template: post
 featured_top: false
 featured_media: ./featured_media.png
 draft: true
-slug: /2019/12/common-problems-in-using-gnuGg
+slug: /2019/12/common-problems-in-using-gnuPg
 categories: 
     - 安全
 tags:
