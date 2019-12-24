@@ -95,6 +95,10 @@ export const SET_DASHBOARD_LIST_EXPANDED = gql`
 
 老老实实写。用 [GraphQL Code Generator](https://graphql-code-generator.com/) 辅助生成，能缓解部分手工写模板代码的工作。
 
+#### 2019-12-24 更新
+
+GraphQL Code Generator 的使用案例参考：[Build a GraphQL + React App with TypeScript](https://levelup.gitconnected.com/build-a-graphql-react-app-with-typescript-9661f908b26)
+
 ## 3. 如何身份验证？(2019-12-04 更新)
 
 这是我接触 GraphQL 的第一个问题。GraphQL 给我最初的感觉是将数据库读写直接暴露给应用程序端了，当然这是个**错误(或浅显)的认识**。身份验证怎么办？这样岂不是可以瞎搞？🤪
