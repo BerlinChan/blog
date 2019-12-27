@@ -170,7 +170,7 @@ ORM(Object Relational Mapping)意为对象关系映射，将面向对象语言�
 
 ## 5. Field 为 List 时的两个感叹号？(2019-12-27 更新)
 
-例如定义 Field `list` 为如下：
+例如定义 Field `tags` 为如下：
 
 ```graphql
 type TwoExclamation {
