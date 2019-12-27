@@ -167,3 +167,20 @@ ORM(Object Relational Mapping)意为对象关系映射，将面向对象语言�
 之前看 Java 同事用 [Hibernate](https://hibernate.org/orm/) 操作数据库好爽的，原来 JS 里面也可以了。
 
 这东西给我（作为前端开发）感觉是，**轻松拉近应用程序端与数据库的距离**，在开发中有了更多想象与尝试空间。
+
+## 5. Field 为 List 时的两个感叹号？(2019-12-27 更新)
+
+例如定义 Field `list` 为如下：
+
+```graphql
+type TwoExclamation {
+    tags: [String!]!
+}
+```
+
+`[String!]!` 有两个感叹号。
+
+- **第一个** `!`(String 后面) 表示 `tags` 中没有元素可为 `null`，比如这个是无效的：["Software", null, "Prisma"]。可以期望请求结果中 `tags` 的每个元素都为 `String`。
+- **第二个** `!`(] 后面) 表示该 List 不可为 `null`，尽管可为空列表。所以对于 `tags`，`null` 是无效值而 `[]` 有效。可以期望请求结果中 `tags` 一定是个数组。
+
+这样明确定义，让我们在处理数据时省掉类型判断与容错，而不必担心`类型错误`的出现。
