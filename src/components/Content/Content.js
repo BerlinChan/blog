@@ -5,6 +5,9 @@ const useStyles = makeStyles(theme => ({
   content: {
     fontSize: '1.125rem',
     lineHeight: 1.6,
+    '& p': {
+      textIndent: '2em',
+    },
     '& a': {
       color: theme.palette.primary.main,
       textDecoration: 'none',

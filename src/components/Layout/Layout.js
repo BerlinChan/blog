@@ -1,8 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import { createMuiTheme } from '@material-ui/core/styles'
-import { ThemeProvider } from '@material-ui/styles'
+import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import { brown, deepOrange } from '@material-ui/core/colors'
 import Header from './Header'
@@ -14,7 +13,7 @@ import { useColorMode } from '../../hooks'
 
 const Layout = ({ title, children, featuredContent, noSidebar }) => {
   const [colorMode, setColorMode] = useColorMode()
-  const theme = React.useMemo(
+  const theme = responsiveFontSizes(React.useMemo(
     () =>
       createMuiTheme({
         palette: {
@@ -24,7 +23,7 @@ const Layout = ({ title, children, featuredContent, noSidebar }) => {
         },
       }),
     [colorMode],
-  )
+  ))
 
   return <ThemeProvider theme={theme}>
     <CssBaseline/>
