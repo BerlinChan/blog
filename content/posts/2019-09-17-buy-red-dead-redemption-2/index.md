@@ -28,3 +28,6 @@ RockStar 的游戏都未玩过，这次冲着 [IGN 评分 9.8](https://www.ign.c
 看就知道玩游戏的《提前遇见下世代的游戏》
 
 `video: https://www.youtube.com/watch?v=_wCgLGDjggk`
+
+## 更新：主线通关感受
+[荒野大镖客2——我们的时代已过去是悲凉的事实](/2019/11/red-dead-redemption2-our-era-has-gone)
