@@ -6,6 +6,7 @@
 [https://www.berlinchan.com/](https://www.berlinchan.com/)
 
 ## TODO
+- [ ] Add TOC on post page's sidebar
 - [ ] lighthouse scroll enhance
 - [ ] youku.com 视频替换
 
