@@ -4,7 +4,7 @@ date: 2019-12-30T10:46:37.121Z
 template: post
 featured_top: false
 featured_media: ./askent-featured-cover.jpg
-draft: false
+draft: true
 slug: /2019/12/create-presentation-tool-from-scratch
 categories: 
     - 前端
