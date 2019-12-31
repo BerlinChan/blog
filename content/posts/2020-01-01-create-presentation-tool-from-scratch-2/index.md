@@ -1,6 +1,6 @@
 ---
 title: 从零开始，创建一个多端互动演示工具（二）
-date: 2019-12-30T10:46:37.121Z
+date: 2020-01-01T10:46:37.121Z
 template: post
 featured_top: false
 featured_media: ./askent-featured-cover.jpg
