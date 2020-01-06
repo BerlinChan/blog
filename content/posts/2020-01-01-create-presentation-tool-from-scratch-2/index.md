@@ -19,10 +19,12 @@ description: 互动演示工具让演示者与其观众双向沟通。结合我�
 ## 开发工具
 - TypeScript
 - Node.js
+- WebSocket
 - Prisma2
 - Apollo
 - React
 - Material UI
+- i18n
 
 ## 设计
 
