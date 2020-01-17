@@ -168,6 +168,12 @@ ORM(Object Relational Mapping)意为对象关系映射，将面向对象语言�
 
 这东西给我（作为前端开发）感觉是，**轻松拉近应用程序端与数据库的距离**，在开发中有了更多想象与尝试空间。
 
+### 在 API 中添加业务逻辑，而不是直接暴露 CRUD(2020-01-17 更新)
+
+可以直接借助 Prisma Photon 暴露操作数据库的 [CRUD](https://github.com/prisma/prisma2/blob/master/docs/photon/api.md#crud) 方法，但更多的情况是 API 中有特定业务逻辑，而不是直接将数据写到数据库，这才是 API 这一环节的真正作用所在。
+
+不同的环节数据模型也有所差异，这正是 **PO、DTO、VO** 所定义的。
+
 ## 5. Field 为 List 时的两个感叹号？(2019-12-27 更新)
 
 例如定义 Field `tags` 为如下：
@@ -184,3 +190,7 @@ type TwoExclamation {
 - **第二个** `!`(] 后面) 表示该 List 不可为 `null`，尽管可为空列表。所以对于 `tags`，`null` 是无效值而 `[]` 有效。可以期望请求结果中 `tags` 一定是个数组。
 
 这样明确定义，让我们在处理数据时省掉类型判断与容错，而不必担心`类型错误`的出现。
+
+## 6. GraphQL 的性能如何？(2020-01-17 更新)
+
+参考项目 [node-graphql-benchmarks](https://github.com/benawad/node-graphql-benchmarks)
