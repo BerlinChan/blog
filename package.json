@@ -19,8 +19,8 @@
     "material-ui"
   ],
   "dependencies": {
-    "@material-ui/core": "^4.9.0",
-    "@material-ui/icons": "^4.5.1",
+    "@material-ui/core": "^4.9.1",
+    "@material-ui/icons": "^4.9.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.19.6",
     "gatsby-background-image": "^0.9.13",
