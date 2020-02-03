@@ -6,11 +6,11 @@ featured_top: false
 featured_media: ./featured_media.jpg
 draft: false
 slug: /2019/11/question-about-using-graphql
-categories: 
-    - 前端
+categories:
+  - 前端
 tags:
-    - GraphGL
-    - API
+  - GraphGL
+  - API
 description: 在试用 GraphQL 读写数据库和包装现有 REST 后，觉得确实是新鲜实用的 API 方案。对于这种 Schema First Development 的开发实践方法也很赞同。但留下了一些疑问(和解决方法)，于是记载一下。
 ---
 
@@ -27,7 +27,7 @@ description: 在试用 GraphQL 读写数据库和包装现有 REST 后，觉得�
 下面正文开始。
 
 ---
- 
+
 ## 学习 GraphQL
 
 老有人拿 RESTful 和 GraphQL 比较，一直很好奇，最近我就看了看。跟官方教程走了一遍后，我更喜欢 GraphQL 的另一种实现 Apollo，相比 GraphQL 更容易理解，写起来更简洁。而且与之配合的客户端 Apollo Client 要比 Relay 也更简单(虽然客户端是非必选的)，于是就选择 Apollo 全家桶了。
@@ -57,7 +57,7 @@ description: 在试用 GraphQL 读写数据库和包装现有 REST 后，觉得�
 
 那目前我选择**不用 Apollo Client 管理本地状态**，若需要，还是交给 Redux 或者 MobX 这类专门工具，这样客户端几乎不用写 `typeDefs` 和 `resolvers` 从而避开模块化问题了。
 
-值得反思的是，在事情复杂到需要模块化之前，你可能不需要什么状态管理，如 Redux 作者之一  Dan Abramov 说：
+值得反思的是，在事情复杂到需要模块化之前，你可能不需要什么状态管理，如 Redux 作者之一 Dan Abramov 说：
 
 > [I would like to amend this: don't use Redux until you have problems with vanilla React.](https://redux.js.org/faq/general#when-should-i-use-redux)
 
@@ -67,10 +67,10 @@ description: 在试用 GraphQL 读写数据库和包装现有 REST 后，觉得�
 
 ```javascript
 export const GET_SOME_LIST = gql`
-    query GetSomeList{
-        someList
-    }
-`
+  query GetSomeList {
+    someList
+  }
+`;
 ```
 
 `GET_SOME_LIST`、`GetSomeList`、`someList` 这三个名称分别是:
@@ -86,7 +86,7 @@ export const SET_DASHBOARD_LIST_EXPANDED = gql`
     mutation SetDashBoardListExpanded($ids:[ID]!){
         setDashBoardListExpanded(ids:$ids):[ID]!
     }
-`
+`;
 ```
 
 啊，看不清了 😵
@@ -116,42 +116,42 @@ GraphQL Code Generator 的使用案例参考：[Build a GraphQL + React App with
 Apollo Server 结合 npm 包 `pg-promise`、`monk` 这类工具很方便将 Postgre、MongoDB 数据库作为数据源接入，代码如下：
 
 ```javascript
-const { ApolloServer } = require('apollo-server')
-const { gql } = require('apollo-server')
-const pgp = require('pg-promise')()
-const connectionString = 'postgres://username:password@host:port/database'
-const db = pgp(connectionString)
+const { ApolloServer } = require("apollo-server");
+const { gql } = require("apollo-server");
+const pgp = require("pg-promise")();
+const connectionString = "postgres://username:password@host:port/database";
+const db = pgp(connectionString);
 
 const typeDefs = gql`
-    type Query {
-        user(id:ID!):User
-    }
+  type Query {
+    user(id: ID!): User
+  }
 
-    type User{
-        id:ID!
-        name:String
-        email:String
-    }
-`
+  type User {
+    id: ID!
+    name: String
+    email: String
+  }
+`;
 
 const resolvers = {
   Query: {
     user: async (parent, { id }, context, info) => {
-      const query = `SELECT id,name,email FROM table_user WHERE id = '${id}'`
+      const query = `SELECT id,name,email FROM table_user WHERE id = '${id}'`;
 
-      return await db.one(query)
-    },
-  },
-}
+      return await db.one(query);
+    }
+  }
+};
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers,
-})
+  resolvers
+});
 
 server.listen().then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`)
-})
+  console.log(`🚀 Server ready at ${url}`);
+});
 ```
 
 但显然有个不够自动化的问题——**需要根据数据库表结构定义手工写 schema**，如上例中的 `User`，对于不同的查询参数也需要手动写 resolver。我想，数据库中定义好的表结构应该能根据一定的规则转换为 schema，于是朋友推荐看了 [Prisma](https://www.prisma.io/)。
@@ -180,7 +180,7 @@ ORM(Object Relational Mapping)意为对象关系映射，将面向对象语言�
 
 ```graphql
 type TwoExclamation {
-    tags: [String!]!
+  tags: [String!]!
 }
 ```
 
@@ -194,3 +194,9 @@ type TwoExclamation {
 ## 6. GraphQL 的性能如何？(2020-01-17 更新)
 
 参考项目 [node-graphql-benchmarks](https://github.com/benawad/node-graphql-benchmarks)
+
+## 7. A GraphQL+Apollo+Prisma+React+MaterialUI tech-stack project
+
+我正在用这一系列技术栈开发 Askent 项目——一个现场交互演示工具，它的介绍请见：[从零开始，创建一个多端互动演示工具](/2019/12/create-presentation-tool-from-scratch/)。
+
+Github Repository: [https://github.com/BerlinChan/askent](https://github.com/BerlinChan/askent)
