@@ -9,8 +9,8 @@ slug: /2019/12/create-presentation-tool-from-scratch
 categories: 
     - 前端
 tags:
+    - Askent
     - 个人项目
-    - 教程
 description: 互动演示工具让演示者与其观众双向沟通。结合我常用的开发工具，从零开始创建一个以“简洁、易用、安全”为标准的多端互动演示工具。
 ---
 
@@ -43,3 +43,5 @@ description: 互动演示工具让演示者与其观众双向沟通。结合我�
 [https://github.com/BerlinChan/askent](https://github.com/BerlinChan/askent)
 
 Working in progress, continually updated...
+
+[2月5日开发进度更新](/2020/02/project-askent-admin-audience-client)

@@ -9,8 +9,8 @@ slug: /2020/01/create-presentation-tool-from-scratch-2
 categories: 
     - 前端
 tags:
+    - Askent
     - 个人项目
-    - 教程
 description: 互动演示工具让演示者与其观众双向沟通。结合我常用的开发工具，从零开始创建一个以“简洁、易用、安全”为标准的多端互动演示工具。
 ---
 
