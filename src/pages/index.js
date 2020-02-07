@@ -127,7 +127,7 @@ export const query = graphql`
                             }
                         }
                     }
-                    excerpt
+                    excerpt(pruneLength: 70)
                 }
             }
         }

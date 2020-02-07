@@ -57,7 +57,7 @@ const PostList = ({ edges }) => {
                 {node.frontmatter.title}
               </Typography>
               <Typography variant="subtitle1" paragraph>
-                {node.frontmatter.description}
+                {node.frontmatter.description||node.excerpt}
               </Typography>
               <Typography variant="subtitle1" color="primary">
                 阅读
