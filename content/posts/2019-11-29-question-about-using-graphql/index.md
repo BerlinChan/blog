@@ -20,7 +20,7 @@ description: 在试用 GraphQL 读写数据库和包装现有 REST 后，觉得�
 
 上一篇准备翻译 [10++ TypeScript Pro tips/patterns with (or without) React](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680) 的，但翻译到一半后决定弃坑，强烈的挫败感，原因如下：
 
-原文最初写于 2018-10-29，自那以后 Typescript 和 React 都有很多更新(JS 的世界真实日新月异)，文中有些内容已不再适用。而且我觉得本文中有些建议，包括 Typescript 本身，过于追求了严格和限制，反而丧失 Javascript 的灵活优势(双刃剑，莫抬杠)。没有深入使用过 TS，所以还抱着怀疑的态度在学习中。
+原文最初写于 2018-10-29，自那以后 Typescript 和 React 都有很多更新(JS 的世界日新月异)，文中有些内容已不再适用。而且我觉得本文中有些建议，包括 Typescript 本身，过于追求了严格和限制，反而丧失 Javascript 的灵活优势(双刃剑，莫抬杠)。没有深入使用过 TS，所以还抱着怀疑的态度在学习中。
 
 技术文章有很多术语，翻译后反而不容易理解，原有单词放在英语语境中反而容易理解，有时候一整句保留所有术语后，翻译出来的中文就是几个"的"、"在"、"上"、"使用"，都怀疑还有没有必要翻译。
 
