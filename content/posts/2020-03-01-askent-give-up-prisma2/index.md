@@ -12,7 +12,7 @@ tags:
   - Askent
   - ORM
   - 个人项目
-description: 随着功能开发深入细节，仍在 Preview 开发状态，功能未完善的 ORM 工具 Prisma2 问题凸显。我对数据库、ORM 没经验，这些问题在之前的选型中确实未考虑到，准备用成熟的 Sequelize 替换之。
+description: 完成大屏演示端，随着功能开发深入，仍在 Preview 重度开发的 ORM 工具 Prisma2 问题凸显。我对数据库、ORM 没经验，这些问题在之前的选型中确实未考虑到，准备用成熟的 Sequelize 替换之。
 ---
 
 <!-- endExcerpt -->
