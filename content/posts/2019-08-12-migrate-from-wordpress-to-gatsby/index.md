@@ -17,7 +17,7 @@ description: "利用 Wordpress 插件 WP2Static 将内容静态化成 HTML，然
 
 <!-- endExcerpt -->
 
-之前[为什么弃用WordPress并搬离阿里云](https://www.berlinchan.com/2019/08/why-leave-wordpress-and-aliyun/)中记的三点问题，
+之前[为什么弃用WordPress并搬离阿里云](/2019/08/why-leave-wordpress-and-aliyun/)中记的三点问题，
 导致我决定迁移网站，弃用 Wordpress 的替代方案比较过 Jekyll/Hexo/Gatsby 三种框架。
 
 - Jekyll，虽然是 GitHub Pages 官方支持的静态内容生成框架，但是我对 Ruby 语言不熟悉，所以首先排除。
@@ -80,7 +80,7 @@ Wordpress 的旧文章很容易接入 GraphQL 并为生成器提供数据，使�
 ## GitHub 上好用的工具
 Gatsby 是一个快速发展中的新框架，将代码托管在 GitHub 上时，用市场中的 [Dependabot Preview](https://github.com/marketplace/dependabot-preview)
 或者 [Renovate](https://github.com/marketplace/renovate)，能很好帮我们更新 npm 依赖。
-[使用 ImgBot 自动为 Github Pages 项目优化图片](https://www.berlinchan.com/2019/08/imgBot-optimize-image-asset-for-github-pages-project)，
+[使用 ImgBot 自动为 Github Pages 项目优化图片](/2019/08/imgBot-optimize-image-asset-for-github-pages-project)，
 还有持续集成工具 [Travis CI](https://github.com/marketplace/travis-ci)。
 
 这些市场中的工具设计的简单易用，自动化的工作为我节省了大量时间。
