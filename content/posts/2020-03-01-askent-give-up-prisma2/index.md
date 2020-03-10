@@ -55,7 +55,7 @@ model Question {
 | --- | --- |
 | id  | id  |
 
-不知道 AB 哪个是 userId，哪个是 questionId，虽然比较一下能确定，但这样也太不明确了，也就不好统计 `Question。votedUsers` 的 `Count`。
+不知道 AB 哪个是 userId，哪个是 questionId，虽然比较一下能确定，但这样也太不明确了，也就不好统计 `Question.votedUsers` 的 `Count`。
 
 2. 查询排序不支持多条件。详情见 [issue: Order by multiple fields](https://github.com/prisma/prisma/issues/62)。
 3. 不支持 Aggreation 查询。详情见 [issue: Aggregations](https://github.com/prisma/prisma-client-js/issues/5)。
@@ -65,4 +65,4 @@ model Question {
 
 同时数据库准备用 MySQL 替换 SQLite，之前用 SQLite 是起步之初为简化开发环境。
 
-我很喜欢 `prisma.schema` 定义 model 的方式，屏蔽麻烦的数据库的建表工作，还有自动生成 [PrismaClient](https://github.com/prisma/prisma-client-js)，极大简化访问数据库操作。看到正在更新到 [Nexus 新官网](https://www.nexusjs.org/)，将要集成数据库访问，或许就是 `nexus-prisma` 将默认集成到其中，成为从数据库到 GraphQL 的一站式开发框架。很看好 Prisma2 的发展，期待看到它逐渐完善后的样子。
+我很喜欢 `prisma.schema` 定义 model 的方式，屏蔽麻烦的数据库的建表工作，还有自动生成 [PrismaClient](https://github.com/prisma/prisma-client-js)，极大简化访问数据库操作。看到正在更新的 [Nexus 新官网](https://www.nexusjs.org/)，将要集成数据库访问，或许就是 `nexus-prisma` 将默认集成到其中，成为从数据库到 GraphQL 的一站式开发框架。很看好 Prisma2 的发展，期待看到它逐渐完善后的样子。
