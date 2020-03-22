@@ -13,7 +13,7 @@ tags:
   - realtime
   - GraphQL
   - Askent
-description: 在做消息列表同步时，针对各种同步场景进行补漏，代码越来越多且复杂难以维护，我意识到在这里使用 PubSub 模式可能是个错误。展开搜索，发现一些有用的工具
+description: 在做一个消息列表同步时，使用 PubSub 模式针对各种场景补漏，代码越来越多且复杂难以维护。展开搜索，发现一些有用的工具
 ---
 
 <!-- endExcerpt -->
