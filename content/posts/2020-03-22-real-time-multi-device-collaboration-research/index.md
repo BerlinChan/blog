@@ -22,11 +22,11 @@ description: 在做一个消息列表同步时，使用 PubSub 模式针对各�
 
 > 管理端置顶一条用户端当前分页中不存在的 _Question_，用户端相当于新增一条，而用户端当前分页中有该条的，则需更新
 
-针对各种场景进行补漏，代码越来越多且复杂难以维护，我意识到在这里使用 [PubSub 模式](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)可能是个错误。
+针对各种场景进行补漏，代码越来越多且复杂难以维护（回顾迭代过程类似 [deepstream 介绍 realtime search](https://deepstream.io/blog/20191104-realtime-search/) 的这篇文章），我意识到在这里使用 [PubSub 模式](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)可能是个错误。
 
 于是展开一番搜索，发现如下开发工具：
 
-- [Deepstream](https://deepstream.io/)
+- [deepstream](https://deepstream.io/)
 - [Emitter](https://emitter.io)
 - [Kuzzle](https://kuzzle.io)
 - [PubNub](https://www.pubnub.com)

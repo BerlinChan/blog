@@ -31,7 +31,7 @@ description: 完成大屏演示端，随着功能开发深入，仍在 Preview �
 
 开发中的 Prisma2 关键功能严重缺失，导致产品功能无法实现，如今到了要“弃坑”的时候。缺失关键功能如下：
 
-1. 关联表不支持 field 名自定义
+1. 关联表不支持 column 名自定义
 
 我的 `prismal.schema` 中有如下 model 定义：
 
@@ -53,7 +53,7 @@ model Question {
 
 | A   | B   |
 | --- | --- |
-| id  | id  |
+| aId  | bId  |
 
 不知道 AB 哪个是 userId，哪个是 questionId，虽然比较一下能确定，但这样也太不明确了，也就不好统计 `Question.votedUsers` 的 `Count`。
 
