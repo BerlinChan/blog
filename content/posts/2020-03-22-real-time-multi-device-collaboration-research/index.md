@@ -27,6 +27,7 @@ description: 在做一个消息列表同步时，使用 PubSub 模式针对各�
 于是展开一番搜索，发现如下开发工具：
 
 - [deepstream](https://deepstream.io/)
+- [Feathers](https://feathersjs.com/)
 - [Emitter](https://emitter.io)
 - [Kuzzle](https://kuzzle.io)
 - [PubNub](https://www.pubnub.com)
