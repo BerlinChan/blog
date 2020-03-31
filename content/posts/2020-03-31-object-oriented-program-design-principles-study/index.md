@@ -17,7 +17,7 @@ tags:
 
 <!-- endExcerpt -->
 
-[深入理解 DIP、IoC、DI 以及 IoC 容器](https://www.cnblogs.com/liuhaorain/p/3747470.html)
-[深入理解 abstract class 和 interface](https://www.ibm.com/developerworks/cn/java/l-javainterface-abstract/)
+- [深入理解 DIP、IoC、DI 以及 IoC 容器](https://www.cnblogs.com/liuhaorain/p/3747470.html)
+- [深入理解 abstract class 和 interface](https://www.ibm.com/developerworks/cn/java/l-javainterface-abstract/)
 
 当然 OOP 设计原则不止这两个，还有诸如 Open-close principle, Do Not Repeat Yourself(DRY) 等。Keep searching!
