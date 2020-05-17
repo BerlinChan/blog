@@ -1,11 +1,11 @@
 ---
-title: 人民该替不良媒体的形成负多少责任？
+title: 烂读者还是烂媒体？
 date: 2020-05-17T10:46:37.121Z
 template: post
 featured_top: false
 featured_media: ./IMG_20160108_124213.jpg
 draft: false
-slug: /2020/05/how-much-responsibility-should-audience-take-for-bad-media-quality
+slug: /2020/05/bad-audience-or-bad-media
 categories: 
     - 观点
 tags:
