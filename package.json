@@ -55,7 +55,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-    "react-share": "^4.1.0"
+    "react-share": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.2",
