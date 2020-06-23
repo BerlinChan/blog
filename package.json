@@ -68,7 +68,7 @@
     "babel-preset-gatsby": "0.4.11",
     "browserslist": "4.12.0",
     "concurrently": "5.2.0",
-    "gh-pages": "3.0.0",
+    "gh-pages": "3.1.0",
     "postcss-pxtorem": "5.1.1",
     "rimraf": "3.0.2"
   }
