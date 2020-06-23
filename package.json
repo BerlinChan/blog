@@ -62,7 +62,7 @@
     "@babel/plugin-proposal-class-properties": "7.10.1",
     "@babel/plugin-proposal-optional-chaining": "7.10.3",
     "@babel/preset-env": "7.10.3",
-    "autoprefixer": "9.8.0",
+    "autoprefixer": "9.8.2",
     "@babel/preset-react": "7.10.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-preset-gatsby": "0.4.11",
