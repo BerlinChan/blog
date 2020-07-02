@@ -9,7 +9,7 @@ slug: /2019/11/question-about-using-graphql
 categories:
   - 前端
 tags:
-  - GraphGL
+  - GraphQL
   - API
 description: 在试用 GraphQL 读写数据库和包装现有 REST 后，觉得确实是新鲜实用的 API 方案。对于这种 Schema First Development 的开发实践方法也很赞同。但留下了一些疑问(和解决方法)，于是记载一下。
 ---
