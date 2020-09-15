@@ -1,0 +1,121 @@
+[
+  {
+    "description": "",
+    "slug": "front-end",
+    "path": "/category/front-end/",
+    "name": "前端",
+    "count": 5
+  },
+  {
+    "description": "摄影、摄像器材五花八门，自制、DIY闪现智慧光芒。",
+    "slug": "equipment",
+    "path": "/category/equipment/",
+    "name": "折腾装备",
+    "count": 8
+  },
+  {
+    "description": "生活大事小事、家人、朋友、心路的记载。",
+    "slug": "thinking",
+    "path": "/category/thinking/",
+    "name": "折腾随想",
+    "count": 24
+  },
+  {
+    "description": "理论路上不断学习，实践路上不断试验。",
+    "slug": "learn",
+    "path": "/category/learn/",
+    "name": "摄影学习与折腾",
+    "count": 21
+  },
+  {
+    "description": "",
+    "slug": "database",
+    "path": "/category/database/",
+    "name": "数据库",
+    "count": 1
+  },
+  {
+    "description": "",
+    "slug": "diary",
+    "path": "/category/diary/",
+    "name": "日记",
+    "count": 10
+  },
+  {
+    "description": "",
+    "slug": "critic",
+    "path": "/category/critic/",
+    "name": "时事评论",
+    "count": 1
+  },
+  {
+    "description": "",
+    "slug": "uncategorized",
+    "path": "/category/uncategorized/",
+    "name": "未分类",
+    "count": 0
+  },
+  {
+    "description": "精选个人作品和它们背后的故事。",
+    "slug": "story",
+    "path": "/category/story/",
+    "name": "照片故事",
+    "count": 7
+  },
+  {
+    "description": "比静态图像更丰富的表达形式，讲故事的最高手段。记载独立电影、纪录片、剧本、摄像、录音、后期、视效、电影音乐、Maya、经验、实验短片相关。",
+    "slug": "film",
+    "path": "/category/film/",
+    "name": "独立电影与短片",
+    "count": 24
+  },
+  {
+    "description": "",
+    "slug": "entertainment",
+    "path": "/category/entertainment/",
+    "name": "生活娱乐活动",
+    "count": 26
+  },
+  {
+    "description": "旅行、生活、工作中的所见所闻，稀奇、有趣、大小琐事的无所不记。",
+    "slug": "knowledge",
+    "path": "/category/knowledge/",
+    "name": "见闻杂事",
+    "count": 19
+  },
+  {
+    "description": "计算机是数字时代的核心，软硬件是折腾背后的保障，网络是知识的储备库。记载关于影像的计算机软硬件和网络资源。",
+    "slug": "pcandinternet",
+    "path": "/category/pcandinternet/",
+    "name": "计算机与网络",
+    "count": 18
+  },
+  {
+    "description": "",
+    "slug": "books",
+    "path": "/category/books/",
+    "name": "读书",
+    "count": 4
+  },
+  {
+    "description": "",
+    "slug": "software",
+    "path": "/category/software/",
+    "name": "软件",
+    "count": 1
+  },
+  {
+    "description": "",
+    "slug": "bts",
+    "path": "/category/bts/",
+    "name": "镜头背后",
+    "count": 3
+  },
+  {
+    "description": "",
+    "slug": "music",
+    "path": "/category/music/",
+    "name": "音乐",
+    "count": 5
+  }
+]
