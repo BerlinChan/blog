@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
-import moment from "moment";
+import { format } from "date-fns";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import Box from "@material-ui/core/Box";
@@ -11,36 +11,36 @@ import {
   FacebookShareButton,
   LinkedinShareButton,
   TelegramShareButton,
-  TwitterShareButton
+  TwitterShareButton,
 } from "react-share";
 import SvgIcons from "../../assets/SvgIcons";
 import ButtonBase from "@material-ui/core/ButtonBase";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   date: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   category: {
-    marginRight: theme.spacing(1)
+    marginRight: theme.spacing(1),
   },
   tagList: {
     display: "flex",
     flexWrap: "wrap",
-    padding: theme.spacing(0.5)
+    padding: theme.spacing(0.5),
   },
   chip: {
-    margin: theme.spacing(0.5)
+    margin: theme.spacing(0.5),
   },
   shareButton: {
     marginLeft: theme.spacing(1),
     padding: theme.spacing(1),
-    borderRadius: "50%"
-  }
+    borderRadius: "50%",
+  },
 }));
 
 const Post = ({ isArchivedBlogPost, post, children }) => {
   const classes = useStyles();
-  const { url: siteUrl, archivedBlogUrl, UTC } = useSiteMetadata();
+  const { url: siteUrl, archivedBlogUrl } = useSiteMetadata();
   const { categorySlugs, tagSlugs } = post.fields;
   const { categories, tags, title, date, slug, description } = post.frontmatter;
 
@@ -55,10 +55,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
         color="textSecondary"
         className={classes.date}
       >
-        {moment
-          .utc(date)
-          .utcOffset(UTC)
-          .format("YYYY-MM-DD HH:mm")}
+        {format(new Date(date), "yyyy-MM-dd HH:mm")}
       </Typography>
       {categorySlugs.map((categorySlug, index) => (
         <Typography
