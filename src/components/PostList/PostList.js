@@ -52,7 +52,7 @@ const PostList = ({ edges }) => {
                   className={classes.date}
                   display={"inline"}
                 >
-                  {format(new Date(node.frontmatter.date), "yyyy-MM-dd")} - moment:
+                  {format(new Date(node.frontmatter.date), "yyyy-MM-dd")}
                 </Typography>
                 {node.frontmatter.categories.map((category, index) => (
                   <Typography
