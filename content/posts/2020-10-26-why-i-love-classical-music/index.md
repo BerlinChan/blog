@@ -54,7 +54,7 @@ description: 为什么想学古典音乐，回顾我的经历找到一些动机�
 
 ## 四、音乐无需懂
 
-在 [WeThinker 《聆听音乐》读书会](https://mp.weixin.qq.com/s?src=11&timestamp=1603938565&ver=2673&signature=7G2p26EnAb-iVzZVvB3pleQm8a0NTbndQT83sPZRQCzPy0VqCC*xSWHPgkhy12eQUtqEkaytcQN18LqNXSbN8CfVPL**edE4JW9f29lqwlOJpYif2f9KVGagdUqTFm0g)上，主持人张娜老师在预热分享上讲的话，让我产生的一点联想，下面是群消息摘录：
+在 [WeThinker 《聆听音乐》读书会](https://mp.weixin.qq.com/s?src=11&timestamp=1603938565&ver=2673&signature=7G2p26EnAb-iVzZVvB3pleQm8a0NTbndQT83sPZRQCzPy0VqCC*xSWHPgkhy12eQUtqEkaytcQN18LqNXSbN8CfVPL**edE4JW9f29lqwlOJpYif2f9KVGagdUqTFm0g)上，主读人张娜老师在预热分享上讲的话，让我产生的一点联想，下面是群消息摘录：
 
 ### 我：
 
