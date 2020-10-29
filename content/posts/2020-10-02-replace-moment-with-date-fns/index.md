@@ -10,7 +10,7 @@ categories:
     - 前端
 tags:
     - Moment.js
-    - 内卷
+    - 内卷化
 description: 流行 JS 时间日期库 Moment.js 宣布进入维护模式，他已完成属于他时代的使命。本文翻译官方声明的开头部分，推荐替代品，并向他表示我的感谢。
 ---
 
