@@ -11,6 +11,7 @@ categories:
 tags:
     - 媒体
     - 新闻
+    - social media
 description: 劣质资讯内容就是抓住了人趋向选择简单容易的心理，引诱精神脆弱、空虚的读者，令他们人性中的堕落与贪婪暴露无遗。
 ---
 
@@ -37,3 +38,11 @@ description: 劣质资讯内容就是抓住了人趋向选择简单容易的心�
 **劣质资讯内容就是抓住了人的这种心理，引诱精神脆弱、空虚的读者，令他们人性中的堕落与贪婪暴露无遗。**
 
 写这篇文章一边与朋友简单交谈后，他删掉了手机中的抖音，这是一个好的开始，但在他提高自律、找到充实自己的方法前，还有很多家劣质媒体平台在觊觎着他的注意力，准备乘虚而入。
+
+## 2020-10-30 更新
+
+推荐看 Netflix 的纪录片[《监视资本主义：智能陷阱》（The social dilemma）](https://www.imdb.com/title/tt11464826/)。
+
+![Checkmate humanity - The social dilemma](./checkmate-humanity-the-social-dilemma.jpg)
+
+纪录片《监视资本主义：智能陷阱》的截图，PPT 中写着 “挫败人性”。
