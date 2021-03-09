@@ -1,6 +1,6 @@
 ---
-title: 译文：借助 GraphQL 承载100万活动订阅(实时查询)
-date: 2021-03-01T10:46:37.121Z
+title: 译文：借助 GraphQL 承载 100万并发活动订阅（实时查询）
+date: 2021-03-09T10:46:37.121Z
 template: post
 featured_top: false
 featured_media: ./featured_media.png
@@ -10,6 +10,7 @@ categories:
     - 前端
 tags:
     - GraphQL
+    - Postgres
     - Hasura
     - Askent
     - websocket
@@ -20,23 +21,29 @@ description:
 
 <!-- endExcerpt -->
 
-在项目 [Askent](/2020/03/real-time-multi-device-collaboration-devtools) 开发中，需要同步管理后台、客户端、演示大屏，三端上的消息显示，继之前[使用 Apollo Subscription 基于 Pub/Sub 开发遇到问题](/2020/03/real-time-multi-device-collaboration-devtools)，然后参照 [DeepStrem 的 Realtime Search 思路](https://deepstream.io/blog/20191104-realtime-search/)实现一版后，仍有一个严重的性能问题无法解决——每个客户端权限、筛选、排序各不同，因此一个提问的 Pub 事件需要为每个客户端执行一次（实际是两次，见下文流程图）查询，再计算 diff 后向对应客户端推送增量数据。
+## 问题
+
+在项目 [Askent](/2020/03/real-time-multi-device-collaboration-devtools) 开发中，需要同步管理后台、客户端、演示大屏，三端上的消息显示，继之前[使用 Apollo Subscription 基于 Pub/Sub 开发遇到问题](/2020/03/real-time-multi-device-collaboration-devtools)，然后参照 [DeepStrem 的 Realtime Search 思路](https://deepstream.io/blog/20191104-realtime-search/)实现一版后，仍有一个严重的性能问题无法解决每个客户端会话权限、查询变量各不同，因此一个提问的 Pub 事件需要为每个客户端执行一次（实际是两次，见下文流程图）查询，再计算 diff 后向对应客户端推送增量数据。
 
 ## 原文:
 
 [Scaling to 1 million active GraphQL subscriptions (live queries)](https://github.com/hasura/graphql-engine/blob/master/architecture/live-queries.md)
 
-Hasura 是基于 Postgres数据库的 GraphQL 引擎，提供可控制权限的立即可用的 GraphQL API。到 [hasura.io](https://hasura.io/) 和 [github.com/hasura/graphql-engine](https://github.com/hasura/graphql-engine) 了解更多。
+如下是翻译正文
 
-Hasura 可为客户端提供实时查询（基于 GraphQL 订阅）。例如，一个订餐应用使用实时查询显示某特定用户的订单实时状态。
+---
 
-本文档描述 Hasura 的架构，阐述它是如何支撑百万个实时查询的。
+Hasura 是基于 Postgres数据库的 GraphQL 引擎，提供可控制权限的开箱即用的 GraphQL API。到 [hasura.io](https://hasura.io/) 和 [github.com/hasura/graphql-engine](https://github.com/hasura/graphql-engine) 了解更多。
+
+Hasura 可为客户端提供实时查询（基于 GraphQL 订阅）。例如，一个外卖应用使用实时查询显示某特定用户的订单实时状态。
+
+本文档描述 Hasura 的架构，阐述它是如何支撑百万个并发实时查询的。
 
 ##### 目录
 - 结论
 - GraphQL 与订阅
 - 实现 GraphQL 实时查询
-- GraphQL 查询的再获取
+- 再获取 GraphQL 查询结果
 - Hasura 的方法
 - 测试
 - 本方法的优势
@@ -45,7 +52,7 @@ Hasura 可为客户端提供实时查询（基于 GraphQL 订阅）。例如，�
 
 **设置：**每个客户端（Web 或 移动应用）用认证令牌登录并订阅一个实时查询结果。数据存放于 Postgres 数据库。每秒钟更新 Postgres 数据库中的一百万行数据，并确保推送一个新查询结果到客户端。Hasura 是 GraphQL API 的提供者（包含授权）。
 
-**测试：**Hasura 可以并发处理多少个客户端的实施订阅？Hasura 是否可以纵向或横向性能伸缩？
+**测试：**Hasura 可以并发处理多少个客户端的实施订阅？Hasura 是否可以纵向或横向性能伸缩扩展？
 
 <img src="https://storage.googleapis.com/graphql-engine-cdn.hasura.io/img/subscriptions-images/main-image-fs8.png"  width="500px" />
 
@@ -143,3 +150,47 @@ GraphQL 查询  GraphQL 抽象语法树  包含授权规则的内部抽象语法
 假设有客户端运行一个订阅，以获取最新的订单状态和配送员位置。我们可以在查询中创建一个关系，其中包含作为不同行的所有查询变量（订单id）和会话变量（用户id）。然后join查询以获取具有此关系的实际数据，以确保在单个响应中获取多个客户端的最新数据。这将允许同时为多个用户获取最新的结果，即使它们提供的参数和会话变量是完全动态的，并且仅在查询时可用。
 
 ![graphql-to-sql-multiplexed](https://storage.googleapis.com/graphql-engine-cdn.hasura.io/img/subscriptions-images/multiplexed-fs8.png)
+
+#### 何时执行再获取（refetch）？
+
+我们尝试了多种方法，获取底层数据库更新事件时来再获取查询。
+
+1. 监听、通知：需要用触发器检测所有表，在消费端（web服务器）重启或网络中断的情况下，被消费事件可能会被丢弃。
+2. WAL（译注：Write-ahead logging，预写式日志）：Reliable stream，但是 LR 插槽使得横向性能扩展非常困难，并且在托管数据库供应商上通常不可用。繁重的写入负载会污染 WAL，并且需要在应用层进行节流。
+
+在这些尝试后，我们当前回退到基于时间间隔的轮询来再获取查询。因此，我们不是在有适当事件时再获取，而是根据一个时间间隔再获取查询。这样做有两个主要原因：
+1. 当实时查询中使用的声明性权限和条件很简单时，在某种程度上可以将数据库事件映射到特定客户端的动态查询上（比如 `order_id` = 1 and `user_id` = cookie.`session_id`），但是对于复杂的查询会变得棘手（比如查询 `'status' ILIKE 'failed_%'`）。声明性权限有时也可以跨表使用。我们在研究这种方法以及基本的增量更新方面投入了大量的精力，并且在生产中有[几个小项目](https://www.postgresql.eu/events/pgconfeu2018/sessions/session/2195/slides/144/Implementing%20Incremental%20View%20Maintenance%20on%20PostgreSQL%20.pdf)采用了类似的方法。
+2. 对于任何应用程序，除非写吞吐量很小，否则无论如何，您最终都会在一个时间间隔内对事件进行节流/防抖（throttling/debouncing）。
+
+这种方法的缺点是写负载很小时存在延迟。再获取可以立即完成，而不是在几毫秒后。通过适当地调整再获取间隔和批量大小，可以容易地缓解这一问题。到目前为止，我们首先关注的是消除开销最大的瓶颈，即再获取查询。也就是说，我们将在接下来的几个月里继续关注改进，特别是使用事件依赖（在适用的情况下），来潜在地减少实时查询中每隔一段时间再获取的的数量。
+
+请注意，我们在内部有其他基于事件的方法的驱动程序，如果你有一个用例，目前的方法不能满足你的要求，我们愿意与你合作与提供协助！
+
+## 测试
+
+测试基于 Websocket 的实时查询的性能扩展性与可靠性是一项挑战。我们花了几周来构建测试套件和基础自动化工具。设置如下所示：
+
+1. 一个 nodejs脚本，它运行大量的 GraphQL实时查询客户端，并在内存中记录事件，这些事件随后被存储到数据库中。[\[github\]](https://github.com/hasura/subscription-benchmark)
+2. 一个在数据库上创建写负载的脚本，从而导致所有运行实时查询的客户端之间发生更改（每秒更新一百万行）。
+3. 一旦测试套件完成运行，验证脚本就会在数据库中运行，在该数据库中提取日志/事件以验证没有错误并且所有事件已被接收到。
+4. 仅在以下情况下才认为测试有效：
+   - 收到的有效载荷错误数为 0
+   - 从创建事件到客户端接收的平均延迟小于 1000毫秒
+
+<img alt="testing-architecture" src="https://storage.googleapis.com/graphql-engine-cdn.hasura.io/img/subscriptions-images/test-architecture.png" width="700px" />
+
+## 本方法的优势
+
+Hasura 使实时查询变得触手可及。查询的概念很容易扩展到实时查询，而不需要使用 GraphQL 的开发人员做任何额外工作。这对我们来说是最重要的。
+
+1. 功能特性丰富的实时查询，全面支持 Postgres operators/aggregations/views/functions 等
+2. 性能可估
+3. 性能可纵向与横向伸缩扩展
+4. 可运行于所有云、数据库供应商平台
+
+## 未来展望
+
+减少 Postgres 负载，通过：
+
+1. 映射事件到实时查询
+2. 结果集的增量计算
