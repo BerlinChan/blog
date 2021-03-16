@@ -52,7 +52,7 @@ export default () => {
       </Link>
       <Menu
         {...bindMenu(popupState)}
-        className={classes.menuDropdown}
+        classes={{ paper: classes.menuDropdown }}
         getContentAnchorEl={null}
         anchorOrigin={{
           vertical: "bottom",
