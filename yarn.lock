@@ -2316,6 +2316,13 @@
     csstype "^2.5.2"
     prop-types "^15.7.2"
 
+"@material-ui/types@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@material-ui/types/-/types-4.1.1.tgz#b65e002d926089970a3271213a3ad7a21b17f02b"
+  integrity sha512-AN+GZNXytX9yxGi0JOfxHrRTbhFybjUJ05rnsBVjcB+16e466Z0Xe5IxawuOayVZgTBNDxmPKo5j4V6OnMtaSQ==
+  dependencies:
+    "@types/react" "*"
+
 "@material-ui/types@^5.1.0":
   version "5.1.0"
   resolved "https://registry.npm.taobao.org/@material-ui/types/download/@material-ui/types-5.1.0.tgz#efa1c7a0b0eaa4c7c87ac0390445f0f88b0d88f2"
@@ -10260,6 +10267,16 @@ markdown-table@^2.0.0:
   integrity sha1-GUqQztJtMf51PYuUNEMCFMARhls=
   dependencies:
     repeat-string "^1.0.0"
+
+material-ui-popup-state@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/material-ui-popup-state/-/material-ui-popup-state-1.7.2.tgz#abcb3f94f5e66e7a4ea5d4c1381ce72e10728c7d"
+  integrity sha512-x5AeeEQKJXWTVPys1XhPdBkKp6hYG95GgtQyPnheRiYcDmKr9cq1hQm7bvdD1l2PG51FfgUwiGJH+dHhLaOJUA==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    "@material-ui/types" "^4.1.1"
+    classnames "^2.2.6"
+    prop-types "^15.7.2"
 
 md5-file@^5.0.0:
   version "5.0.0"
