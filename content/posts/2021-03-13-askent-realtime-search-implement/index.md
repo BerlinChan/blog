@@ -1,11 +1,11 @@
 ---
-title: Askent 实时消息搜索的实现
+title: Askent 实时消息搜索的问题及 Hasura 替代
 date: 2021-03-13T10:46:37.121Z
 template: post
 featured_top: false
 featured_media: ./realtime-search-workflow.jpg
 draft: false
-slug: /2021/03/askent-realtime-search-implement
+slug: /2021/03/askent-realtime-search-implement-and-hasura
 categories: 
     - 前端
 tags:
@@ -15,7 +15,7 @@ tags:
     - Askent
     - websocket
     - realtime
-description: 
+description: 当前参照 DeepStream 的 Realtime Search 思路实现的提问列表实时查询，存在严重耗费性能的问题，偶然发现 Hasura 正是我需要的工具。
 ---
 
 <!-- endExcerpt -->
