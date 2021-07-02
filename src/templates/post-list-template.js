@@ -29,38 +29,41 @@ const PostListTemplate = ({ data, pageContext }) => {
   )
 }
 
-export const query = graphql`
-    query PostListTemplate($postsLimit: Int!, $postsOffset: Int!) {
-        allMarkdownRemark(
-            limit: $postsLimit,
-            skip: $postsOffset,
-            filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } },
-            sort: { order: DESC, fields: [frontmatter___date] }
-        ){
-            edges {
-                node {
-                    fields {
-                        slug
-                        categorySlugs
-                    }
-                    frontmatter {
-                        title
-                        date
-                        categories
-                        description
-                        featured_media {
-                            childImageSharp {
-                                fixed(width: 200, height: 200, cropFocus: CENTER) {
-                                    src
-                                }
-                            }
-                        }
-                    }
-                    excerpt(pruneLength: 70)
-                }
-            }
+export const query = graphql`query PostListTemplate($postsLimit: Int!, $postsOffset: Int!) {
+  allMarkdownRemark(
+    limit: $postsLimit
+    skip: $postsOffset
+    filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
+    sort: {order: DESC, fields: [frontmatter___date]}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          categorySlugs
         }
+        frontmatter {
+          title
+          date
+          categories
+          description
+          featured_media {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                height: 200
+                placeholder: BLURRED
+                transformOptions: {cropFocus: CENTER}
+                layout: FIXED
+              )
+            }
+          }
+        }
+        excerpt(pruneLength: 70)
+      }
     }
+  }
+}
 `
 
 export default PostListTemplate

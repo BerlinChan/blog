@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
 import CardMedia from "@material-ui/core/CardMedia";
 import { makeStyles } from "@material-ui/core/styles";
+import { getSrc } from "gatsby-plugin-image"
 
 const useStyles = makeStyles((theme) => ({
   cardActionArea: {
@@ -80,9 +81,9 @@ const PostList = ({ edges }) => {
               <Hidden xsDown>
                 <CardMedia
                   className={classes.cardMedia}
-                  image={
-                    node.frontmatter.featured_media.childImageSharp.fixed.src
-                  }
+                  image={getSrc(
+                    node.frontmatter.featured_media.childImageSharp.gatsbyImageData
+                    )}
                   title={node.frontmatter.title}
                 />
               </Hidden>

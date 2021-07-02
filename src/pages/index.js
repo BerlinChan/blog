@@ -54,8 +54,7 @@ const HomePage = ({ data }) => {
         <Paper className={classes.mainFeaturedPost}>
           <BackgroundImage
             fluid={
-              featuredPostEdge.node.frontmatter.featured_media.childImageSharp
-                .fluid
+              featuredPostEdge.node.frontmatter.featured_media.childImageSharp.gatsbyImageData
             }
           >
             <div className={classes.overlay} />
@@ -104,69 +103,64 @@ const HomePage = ({ data }) => {
 
 export default HomePage;
 
-export const query = graphql`
-  query IndexQuery {
-    featuredPosts: allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          draft: { ne: true }
-          template: { eq: "post" }
-          featured_top: { ne: false }
-        }
-      }
-      limit: 1
-      sort: { order: DESC, fields: frontmatter___date }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-            description
-            featured_media {
-              childImageSharp {
-                fluid(maxWidth: 1200) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
+export const query = graphql`query IndexQuery {
+  featuredPosts: allMarkdownRemark(
+    filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_top: {ne: false}}}
+    limit: 1
+    sort: {order: DESC, fields: frontmatter___date}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          slug
+          description
+          featured_media {
+            childImageSharp {
+              gatsbyImageData(placeholder: TRACED_SVG, layout: FULL_WIDTH)
             }
           }
         }
       }
-    }
-    recentPosts: allMarkdownRemark(
-      limit: 6
-      filter: { frontmatter: { draft: { ne: true }, template: { eq: "post" } } }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            categorySlugs
-          }
-          frontmatter {
-            description
-            slug
-            title
-            categories
-            date
-            featured_media {
-              childImageSharp {
-                fixed(width: 200, height: 200, cropFocus: CENTER) {
-                  src
-                }
-              }
-            }
-          }
-          excerpt(pruneLength: 70)
-        }
-      }
-    }
-    allPostCount: allMarkdownRemark(
-      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-    ) {
-      totalCount
     }
   }
+  recentPosts: allMarkdownRemark(
+    limit: 6
+    filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}}}
+    sort: {fields: frontmatter___date, order: DESC}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          categorySlugs
+        }
+        frontmatter {
+          description
+          slug
+          title
+          categories
+          date
+          featured_media {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                height: 200
+                placeholder: BLURRED
+                transformOptions: {cropFocus: CENTER}
+                layout: FIXED
+              )
+            }
+          }
+        }
+        excerpt(pruneLength: 70)
+      }
+    }
+  }
+  allPostCount: allMarkdownRemark(
+    filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
+  ) {
+    totalCount
+  }
+}
 `;

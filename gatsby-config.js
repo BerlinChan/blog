@@ -134,8 +134,9 @@ module.exports = {
       },
     },
     'gatsby-transformer-json',
-    'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-material-ui',
     {
       resolve: 'gatsby-plugin-google-gtag',

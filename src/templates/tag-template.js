@@ -35,43 +35,40 @@ const TagTemplate = ({ data, pageContext }) => {
   )
 }
 
-export const query = graphql`
-    query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!) {
-        site {
-            siteMetadata {
-                title
-                subtitle
-            }
-        }
-        allMarkdownRemark(
-            limit: $postsLimit,
-            skip: $postsOffset,
-            filter: { frontmatter: { tags: { in: [$tag] }, template: { eq: "post" }, draft: { ne: true } } },
-            sort: { order: DESC, fields: [frontmatter___date] }
-        ){
-            edges {
-                node {
-                    fields {
-                        slug
-                        categorySlugs
-                    }
-                    frontmatter {
-                        title
-                        date
-                        categories
-                        description
-                        featured_media {
-                            childImageSharp {
-                                fixed {
-                                    src
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+export const query = graphql`query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!) {
+  site {
+    siteMetadata {
+      title
+      subtitle
     }
+  }
+  allMarkdownRemark(
+    limit: $postsLimit
+    skip: $postsOffset
+    filter: {frontmatter: {tags: {in: [$tag]}, template: {eq: "post"}, draft: {ne: true}}}
+    sort: {order: DESC, fields: [frontmatter___date]}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+          categorySlugs
+        }
+        frontmatter {
+          title
+          date
+          categories
+          description
+          featured_media {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, layout: FIXED)
+            }
+          }
+        }
+      }
+    }
+  }
+}
 `
 
 export default TagTemplate

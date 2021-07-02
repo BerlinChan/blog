@@ -22,9 +22,9 @@ const PostTemplate = ({ data }) => {
   }
   if (featured_media) {
     openGraph.image = {
-      url: `${siteUrl}${featured_media.childImageSharp.fixed.src}`,
-      width: featured_media.childImageSharp.fixed.width,
-      height: featured_media.childImageSharp.fixed.height,
+      url: `${siteUrl}${featured_media.childImageSharp.gatsbyImageData.src}`,
+      width: featured_media.childImageSharp.gatsbyImageData.width,
+      height: featured_media.childImageSharp.gatsbyImageData.height,
     }
   }
 
@@ -46,51 +46,46 @@ const PostTemplate = ({ data }) => {
   )
 }
 
-export const query = graphql`
-    query PostBySlug($slug: String!, $prevPostSlug: String, $nextPostSlug: String) {
-        markdownRemark(fields: { slug: { eq: $slug } }) {
-            id
-            html
-            fields {
-                slug
-                categorySlugs
-                tagSlugs
-            }
-            frontmatter {
-                title
-                date
-                categories
-                description
-                tags
-                slug
-                featured_media {
-                    childImageSharp {
-                        fixed(width: 800, height: 400) {
-                            height
-                            width
-                            src
-                        }
-                    }
-                }
-            }
-        }
-        prevPost: markdownRemark(fields: {slug: {eq: $prevPostSlug} }) {
-            fields {
-                slug
-            }
-            frontmatter {
-                title
-            }
-        }
-        nextPost: markdownRemark(fields: {slug: {eq: $nextPostSlug} }) {
-            fields {
-                slug
-            }
-            frontmatter {
-                title
-            }
-        }
+export const query = graphql`query PostBySlug($slug: String!, $prevPostSlug: String, $nextPostSlug: String) {
+  markdownRemark(fields: {slug: {eq: $slug}}) {
+    id
+    html
+    fields {
+      slug
+      categorySlugs
+      tagSlugs
     }
+    frontmatter {
+      title
+      date
+      categories
+      description
+      tags
+      slug
+      featured_media {
+        childImageSharp {
+          gatsbyImageData(width: 800, height: 400, placeholder: BLURRED, layout: FIXED)
+        }
+      }
+    }
+  }
+  prevPost: markdownRemark(fields: {slug: {eq: $prevPostSlug}}) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+    }
+  }
+  nextPost: markdownRemark(fields: {slug: {eq: $nextPostSlug}}) {
+    fields {
+      slug
+    }
+    frontmatter {
+      title
+    }
+  }
+}
 `
 
 export default PostTemplate
