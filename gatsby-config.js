@@ -109,7 +109,6 @@ module.exports = {
               quality: 60,
               maxWidth: 760,
               withWebp: true,
-              ignoreFileExtensions: [],
             },
           },
           {
