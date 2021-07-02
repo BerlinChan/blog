@@ -57,7 +57,7 @@ const HideOnScroll = (props) => {
   )
 }
 
-export default (props) => {
+const Header = (props) => {
   const [openDraw, setOpenDraw] = React.useState(false)
   const theme = useTheme()
   const classes = useStyles()
@@ -104,3 +104,5 @@ export default (props) => {
     </React.Fragment>
   )
 }
+
+export default Header

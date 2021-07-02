@@ -15,7 +15,7 @@ tags:
 description: 
 ---
 
-I have a personal project named [Askent](https://github.com/BerlinChan/askent), which is actually a clone of sli.do.
+I have a personal project named [Askent](https://github.com/BerlinChan/askent), which is actually a clone of [Sli.do](https://www.sli.do/).
 
 <!-- endExcerpt -->
 
@@ -33,7 +33,7 @@ Through all of these trials, I've been learned a lot, and maybe I can name mysel
 
 Nowadays, the Askent was [deployed at Github Pages](https://askent.berlinchan.com/), and server-side runs on my home's router so it will not costs me an arm and a leg, and regards of security of the home network, the server has not published to the Internet which I'm still working on it.
 
-## Related topic on project Askent
+## Related topics on project Askent
 
 - [Askent 实时消息搜索的问题及 Hasura 替代](/2021/03/askent-realtime-search-implement-and-hasura)
 - [几款多端实时协作、同步的开发工具](/2020/03/real-time-multi-device-collaboration-devtools)

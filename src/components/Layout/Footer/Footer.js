@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default () => {
+const Footer = () => {
   const [anchorQrEl, setAnchorQrEl] = React.useState(null);
   const classes = useStyles();
   const {
@@ -188,3 +188,5 @@ export default () => {
     </footer>
   );
 };
+
+export default Footer

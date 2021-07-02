@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default ({ openDraw, setOpenDraw }) => {
+const MenuDraw = ({ openDraw, setOpenDraw }) => {
   const classes = useStyles()
   const { menu } = useSiteMetadata()
   const categories = useCategoriesList()
@@ -64,3 +64,5 @@ export default ({ openDraw, setOpenDraw }) => {
     </List>
   </SwipeableDrawer>
 }
+
+export default MenuDraw

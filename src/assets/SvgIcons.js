@@ -1,7 +1,7 @@
 import React from 'react'
 import SvgIcon from '@material-ui/core/SvgIcon'
 
-export default ({ name, ...props }) => {
+const Icons = ({ name, ...props }) => {
   switch (name) {
     case 'twitter':
       return <SvgIcon viewBox="0 0 416 448" {...props}>
@@ -45,3 +45,5 @@ export default ({ name, ...props }) => {
       return
   }
 }
+
+export default Icons

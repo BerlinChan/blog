@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default () => {
+const MenuComponent = () => {
   const classes = useStyles();
   const popupState = usePopupState({
     variant: "popover",
@@ -125,3 +125,5 @@ export default () => {
     </React.Fragment>
   );
 };
+
+export default MenuComponent
