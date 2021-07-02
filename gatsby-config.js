@@ -152,30 +152,20 @@ module.exports = {
       options: {
         query: `
           {
-            site {
-              siteMetadata {
-                siteUrl: url
-              }
-            }
-            allSitePage(
-              filter: {
-                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
-              }
-            ) {
-              edges {
-                node {
-                  path
-                }
+            allSitePage {
+              nodes {
+                path
               }
             }
           }
         `,
-        output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
-          url: site.siteMetadata.siteUrl + edge.node.path,
+        resolveSiteUrl: () => siteConfig.url,
+        resolvePages: ({ allSitePage }) => allSitePage.nodes,
+        serialize: ({ path }) => ({
+          url: path,
           changefreq: 'monthly',
           priority: 0.7,
-        })),
+        }),
       },
     },
     {
