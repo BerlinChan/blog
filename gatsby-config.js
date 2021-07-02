@@ -4,7 +4,7 @@ const postCssPlugins = require('./postcss-config.js')
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
-    url: siteConfig.url,
+    siteUrl: siteConfig.siteUrl,
     archivedBlogUrl: siteConfig.archivedBlogUrl,
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
@@ -49,7 +49,7 @@ module.exports = {
           {
             site {
               siteMetadata {
-                site_url: url
+                siteUrl
                 title
                 description: subtitle
               }
@@ -63,8 +63,8 @@ module.exports = {
                 (edge) => Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.site_url + edge.node.fields.slug,
-                  guid: site.siteMetadata.site_url + edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 }))
             ),
@@ -147,27 +147,7 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        query: `
-          {
-            allSitePage {
-              nodes {
-                path
-              }
-            }
-          }
-        `,
-        resolveSiteUrl: () => siteConfig.url,
-        resolvePages: ({ allSitePage }) => allSitePage.nodes,
-        serialize: ({ path }) => ({
-          url: path,
-          changefreq: 'monthly',
-          priority: 0.7,
-        }),
-      },
-    },
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

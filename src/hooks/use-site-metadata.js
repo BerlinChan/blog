@@ -6,7 +6,7 @@ const useSiteMetadata = () => {
       query SiteMetaData {
         site {
           siteMetadata {
-            url
+            siteUrl
             archivedBlogUrl
             title
             subtitle

@@ -3,7 +3,7 @@ import ReactDisqusComments from 'react-disqus-comments'
 import { useSiteMetadata } from '../../hooks'
 
 const Comments = ({ postTitle, postSlug }) => {
-  const { url, disqusShortname } = useSiteMetadata()
+  const { siteUrl, disqusShortname } = useSiteMetadata()
 
   if (!disqusShortname) {
     return null
@@ -14,7 +14,7 @@ const Comments = ({ postTitle, postSlug }) => {
       shortname={disqusShortname}
       identifier={postSlug}
       title={postTitle}
-      url={url + postSlug}
+      url={siteUrl + postSlug}
     />
   )
 }

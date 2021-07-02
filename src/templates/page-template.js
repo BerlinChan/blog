@@ -7,7 +7,7 @@ import Content from '../components/Content'
 import OpenGraph from '../components/OpenGraph'
 
 const PageTemplate = ({ data }) => {
-  const { url: siteUrl, title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
+  const { siteUrl, title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata()
   const { html: pageBody } = data.markdownRemark
   const { title: pageTitle, description: pageDescription, slug } = data.markdownRemark.frontmatter
   const openGraph = {

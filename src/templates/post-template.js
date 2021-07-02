@@ -11,7 +11,7 @@ import Comments from '../components/Comments'
 import Box from '@material-ui/core/Box'
 
 const PostTemplate = ({ data }) => {
-  const { title: siteTitle, subtitle: siteSubtitle, url: siteUrl } = useSiteMetadata()
+  const { title: siteTitle, subtitle: siteSubtitle, siteUrl } = useSiteMetadata()
   const { title: postTitle, description: postDescription, featured_media } = data.markdownRemark.frontmatter
   const { slug } = data.markdownRemark.fields
   const openGraph = {

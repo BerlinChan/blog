@@ -1,5 +1,5 @@
 module.exports = {
-  url: 'https://www.berlinchan.com',
+  siteUrl: 'https://www.berlinchan.com',
   archivedBlogUrl: 'https://archived-blog.berlinchan.com',
   pathPrefix: '/',
   title: '陈柏林的Blog',

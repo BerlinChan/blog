@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Post = ({ isArchivedBlogPost, post, children }) => {
   const classes = useStyles();
-  const { url: siteUrl, archivedBlogUrl } = useSiteMetadata();
+  const { siteUrl, archivedBlogUrl } = useSiteMetadata();
   const { categorySlugs, tagSlugs } = post.fields;
   const { categories, tags, title, date, slug, description } = post.frontmatter;
 

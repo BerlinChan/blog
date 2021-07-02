@@ -10,7 +10,7 @@ import Content from '../components/Content'
 import OpenGraph from '../components/OpenGraph'
 
 const PostTemplate = ({ data }) => {
-  const { url: siteUrl, title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
+  const { siteUrl, title: siteTitle, subtitle: siteSubtitle, archivedBlogUrl } = useSiteMetadata()
   const { title: postTitle, excerpt: postDescription, content, path, date, tags, categories,featured_media } = data.archivedBlogPostJson
   const openGraph = {
     title: `${postTitle} | ${siteTitle}`,
