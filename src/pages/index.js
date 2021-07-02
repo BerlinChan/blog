@@ -12,7 +12,7 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import PostList from "../components/PostList";
 import Pagination from "../components/Pagination";
 import { Link as GatsbyLink } from "gatsby";
-import BackgroundImage from "gatsby-background-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -21,6 +21,13 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
     overflow: "hidden",
+  },
+  background: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
   },
   overlay: {
     position: "absolute",
@@ -45,45 +52,47 @@ const useStyles = makeStyles((theme) => ({
 const HomePage = ({ data }) => {
   const classes = useStyles();
   const { title: siteTitle, postsPerPage } = useSiteMetadata();
-  const featuredPostEdge = data.featuredPosts.edges[0];
+  const featuredPostEdge = data.featuredPosts.nodes[0];
 
   return (
     <Layout
       title={siteTitle}
       featuredContent={
         <Paper className={classes.mainFeaturedPost}>
-          <BackgroundImage
-            fluid={
-              featuredPostEdge.node.frontmatter.featured_media.childImageSharp.gatsbyImageData
-            }
-          >
-            <div className={classes.overlay} />
-            <Grid container>
-              <Grid item md={6}>
-                <ButtonBase
-                  focusRipple
-                  className={classes.mainFeaturedPostContent}
-                  component={GatsbyLink}
-                  to={featuredPostEdge.node.frontmatter.slug}
+          <GatsbyImage
+            className={classes.background}
+            image={getImage(
+              featuredPostEdge.frontmatter.featured_media.childImageSharp
+            )}
+            alt={featuredPostEdge.frontmatter.title}
+            layout="fullWidth"
+          />
+          <div className={classes.overlay} />
+          <Grid container>
+            <Grid item md={6}>
+              <ButtonBase
+                focusRipple
+                className={classes.mainFeaturedPostContent}
+                component={GatsbyLink}
+                to={featuredPostEdge.frontmatter.slug}
+              >
+                <Typography
+                  component="h1"
+                  variant="h3"
+                  color="inherit"
+                  gutterBottom
                 >
-                  <Typography
-                    component="h1"
-                    variant="h3"
-                    color="inherit"
-                    gutterBottom
-                  >
-                    {featuredPostEdge.node.frontmatter.title}
-                  </Typography>
-                  <Typography variant="h5" color="inherit" paragraph>
-                    {featuredPostEdge.node.frontmatter.description}
-                  </Typography>
-                  <Typography variant="subtitle1" color={"inherit"}>
-                    阅读…
-                  </Typography>
-                </ButtonBase>
-              </Grid>
+                  {featuredPostEdge.frontmatter.title}
+                </Typography>
+                <Typography variant="h5" color="inherit" paragraph>
+                  {featuredPostEdge.frontmatter.description}
+                </Typography>
+                <Typography variant="subtitle1" color={"inherit"}>
+                  阅读…
+                </Typography>
+              </ButtonBase>
             </Grid>
-          </BackgroundImage>
+          </Grid>
         </Paper>
       }
     >
@@ -103,64 +112,69 @@ const HomePage = ({ data }) => {
 
 export default HomePage;
 
-export const query = graphql`query IndexQuery {
-  featuredPosts: allMarkdownRemark(
-    filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}, featured_top: {ne: false}}}
-    limit: 1
-    sort: {order: DESC, fields: frontmatter___date}
-  ) {
-    edges {
-      node {
+export const query = graphql`
+  query IndexQuery {
+    featuredPosts: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          draft: { ne: true }
+          template: { eq: "post" }
+          featured_top: { ne: false }
+        }
+      }
+      limit: 1
+      sort: { order: DESC, fields: frontmatter___date }
+    ) {
+      nodes {
         frontmatter {
           title
           slug
           description
           featured_media {
             childImageSharp {
-              gatsbyImageData(placeholder: TRACED_SVG, layout: FULL_WIDTH)
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
             }
           }
         }
       }
     }
-  }
-  recentPosts: allMarkdownRemark(
-    limit: 6
-    filter: {frontmatter: {draft: {ne: true}, template: {eq: "post"}}}
-    sort: {fields: frontmatter___date, order: DESC}
-  ) {
-    edges {
-      node {
-        fields {
-          slug
-          categorySlugs
-        }
-        frontmatter {
-          description
-          slug
-          title
-          categories
-          date
-          featured_media {
-            childImageSharp {
-              gatsbyImageData(
-                width: 200
-                height: 200
-                placeholder: BLURRED
-                transformOptions: {cropFocus: CENTER}
-                layout: FIXED
-              )
+    recentPosts: allMarkdownRemark(
+      limit: 6
+      filter: { frontmatter: { draft: { ne: true }, template: { eq: "post" } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            categorySlugs
+          }
+          frontmatter {
+            description
+            slug
+            title
+            categories
+            date
+            featured_media {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 200
+                  height: 200
+                  placeholder: BLURRED
+                  transformOptions: { cropFocus: CENTER }
+                  layout: FIXED
+                )
+              }
             }
           }
+          excerpt(pruneLength: 70)
         }
-        excerpt(pruneLength: 70)
       }
     }
+    allPostCount: allMarkdownRemark(
+      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+    ) {
+      totalCount
+    }
   }
-  allPostCount: allMarkdownRemark(
-    filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
-  ) {
-    totalCount
-  }
-}
 `;

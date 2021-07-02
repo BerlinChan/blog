@@ -179,8 +179,8 @@ const Footer = () => {
               )
             }
           >
-            {fuxkId.map((item) => (
-              <span>{item}</span>
+            {fuxkId.map((item, index) => (
+              <span key={index}>{item}</span>
             ))}
           </Typography>
         </Grid>
