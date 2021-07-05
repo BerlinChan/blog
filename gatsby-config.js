@@ -61,7 +61,7 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => (
               allMarkdownRemark.edges.map(
                 (edge) => Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
+                  description: edge.node.frontmatter.description || edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
@@ -84,10 +84,9 @@ module.exports = {
                       frontmatter {
                         title
                         date
-                        template
-                        draft
                         description
                       }
+                      excerpt(pruneLength: 70)
                     }
                   }
                 }
@@ -148,6 +147,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

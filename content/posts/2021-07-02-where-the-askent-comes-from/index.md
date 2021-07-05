@@ -39,4 +39,3 @@ Nowadays, the Askent was [deployed at Github Pages](https://askent.berlinchan.co
 - [几款多端实时协作、同步的开发工具](/2020/03/real-time-multi-device-collaboration-devtools)
 - [互动演示工具 Askent 已开发出管理与观众端雏形](/2020/02/project-askent-admin-audience-client)
 - [从零开始，创建一个多端互动演示工具](/2019/12/create-presentation-tool-from-scratch)
-- 
