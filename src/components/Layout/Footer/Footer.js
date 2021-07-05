@@ -9,7 +9,7 @@ import { useSiteMetadata } from "../../../hooks";
 import SvgIcons from "../../../assets/SvgIcons";
 import { Link as GatsbyLink } from "gatsby";
 import Popover from "@material-ui/core/Popover";
-import qrCode from "../../../../static/media/qrcode_for_gh_e9cd709bed60_258.jpg";
+import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -153,7 +153,14 @@ const Footer = () => {
             <Typography align={"center"} className={classes.qrCodeText}>
               公众号“摄影师陈柏林”
             </Typography>
-            <img src={qrCode} alt="qrCode" width={258} height={258} />
+            <StaticImage
+              src={
+                "../../../../static/media/qrcode_for_gh_e9cd709bed60_258.jpg"
+              }
+              alt="qrCode"
+              width={258}
+              height={258}
+            />
           </Popover>
         </Grid>
         <Grid item sm={6} md={4}>
@@ -189,4 +196,4 @@ const Footer = () => {
   );
 };
 
-export default Footer
+export default Footer;
