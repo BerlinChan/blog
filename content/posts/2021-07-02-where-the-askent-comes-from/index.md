@@ -33,6 +33,10 @@ Through all of these trials, I've been learned a lot, and maybe I can name mysel
 
 Nowadays, the Askent was [deployed at Github Pages](https://askent.berlinchan.com/), and server-side runs on my home's router so it will not costs me an arm and a leg, and regards of security of the home network, the server has not published to the Internet which I'm still working on it.
 
+## About the name
+
+Askent = Ask + Event
+
 ## Related topics on project Askent
 
 - [Askent 实时消息搜索的问题及 Hasura 替代](/2021/03/askent-realtime-search-implement-and-hasura)
