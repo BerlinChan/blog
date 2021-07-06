@@ -48,7 +48,6 @@ Smarter Everyday、Corridor Digital、NiceChord、Gameker、超粒方、Kai W…
 - 网站托管 [https://pages.github.com/](https://pages.github.com/)
 - Gatsby [https://www.gatsbyjs.org/](https://www.gatsbyjs.org/)
 - Material UI [https://material-ui.com/](https://material-ui.com/)
-- CDN 阿里云
 
 ## LICENSE
 [![知识共享许可协议](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)  
