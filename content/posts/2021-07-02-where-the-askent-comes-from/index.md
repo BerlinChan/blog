@@ -19,7 +19,7 @@ I have a personal project named [Askent](https://github.com/BerlinChan/askent), 
 
 <!-- endExcerpt -->
 
-It comes from a webinar hosted by [GatsbyJs](https://www.gatsbyjs.com/). At that meeting, the host use [Sli.do](https://www.sli.do/) as a tool to interact with audiences, let them ask questions, and make a survey at the end of the meeting.
+The idea was comes from a webinar hosted by [GatsbyJs](https://www.gatsbyjs.com/). At that meeting, the host use [Sli.do](https://www.sli.do/) as a tool to interact with audiences, let them ask questions, and make a survey at the end of the meeting.
 
 Sli.do's easy-to-use and elegant design impressed me a lot when I first saw it. And at that time, I was learning [GraphQL](https://graphql.org/) by myself, so I decided to make a clone of it as an exercise project.
 

@@ -143,6 +143,7 @@ const Footer = () => {
           >
             <SvgIcons name={"rss"} />
           </IconButton>
+
           <Popover
             anchorOrigin={{ vertical: "top", horizontal: "center" }}
             transformOrigin={{ vertical: "bottom", horizontal: "center" }}
@@ -158,6 +159,7 @@ const Footer = () => {
                 "../../../../static/media/qrcode_for_gh_e9cd709bed60_258.jpg"
               }
               alt="qrCode"
+              layout="fixed"
               width={258}
               height={258}
             />
