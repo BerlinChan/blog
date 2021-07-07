@@ -31,7 +31,7 @@ The project was funded in December 2019, when before the outbreak of COVID-19. a
 
 Through all of these trials, I've been learned a lot, and maybe I can name myself not only a front-end developer but also a full stack web developer too(maybe too much early ^_^).
 
-Nowadays, the Askent was [deployed at Github Pages](https://askent.berlinchan.com/), and server-side runs on my home's router so it will not costs me an arm and a leg, and regards of security of the home network, the server has not published to the Internet which I'm still working on it.
+Nowadays, the Askent was [deployed at Github Pages](https://askent.berlinchan.com/), and server-side runs on my home's server so it will not costs me an arm and a leg, ~~and regards of security of the home network, the server has not published to the Internet which I'm still working on it.~~ I've deployed the server to the Internet in my spare time, which with a lot of bugs, still WIP(update on July, 7th).
 
 ## About the name
 
