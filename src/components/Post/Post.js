@@ -13,7 +13,7 @@ import {
   TelegramShareButton,
   TwitterShareButton,
 } from "react-share";
-import SvgIcons from "../../assets/SvgIcons";
+import SvgIcons from "../../utils/SvgIcons";
 import ButtonBase from "@material-ui/core/ButtonBase";
 
 const useStyles = makeStyles((theme) => ({

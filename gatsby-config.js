@@ -1,4 +1,4 @@
-const siteConfig = require('./config.js')
+const siteConfig = require("./config.js");
 
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
@@ -21,28 +21,22 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/content`,
-        name: 'pages',
+        path: "./content",
+        name: "pages",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/static/media`,
-        name: 'media',
+        name: "images",
+        path: "./src/images/",
       },
+      __key: "images",
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: `${__dirname}/static`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-feed',
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
           {
@@ -57,16 +51,17 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => (
-              allMarkdownRemark.edges.map(
-                (edge) => Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description || edge.node.excerpt,
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map((edge) =>
+                Object.assign({}, edge.node.frontmatter, {
+                  description:
+                    edge.node.frontmatter.description || edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
-                }))
-            ),
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              ),
             query: `
               {
                 allMarkdownRemark(
@@ -93,16 +88,17 @@ module.exports = {
             `,
             output: siteConfig.author.contacts.rss,
             title: `${siteConfig.title} RSS Feed`,
-          }],
+          },
+        ],
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
-        'excerpt_separator': `<!-- endExcerpt -->`,
+        excerpt_separator: `<!-- endExcerpt -->`,
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               quality: 60,
               maxWidth: 760,
@@ -111,33 +107,33 @@ module.exports = {
           },
           {
             // MUST before gatsby-remark-responsive-iframe
-            resolve: 'gatsby-remark-embed-video',
+            resolve: "gatsby-remark-embed-video",
             options: {
               width: 600,
               ratio: 1.77,
               related: false,
               noIframeBorder: true,
-            }
+            },
           },
           {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' },
+            resolve: "gatsby-remark-responsive-iframe",
+            options: { wrapperStyle: "margin-bottom: 1.0725rem" },
           },
           `gatsby-remark-copy-linked-files`,
-          'gatsby-remark-autolink-headers',
-          'gatsby-remark-prismjs',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-external-links',
+          "gatsby-remark-autolink-headers",
+          "gatsby-remark-prismjs",
+          "gatsby-remark-smartypants",
+          "gatsby-remark-external-links",
         ],
       },
     },
-    'gatsby-transformer-json',
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-material-ui',
+    "gatsby-transformer-json",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-material-ui",
     {
-      resolve: 'gatsby-plugin-google-gtag',
+      resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: [siteConfig.googleAnalyticsId],
         pluginConfig: {
@@ -145,23 +141,23 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-robots-txt',
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-robots-txt",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
         name: siteConfig.title,
         short_name: siteConfig.title,
-        start_url: '/',
-        background_color: '#fafafa',
-        theme_color: '#ff5722',
-        display: 'standalone',
-        icon: 'static/media/photo.jpg',
+        start_url: "/",
+        background_color: "#fafafa",
+        theme_color: "#ff5722",
+        display: "standalone",
+        icon: "src/images/photo.jpg",
       },
     },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-optimize-svgs',
+    "gatsby-plugin-offline",
+    "gatsby-plugin-catch-links",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-optimize-svgs",
   ],
-}
+};

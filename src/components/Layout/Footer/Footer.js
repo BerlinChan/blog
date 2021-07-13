@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import Link from "@material-ui/core/Link";
 import { useSiteMetadata } from "../../../hooks";
-import SvgIcons from "../../../assets/SvgIcons";
+import SvgIcons from "../../../utils/SvgIcons";
 import { Link as GatsbyLink } from "gatsby";
 import Popover from "@material-ui/core/Popover";
 import { StaticImage } from "gatsby-plugin-image";
@@ -156,7 +156,7 @@ const Footer = () => {
             </Typography>
             <StaticImage
               src={
-                "../../../../static/media/qrcode_for_gh_e9cd709bed60_258.jpg"
+                "../../../images/qrcode_for_gh_e9cd709bed60_258.jpg"
               }
               alt="qrCode"
               layout="fixed"
