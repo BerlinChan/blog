@@ -21,8 +21,9 @@ module.exports = async (graphql, actions) => {
       }
     }
   `);
-
-  result.data.allMarkdownRemark.nodes.forEach((node, index) => {
+  const { nodes } = result.data.allMarkdownRemark;
+  
+  nodes.forEach((node, index) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve("./src/templates/post-template.js"),
