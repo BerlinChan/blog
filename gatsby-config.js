@@ -51,17 +51,6 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map((edge) =>
-                Object.assign({}, edge.node.frontmatter, {
-                  description:
-                    edge.node.frontmatter.description || edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              ),
             query: `
               {
                 allMarkdownRemark(
@@ -69,8 +58,7 @@ module.exports = {
                   sort: { order: DESC, fields: [frontmatter___date] },
                   filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
                 ) {
-                  edges {
-                    node {
+                    nodes {
                       html
                       fields {
                         slug
@@ -82,12 +70,20 @@ module.exports = {
                       }
                       excerpt(pruneLength: 70)
                     }
-                  }
                 }
               }
             `,
             output: siteConfig.author.contacts.rss,
             title: `${siteConfig.title} RSS Feed`,
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.nodes.map((node) => ({
+                ...node.frontmatter,
+                description: node.frontmatter.description || node.excerpt,
+                date: node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + node.fields.slug,
+                guid: site.siteMetadata.siteUrl + node.fields.slug,
+                custom_elements: [{ "content:encoded": node.html }],
+              })),
           },
         ],
       },

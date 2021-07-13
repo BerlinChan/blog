@@ -32,12 +32,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PostList = ({ edges }) => {
+const PostList = ({ nodes }) => {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      {edges.map(({ node }, index) => (
+      {nodes.map((node, index) => (
         <CardActionArea
           component={GatsbyLink}
           to={node.fields.slug}

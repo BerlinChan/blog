@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
 const HomePage = ({ data }) => {
   const classes = useStyles();
   const { title: siteTitle, postsPerPage } = useSiteMetadata();
-  const featuredPostEdge = data.featuredPosts.nodes[0];
+  const featuredPostNode = data.featuredPosts.nodes[0];
 
   return (
     <Layout
@@ -62,9 +62,9 @@ const HomePage = ({ data }) => {
           <GatsbyImage
             className={classes.background}
             image={getImage(
-              featuredPostEdge.frontmatter.featured_media.childImageSharp
+              featuredPostNode.frontmatter.featured_media.childImageSharp
             )}
-            alt={featuredPostEdge.frontmatter.title}
+            alt={featuredPostNode.frontmatter.title}
             layout="fullWidth"
           />
           <div className={classes.overlay} />
@@ -74,7 +74,7 @@ const HomePage = ({ data }) => {
                 focusRipple
                 className={classes.mainFeaturedPostContent}
                 component={GatsbyLink}
-                to={featuredPostEdge.frontmatter.slug}
+                to={featuredPostNode.frontmatter.slug}
               >
                 <Typography
                   component="h1"
@@ -82,10 +82,10 @@ const HomePage = ({ data }) => {
                   color="inherit"
                   gutterBottom
                 >
-                  {featuredPostEdge.frontmatter.title}
+                  {featuredPostNode.frontmatter.title}
                 </Typography>
                 <Typography variant="h5" color="inherit" paragraph>
-                  {featuredPostEdge.frontmatter.description}
+                  {featuredPostNode.frontmatter.description}
                 </Typography>
                 <Typography variant="subtitle1" color={"inherit"}>
                   阅读…
@@ -102,7 +102,7 @@ const HomePage = ({ data }) => {
       <Box mb={3}>
         <Divider />
       </Box>
-      <PostList edges={data.recentPosts.edges} />
+      <PostList nodes={data.recentPosts.nodes} />
       {data.allPostCount.totalCount > postsPerPage && (
         <Pagination nextPagePath={"/page/1"} />
       )}
@@ -143,32 +143,30 @@ export const query = graphql`
       filter: { frontmatter: { draft: { ne: true }, template: { eq: "post" } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
-      edges {
-        node {
-          fields {
-            slug
-            categorySlugs
-          }
-          frontmatter {
-            description
-            slug
-            title
-            categories
-            date
-            featured_media {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 200
-                  height: 200
-                  placeholder: BLURRED
-                  transformOptions: { cropFocus: CENTER }
-                  layout: FIXED
-                )
-              }
+      nodes {
+        fields {
+          slug
+          categorySlugs
+        }
+        frontmatter {
+          description
+          slug
+          title
+          categories
+          date
+          featured_media {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                height: 200
+                placeholder: BLURRED
+                transformOptions: { cropFocus: CENTER }
+                layout: FIXED
+              )
             }
           }
-          excerpt(pruneLength: 70)
         }
+        excerpt(pruneLength: 70)
       }
     }
     allPostCount: allMarkdownRemark(

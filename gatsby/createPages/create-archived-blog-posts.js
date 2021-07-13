@@ -1,25 +1,22 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = async (graphql, actions) => {
-  const { createPage } = actions
-
+  const { createPage } = actions;
   const result = await graphql(`
     {
       allArchivedBlogPostJson {
-        edges {
-          node {
-            path
-          }
+        nodes {
+          path
         }
       }
     }
-  `)
+  `);
 
-  result.data.allArchivedBlogPostJson.edges.forEach(edge =>
+  result.data.allArchivedBlogPostJson.nodes.forEach((node) =>
     createPage({
-      path: edge.node.path,
-      component: path.resolve('./src/templates/post-archived-blog-template.js'),
-      context: { slug: edge.node.path },
+      path: node.path,
+      component: path.resolve("./src/templates/post-archived-blog-template.js"),
+      context: { slug: node.path },
     })
-  )
-}
+  );
+};

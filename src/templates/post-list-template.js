@@ -1,43 +1,37 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import PostList from '../components/PostList'
-import Pagination from '../components/Pagination'
-import { useSiteMetadata } from '../hooks'
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import PostList from "../components/PostList";
+import Pagination from "../components/Pagination";
+import { useSiteMetadata } from "../hooks";
 
 const PostListTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle} = useSiteMetadata()
-  const {
-    currentPage,
-    prevPagePath,
-    nextPagePath,
-  } = pageContext
-  const { edges } = data.allMarkdownRemark
-  const pageTitle = currentPage > 0
-    ? `文章 - 第 ${currentPage} 页 - ${siteTitle}`
-    : siteTitle
+  const { title: siteTitle } = useSiteMetadata();
+  const { currentPage, prevPagePath, nextPagePath } = pageContext;
+  const pageTitle =
+    currentPage > 0 ? `文章 - 第 ${currentPage} 页 - ${siteTitle}` : siteTitle;
 
   return (
     <Layout title={pageTitle}>
-      <PostList edges={edges}/>
+      <PostList nodes={data.allMarkdownRemark.nodes} />
       <Pagination
-        nextPageName={nextPagePath ? '' : '存档文章'}
+        nextPageName={nextPagePath ? "" : "存档文章"}
         prevPagePath={prevPagePath}
-        nextPagePath={nextPagePath ? nextPagePath : '/archivedBlogPage'}
+        nextPagePath={nextPagePath ? nextPagePath : "/archivedBlogPage"}
       />
     </Layout>
-  )
-}
+  );
+};
 
-export const query = graphql`query PostListTemplate($postsLimit: Int!, $postsOffset: Int!) {
-  allMarkdownRemark(
-    limit: $postsLimit
-    skip: $postsOffset
-    filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
-    sort: {order: DESC, fields: [frontmatter___date]}
-  ) {
-    edges {
-      node {
+export const query = graphql`
+  query PostListTemplate($postsLimit: Int!, $postsOffset: Int!) {
+    allMarkdownRemark(
+      limit: $postsLimit
+      skip: $postsOffset
+      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      nodes {
         fields {
           slug
           categorySlugs
@@ -53,7 +47,7 @@ export const query = graphql`query PostListTemplate($postsLimit: Int!, $postsOff
                 width: 200
                 height: 200
                 placeholder: BLURRED
-                transformOptions: {cropFocus: CENTER}
+                transformOptions: { cropFocus: CENTER }
                 layout: FIXED
               )
             }
@@ -63,7 +57,6 @@ export const query = graphql`query PostListTemplate($postsLimit: Int!, $postsOff
       }
     }
   }
-}
-`
+`;
 
-export default PostListTemplate
+export default PostListTemplate;
