@@ -14,7 +14,7 @@ const Pagination = ({ prevPageName, nextPageName, prevPagePath, nextPagePath }) 
   const classes = useStyles()
 
   return (
-    <Grid container justify="space-between" wrap="nowrap">
+    <Grid container justifyContent="space-between" wrap="nowrap">
       {prevPagePath ? <Grid item>
         <Link component={GatsbyLink} rel="prev" to={prevPagePath} variant='h6'>
           ← {prevPageName ? prevPageName : PAGINATION.PREV_PAGE}</Link>
