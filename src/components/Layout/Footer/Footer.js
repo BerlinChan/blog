@@ -156,7 +156,7 @@ const Footer = () => {
             </Typography>
             <StaticImage
               src={
-                "../../../images/qrcode_for_gh_e9cd709bed60_258.jpg"
+                "../../../images/wechat_qrcode_for_gh_e9cd709bed60_258.jpg"
               }
               alt="qrCode"
               layout="fixed"
