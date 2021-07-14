@@ -1,0 +1,2 @@
+(self.webpackChunkblog=self.webpackChunkblog||[]).push([[41],{8895:function(t,e,n){"use strict";n.r(e);var a=n(7294),r=n(7010),l=n(6535),u=n(453);e.default=function(){var t=(0,l.$W)().title;return a.createElement(r.Z,{title:"Not Found - "+t},a.createElement(u.Z,{variant:"subtitle1",gutterBottom:!0},"NOT FOUND"),a.createElement(u.Z,{component:"h2",variant:"h4"},"页面不存在"))}}}]);
+//# sourceMappingURL=component---src-templates-not-found-template-js-5fbf3f06473ce17c811f.js.map
