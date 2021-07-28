@@ -69,7 +69,7 @@ const Header = (props) => {
         <AppBar color={'default'}>
           <Toolbar className={classes.toolbar}>
             <Link component={GatsbyLink} to={withPrefix('/')} className={classes.avatar}>
-              <Avatar alt={name} src={withPrefix(photo)}/>
+              <Avatar alt={name} src={photo}/>
             </Link>
             <Link component={GatsbyLink} to={withPrefix('/')} className={classes.toolbarTitle} underline="none">
               <Typography component="h2" variant="h5" color="inherit" align="left" noWrap>

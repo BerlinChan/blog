@@ -1,16 +1,46 @@
-const siteConfig = require("./config.js");
+const siteConfig = {
+  title: "陈柏林的Blog",
+  googleAnalyticsId: "UA-43244265-2",
+  author: {
+    name: "陈柏林",
+    photo: "/media/photo.jpg",
+    bio: "前端开发工程师、摄影师，理想主义与黑客精神",
+    contacts: {
+      twitter: "https://www.twitter.com/BerlinChanCom",
+      facebook: "https://www.facebook.com/berlinchancom",
+      github: "https://github.com/BerlinChan",
+      linkedIn: "https://www.linkedin.com/in/berlinchan",
+      youtube: "https://www.youtube.com/user/berlinchancom",
+      email: "mailto:berlinchancom@gmail.com",
+      rss: "/rss.xml",
+    },
+  },
+};
 
 module.exports = {
-  pathPrefix: siteConfig.pathPrefix,
+  pathPrefix: "/",
   siteMetadata: {
-    siteUrl: siteConfig.siteUrl,
-    archivedBlogUrl: siteConfig.archivedBlogUrl,
+    siteUrl: "https://www.berlinchan.com",
+    archivedBlogUrl: "https://archived-blog.berlinchan.com",
     title: siteConfig.title,
-    subtitle: siteConfig.subtitle,
-    UTC: siteConfig.UTC,
-    postsPerPage: siteConfig.postsPerPage,
-    disqusShortname: siteConfig.disqusShortname,
-    menu: siteConfig.menu,
+    subtitle: "",
+    UTC: "+08",
+    postsPerPage: 6,
+    disqusShortname: "berlinchan",
+    menu: [
+      {
+        label: "自由的家猫",
+        link: "https://www.awildpetcat.com/",
+      },
+      {
+        label: "旧站博物馆",
+        link: "https://museum.berlinchan.com/",
+      },
+      {
+        label: "关于",
+        path: "/pages/about",
+      },
+    ],
     author: siteConfig.author,
   },
   plugins: [
@@ -31,7 +61,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/images",
       },
       __key: "images",
     },
@@ -44,7 +74,6 @@ module.exports = {
               siteMetadata {
                 siteUrl
                 title
-                description: subtitle
               }
             }
           }
