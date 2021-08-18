@@ -48,7 +48,7 @@
     "gatsby-transformer-json": "3.9.0",
     "gatsby-transformer-remark": "4.6.0",
     "gatsby-transformer-sharp": "3.9.0",
-    "material-ui-popup-state": "1.8.4",
+    "material-ui-popup-state": "1.9.2",
     "prismjs": "1.24.1",
     "react": "17.0.2",
     "react-disqus-comments": "1.4.0",
