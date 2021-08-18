@@ -1,5 +1,4 @@
 import React from "react";
-import get from "lodash/get";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
@@ -36,13 +35,7 @@ const PostListTemplate = ({ data, pageContext }) => {
               (category) => category.name
             ),
             description: node.excerpt,
-            featured_media: get(node, "featured_media.source_url") && {
-              childImageSharp: {
-                fixed: {
-                  src: node.featured_media.source_url,
-                },
-              },
-            },
+            featured_media: node.featured_media,
           },
         }))}
       />
@@ -72,7 +65,15 @@ export const query = graphql`
           path
         }
         featured_media {
-          source_url
+          childImageSharp {
+            gatsbyImageData(
+              width: 200
+              height: 200
+              placeholder: BLURRED
+              transformOptions: { cropFocus: CENTER }
+              layout: FIXED
+            )
+          }
         }
       }
     }

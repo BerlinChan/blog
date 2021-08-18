@@ -5,5 +5,4 @@ npm-debug.log
 .gatsby-context.js
 .idea
 .DS_Store
-package-lock.json
 yarn-error.log
