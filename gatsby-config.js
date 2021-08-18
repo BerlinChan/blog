@@ -47,14 +47,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: 'archivedBlog',
         path: `./content/archived-blog`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: "./content",
         name: "pages",
+        path: "./content",
       },
     },
     {
@@ -63,7 +64,6 @@ module.exports = {
         name: "images",
         path: "./src/images",
       },
-      __key: "images",
     },
     {
       resolve: "gatsby-plugin-feed",
