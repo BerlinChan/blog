@@ -8,7 +8,7 @@ draft: true
 slug: /2021/07/template
 categories: 
     - 前端
-    - 安全
+    - 信息安全
     - 小玩意
     - 观点
     - 钢琴

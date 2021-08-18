@@ -7,7 +7,7 @@ featured_media: ./featured_media.jpg
 draft: false
 slug: /2019/12/common-problems-in-using-gnuPg
 categories: 
-    - 安全
+    - 信息安全
 tags:
     - GnuPG
     - 公钥加密

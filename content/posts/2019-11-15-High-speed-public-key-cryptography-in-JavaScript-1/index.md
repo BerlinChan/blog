@@ -7,7 +7,7 @@ featured_media: ./featured_media.jpg
 draft: false
 slug: /2019/11/High-speed-public-key-cryptography-in-JavaScript-1
 categories: 
-    - 安全
+    - 信息安全
 tags:
     - Javascript
     - Node.js

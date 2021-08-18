@@ -7,7 +7,7 @@ featured_media: ./featured_media.png
 draft: false
 slug: /2019/11/Windows-10-Built-In-MD5-Checksum-Calculator
 categories: 
-    - 安全
+    - 信息安全
 tags:
     - Windows
     - checksum

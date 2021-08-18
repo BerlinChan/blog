@@ -8,7 +8,7 @@ draft: false
 slug: /2019/11/building-an-encrypted-messenger-with-javascript
 categories: 
     - 前端
-    - 安全
+    - 信息安全
 tags:
     - Javascript
     - Node.js
