@@ -8,7 +8,6 @@
 ## TODO
 - [ ] Add TOC on post page's sidebar
 - [ ] lighthouse scroll enhance
-- [ ] youku.com 视频替换
 
 ## LICENSE
 MIT
