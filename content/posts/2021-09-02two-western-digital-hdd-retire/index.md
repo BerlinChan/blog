@@ -19,7 +19,7 @@ I have two Western Digital HDDs, one is Caviar Black and another is Caviar Green
 
 ![](./western-digital-hdd-black-1t-sector-scan.png)
 
-These two hard disks have been brought in 2010, which was for my third computer, also the first self-assemble PC. In this ten-year occupation, they're mostly idle, because their **Power On Hours count is just about 7000+ hours**. I didn't find the MTBF(mean time between failures) specification about the product serial, but I don't think it should break down in so much short time using, or maybe just BAD luck.
+These two hard disks have been bought in 2010, which was for my third computer, also the first self-assemble PC. In this ten-year occupation, they're mostly idle, because their **Power On Hours count is just about 7000+ hours**. I didn't find the MTBF(mean time between failures) specification about the product serial, but I don't think it should break down in so much short time using, or maybe just BAD luck.
 
 It almost ruined a very important video of mine, which scared me badly.
 
