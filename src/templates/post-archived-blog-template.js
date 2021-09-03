@@ -35,7 +35,7 @@ const PostTemplate = ({ data }) => {
   };
   if (featured_media) {
     openGraph.image = {
-      url: getSrc(featured_media.childImageSharp.gatsbyImageData),
+      url: `${siteUrl}${getSrc(featured_media.childImageSharp.gatsbyImageData)}`,
       width: featured_media.childImageSharp.gatsbyImageData.width,
       height: featured_media.childImageSharp.gatsbyImageData.height,
     }
