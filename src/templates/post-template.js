@@ -12,13 +12,13 @@ import Box from '@material-ui/core/Box'
 import { getSrc } from "gatsby-plugin-image"
 
 const PostTemplate = ({ data }) => {
-  const { title: siteTitle, subtitle: siteSubtitle, siteUrl } = useSiteMetadata()
+  const { title: siteTitle, siteUrl } = useSiteMetadata()
   const { title: postTitle, description: postDescription, featured_media } = data.markdownRemark.frontmatter
   const { slug } = data.markdownRemark.fields
   const openGraph = {
     title: `${postTitle} | ${siteTitle}`,
     url: `${siteUrl}${slug}`,
-    description: postDescription !== null ? postDescription : siteSubtitle,
+    description: postDescription !== null ? postDescription : data.markdownRemark.excerpt,
     type: 'article',
   }
   if (featured_media) {
@@ -51,6 +51,7 @@ export const query = graphql`query PostBySlug($slug: String!, $prevPostSlug: Str
   markdownRemark(fields: {slug: {eq: $slug}}) {
     id
     html
+    excerpt(pruneLength: 70)
     fields {
       slug
       categorySlugs
