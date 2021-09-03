@@ -9,6 +9,7 @@ import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
 import Comments from '../components/Comments'
 import Box from '@material-ui/core/Box'
+import { getSrc } from "gatsby-plugin-image"
 
 const PostTemplate = ({ data }) => {
   const { title: siteTitle, subtitle: siteSubtitle, siteUrl } = useSiteMetadata()
@@ -22,7 +23,7 @@ const PostTemplate = ({ data }) => {
   }
   if (featured_media) {
     openGraph.image = {
-      url: `${siteUrl}${featured_media.childImageSharp.gatsbyImageData.src}`,
+      url: getSrc(featured_media.childImageSharp.gatsbyImageData),
       width: featured_media.childImageSharp.gatsbyImageData.width,
       height: featured_media.childImageSharp.gatsbyImageData.height,
     }

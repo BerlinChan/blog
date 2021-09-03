@@ -8,6 +8,7 @@ import Post from "../components/Post";
 import Comments from "../components/Comments";
 import Content from "../components/Content";
 import OpenGraph from "../components/OpenGraph";
+import { getSrc } from "gatsby-plugin-image"
 
 const PostTemplate = ({ data }) => {
   const {
@@ -34,7 +35,7 @@ const PostTemplate = ({ data }) => {
   };
   if (featured_media) {
     openGraph.image = {
-      url: `${siteUrl}${featured_media.childImageSharp.gatsbyImageData.src}`,
+      url: getSrc(featured_media.childImageSharp.gatsbyImageData),
       width: featured_media.childImageSharp.gatsbyImageData.width,
       height: featured_media.childImageSharp.gatsbyImageData.height,
     }
