@@ -6,6 +6,7 @@
 [https://www.berlinchan.com/](https://www.berlinchan.com/)
 
 ## TODO
+- [ ] replace low-resolution images which warned in build log
 - [ ] Add TOC on post page's sidebar
 - [ ] lighthouse scroll enhance
 
