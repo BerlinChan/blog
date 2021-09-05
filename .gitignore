@@ -1,8 +1,7 @@
 node_modules/
 .cache/
 public/
-npm-debug.log
-.gatsby-context.js
-.idea
+.idea/
 .DS_Store
+npm-debug.log
 yarn-error.log

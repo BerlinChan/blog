@@ -10,10 +10,11 @@ categories:
     - 小玩意
 tags:
     - HDD
+    - PC
 description: 
 ---
 
-I have two Western Digital HDDs, one is Caviar Black and another is Caviar Green serial, both capacities are 1TB. **Because uncorrectable sectors** occurred, it's time for them to retire.
+I have two Western Digital HDDs, one is Caviar Black and another is Caviar Green serial, both capacities are 1TB. Because **uncorrectable sectors** occurred, it's time for them to retire.
 
 <!-- endExcerpt -->
 
@@ -25,11 +26,25 @@ It almost ruined a very important video of mine, which scared me badly.
 
 I have a strong impression of a BBS post before I've decided to buy the Caviar Black 1TB disk, it said "the data stored on the Black disk could never lose." Haha, it's hard to say NEVER.
 
-With these two HDDs in use, I mostly use them to do some photography work, video editing, and 3D animation. I've moved important data to a new NAS with 2 Seagate 8T disks. How do they doing? We'll see.
-
 ![](./two-western-digital-hdd.jpg)
 
-## HDD Specification
+With these two HDDs in use, I mostly use them to do some photography work, video editing, and 3D animation. I've moved important data to a new NAS with 2 Seagate 8T disks. How do they doing? We'll see.
+
+And also it's time to say goodbye to the old PC, thanks for working alongside me for so many years, from Yichang to Wuhan!
+
+![](./pc-case.jpg)
+
+---
+
+## PC Specifications
+
+- Mother Board : Gigabyte P55-UD3R
+- CPU : Intel Core i5 750
+- RAM : 12GB DDR3 1600
+- Graphics Card : Nvidia Quadro 2000
+- Optical Drive : ASUS DVD RW
+
+## HDD Specifications
 
 ### WDC WD1002FAEX-00Z3A0
 
