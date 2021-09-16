@@ -16,7 +16,6 @@ const useSiteMetadata = () => {
             author {
               name
               bio
-              photo
               contacts {
                 email
                 twitter

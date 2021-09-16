@@ -3,7 +3,6 @@ const siteConfig = {
   googleAnalyticsId: "UA-43244265-2",
   author: {
     name: "陈柏林",
-    photo: "/media/photo.jpg",
     bio: "前端开发工程师、摄影师，理想主义与黑客精神",
     contacts: {
       twitter: "https://www.twitter.com/BerlinChanCom",
