@@ -1,5 +1,5 @@
 ---
-title: Two WesterDigital HDDs retire after 10-year occupation
+title: Two WesternDigital HDDs retire after 10-year occupation
 date: 2021-09-02T10:46:37.121Z
 template: post
 featured_top: false
