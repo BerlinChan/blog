@@ -3,8 +3,8 @@ import { Link as GatsbyLink } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import Layout from '../components/Layout'
 import { useSiteMetadata, useTagsList } from '../hooks'
-import Link from '@material-ui/core/Link'
-import Typography from '@material-ui/core/Typography'
+import Link from '@mui/material/Link'
+import Typography from '@mui/material/Typography'
 
 const TagsListTemplate = () => {
   const { title } = useSiteMetadata()

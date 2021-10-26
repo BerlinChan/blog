@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import PostList from "../components/PostList";
 import Pagination from "../components/Pagination";
 import { useSiteMetadata } from "../hooks";
-import Typography from "@material-ui/core/Typography";
+import Typography from "@mui/material/Typography";
 
 const CategoryTemplate = ({ data, pageContext }) => {
   const { title: siteTitle } = useSiteMetadata();

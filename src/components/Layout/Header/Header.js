@@ -1,22 +1,23 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Box from "@material-ui/core/Box";
-import Toolbar from "@material-ui/core/Toolbar";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
-import Slide from "@material-ui/core/Slide";
-import Hidden from "@material-ui/core/Hidden";
+import { useTheme } from "@mui/material/styles";
+import makeStyles from '@mui/styles/makeStyles';
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import Slide from "@mui/material/Slide";
+import Hidden from "@mui/material/Hidden";
 import Menu from "../Menu";
 import MenuDraw from "../MenuDraw";
 import { useSiteMetadata } from "../../../hooks";
 import { Link as GatsbyLink, withPrefix } from "gatsby";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger/useScrollTrigger";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
-import BrightnessHighIcon from "@material-ui/icons/BrightnessHigh";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
 import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = makeStyles((theme) => ({
@@ -104,7 +105,7 @@ const Header = (props) => {
               </Typography>
             </Link>
             <Box className={classes.toolbarMenu}>
-              <Hidden xsDown>
+              <Hidden smDown>
                 <Menu />
               </Hidden>
               <Hidden smUp>
@@ -113,16 +114,16 @@ const Header = (props) => {
                   color="inherit"
                   aria-label="menu"
                   onClick={() => setOpenDraw(true)}
-                >
+                  size="large">
                   <MenuIcon color={"primary"} />
                 </IconButton>
               </Hidden>
-              {theme.palette.type === "light" ? (
+              {theme.palette.mode === "light" ? (
                 <IconButton
                   color="primary"
                   aria-label="Activate dark mode"
                   onClick={() => props.setColorMode("dark")}
-                >
+                  size="large">
                   <Brightness4Icon />
                 </IconButton>
               ) : (
@@ -130,7 +131,7 @@ const Header = (props) => {
                   color="primary"
                   aria-label="Activate light mode"
                   onClick={() => props.setColorMode("light")}
-                >
+                  size="large">
                   <BrightnessHighIcon />
                 </IconButton>
               )}

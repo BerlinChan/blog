@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
 import { useCategoriesList, useSiteMetadata } from '../../../hooks'
-import { makeStyles } from '@material-ui/core/styles'
+import makeStyles from '@mui/styles/makeStyles';
 import kebabCase from 'lodash/kebabCase'
-import Link from '@material-ui/core/Link'
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
-import ListSubheader from '@material-ui/core/ListSubheader'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
+import Link from '@mui/material/Link'
+import SwipeableDrawer from '@mui/material/SwipeableDrawer'
+import ListSubheader from '@mui/material/ListSubheader'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
 
 const useStyles = makeStyles(theme => ({
   menuDrawer: {

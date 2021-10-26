@@ -1,14 +1,14 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import Hidden from "@material-ui/core/Hidden";
-import Link from "@material-ui/core/Link";
+import makeStyles from '@mui/styles/makeStyles';
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Hidden from "@mui/material/Hidden";
+import Link from "@mui/material/Link";
 import { useSiteMetadata } from "../../../hooks";
 import SvgIcons from "../../../utils/SvgIcons";
 import { Link as GatsbyLink } from "gatsby";
-import Popover from "@material-ui/core/Popover";
+import Popover from "@mui/material/Popover";
 import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = makeStyles((theme) => ({
@@ -62,7 +62,7 @@ const Footer = () => {
   return (
     <footer className={classes.footer}>
       <Grid container spacing={3}>
-        <Hidden smDown>
+        <Hidden mdDown>
           <Grid item md={4}>
             <Typography variant="subtitle1" color="textSecondary">
               <Link component={GatsbyLink} to={"/page"} color="inherit">
@@ -97,7 +97,7 @@ const Footer = () => {
             href={contacts.twitter}
             target="_blank"
             rel="noopener"
-          >
+            size="large">
             <SvgIcons name={"twitter"} />
           </IconButton>
           <IconButton
@@ -105,7 +105,7 @@ const Footer = () => {
             href={contacts.youtube}
             target="_blank"
             rel="noopener"
-          >
+            size="large">
             <SvgIcons name={"youtube"} />
           </IconButton>
           <IconButton
@@ -113,7 +113,7 @@ const Footer = () => {
             href={contacts.facebook}
             target="_blank"
             rel="noopener"
-          >
+            size="large">
             <SvgIcons name={"facebook"} />
           </IconButton>
           <IconButton
@@ -121,7 +121,7 @@ const Footer = () => {
             href={contacts.linkedIn}
             target="_blank"
             rel="noopener"
-          >
+            size="large">
             <SvgIcons name={"linkedIn"} />
           </IconButton>
           <IconButton
@@ -129,10 +129,10 @@ const Footer = () => {
             href={contacts.github}
             target="_blank"
             rel="noopener"
-          >
+            size="large">
             <SvgIcons name={"github"} />
           </IconButton>
-          <IconButton className={classes.snsIcon} onClick={handleQrClick}>
+          <IconButton className={classes.snsIcon} onClick={handleQrClick} size="large">
             <SvgIcons name={"wechat"} />
           </IconButton>
           <IconButton
@@ -140,7 +140,7 @@ const Footer = () => {
             href={contacts.rss}
             target="_blank"
             rel="noopener"
-          >
+            size="large">
             <SvgIcons name={"rss"} />
           </IconButton>
 

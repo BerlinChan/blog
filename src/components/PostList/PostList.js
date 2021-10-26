@@ -1,14 +1,14 @@
 import React from "react";
 import { format } from "date-fns";
 import { Link as GatsbyLink } from "gatsby";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import Card from "@material-ui/core/Card";
-import Box from "@material-ui/core/Box";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import Hidden from "@material-ui/core/Hidden";
-import CardMedia from "@material-ui/core/CardMedia";
-import { makeStyles } from "@material-ui/core/styles";
+import CardActionArea from "@mui/material/CardActionArea";
+import Card from "@mui/material/Card";
+import Box from "@mui/material/Box";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Hidden from "@mui/material/Hidden";
+import CardMedia from "@mui/material/CardMedia";
+import makeStyles from '@mui/styles/makeStyles';
 import { getSrc } from "gatsby-plugin-image"
 
 const useStyles = makeStyles((theme) => ({
@@ -78,7 +78,7 @@ const PostList = ({ nodes }) => {
               </CardContent>
             </Box>
             {node.frontmatter.featured_media && (
-              <Hidden xsDown>
+              <Hidden smDown>
                 <CardMedia
                   className={classes.cardMedia}
                   image={getSrc(

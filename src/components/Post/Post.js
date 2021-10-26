@@ -1,11 +1,11 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import { format } from "date-fns";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
-import Box from "@material-ui/core/Box";
-import Chip from "@material-ui/core/Chip";
-import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+import Box from "@mui/material/Box";
+import Chip from "@mui/material/Chip";
+import makeStyles from '@mui/styles/makeStyles';
 import { useSiteMetadata } from "../../hooks";
 import {
   FacebookShareButton,
@@ -14,7 +14,7 @@ import {
   TwitterShareButton,
 } from "react-share";
 import SvgIcons from "../../utils/SvgIcons";
-import ButtonBase from "@material-ui/core/ButtonBase";
+import ButtonBase from "@mui/material/ButtonBase";
 
 const useStyles = makeStyles((theme) => ({
   date: {

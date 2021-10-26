@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
 import { useSiteMetadata } from "../hooks";
-import Box from "@material-ui/core/Box";
+import Box from "@mui/material/Box";
 import ArchivedBlogTips from "../components/ArchivedBlogTips";
 import PostList from "../components/PostList";
 

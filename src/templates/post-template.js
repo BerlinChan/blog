@@ -8,7 +8,7 @@ import Content from '../components/Content'
 import Pagination from '../components/Pagination'
 import { useSiteMetadata } from '../hooks'
 import Comments from '../components/Comments'
-import Box from '@material-ui/core/Box'
+import Box from '@mui/material/Box'
 import { getSrc } from "gatsby-plugin-image"
 
 const PostTemplate = ({ data }) => {

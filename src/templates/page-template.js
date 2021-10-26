@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
-import Typography from '@material-ui/core/Typography'
+import Typography from '@mui/material/Typography'
 import Content from '../components/Content'
 import OpenGraph from '../components/OpenGraph'
 

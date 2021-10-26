@@ -20,8 +20,8 @@
     "material-ui"
   ],
   "dependencies": {
-    "@material-ui/core": "4.12.3",
-    "@material-ui/icons": "4.11.2",
+    "@mui/icons-material": "^5.0.4",
+    "@mui/material": "^5.0.4",
     "date-fns": "2.25.0",
     "gatsby": "3.14.2",
     "gatsby-plugin-catch-links": "3.14.0",

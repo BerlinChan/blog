@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { useSiteMetadata } from '../hooks'
-import Typography from '@material-ui/core/Typography'
+import Typography from '@mui/material/Typography'
 
 const NotFoundTemplate = () => {
   const { title } = useSiteMetadata()

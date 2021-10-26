@@ -1,9 +1,9 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import { useCategoriesList, useSiteMetadata } from "../../../hooks";
-import { makeStyles } from "@material-ui/core/styles";
-import Link from "@material-ui/core/Link";
-import MenuItem from "@material-ui/core/MenuItem";
+import makeStyles from '@mui/styles/makeStyles';
+import Link from "@mui/material/Link";
+import MenuItem from "@mui/material/MenuItem";
 import Menu from "material-ui-popup-state/HoverMenu";
 import {
   usePopupState,

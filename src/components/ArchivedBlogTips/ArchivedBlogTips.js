@@ -1,11 +1,11 @@
 import React from 'react'
-import Box from '@material-ui/core/Box'
-import InfoIcon from '@material-ui/icons/Info'
-import Link from '@material-ui/core/Link'
-import SnackbarContent from '@material-ui/core/SnackbarContent'
-import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
-import { blue } from '@material-ui/core/colors'
+import Box from '@mui/material/Box'
+import InfoIcon from '@mui/icons-material/Info'
+import Link from '@mui/material/Link'
+import SnackbarContent from '@mui/material/SnackbarContent'
+import Typography from '@mui/material/Typography'
+import makeStyles from '@mui/styles/makeStyles';
+import { blue } from '@mui/material/colors'
 
 const useStyles = makeStyles(theme => ({
   info: {

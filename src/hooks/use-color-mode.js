@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const useColorMode = () => {
   const localStorage = typeof window !== "undefined" && window.localStorage;
