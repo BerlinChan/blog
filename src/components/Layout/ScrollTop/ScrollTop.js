@@ -1,20 +1,26 @@
 import React from 'react'
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
 import useScrollTrigger from '@mui/material/useScrollTrigger'
 import Zoom from '@mui/material/Zoom'
 import Fab from '@mui/material/Fab'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 
-const useStyles = makeStyles({
-  scrollToTop: {
+const PREFIX = 'ScrollTop';
+
+const classes = {
+  scrollToTop: `${PREFIX}-scrollToTop`
+};
+
+const StyledZoom = styled(Zoom)({
+  [`& .${classes.scrollToTop}`]: {
     position: 'fixed',
     bottom: 16,
     right: 16,
   },
-})
+});
 
 const ScrollTop = (props) => {
-  const classes = useStyles()
+
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
@@ -25,14 +31,14 @@ const ScrollTop = (props) => {
   }
 
   return (
-    <Zoom in={trigger}>
+    <StyledZoom in={trigger}>
       <div onClick={handleClick} role="presentation" className={classes.scrollToTop}>
         <Fab color="secondary" size="medium" aria-label="scroll back to top">
           <KeyboardArrowUpIcon/>
         </Fab>
       </div>
-    </Zoom>
-  )
+    </StyledZoom>
+  );
 }
 
 export default ScrollTop

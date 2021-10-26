@@ -1,4 +1,5 @@
 import React from "react";
+import { styled } from '@mui/material/styles';
 import { format } from "date-fns";
 import { Link as GatsbyLink } from "gatsby";
 import CardActionArea from "@mui/material/CardActionArea";
@@ -8,35 +9,55 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Hidden from "@mui/material/Hidden";
 import CardMedia from "@mui/material/CardMedia";
-import makeStyles from '@mui/styles/makeStyles';
 import { getSrc } from "gatsby-plugin-image"
 
-const useStyles = makeStyles((theme) => ({
-  cardActionArea: {
+const PREFIX = 'PostList';
+
+const classes = {
+  cardActionArea: `${PREFIX}-cardActionArea`,
+  card: `${PREFIX}-card`,
+  cardDetails: `${PREFIX}-cardDetails`,
+  cardMedia: `${PREFIX}-cardMedia`,
+  date: `${PREFIX}-date`,
+  category: `${PREFIX}-category`
+};
+
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.cardActionArea}`]: {
     marginBottom: theme.spacing(3),
   },
-  card: {
+
+  [`& .${classes.card}`]: {
     display: "flex",
   },
-  cardDetails: {
+
+  [`& .${classes.cardDetails}`]: {
     flex: 1,
   },
-  cardMedia: {
+
+  [`& .${classes.cardMedia}`]: {
     width: 200,
   },
-  date: {
+
+  [`& .${classes.date}`]: {
     marginRight: theme.spacing(1),
   },
-  category: {
+
+  [`& .${classes.category}`]: {
     marginRight: theme.spacing(0.5),
-  },
+  }
 }));
 
 const PostList = ({ nodes }) => {
-  const classes = useStyles();
+
 
   return (
-    <React.Fragment>
+    <Root>
       {nodes.map((node, index) => (
         <CardActionArea
           component={GatsbyLink}
@@ -91,7 +112,7 @@ const PostList = ({ nodes }) => {
           </Card>
         </CardActionArea>
       ))}
-    </React.Fragment>
+    </Root>
   );
 };
 

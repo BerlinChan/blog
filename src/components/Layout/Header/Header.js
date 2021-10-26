@@ -1,6 +1,6 @@
 import React from "react";
+import { styled } from '@mui/material/styles';
 import { useTheme } from "@mui/material/styles";
-import makeStyles from '@mui/styles/makeStyles';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -20,26 +20,46 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
 import { StaticImage } from "gatsby-plugin-image";
 
-const useStyles = makeStyles((theme) => ({
-  avatar: {
+const PREFIX = 'Header';
+
+const classes = {
+  avatar: `${PREFIX}-avatar`,
+  toolbar: `${PREFIX}-toolbar`,
+  toolbarTitle: `${PREFIX}-toolbarTitle`,
+  toolbarMenu: `${PREFIX}-toolbarMenu`,
+  toolbarHolder: `${PREFIX}-toolbarHolder`
+};
+
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.avatar}`]: {
     marginRight: theme.spacing(2),
   },
-  toolbar: {
+
+  [`& .${classes.toolbar}`]: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
-  toolbarTitle: {
+
+  [`& .${classes.toolbarTitle}`]: {
     color: theme.palette.primary.main,
     "&:hover": {
       color: theme.palette.primary.main,
     },
   },
-  toolbarMenu: {
+
+  [`& .${classes.toolbarMenu}`]: {
     marginLeft: "auto",
   },
-  toolbarHolder: {
+
+  [`& .${classes.toolbarHolder}`]: {
     marginBottom: theme.spacing(3),
-  },
+  }
 }));
+
 const HideOnScroll = (props) => {
   const { children } = props;
   const trigger = useScrollTrigger({
@@ -62,14 +82,14 @@ const HideOnScroll = (props) => {
 const Header = (props) => {
   const [openDraw, setOpenDraw] = React.useState(false);
   const theme = useTheme();
-  const classes = useStyles();
+
   const {
     title: siteTitle,
     author: { name },
   } = useSiteMetadata();
 
   return (
-    <React.Fragment>
+    <Root>
       <HideOnScroll {...props}>
         <AppBar color={"default"}>
           <Toolbar className={classes.toolbar}>
@@ -141,7 +161,7 @@ const Header = (props) => {
       </HideOnScroll>
       <Toolbar className={classes.toolbarHolder} />
       <MenuDraw openDraw={openDraw} setOpenDraw={setOpenDraw} />
-    </React.Fragment>
+    </Root>
   );
 };
 

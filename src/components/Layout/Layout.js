@@ -3,10 +3,8 @@ import { Helmet } from 'react-helmet'
 import CssBaseline from '@mui/material/CssBaseline'
 import {
   ThemeProvider,
-  StyledEngineProvider,
   createTheme,
   responsiveFontSizes,
-  adaptV4Theme,
 } from '@mui/material/styles';
 import Container from '@mui/material/Container'
 import { brown, deepOrange } from '@mui/material/colors'
@@ -21,18 +19,17 @@ const Layout = ({ title, children, featuredContent, noSidebar }) => {
   const [colorMode, setColorMode] = useColorMode()
   const theme = responsiveFontSizes(React.useMemo(
     () =>
-      createTheme(adaptV4Theme({
+      createTheme({
         palette: {
           mode: colorMode === 'dark' ? 'dark' : 'light',
           primary: deepOrange,
           secondary: brown,
         },
-      })),
+      }),
     [colorMode],
   ))
 
   return (
-    <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <Helmet defer={false}>
@@ -56,7 +53,6 @@ const Layout = ({ title, children, featuredContent, noSidebar }) => {
         </Container>
         <ScrollTop/>
       </ThemeProvider>
-    </StyledEngineProvider>
   );
 }
 

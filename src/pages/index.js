@@ -1,8 +1,8 @@
 import React from "react";
+import { styled } from '@mui/material/styles';
 import { graphql } from "gatsby";
 import { useSiteMetadata } from "../hooks";
 import Layout from "../components/Layout";
-import makeStyles from '@mui/styles/makeStyles';
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -14,22 +14,37 @@ import Pagination from "../components/Pagination";
 import { Link as GatsbyLink } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const useStyles = makeStyles((theme) => ({
-  mainFeaturedPost: {
+const PREFIX = 'HomePage';
+
+const classes = {
+  mainFeaturedPost: `${PREFIX}-mainFeaturedPost`,
+  background: `${PREFIX}-background`,
+  overlay: `${PREFIX}-overlay`,
+  mainFeaturedPostContent: `${PREFIX}-mainFeaturedPostContent`
+};
+
+const StyledLayout = styled(Layout)((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.mainFeaturedPost}`]: {
     position: "relative",
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
     overflow: "hidden",
   },
-  background: {
+
+  [`& .${classes.background}`]: {
     position: "absolute",
     top: 0,
     bottom: 0,
     right: 0,
     left: 0,
   },
-  overlay: {
+
+  [`& .${classes.overlay}`]: {
     position: "absolute",
     top: 0,
     bottom: 0,
@@ -37,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     backgroundColor: "rgba(0,0,0,.3)",
   },
-  mainFeaturedPostContent: {
+
+  [`& .${classes.mainFeaturedPostContent}`]: {
     display: "block",
     position: "relative",
     textAlign: "left",
@@ -46,16 +62,16 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(6),
       paddingRight: 0,
     },
-  },
+  }
 }));
 
 const HomePage = ({ data }) => {
-  const classes = useStyles();
+
   const { title: siteTitle, postsPerPage } = useSiteMetadata();
   const featuredPostNode = data.featuredPosts.nodes[0];
 
   return (
-    <Layout
+    <StyledLayout
       title={siteTitle}
       featuredContent={
         <Paper className={classes.mainFeaturedPost}>
@@ -106,7 +122,7 @@ const HomePage = ({ data }) => {
       {data.allPostCount.totalCount > postsPerPage && (
         <Pagination nextPagePath={"/page/1"} />
       )}
-    </Layout>
+    </StyledLayout>
   );
 };
 

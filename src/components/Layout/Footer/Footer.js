@@ -1,5 +1,5 @@
-import React from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import React from 'react'
+import { styled } from '@mui/material/styles';
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -11,23 +11,37 @@ import { Link as GatsbyLink } from "gatsby";
 import Popover from "@mui/material/Popover";
 import { StaticImage } from "gatsby-plugin-image";
 
-const useStyles = makeStyles((theme) => ({
-  footer: {
+const PREFIX = 'Footer';
+
+const classes = {
+  footer: `${PREFIX}-footer`,
+  snsIcon: `${PREFIX}-snsIcon`,
+  qrCodeText: `${PREFIX}-qrCodeText`
+};
+
+const Root = styled('footer')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.footer}`]: {
     backgroundColor: theme.palette.background.paper,
     marginTop: theme.spacing(6),
     padding: theme.spacing(6, 4),
   },
-  snsIcon: {
+
+  [`& .${classes.snsIcon}`]: {
     marginRight: theme.spacing(1),
   },
-  qrCodeText: {
+
+  [`& .${classes.qrCodeText}`]: {
     marginTop: theme.spacing(1),
-  },
+  }
 }));
 
 const Footer = () => {
   const [anchorQrEl, setAnchorQrEl] = React.useState(null);
-  const classes = useStyles();
+
   const {
     author: { contacts },
     menu,
@@ -60,7 +74,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className={classes.footer}>
+    <Root className={classes.footer}>
       <Grid container spacing={3}>
         <Hidden mdDown>
           <Grid item md={4}>
@@ -192,7 +206,7 @@ const Footer = () => {
           </Typography>
         </Grid>
       </Grid>
-    </footer>
+    </Root>
   );
 };
 

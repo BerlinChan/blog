@@ -1,11 +1,11 @@
 import React from "react";
+import { styled } from '@mui/material/styles';
 import { Link as GatsbyLink } from "gatsby";
 import { format } from "date-fns";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
-import makeStyles from '@mui/styles/makeStyles';
 import { useSiteMetadata } from "../../hooks";
 import {
   FacebookShareButton,
@@ -16,36 +16,55 @@ import {
 import SvgIcons from "../../utils/SvgIcons";
 import ButtonBase from "@mui/material/ButtonBase";
 
-const useStyles = makeStyles((theme) => ({
-  date: {
+const PREFIX = 'Post';
+
+const classes = {
+  date: `${PREFIX}-date`,
+  category: `${PREFIX}-category`,
+  tagList: `${PREFIX}-tagList`,
+  chip: `${PREFIX}-chip`,
+  shareButton: `${PREFIX}-shareButton`
+};
+
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.date}`]: {
     marginRight: theme.spacing(2),
   },
-  category: {
+
+  [`& .${classes.category}`]: {
     marginRight: theme.spacing(1),
   },
-  tagList: {
+
+  [`& .${classes.tagList}`]: {
     display: "flex",
     flexWrap: "wrap",
     padding: theme.spacing(0.5),
   },
-  chip: {
+
+  [`& .${classes.chip}`]: {
     margin: theme.spacing(0.5),
   },
-  shareButton: {
+
+  [`& .${classes.shareButton}`]: {
     marginLeft: theme.spacing(1),
     padding: theme.spacing(1),
     borderRadius: "50%",
-  },
+  }
 }));
 
 const Post = ({ isArchivedBlogPost, post, children }) => {
-  const classes = useStyles();
+
   const { siteUrl, archivedBlogUrl } = useSiteMetadata();
   const { categorySlugs, tagSlugs } = post.fields;
   const { categories, tags, title, date, slug, description } = post.frontmatter;
 
   return (
-    <React.Fragment>
+    <Root>
       <Typography component="h2" variant={"h4"} gutterBottom>
         {title}
       </Typography>
@@ -151,7 +170,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           <SvgIcons name={"telegram"} />
         </ButtonBase>
       </Box>
-    </React.Fragment>
+    </Root>
   );
 };
 

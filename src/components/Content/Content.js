@@ -1,8 +1,18 @@
 import React from 'react'
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
 
-const useStyles = makeStyles(theme => ({
-  content: {
+const PREFIX = 'Content';
+
+const classes = {
+  content: `${PREFIX}-content`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.content}`]: {
     fontSize: '1.125rem',
     lineHeight: 1.6,
     '& p': {
@@ -38,15 +48,13 @@ const useStyles = makeStyles(theme => ({
         },
       },
     },
-  },
-}))
+  }
+}));
 
 const Content = ({ html }) => {
-  const classes = useStyles()
 
-  return (
-    <div className={classes.content} dangerouslySetInnerHTML={{ __html: html }}/>
-  )
+
+  return <Root className={classes.content} dangerouslySetInnerHTML={{ __html: html }}/>;
 }
 
 export default Content
