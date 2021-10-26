@@ -183,9 +183,7 @@ const Footer = () => {
             color="textSecondary"
             style={{ cursor: "pointer" }}
             onClick={() =>
-              window.open(
-                `http://${["www", "beian", "miit", "gov", "cn"].join(".")}/`
-              )
+              window.open(["beian", "miit", "gov", "cn"].join("."))
             }
           >
             {fuxkId.map((item, index) => (
