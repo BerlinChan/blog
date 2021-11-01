@@ -1,12 +1,13 @@
-const createSchemaCustomization=({ actions }) => {
+const createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
-  createTypes({
+
+  createTypes(
     `
-      type CustomImage implements Node {
-        localImage: File!
+      type ArchivedBlogPostJson implements Node {
+        featured_media: File @link(from: "fields.featured_media_id")
       }
     `
-  })
-}
+  );
+};
 
-exports.default = createSchemaCustomization
+exports.default = createSchemaCustomization;

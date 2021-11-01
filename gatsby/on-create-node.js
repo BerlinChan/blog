@@ -55,7 +55,7 @@ const onCreateNode = async ({
     });
     // if the file was created, extend the node with "localFile"
     if (fileNode) {
-      createNodeField({ node, name: "featured_media", value: fileNode.id });
+      createNodeField({ node, name: "featured_media_id", value: fileNode.id });
     }
   }
 };
