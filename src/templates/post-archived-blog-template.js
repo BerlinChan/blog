@@ -82,16 +82,6 @@ export const query = graphql`
         name
         path
       }
-      featured_media {
-        childImageSharp {
-          gatsbyImageData(
-            width: 800
-            height: 400
-            placeholder: BLURRED
-            layout: FIXED
-          )
-        }
-      }
       path
       date
       excerpt
