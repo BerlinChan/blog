@@ -64,6 +64,17 @@ export const query = graphql`
           name
           path
         }
+        featured_media {
+          childImageSharp {
+            gatsbyImageData(
+              width: 200
+              height: 200
+              placeholder: BLURRED
+              transformOptions: { cropFocus: CENTER }
+              layout: FIXED
+            )
+          }
+        }
       }
     }
   }
