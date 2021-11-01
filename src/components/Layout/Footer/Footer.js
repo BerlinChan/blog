@@ -46,24 +46,6 @@ const Footer = () => {
     author: { contacts },
     menu,
   } = useSiteMetadata();
-  const fuxkId = [
-    "鄂",
-    "I",
-    "C",
-    "P",
-    "备",
-    "1",
-    "6",
-    "0",
-    "0",
-    "7",
-    "5",
-    "8",
-    "6",
-    "号",
-    "-",
-    "1",
-  ];
 
   function handleQrClick(event) {
     setAnchorQrEl(event.currentTarget);
@@ -191,20 +173,6 @@ const Footer = () => {
               知识共享署名 4.0 国际许可协议
             </Link>
             进行许可。
-          </Typography>
-          <Typography
-            variant="body2"
-            color="textSecondary"
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              window.open(
-                `https://${["beian", "miit", "gov", "cn"].join(".")}/`
-              )
-            }
-          >
-            {fuxkId.map((item, index) => (
-              <span key={index}>{item}</span>
-            ))}
           </Typography>
         </Grid>
       </Grid>
