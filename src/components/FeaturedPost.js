@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "@mui/material/styles";
+import { useTheme, alpha } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
@@ -34,7 +34,7 @@ const FeaturedPost = ({ featuredPostNode }) => {
           alignItems: "start",
           gridArea: "1/1",
           padding: theme.spacing(3),
-          backgroundColor: "rgba(0,0,0,.3)",
+          backgroundColor: alpha(theme.palette.background.paper, 0.3),
           [theme.breakpoints.up("md")]: {
             padding: theme.spacing(6, 0, 6, 6),
           },
