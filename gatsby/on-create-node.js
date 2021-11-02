@@ -53,9 +53,9 @@ const onCreateNode = async ({
       cache, // Gatsby's cache
       store, // Gatsby's Redux store
     });
-    // if the file was created, attach the new node to the parent node
+    // if the file was created, extend the node with "featured_media_id"
     if (fileNode) {
-      node.featured_media___NODE = fileNode.id;
+      createNodeField({ node, name: "featured_media_id", value: fileNode.id });
     }
   }
 };
