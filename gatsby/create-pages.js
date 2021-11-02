@@ -1,5 +1,4 @@
 const path = require('path')
-const _ = require('lodash')
 const createCategoriesPages = require('./pagination/create-category-list.js')
 const createTagsPages = require('./pagination/create-tag-list.js')
 const createPostsPages = require('./pagination/create-post-list.js')

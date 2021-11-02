@@ -1,20 +1,31 @@
 import React from 'react'
+import { styled } from '@mui/material/styles';
 import { Link as GatsbyLink } from 'gatsby'
 import { PAGINATION } from '../../constants'
 import Link from '@mui/material/Link'
 import Grid from '@mui/material/Grid'
-import makeStyles from '@mui/styles/makeStyles';
 
-const useStyles = makeStyles(theme => ({
-  nextNav: {
+const PREFIX = 'Pagination';
+
+const classes = {
+  nextNav: `${PREFIX}-nextNav`
+};
+
+const StyledGrid = styled(Grid)((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.nextNav}`]: {
     marginLeft: 'auto',
-  },
-}))
+  }
+}));
+
 const Pagination = ({ prevPageName, nextPageName, prevPagePath, nextPagePath }) => {
-  const classes = useStyles()
+
 
   return (
-    <Grid container justifyContent="space-between" wrap="nowrap">
+    <StyledGrid container justifyContent="space-between" wrap="nowrap">
       {prevPagePath ? <Grid item>
         <Link component={GatsbyLink} rel="prev" to={prevPagePath} variant='h6'>
           ← {prevPageName ? prevPageName : PAGINATION.PREV_PAGE}</Link>
@@ -23,8 +34,8 @@ const Pagination = ({ prevPageName, nextPageName, prevPagePath, nextPagePath }) 
         <Link component={GatsbyLink} rel="next" to={nextPagePath} variant='h6'>
           {nextPageName ? nextPageName : PAGINATION.NEXT_PAGE} →</Link>
       </Grid> : null}
-    </Grid>
-  )
+    </StyledGrid>
+  );
 }
 
 export default Pagination

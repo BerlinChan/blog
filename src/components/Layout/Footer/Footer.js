@@ -1,5 +1,5 @@
-import React from "react";
-import makeStyles from '@mui/styles/makeStyles';
+import React from 'react'
+import { styled } from '@mui/material/styles';
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
@@ -11,45 +11,41 @@ import { Link as GatsbyLink } from "gatsby";
 import Popover from "@mui/material/Popover";
 import { StaticImage } from "gatsby-plugin-image";
 
-const useStyles = makeStyles((theme) => ({
-  footer: {
+const PREFIX = 'Footer';
+
+const classes = {
+  footer: `${PREFIX}-footer`,
+  snsIcon: `${PREFIX}-snsIcon`,
+  qrCodeText: `${PREFIX}-qrCodeText`
+};
+
+const Root = styled('footer')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.footer}`]: {
     backgroundColor: theme.palette.background.paper,
     marginTop: theme.spacing(6),
     padding: theme.spacing(6, 4),
   },
-  snsIcon: {
+
+  [`& .${classes.snsIcon}`]: {
     marginRight: theme.spacing(1),
   },
-  qrCodeText: {
+
+  [`& .${classes.qrCodeText}`]: {
     marginTop: theme.spacing(1),
-  },
+  }
 }));
 
 const Footer = () => {
   const [anchorQrEl, setAnchorQrEl] = React.useState(null);
-  const classes = useStyles();
+
   const {
     author: { contacts },
     menu,
   } = useSiteMetadata();
-  const fuxkId = [
-    "鄂",
-    "I",
-    "C",
-    "P",
-    "备",
-    "1",
-    "6",
-    "0",
-    "0",
-    "7",
-    "5",
-    "8",
-    "6",
-    "号",
-    "-",
-    "1",
-  ];
 
   function handleQrClick(event) {
     setAnchorQrEl(event.currentTarget);
@@ -60,7 +56,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className={classes.footer}>
+    <Root className={classes.footer}>
       <Grid container spacing={3}>
         <Hidden mdDown>
           <Grid item md={4}>
@@ -178,21 +174,9 @@ const Footer = () => {
             </Link>
             进行许可。
           </Typography>
-          <Typography
-            variant="body2"
-            color="textSecondary"
-            style={{ cursor: "pointer" }}
-            onClick={() =>
-              window.open(["beian", "miit", "gov", "cn"].join("."))
-            }
-          >
-            {fuxkId.map((item, index) => (
-              <span key={index}>{item}</span>
-            ))}
-          </Typography>
         </Grid>
       </Grid>
-    </footer>
+    </Root>
   );
 };
 

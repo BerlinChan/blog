@@ -1,7 +1,7 @@
 import React from "react";
+import { styled } from '@mui/material/styles';
 import { Link as GatsbyLink } from "gatsby";
 import { useCategoriesList, useSiteMetadata } from "../../../hooks";
-import makeStyles from '@mui/styles/makeStyles';
 import Link from "@mui/material/Link";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "material-ui-popup-state/HoverMenu";
@@ -12,23 +12,40 @@ import {
 } from "material-ui-popup-state/hooks";
 import kebabCase from "lodash/kebabCase";
 
-const useStyles = makeStyles((theme) => ({
-  menuDropdown: {
+const PREFIX = 'MenuComponent';
+
+const classes = {
+  menuDropdown: `${PREFIX}-menuDropdown`,
+  menuLink: `${PREFIX}-menuLink`,
+  toolbarLink: `${PREFIX}-toolbarLink`,
+  activeLink: `${PREFIX}-activeLink`
+};
+
+// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.menuDropdown}`]: {
     width: 200,
   },
-  menuLink: {
+
+  [`& .${classes.menuLink}`]: {
     width: "100%",
   },
-  toolbarLink: {
+
+  [`& .${classes.toolbarLink}`]: {
     padding: theme.spacing(1),
   },
-  activeLink: {
+
+  [`& .${classes.activeLink}`]: {
     color: theme.palette.action.active,
-  },
+  }
 }));
 
 const MenuComponent = () => {
-  const classes = useStyles();
+
   const popupState = usePopupState({
     variant: "popover",
     popupId: "menuListGrow",
@@ -37,7 +54,7 @@ const MenuComponent = () => {
   const categories = useCategoriesList();
 
   return (
-    <React.Fragment>
+    <Root>
       <Link
         component={GatsbyLink}
         to={`/page`}
@@ -122,7 +139,7 @@ const MenuComponent = () => {
           )}
         </React.Fragment>
       ))}
-    </React.Fragment>
+    </Root>
   );
 };
 

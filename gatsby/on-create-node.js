@@ -41,10 +41,11 @@ const onCreateNode = async ({
       );
       createNodeField({ node, name: "categorySlugs", value: categorySlugs });
     }
-  }
-
-  if (node.internal.type === "ArchivedBlogPostJson" && node.featuredImg) {
-    let fileNode = await createRemoteFileNode({
+  } else if (
+    node.internal.type === "ArchivedBlogPostJson" &&
+    node.featuredImg
+  ) {
+    const fileNode = await createRemoteFileNode({
       url: node.featuredImg, // string that points to the URL of the image
       parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
       createNode, // helper function in gatsby-node to generate the node
@@ -52,9 +53,9 @@ const onCreateNode = async ({
       cache, // Gatsby's cache
       store, // Gatsby's Redux store
     });
-    // if the file was created, attach the new node to the parent node
+    // if the file was created, extend the node with "featured_media_id"
     if (fileNode) {
-      node.featured_media___NODE = fileNode.id;
+      createNodeField({ node, name: "featured_media_id", value: fileNode.id });
     }
   }
 };

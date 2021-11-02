@@ -1,6 +1,5 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import makeStyles from '@mui/styles/makeStyles';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -20,26 +19,6 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
 import { StaticImage } from "gatsby-plugin-image";
 
-const useStyles = makeStyles((theme) => ({
-  avatar: {
-    marginRight: theme.spacing(2),
-  },
-  toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
-  toolbarTitle: {
-    color: theme.palette.primary.main,
-    "&:hover": {
-      color: theme.palette.primary.main,
-    },
-  },
-  toolbarMenu: {
-    marginLeft: "auto",
-  },
-  toolbarHolder: {
-    marginBottom: theme.spacing(3),
-  },
-}));
 const HideOnScroll = (props) => {
   const { children } = props;
   const trigger = useScrollTrigger({
@@ -62,7 +41,6 @@ const HideOnScroll = (props) => {
 const Header = (props) => {
   const [openDraw, setOpenDraw] = React.useState(false);
   const theme = useTheme();
-  const classes = useStyles();
   const {
     title: siteTitle,
     author: { name },
@@ -72,15 +50,15 @@ const Header = (props) => {
     <React.Fragment>
       <HideOnScroll {...props}>
         <AppBar color={"default"}>
-          <Toolbar className={classes.toolbar}>
+          <Toolbar sx={{ borderBottom: `1px solid ${theme.palette.divider}` }}>
             <Link
               component={GatsbyLink}
               to={withPrefix("/")}
-              className={classes.avatar}
+              sx={{ marginRight: theme.spacing(2) }}
             >
               <Avatar>
                 <StaticImage
-                  src='../../../images/photo.jpg'
+                  src="../../../images/photo.jpg"
                   alt={name}
                   layout="fixed"
                   width={40}
@@ -91,7 +69,7 @@ const Header = (props) => {
             <Link
               component={GatsbyLink}
               to={withPrefix("/")}
-              className={classes.toolbarTitle}
+              sx={{ color: theme.palette.primary.main }}
               underline="none"
             >
               <Typography
@@ -104,7 +82,7 @@ const Header = (props) => {
                 {siteTitle}
               </Typography>
             </Link>
-            <Box className={classes.toolbarMenu}>
+            <Box sx={{ marginLeft: "auto" }} display="flex" alignItems="center">
               <Hidden smDown>
                 <Menu />
               </Hidden>
@@ -114,7 +92,8 @@ const Header = (props) => {
                   color="inherit"
                   aria-label="menu"
                   onClick={() => setOpenDraw(true)}
-                  size="large">
+                  size="large"
+                >
                   <MenuIcon color={"primary"} />
                 </IconButton>
               </Hidden>
@@ -123,7 +102,8 @@ const Header = (props) => {
                   color="primary"
                   aria-label="Activate dark mode"
                   onClick={() => props.setColorMode("dark")}
-                  size="large">
+                  size="large"
+                >
                   <Brightness4Icon />
                 </IconButton>
               ) : (
@@ -131,7 +111,8 @@ const Header = (props) => {
                   color="primary"
                   aria-label="Activate light mode"
                   onClick={() => props.setColorMode("light")}
-                  size="large">
+                  size="large"
+                >
                   <BrightnessHighIcon />
                 </IconButton>
               )}
@@ -139,7 +120,7 @@ const Header = (props) => {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-      <Toolbar className={classes.toolbarHolder} />
+      <Toolbar sx={{ marginBottom: theme.spacing(3) }} />
       <MenuDraw openDraw={openDraw} setOpenDraw={setOpenDraw} />
     </React.Fragment>
   );
