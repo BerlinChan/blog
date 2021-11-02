@@ -1,5 +1,4 @@
 import React from "react";
-import { styled } from '@mui/material/styles';
 import { useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -19,46 +18,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
 import { StaticImage } from "gatsby-plugin-image";
-
-const PREFIX = 'Header';
-
-const classes = {
-  avatar: `${PREFIX}-avatar`,
-  toolbar: `${PREFIX}-toolbar`,
-  toolbarTitle: `${PREFIX}-toolbarTitle`,
-  toolbarMenu: `${PREFIX}-toolbarMenu`,
-  toolbarHolder: `${PREFIX}-toolbarHolder`
-};
-
-// TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
-const Root = styled('div')((
-  {
-    theme
-  }
-) => ({
-  [`& .${classes.avatar}`]: {
-    marginRight: theme.spacing(2),
-  },
-
-  [`& .${classes.toolbar}`]: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
-
-  [`& .${classes.toolbarTitle}`]: {
-    color: theme.palette.primary.main,
-    "&:hover": {
-      color: theme.palette.primary.main,
-    },
-  },
-
-  [`& .${classes.toolbarMenu}`]: {
-    marginLeft: "auto",
-  },
-
-  [`& .${classes.toolbarHolder}`]: {
-    marginBottom: theme.spacing(3),
-  }
-}));
 
 const HideOnScroll = (props) => {
   const { children } = props;
@@ -82,25 +41,24 @@ const HideOnScroll = (props) => {
 const Header = (props) => {
   const [openDraw, setOpenDraw] = React.useState(false);
   const theme = useTheme();
-
   const {
     title: siteTitle,
     author: { name },
   } = useSiteMetadata();
 
   return (
-    <Root>
+    <React.Fragment>
       <HideOnScroll {...props}>
         <AppBar color={"default"}>
-          <Toolbar className={classes.toolbar}>
+          <Toolbar sx={{ borderBottom: `1px solid ${theme.palette.divider}` }}>
             <Link
               component={GatsbyLink}
               to={withPrefix("/")}
-              className={classes.avatar}
+              sx={{ marginRight: theme.spacing(2) }}
             >
               <Avatar>
                 <StaticImage
-                  src='../../../images/photo.jpg'
+                  src="../../../images/photo.jpg"
                   alt={name}
                   layout="fixed"
                   width={40}
@@ -111,7 +69,7 @@ const Header = (props) => {
             <Link
               component={GatsbyLink}
               to={withPrefix("/")}
-              className={classes.toolbarTitle}
+              sx={{ color: theme.palette.primary.main }}
               underline="none"
             >
               <Typography
@@ -124,7 +82,7 @@ const Header = (props) => {
                 {siteTitle}
               </Typography>
             </Link>
-            <Box className={classes.toolbarMenu}>
+            <Box sx={{ marginLeft: "auto" }} display="flex" alignItems="center">
               <Hidden smDown>
                 <Menu />
               </Hidden>
@@ -134,7 +92,8 @@ const Header = (props) => {
                   color="inherit"
                   aria-label="menu"
                   onClick={() => setOpenDraw(true)}
-                  size="large">
+                  size="large"
+                >
                   <MenuIcon color={"primary"} />
                 </IconButton>
               </Hidden>
@@ -143,7 +102,8 @@ const Header = (props) => {
                   color="primary"
                   aria-label="Activate dark mode"
                   onClick={() => props.setColorMode("dark")}
-                  size="large">
+                  size="large"
+                >
                   <Brightness4Icon />
                 </IconButton>
               ) : (
@@ -151,7 +111,8 @@ const Header = (props) => {
                   color="primary"
                   aria-label="Activate light mode"
                   onClick={() => props.setColorMode("light")}
-                  size="large">
+                  size="large"
+                >
                   <BrightnessHighIcon />
                 </IconButton>
               )}
@@ -159,9 +120,9 @@ const Header = (props) => {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-      <Toolbar className={classes.toolbarHolder} />
+      <Toolbar sx={{ marginBottom: theme.spacing(3) }} />
       <MenuDraw openDraw={openDraw} setOpenDraw={setOpenDraw} />
-    </Root>
+    </React.Fragment>
   );
 };
 
