@@ -1,116 +1,22 @@
 import React from "react";
-import { styled } from '@mui/material/styles';
 import { graphql } from "gatsby";
 import { useSiteMetadata } from "../hooks";
 import Layout from "../components/Layout";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
-import ButtonBase from "@mui/material/ButtonBase";
 import PostList from "../components/PostList";
 import Pagination from "../components/Pagination";
-import { Link as GatsbyLink } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
-const PREFIX = 'HomePage';
-
-const classes = {
-  mainFeaturedPost: `${PREFIX}-mainFeaturedPost`,
-  background: `${PREFIX}-background`,
-  overlay: `${PREFIX}-overlay`,
-  mainFeaturedPostContent: `${PREFIX}-mainFeaturedPostContent`
-};
-
-const StyledLayout = styled(Layout)((
-  {
-    theme
-  }
-) => ({
-  [`& .${classes.mainFeaturedPost}`]: {
-    position: "relative",
-    backgroundColor: theme.palette.grey[800],
-    color: theme.palette.common.white,
-    marginBottom: theme.spacing(4),
-    overflow: "hidden",
-  },
-
-  [`& .${classes.background}`]: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-  },
-
-  [`& .${classes.overlay}`]: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-    backgroundColor: "rgba(0,0,0,.3)",
-  },
-
-  [`& .${classes.mainFeaturedPostContent}`]: {
-    display: "block",
-    position: "relative",
-    textAlign: "left",
-    padding: theme.spacing(3),
-    [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(6),
-      paddingRight: 0,
-    },
-  }
-}));
+import FeaturedPost from "../components/FeaturedPost";
 
 const HomePage = ({ data }) => {
-
   const { title: siteTitle, postsPerPage } = useSiteMetadata();
   const featuredPostNode = data.featuredPosts.nodes[0];
 
   return (
-    <StyledLayout
+    <Layout
       title={siteTitle}
-      featuredContent={
-        <Paper className={classes.mainFeaturedPost}>
-          <GatsbyImage
-            className={classes.background}
-            image={getImage(
-              featuredPostNode.frontmatter.featured_media.childImageSharp
-            )}
-            alt={featuredPostNode.frontmatter.title}
-            layout="fullWidth"
-          />
-          <div className={classes.overlay} />
-          <Grid container>
-            <Grid item md={6}>
-              <ButtonBase
-                focusRipple
-                className={classes.mainFeaturedPostContent}
-                component={GatsbyLink}
-                to={featuredPostNode.frontmatter.slug}
-              >
-                <Typography
-                  component="h1"
-                  variant="h3"
-                  color="inherit"
-                  gutterBottom
-                >
-                  {featuredPostNode.frontmatter.title}
-                </Typography>
-                <Typography variant="h5" color="inherit" paragraph>
-                  {featuredPostNode.frontmatter.description}
-                </Typography>
-                <Typography variant="subtitle1" color={"inherit"}>
-                  阅读…
-                </Typography>
-              </ButtonBase>
-            </Grid>
-          </Grid>
-        </Paper>
-      }
+      featuredContent={<FeaturedPost featuredPostNode={featuredPostNode} />}
     >
       <Typography variant="h6" gutterBottom>
         近期文章
@@ -122,7 +28,7 @@ const HomePage = ({ data }) => {
       {data.allPostCount.totalCount > postsPerPage && (
         <Pagination nextPagePath={"/page/1"} />
       )}
-    </StyledLayout>
+    </Layout>
   );
 };
 
@@ -148,7 +54,7 @@ export const query = graphql`
           description
           featured_media {
             childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              gatsbyImageData(aspectRatio: 3, placeholder: BLURRED, layout: FULL_WIDTH)
             }
           }
         }
