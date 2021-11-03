@@ -21,7 +21,7 @@ const Layout = ({ title, children, featuredContent, noSidebar }) => {
     () =>
       createTheme({
         palette: {
-          mode: colorMode === 'dark' ? 'dark' : 'light',
+          mode: colorMode,
           primary: deepOrange,
           secondary: brown,
         },

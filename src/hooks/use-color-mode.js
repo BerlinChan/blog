@@ -3,9 +3,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const useColorMode = () => {
   const localStorage = typeof window !== "undefined" && window.localStorage;
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)", {
-    noSsr: true,
-  });
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const initialState =
     (localStorage && localStorage.getItem("colorMode")) ||
     (prefersDarkMode ? "dark" : "light");
