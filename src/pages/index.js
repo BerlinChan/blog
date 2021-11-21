@@ -61,7 +61,7 @@ export const query = graphql`
       }
     }
     recentPosts: allMarkdownRemark(
-      limit: 6
+      limit: 10
       filter: { frontmatter: { draft: { ne: true }, template: { eq: "post" } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {

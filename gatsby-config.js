@@ -24,7 +24,7 @@ module.exports = {
     title: siteConfig.title,
     subtitle: "",
     UTC: "+08",
-    postsPerPage: 6,
+    postsPerPage: 10,
     disqusShortname: "berlinchan",
     menu: [
       {
