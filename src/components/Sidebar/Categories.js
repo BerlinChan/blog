@@ -57,13 +57,8 @@ const Categories = (props) => {
           underline="none"
           noWrap
           key={index}
-          sx={{
-            padding: (theme) => theme.spacing(1),
-            ":hover": {
-              backgroundColor: (theme) =>
-                emphasize(theme.palette.background.default, 0.1),
-            },
-          }}
+          className={classes.link}
+          activeClassName={classes.activeLink}
         >
           {`${category.fieldValue} (${category.totalCount})`}
         </StyledLink>

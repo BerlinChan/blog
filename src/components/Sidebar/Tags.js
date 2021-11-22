@@ -1,4 +1,5 @@
 import React from "react";
+import { styled } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
@@ -8,6 +9,23 @@ import Box from "@mui/material/Box";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import IconButton from "@mui/material/IconButton";
 import SidebarCard from "./SidebarCard";
+
+const PREFIX = "Tags";
+
+const classes = {
+  tagLink: `${PREFIX}-tagLink`,
+  activeLink: `${PREFIX}-activeLink`,
+};
+
+const StyledLink = styled(Link)(({ theme }) => ({
+  [`&.${classes.tagLink}`]: {
+    margin: theme.spacing(0, 3, 0.5, 0),
+  },
+
+  [`&.${classes.activeLink}`]: {
+    color: theme.palette.action.active,
+  },
+}));
 
 const Tags = (props) => {
   const tagsList = useTagsList()
@@ -36,11 +54,11 @@ const Tags = (props) => {
           display="flex"
           flexWrap="wrap"
           sx={{
-            padding: (theme) => theme.spacing(1),
+            p: 1,
           }}
         >
           {tagsList.map((tag, index) => (
-            <Link
+            <StyledLink
               component={GatsbyLink}
               to={`/tag/${kebabCase(tag.fieldValue)}/`}
               display="block"
@@ -48,10 +66,11 @@ const Tags = (props) => {
               underline="none"
               noWrap
               key={index}
-              sx={{ margin: (theme) => theme.spacing(0, 3, 0.5, 0) }}
+              className={classes.tagLink}
+              activeClassName={classes.activeLink}
             >
               {tag.fieldValue}
-            </Link>
+            </StyledLink>
           ))}
         </Box>
       }
