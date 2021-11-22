@@ -37,7 +37,7 @@ const Tags = (props) => {
     <SidebarCard
       header={
         <React.Fragment>
-          <Typography variant="subtitle1">标签</Typography>
+          <Typography variant="subtitle1">随机标签</Typography>
           <IconButton
             component={GatsbyLink}
             to={"/tags"}
