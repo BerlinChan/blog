@@ -1,13 +1,13 @@
 import React from "react";
-import { styled, useTheme, emphasize } from "@mui/material/styles";
+import { styled, emphasize } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
-import { useCategoriesList } from "../../../hooks";
+import { useCategoriesList } from "../../hooks";
 import kebabCase from "lodash/kebabCase";
-import Box from "@mui/material/Box";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import IconButton from "@mui/material/IconButton";
+import SidebarCard from "./SidebarCard";
 
 const PREFIX = "Categories";
 
@@ -30,31 +30,25 @@ const StyledLink = styled(Link)(({ theme }) => ({
 }));
 
 const Categories = (props) => {
-  const theme = useTheme();
   const categories = useCategoriesList();
 
   return (
-    <Box {...props}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: theme.spacing(0.5, 1),
-          backgroundColor: theme.palette.background.paper,
-        }}
-      >
-        <Typography variant="subtitle1">分类</Typography>
-        <IconButton
-          component={GatsbyLink}
-          to={"/categories"}
-          aria-label="more"
-          size="small"
-          title={"全部"}
-        >
-          <MoreHorizIcon />
-        </IconButton>
-      </Box>
-      {categories.map((category, index) => (
+    <SidebarCard
+      header={
+        <React.Fragment>
+          <Typography variant="subtitle1">分类</Typography>
+          <IconButton
+            component={GatsbyLink}
+            to={"/categories"}
+            aria-label="more"
+            size="small"
+            title={"全部"}
+          >
+            <MoreHorizIcon />
+          </IconButton>
+        </React.Fragment>
+      }
+      body={categories.map((category, index) => (
         <StyledLink
           component={GatsbyLink}
           to={`/category/${kebabCase(category.fieldValue)}/`}
@@ -63,13 +57,18 @@ const Categories = (props) => {
           underline="none"
           noWrap
           key={index}
-          className={classes.link}
-          activeClassName={classes.activeLink}
+          sx={{
+            padding: (theme) => theme.spacing(1),
+            ":hover": {
+              backgroundColor: (theme) =>
+                emphasize(theme.palette.background.default, 0.1),
+            },
+          }}
         >
           {`${category.fieldValue} (${category.totalCount})`}
         </StyledLink>
       ))}
-    </Box>
+    />
   );
 };
 
