@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme, emphasize } from "@mui/material/styles";
+import { styled, useTheme, emphasize } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
@@ -8,6 +8,26 @@ import kebabCase from "lodash/kebabCase";
 import Box from "@mui/material/Box";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import IconButton from "@mui/material/IconButton";
+
+const PREFIX = "Categories";
+
+const classes = {
+  link: `${PREFIX}-link`,
+  activeLink: `${PREFIX}-activeLink`,
+};
+
+const StyledLink = styled(Link)(({ theme }) => ({
+  [`&.${classes.link}`]: {
+    padding: theme.spacing(1),
+    "&:hover": {
+      backgroundColor: emphasize(theme.palette.background.default, 0.1),
+    },
+  },
+
+  [`&.${classes.activeLink}`]: {
+    color: theme.palette.action.active,
+  },
+}));
 
 const Categories = (props) => {
   const theme = useTheme();
@@ -35,7 +55,7 @@ const Categories = (props) => {
         </IconButton>
       </Box>
       {categories.map((category, index) => (
-        <Link
+        <StyledLink
           component={GatsbyLink}
           to={`/category/${kebabCase(category.fieldValue)}/`}
           display="block"
@@ -43,15 +63,11 @@ const Categories = (props) => {
           underline="none"
           noWrap
           key={index}
-          sx={{
-            padding: theme.spacing(1),
-            ":hover": {
-              backgroundColor: emphasize(theme.palette.background.default, 0.1),
-            },
-          }}
+          className={classes.link}
+          activeClassName={classes.activeLink}
         >
           {`${category.fieldValue} (${category.totalCount})`}
-        </Link>
+        </StyledLink>
       ))}
     </Box>
   );
