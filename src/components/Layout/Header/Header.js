@@ -97,25 +97,27 @@ const Header = (props) => {
                   <MenuIcon color={"primary"} />
                 </IconButton>
               </Hidden>
-              {theme.palette.mode === "light" ? (
-                <IconButton
-                  color="primary"
-                  aria-label="Activate dark mode"
-                  onClick={() => props.setColorMode("dark")}
-                  size="large"
-                >
-                  <Brightness4Icon />
-                </IconButton>
-              ) : (
-                <IconButton
-                  color="primary"
-                  aria-label="Activate light mode"
-                  onClick={() => props.setColorMode("light")}
-                  size="large"
-                >
-                  <BrightnessHighIcon />
-                </IconButton>
-              )}
+              {props.setColorMode ? (
+                theme.palette.mode === "light" ? (
+                  <IconButton
+                    color="primary"
+                    aria-label="Activate dark mode"
+                    onClick={() => props.setColorMode("dark")}
+                    size="large"
+                  >
+                    <Brightness4Icon />
+                  </IconButton>
+                ) : (
+                  <IconButton
+                    color="primary"
+                    aria-label="Activate light mode"
+                    onClick={() => props.setColorMode("light")}
+                    size="large"
+                  >
+                    <BrightnessHighIcon />
+                  </IconButton>
+                )
+              ) : null}
             </Box>
           </Toolbar>
         </AppBar>

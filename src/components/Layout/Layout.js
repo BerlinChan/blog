@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import CssBaseline from "@mui/material/CssBaseline";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import {
   ThemeProvider,
   createTheme,
@@ -13,22 +14,21 @@ import Footer from "./Footer";
 import ScrollTop from "./ScrollTop";
 import Grid from "@mui/material/Grid";
 import Sidebar from "../Sidebar/Sidebar";
-import { useColorMode } from "../../hooks";
 
 const Layout = ({ title, children, featuredContent, noSidebar }) => {
-  const [colorMode, setColorMode] = useColorMode();
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const theme = React.useMemo(
     () =>
       responsiveFontSizes(
         createTheme({
           palette: {
-            mode: colorMode,
+            mode: prefersDarkMode ? "dark" : "light",
             primary: deepOrange,
             secondary: brown,
           },
         })
       ),
-    [colorMode]
+    [prefersDarkMode]
   );
 
   return (
@@ -42,7 +42,7 @@ const Layout = ({ title, children, featuredContent, noSidebar }) => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
       </Helmet>
-      <Header setColorMode={setColorMode} />
+      <Header />
       <Container maxWidth="lg">
         {featuredContent}
         <Grid container spacing={5}>
