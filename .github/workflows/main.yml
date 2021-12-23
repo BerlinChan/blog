@@ -51,5 +51,6 @@ jobs:
           target_branch: gh-pages
           build_dir: public
           fqdn: www.berlinchan.com
+          jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
