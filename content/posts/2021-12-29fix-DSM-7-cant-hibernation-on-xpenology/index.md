@@ -1,5 +1,5 @@
 ---
-title: Fix DSM 7.01 can't hibernation on Xpenology
+title: Fix DSM 7.01 can't hibernate on Xpenology
 date: 2021-12-29T10:46:37.121Z
 template: post
 featured_top: false
