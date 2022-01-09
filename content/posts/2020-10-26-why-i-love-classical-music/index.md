@@ -8,7 +8,7 @@ draft: false
 slug: /2020/10/why-i-love-classical-music
 categories: 
     - 观点
-    - 钢琴
+    - 音乐
 tags:
     - classical music
     - 聆听音乐

@@ -7,7 +7,7 @@ featured_media: ./time-to-say-goodbye-cover.jpg
 draft: false
 slug: /2019/09/piano-solo-time-to-say-goodbye
 categories: 
-    - 钢琴
+    - 音乐
     - 短片
 tags:
     - 演奏
