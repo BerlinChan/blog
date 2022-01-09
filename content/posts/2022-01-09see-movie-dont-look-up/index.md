@@ -22,3 +22,17 @@ It's a perfect sample to help us to understand why would people say "The core of
 I like the scene when DiCaprio's character yelling towards the camera, shouted "the president of the United State is f**king lying." His acting was so crazy and emotional.
 
 ![](./dont-look-up.png)
+
+## My Favorite Lines
+
+    OK. At this very moment, I say we sit tight and assess.
+
+    The divisions in this country are bad enough. We don't want more of that in our house.
+
+    Sometimes we need to just be able to say things to one another. We need to hear things.
+
+    Just look up, turn off the shitbox news.
+
+    I'm gratefull we tried.
+
+    We really did have everything, didn't we?
