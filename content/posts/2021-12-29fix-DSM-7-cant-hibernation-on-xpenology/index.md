@@ -31,9 +31,11 @@ Operated following this tutorial, [黑群晖升级DSM7的教程（黑群晖DS918
 
 Searched on the Internet, in post [PVE直通SATA控制器硬盘无法休眠！](http://www.gebi1.com/thread-300625-1-1.html) comments, I found something useful. Quoted some parts of it here:
 
-    解决办法2：
-    修改 /etc.defaults/syslog-ng/patterndb.d/message.conf 和 /etc.defaults/syslog-ng/patterndb.d/kernel.conf 文件，把 /var/log/messages 和 /var/log/kern.log 日志文件分别都设置到 /tmp/messages 和 /tmp/kern.log ，然后重启系统即可。
-    最好也把 /etc.defaults/logrotate.d/syslog-ng 里的 messages 和 kern.log 路径也做相应的修改，否则这两个日志文件的大小可能会无休止的增长。
+> 解决办法2：
+> 
+> 修改 /etc.defaults/syslog-ng/patterndb.d/message.conf 和 /etc.defaults/syslog-ngpatterndb.d/kernel.conf 文件，把 /var/log/messages 和 /var/log/kern.log 日志文件分都设置到 /tmp/messages 和 /tmp/kern.log ，然后重启系统即可。
+> 
+> 最好也把 /etc.defaults/logrotate.d/syslog-ng 里的 messages 和 kern.log 路径也做相应修改，否则这两个日志文件的大小可能会无休止的增长。
 
 I did these operates followed the comment and inspired by this comment, I continue to analyze the `/var/log/hibernationFull.log`, to find what interrupted the hibernation:
 

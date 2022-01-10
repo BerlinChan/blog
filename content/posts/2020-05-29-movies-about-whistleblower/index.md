@@ -9,7 +9,7 @@ slug: /2020/05/movies-about-whistleblower
 categories:
   - 观点
 tags:
-  - 电影
+  - movies
   - 新闻
   - COVID-19
 description:

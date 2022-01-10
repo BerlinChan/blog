@@ -1,5 +1,5 @@
 ---
-title: See Movie Don't Look Up
+title: See The Movie Don't Look Up
 date: 2022-01-09T10:46:37.121Z
 template: post
 featured_top: false
@@ -25,14 +25,14 @@ I like the scene when DiCaprio's character yelling towards the camera, shouted "
 
 ## My Favorite Lines
 
-    OK. At this very moment, I say we sit tight and assess.
+> OK. At this very moment, I say we sit tight and assess.
 
-    The divisions in this country are bad enough. We don't want more of that in our house.
+> The divisions in this country are bad enough. We don't want more of that in our house.
 
-    Sometimes we need to just be able to say things to one another. We need to hear things.
+> Sometimes we need to just be able to say things to one another. We need to hear things.
 
-    Just look up, turn off the shitbox news.
+> Just look up, turn off the shitbox news.
 
-    I'm gratefull we tried.
+> I'm gratefull we tried.
 
-    We really did have everything, didn't we?
+> We really did have everything, didn't we?
