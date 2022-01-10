@@ -13,7 +13,7 @@ tags:
 description: 
 ---
 
- I just saw the comedy movie "[Don't Look Up](https://www.imdb.com/title/tt11286314/)", it's seriously funny, like [what the director said](https://youtu.be/YEj3juMYCn4?t=42).
+ I just saw the comedy movie "[Don't Look Up](https://www.imdb.com/title/tt11286314/)", it's seriously funny, like [what the director said](https://youtu.be/YEj3juMYCn4?t=42). It means serious and funny.
  
 <!-- endExcerpt -->
 

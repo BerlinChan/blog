@@ -21,8 +21,7 @@ description: "利用 Wordpress 插件 WP2Static 将内容静态化成 HTML，然
 导致我决定迁移网站，弃用 Wordpress 的替代方案比较过 Jekyll/Hexo/Gatsby 三种框架。
 
 - Jekyll，虽然是 GitHub Pages 官方支持的静态内容生成框架，但是我对 Ruby 语言不熟悉，所以首先排除。
-- Hexo，上手容易有很多中文教程，但是文档写的不好，很多 API 说明不容易找到，不过 StackOverflow 上有很多热心人的补充。
-    我试着用 Hexo 搭建[旧站博物馆](https://museum.berlinchan.com)，期间不喜欢主题中的模板引擎语法。
+- Hexo，上手容易有很多中文教程，但是文档写的不好，很多 API 说明不容易找到，不过 StackOverflow 上有很多热心人的补充。我试着用 Hexo 搭建[旧站博物馆](https://museum.berlinchan.com)，期间不喜欢主题中的模板引擎语法。
 - Gatsby，是我迁移的选择。基于 React 优雅的组件构建，既能轻松搭上 SPA PWA 的现代化便车，也顺便在迁移中感受一下 GraphQL。
 
 ## 迁移工作
