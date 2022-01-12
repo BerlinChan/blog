@@ -50,7 +50,7 @@ description: GnuPG 是赛门铁克 PGP 加密套件的自由软件替代品。�
 
 请参考如下最佳实践文章：
 
-- [如何创建完美的GPG密钥对](https://github.com/mdrights/Digital-rights/blob/master/T%E6%95%99%E7%A8%8B%E5%92%8C%E7%AC%94%E8%AE%B0/2017-01-01-%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%AE%8C%E7%BE%8E%E7%9A%84GPG%E5%AF%86%E9%92%A5%E5%AF%B9-2xiangzi.md)
+- [如何创建完美的GPG密钥对](https://2xiangzi.blogspot.com/2016/09/perfect-gpg-keypair.html)
 - [OpenPGP 数字签名最佳实践](https://github.com/mdrights/Digital-rights/blob/master/T%E6%95%99%E7%A8%8B%E5%92%8C%E7%AC%94%E8%AE%B0/2019-04-17-OpenPGP-%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5-Mailfence.md)
 - [GnuPG: 用多个sub keys保护primary key](https://jackqqcn.wordpress.com/2008/06/22/gnupg-%E7%94%A8%E5%A4%9A%E4%B8%AAsub-keys%E4%BF%9D%E6%8A%A4primary-key/)
 - [GPG Subkeys](https://oguya.ch/posts/2016-04-01-gpg-subkeys/)
