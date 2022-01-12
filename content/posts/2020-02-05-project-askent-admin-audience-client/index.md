@@ -54,4 +54,4 @@ Askent 也是我的一个技术探索实践项目，所以技术选型偏激进�
 我也借此以一位深入使用者的身份，旁观一个开源项目的发展。
 
 [`Apollo-Client`](https://www.apollographql.com/docs/react/) + [`Subscription`](https://www.apollographql.com/docs/apollo-server/data/subscriptions/) 是消息实时同步的绝佳使用场景，来开发提问的多端实时同步非常方便。
-它实质是 WebSocket 的 API 高级封装，在[授权](https://www.apollographql.com/docs/react/data/subscriptions/#authentication-over-websocket)、[订阅过滤](https://www.apollographql.com/docs/apollo-server/data/subscriptions/#subscription-filters)方面使用更加方便。
+它实质是 WebSockets 的 API 高级封装，在[授权](https://www.apollographql.com/docs/react/data/subscriptions/#authentication-over-websocket)、[订阅过滤](https://www.apollographql.com/docs/apollo-server/data/subscriptions/#subscription-filters)方面使用更加方便。

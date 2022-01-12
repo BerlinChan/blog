@@ -13,8 +13,9 @@ tags:
     - Postgres
     - Hasura
     - Askent
-    - websocket
+    - WebSockets
     - realtime
+    - DeepStream
 description: 当前参照 DeepStream 的 Realtime Search 思路实现的提问列表实时查询，存在严重耗费性能的问题，偶然发现 Hasura 正是我需要的工具。
 ---
 

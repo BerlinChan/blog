@@ -12,7 +12,7 @@ tags:
     - GraphQL
     - Postgres
     - Hasura
-    - websocket
+    - WebSockets
     - realtime
     - 翻译
 description: 
@@ -87,7 +87,7 @@ GraphQL 让应用开发者轻松地从 API 中精确获取他们想要的数据�
 
 进入实时查询：实时查询的主意是订阅特定查询的最新结果。一旦底层的数据改变，服务器应该推送最新结果到客户端。
 
-乍一看，这完美符合 GraphQL 的使用场景，因为 GraphQL 客户端支持处理大量 websocket 连接。用 subscription 替换 query 就能转换查询到实时查询。就是这么简单，如果 GraphQL 服务器可实现的话。
+乍一看，这完美符合 GraphQL 的使用场景，因为 GraphQL 客户端支持处理大量 WebSockets 连接。用 subscription 替换 query 就能转换查询到实时查询。就是这么简单，如果 GraphQL 服务器可实现的话。
 
 <img alt="order-subscription-query" src="https://storage.googleapis.com/graphql-engine-cdn.hasura.io/img/subscriptions-images/images2/subscription-query-fs8.png" style="width:100%;" />
 
@@ -166,7 +166,7 @@ GraphQL 查询  GraphQL 抽象语法树  包含授权规则的内部抽象语法
 
 ## 测试
 
-测试基于 Websocket 的实时查询的性能扩展性与可靠性是一项挑战。我们花了几周来构建测试套件和基础自动化工具。设置如下所示：
+测试基于 Websockets 的实时查询的性能扩展性与可靠性是一项挑战。我们花了几周来构建测试套件和基础自动化工具。设置如下所示：
 
 1. 一个 nodejs脚本，它运行大量的 GraphQL实时查询客户端，并在内存中记录事件，这些事件随后被存储到数据库中。[\[github\]](https://github.com/hasura/subscription-benchmark)
 2. 一个在数据库上创建写负载的脚本，从而导致所有运行实时查询的客户端之间发生更改（每秒更新一百万行）。
