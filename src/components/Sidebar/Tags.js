@@ -57,7 +57,7 @@ const Tags = (props) => {
             p: 1,
           }}
         >
-          {tagsList.map((tag, index) => (
+          {tagsList.map((tag) => (
             <StyledLink
               component={GatsbyLink}
               to={`/tag/${kebabCase(tag.fieldValue)}/`}
@@ -65,7 +65,7 @@ const Tags = (props) => {
               variant="body1"
               underline="none"
               noWrap
-              key={index}
+              key={tag.fieldValue}
               className={classes.tagLink}
               activeClassName={classes.activeLink}
             >

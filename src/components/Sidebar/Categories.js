@@ -48,7 +48,7 @@ const Categories = (props) => {
           </IconButton>
         </React.Fragment>
       }
-      body={categories.map((category, index) => (
+      body={categories.map((category) => (
         <StyledLink
           component={GatsbyLink}
           to={`/category/${kebabCase(category.fieldValue)}/`}
@@ -56,7 +56,7 @@ const Categories = (props) => {
           variant="body1"
           underline="none"
           noWrap
-          key={index}
+          key={category.fieldValue}
           className={classes.link}
           activeClassName={classes.activeLink}
         >

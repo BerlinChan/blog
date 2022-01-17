@@ -82,7 +82,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           display={"inline"}
           color="textSecondary"
           className={classes.category}
-          key={index}
+          key={categorySlug}
         >
           {isArchivedBlogPost ? (
             <Link
@@ -106,7 +106,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
         {tags.map((tag, index) =>
           isArchivedBlogPost ? (
             <Chip
-              key={index}
+              key={tag}
               label={tag}
               className={classes.chip}
               variant="outlined"
@@ -118,7 +118,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
             />
           ) : (
             <Chip
-              key={index}
+              key={tag}
               label={tag}
               className={classes.chip}
               variant="outlined"

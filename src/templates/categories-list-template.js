@@ -16,8 +16,8 @@ const CategoriesListTemplate = () => {
         文章分类
       </Typography>
       <ul>
-        {categories.map((category, index) => (
-          <li key={index}>
+        {categories.map((category) => (
+          <li key={category.fieldValue}>
             <Link component={GatsbyLink} to={`/category/${kebabCase(category.fieldValue)}/`}
                   variant={'body1'}>
               {category.fieldValue} ({category.totalCount})

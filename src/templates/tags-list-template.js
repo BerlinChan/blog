@@ -16,8 +16,8 @@ const TagsListTemplate = () => {
         标签
       </Typography>
       <ul>
-        {tags.map((tag, index) => (
-          <li key={index}>
+        {tags.map((tag) => (
+          <li key={tag.fieldValue}>
             <Link component={GatsbyLink} to={`/tag/${kebabCase(tag.fieldValue)}/`}
                   variant={'body1'}>
               {tag.fieldValue} ({tag.totalCount})

@@ -58,11 +58,11 @@ const PostList = ({ nodes }) => {
 
   return (
     <Root>
-      {nodes.map((node, index) => (
+      {nodes.map((node) => (
         <CardActionArea
           component={GatsbyLink}
           to={node.fields.slug}
-          key={index}
+          key={node.fields.slug}
           className={classes.cardActionArea}
         >
           <Card className={classes.card}>
@@ -76,13 +76,13 @@ const PostList = ({ nodes }) => {
                 >
                   {format(new Date(node.frontmatter.date), "yyyy-MM-dd")}
                 </Typography>
-                {node.frontmatter.categories.map((category, index) => (
+                {node.frontmatter.categories.map((category) => (
                   <Typography
                     variant="subtitle1"
                     color="textSecondary"
                     display={"inline"}
                     className={classes.category}
-                    key={index}
+                    key={category}
                   >
                     {category}
                   </Typography>

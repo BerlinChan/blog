@@ -66,7 +66,7 @@ const Footer = () => {
               </Link>
               {" | "}
               {menu.map((item, index) => (
-                <React.Fragment key={index}>
+                <React.Fragment key={item.label}>
                   {item.path ? (
                     <Link component={GatsbyLink} to={item.path} color="inherit">
                       {item.label}

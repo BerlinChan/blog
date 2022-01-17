@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import { useCategoriesList, useSiteMetadata } from "../../../hooks";
 import Link from "@mui/material/Link";
@@ -12,21 +12,17 @@ import {
 } from "material-ui-popup-state/hooks";
 import kebabCase from "lodash/kebabCase";
 
-const PREFIX = 'MenuComponent';
+const PREFIX = "MenuComponent";
 
 const classes = {
   menuDropdown: `${PREFIX}-menuDropdown`,
   menuLink: `${PREFIX}-menuLink`,
   toolbarLink: `${PREFIX}-toolbarLink`,
-  activeLink: `${PREFIX}-activeLink`
+  activeLink: `${PREFIX}-activeLink`,
 };
 
 // TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
-const Root = styled('div')((
-  {
-    theme
-  }
-) => ({
+const Root = styled("div")(({ theme }) => ({
   [`& .${classes.menuDropdown}`]: {
     width: 200,
   },
@@ -41,11 +37,10 @@ const Root = styled('div')((
 
   [`& .${classes.activeLink}`]: {
     color: theme.palette.action.active,
-  }
+  },
 }));
 
 const MenuComponent = () => {
-
   const popupState = usePopupState({
     variant: "popover",
     popupId: "menuListGrow",
@@ -80,8 +75,8 @@ const MenuComponent = () => {
           horizontal: "center",
         }}
       >
-        {categories.map((category, index) => (
-          <MenuItem key={index}>
+        {categories.map((category) => (
+          <MenuItem key={category.fieldValue}>
             <Link
               component={GatsbyLink}
               to={`/category/${kebabCase(category.fieldValue)}/`}
@@ -110,8 +105,8 @@ const MenuComponent = () => {
         </MenuItem>
       </Menu>
 
-      {menu.map((item, index) => (
-        <React.Fragment key={index}>
+      {menu.map((item) => (
+        <React.Fragment key={item.label}>
           {item.path ? (
             <Link
               component={GatsbyLink}
@@ -143,4 +138,4 @@ const MenuComponent = () => {
   );
 };
 
-export default MenuComponent
+export default MenuComponent;
