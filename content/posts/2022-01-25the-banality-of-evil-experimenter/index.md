@@ -19,6 +19,8 @@ The movie: [Experimenter](https://www.imdb.com/title/tt3726704/) reminds us how 
 
 <!-- endExcerpt -->
 
+![experimenter](./experimenter1.png)
+
 ## My favorite lines
 
 > Why don't I have a choice? I came here on my own free will.
