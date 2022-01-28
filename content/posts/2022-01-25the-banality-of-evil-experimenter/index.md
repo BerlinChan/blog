@@ -3,8 +3,8 @@ title: The Banality of Evil - Experimenter
 date: 2022-01-25T10:46:37.121Z
 template: post
 featured_top: false
-featured_media: ./featured_media.png
-draft: true
+featured_media: ./experimenter1.png
+draft: false
 slug: /2022/01/the-banality-of-evil-experimenter
 categories: 
     - 观点
@@ -14,6 +14,8 @@ tags:
     - free will
 description: 
 ---
+
+The movie: [Experimenter](https://www.imdb.com/title/tt3726704/) reminds us how easy a person will obedience to authority, how important to keep independent thinking. And be aware the pitfall of [**The Banality of Evil**](https://aeon.co/ideas/what-did-hannah-arendt-really-mean-by-the-banality-of-evil).
 
 <!-- endExcerpt -->
 
