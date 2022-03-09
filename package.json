@@ -20,8 +20,8 @@
     "material-ui"
   ],
   "dependencies": {
-    "@emotion/react": "11.7.1",
-    "@emotion/styled": "11.6.0",
+    "@emotion/react": "11.8.1",
+    "@emotion/styled": "11.8.1",
     "@mui/icons-material": "5.0.5",
     "@mui/material": "5.0.6",
     "date-fns": "2.28.0",
