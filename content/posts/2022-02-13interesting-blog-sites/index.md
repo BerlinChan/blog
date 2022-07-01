@@ -19,6 +19,17 @@ When I surf on the Internet, I found some interesting, useful, impression, inspi
 
 Next time when I find something like this, I'll jot it down here.
 
+
+## [Letters To A New Developer](https://letterstoanewdeveloper.com/)
+
+I heard a principle of programming from my colleague,
+
+> Always leave the code better than you found it.
+
+I found this site when I was search the explaination, and found more interesting letters on the site, like this one: [The Surprising Number Of Programmers Who Can’t Program](https://letterstoanewdeveloper.com/2019/08/23/the-surprising-number-of-programmers-who-cant-program/). I'm curies what's the **FizzBuzz** about, so I searched it and found an other interesting post, [Fizz Buzz in Tensorflow](https://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/).
+
+Although it's a fiction story, I believe so, but the idea behind it is enlightening, and the author even wrote a [book](https://joelgrus.com/2020/06/06/ten-essays-on-fizz-buzz/) about it.
+
 ## [feng.si](https://feng.si/)
 
 ![https://feng.si/](./snapshot_feng.si.png)
