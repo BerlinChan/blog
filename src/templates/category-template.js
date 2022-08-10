@@ -7,15 +7,10 @@ import { useSiteMetadata } from "../hooks";
 import Typography from "@mui/material/Typography";
 
 const CategoryTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle } = useSiteMetadata();
-  const { category, currentPage, prevPagePath, nextPagePath } = pageContext;
-  const pageTitle =
-    currentPage > 0
-      ? `${category} - Page ${currentPage} - ${siteTitle}`
-      : `${category} - ${siteTitle}`;
+  const { category, prevPagePath, nextPagePath } = pageContext;
 
   return (
-    <Layout title={pageTitle}>
+    <Layout>
       <Typography component={"h2"} variant={"h4"} gutterBottom>
         {category}
       </Typography>
@@ -62,3 +57,14 @@ export const query = graphql`
 `;
 
 export default CategoryTemplate;
+
+export const Head = ({ pageContext }) => {
+  const { title: siteTitle } = useSiteMetadata();
+  const { category, currentPage } = pageContext;
+  const pageTitle =
+    currentPage > 0
+      ? `${category} - Page ${currentPage} - ${siteTitle}`
+      : `${category} - ${siteTitle}`;
+
+  return <title>{pageTitle}</title>;
+};

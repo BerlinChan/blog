@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import CssBaseline from "@mui/material/CssBaseline";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {
@@ -15,7 +14,7 @@ import ScrollTop from "./ScrollTop";
 import Grid from "@mui/material/Grid";
 import Sidebar from "../Sidebar/Sidebar";
 
-const Layout = ({ title, children, featuredContent, noSidebar }) => {
+const Layout = ({ children, featuredContent, noSidebar }) => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const theme = React.useMemo(
     () =>
@@ -34,14 +33,6 @@ const Layout = ({ title, children, featuredContent, noSidebar }) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Helmet defer={false}>
-        <html lang="zh-Hans" prefix="og: http://ogp.me/ns#" />
-        <title>{title}</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
-      </Helmet>
       <Header />
       <Container maxWidth="lg">
         {featuredContent}

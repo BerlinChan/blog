@@ -10,12 +10,11 @@ import Pagination from "../components/Pagination";
 import FeaturedPost from "../components/FeaturedPost";
 
 const HomePage = ({ data }) => {
-  const { title: siteTitle, postsPerPage } = useSiteMetadata();
+  const { postsPerPage } = useSiteMetadata();
   const featuredPostNode = data.featuredPosts.nodes[0];
 
   return (
     <Layout
-      title={siteTitle}
       featuredContent={<FeaturedPost featuredPostNode={featuredPostNode} />}
     >
       <Typography variant="h6" gutterBottom>
@@ -54,7 +53,11 @@ export const query = graphql`
           description
           featured_media {
             childImageSharp {
-              gatsbyImageData(aspectRatio: 3, placeholder: BLURRED, layout: FULL_WIDTH)
+              gatsbyImageData(
+                aspectRatio: 3
+                placeholder: BLURRED
+                layout: FULL_WIDTH
+              )
             }
           }
         }
@@ -98,3 +101,9 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head = () => {
+  const { title: siteTitle } = useSiteMetadata();
+
+  return <title>{siteTitle}</title>;
+};

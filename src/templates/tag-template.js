@@ -7,15 +7,10 @@ import { useSiteMetadata } from "../hooks";
 import Typography from "@mui/material/Typography";
 
 const TagTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle } = useSiteMetadata();
-  const { tag, currentPage, prevPagePath, nextPagePath } = pageContext;
-  const pageTitle =
-    currentPage > 0
-      ? `包含标签"${tag}"的文章 - 第 ${currentPage} 页 - ${siteTitle}`
-      : `包含标签"${tag}"的文章 - ${siteTitle}`;
+  const { tag, prevPagePath, nextPagePath } = pageContext;
 
   return (
-    <Layout title={pageTitle}>
+    <Layout>
       <Typography component={"h2"} variant={"h4"} gutterBottom>
         {tag}
       </Typography>
@@ -68,3 +63,14 @@ export const query = graphql`
 `;
 
 export default TagTemplate;
+
+export const Head = ({ pageContext }) => {
+  const { title: siteTitle } = useSiteMetadata();
+  const { tag, currentPage } = pageContext;
+  const pageTitle =
+    currentPage > 0
+      ? `包含标签"${tag}"的文章 - 第 ${currentPage} 页 - ${siteTitle}`
+      : `包含标签"${tag}"的文章 - ${siteTitle}`;
+
+  return <title>{pageTitle}</title>;
+};

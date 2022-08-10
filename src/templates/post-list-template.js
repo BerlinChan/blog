@@ -6,13 +6,10 @@ import Pagination from "../components/Pagination";
 import { useSiteMetadata } from "../hooks";
 
 const PostListTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle } = useSiteMetadata();
-  const { currentPage, prevPagePath, nextPagePath } = pageContext;
-  const pageTitle =
-    currentPage > 0 ? `文章 - 第 ${currentPage} 页 - ${siteTitle}` : siteTitle;
+  const { prevPagePath, nextPagePath } = pageContext;
 
   return (
-    <Layout title={pageTitle}>
+    <Layout>
       <PostList nodes={data.allMarkdownRemark.nodes} />
       <Pagination
         nextPageName={nextPagePath ? "" : "存档文章"}
@@ -60,3 +57,12 @@ export const query = graphql`
 `;
 
 export default PostListTemplate;
+
+export const Head = ({ pageContext }) => {
+  const { title: siteTitle } = useSiteMetadata();
+  const { currentPage } = pageContext;
+  const pageTitle =
+    currentPage > 0 ? `文章 - 第 ${currentPage} 页 - ${siteTitle}` : siteTitle;
+
+  return <title>{pageTitle}</title>;
+};

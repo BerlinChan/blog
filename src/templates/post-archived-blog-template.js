@@ -8,15 +8,10 @@ import Post from "../components/Post";
 import Comments from "../components/Comments";
 import Content from "../components/Content";
 import OpenGraph from "../components/OpenGraph";
-import { getSrc } from "gatsby-plugin-image"
+import { getSrc } from "gatsby-plugin-image";
 
 const PostTemplate = ({ data }) => {
-  const {
-    siteUrl,
-    title: siteTitle,
-    subtitle: siteSubtitle,
-    archivedBlogUrl,
-  } = useSiteMetadata();
+  const { archivedBlogUrl } = useSiteMetadata();
   const {
     title: postTitle,
     excerpt: postDescription,
@@ -25,25 +20,10 @@ const PostTemplate = ({ data }) => {
     date,
     tags,
     categories,
-    featured_media,
   } = data.archivedBlogPostJson;
-  const openGraph = {
-    title: `${postTitle} | ${siteTitle}`,
-    url: `${siteUrl}${path}`,
-    description: postDescription !== null ? postDescription : siteSubtitle,
-    type: "article",
-  };
-  if (featured_media) {
-    openGraph.image = {
-      url: `${siteUrl}${getSrc(featured_media.childImageSharp.gatsbyImageData)}`,
-      width: featured_media.childImageSharp.gatsbyImageData.width,
-      height: featured_media.childImageSharp.gatsbyImageData.height,
-    }
-  }
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`}>
-      <OpenGraph {...openGraph} />
+    <Layout>
       <Post
         isArchivedBlogPost
         post={{
@@ -70,6 +50,8 @@ const PostTemplate = ({ data }) => {
     </Layout>
   );
 };
+
+export default PostTemplate;
 
 export const query = graphql`
   query ArchivedBlogPostByPath($slug: String!) {
@@ -101,4 +83,38 @@ export const query = graphql`
   }
 `;
 
-export default PostTemplate;
+export const Head = ({ data }) => {
+  const {
+    siteUrl,
+    title: siteTitle,
+    subtitle: siteSubtitle,
+  } = useSiteMetadata();
+  const {
+    title: postTitle,
+    excerpt: postDescription,
+    path,
+    featured_media,
+  } = data.archivedBlogPostJson;
+  const openGraph = {
+    title: `${postTitle} | ${siteTitle}`,
+    url: `${siteUrl}${path}`,
+    description: postDescription !== null ? postDescription : siteSubtitle,
+    type: "article",
+  };
+  if (featured_media) {
+    openGraph.image = {
+      url: `${siteUrl}${getSrc(
+        featured_media.childImageSharp.gatsbyImageData
+      )}`,
+      width: featured_media.childImageSharp.gatsbyImageData.width,
+      height: featured_media.childImageSharp.gatsbyImageData.height,
+    };
+  }
+
+  return (
+    <>
+      <title>{`${postTitle} - ${siteTitle}`}</title>
+      <OpenGraph {...openGraph} />
+    </>
+  );
+};

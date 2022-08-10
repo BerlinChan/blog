@@ -8,15 +8,11 @@ import ArchivedBlogTips from "../components/ArchivedBlogTips";
 import PostList from "../components/PostList";
 
 const PostListTemplate = ({ data, pageContext }) => {
-  const { title: siteTitle, archivedBlogUrl } = useSiteMetadata();
-  const { currentPage, prevPagePath, nextPagePath } = pageContext;
-  const pageTitle =
-    currentPage > 0
-      ? `存档文章 - 第 ${currentPage} 页 - ${siteTitle}`
-      : siteTitle;
+  const { archivedBlogUrl } = useSiteMetadata();
+  const { prevPagePath, nextPagePath } = pageContext;
 
   return (
-    <Layout title={pageTitle}>
+    <Layout>
       <Box mb={3}>
         <ArchivedBlogTips originLink={archivedBlogUrl} />
       </Box>
@@ -81,3 +77,14 @@ export const query = graphql`
 `;
 
 export default PostListTemplate;
+
+export const Head = ({ pageContext }) => {
+  const { title: siteTitle } = useSiteMetadata();
+  const { currentPage } = pageContext;
+  const pageTitle =
+    currentPage > 0
+      ? `存档文章 - 第 ${currentPage} 页 - ${siteTitle}`
+      : siteTitle;
+
+  return <title>{pageTitle}</title>;
+};
