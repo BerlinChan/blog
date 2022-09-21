@@ -22,6 +22,7 @@ I changed my job to Turing as a front-end developer and work for a US-based comp
 
 `video: https://www.youtube.com/watch?v=kXNOwVDwzu8`
 `video: https://www.youtube.com/watch?v=vuf-u4EIMNg`
+`video: https://www.youtube.com/watch?v=a3JeapNlurg`
 
 For making this video, it takes my whole family 2-day to tidy the messy house✨. It was a wonderful journey to make this video with Turing's team and my family👍!
 
