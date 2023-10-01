@@ -24,7 +24,7 @@
     "@emotion/styled": "11.10.5",
     "@mui/icons-material": "5.8.4",
     "@mui/material": "5.10.0",
-    "date-fns": "2.29.3",
+    "date-fns": "2.30.0",
     "gatsby": "4.20.0",
     "gatsby-plugin-catch-links": "4.20.0",
     "gatsby-plugin-feed": "4.20.0",
