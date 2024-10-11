@@ -9,6 +9,8 @@ description: 这是陈柏林记载工作、生活、个人项目的博客站，�
 折腾历史见[旧站博物馆](https://museum.berlinchan.com/)。
 
 内容零散，惭愧这些内容缺少“干货”，指宝贵经验、令人启发的那种。
+我很佩服[阮一峰的博客](http://www.ruanyifeng.com/blog/)
+和[编程随想](https://program-think.blogspot.com/)，他们的文字一直激励着我。
 还有 YouTube 上那些优秀频道的作者们：
 Smarter Everyday、Corridor Digital、NiceChord、Gameker、超粒方、Kai W……
 我在努力成为那样的人。
@@ -29,8 +31,11 @@ Smarter Everyday、Corridor Digital、NiceChord、Gameker、超粒方、Kai W…
 前端开发，理想主义，黑客精神，前报社无证摄影记者，拍过[纪录片](https://www.awildpetcat.com)，古典音乐与钢琴入门中。
 
 ## 简历
-- 现今 前端开发各处工地
-- 2015.9 腾讯大楚网编辑
+- 2024.6 VF Corporation
+- 2022.4 远光软件
+- 2017.4 来易网络科技
+- 2016.3 武汉卓尔
+- 2015.9 腾讯大楚网采编
 - 2014.12 三峡晚报摄影记者
 - 2012.3 搜房网编辑
 - 2010.7 武汉体育学院
