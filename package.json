@@ -47,7 +47,7 @@
     "gatsby-remark-smartypants": "5.20.0",
     "gatsby-source-filesystem": "4.20.0",
     "gatsby-transformer-json": "4.20.0",
-    "gatsby-transformer-remark": "5.20.0",
+    "gatsby-transformer-remark": "5.25.1",
     "gatsby-transformer-sharp": "4.20.0",
     "material-ui-popup-state": "2.0.1",
     "prismjs": "1.29.0",
