@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[41],{7030:function(t,e,n){n.r(e),n.d(e,{Head:function(){return c}});var r=n(7294),u=n(7973),l=n(5119),a=n(9308);e.default=function(){return r.createElement(u.Z,null,r.createElement(a.Z,{variant:"subtitle1",gutterBottom:!0},"NOT FOUND"),r.createElement(a.Z,{component:"h2",variant:"h4"},"页面不存在"))};var c=function(){var t=(0,l.$W)().title;return r.createElement("title",null,"Not Found - "+t)}}}]);
+//# sourceMappingURL=component---src-templates-not-found-template-js-6bf16235fde5fafeb8cb.js.map
