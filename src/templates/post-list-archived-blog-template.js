@@ -49,7 +49,7 @@ export const query = graphql`
     allArchivedBlogPostJson(
       limit: $postsLimit
       skip: $postsOffset
-      sort: { fields: date, order: DESC }
+      sort: { date: DESC }
     ) {
       nodes {
         date

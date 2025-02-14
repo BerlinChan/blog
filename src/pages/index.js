@@ -44,7 +44,7 @@ export const query = graphql`
         }
       }
       limit: 1
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { frontmatter: { date: DESC } }
     ) {
       nodes {
         frontmatter {
@@ -66,7 +66,7 @@ export const query = graphql`
     recentPosts: allMarkdownRemark(
       limit: 10
       filter: { frontmatter: { draft: { ne: true }, template: { eq: "post" } } }
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       nodes {
         fields {

@@ -8,7 +8,7 @@ module.exports = async (graphql, actions) => {
         filter: {
           frontmatter: { draft: { ne: true }, template: { eq: "post" } }
         }
-        sort: { fields: frontmatter___date, order: ASC }
+        sort: { frontmatter: { date: ASC } }
       ) {
         nodes {
           frontmatter {
@@ -22,7 +22,7 @@ module.exports = async (graphql, actions) => {
     }
   `);
   const { nodes } = result.data.allMarkdownRemark;
-  
+
   nodes.forEach((node, index) => {
     createPage({
       path: node.fields.slug,

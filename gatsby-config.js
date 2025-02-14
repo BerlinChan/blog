@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'archivedBlog',
+        name: "archivedBlog",
         path: `./content/archived-blog`,
       },
     },
@@ -79,28 +79,26 @@ module.exports = {
         `,
         feeds: [
           {
-            query: `
-              {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-                ) {
-                    nodes {
-                      html
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                        date
-                        description
-                      }
-                      excerpt(pruneLength: 70)
-                    }
+            query: `{
+              allMarkdownRemark(
+                limit: 1000
+                sort: {frontmatter: {date: DESC}}
+                filter: {frontmatter: {template: {eq: "post"}, draft: {ne: true}}}
+              ) {
+                nodes {
+                  html
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    date
+                    description
+                  }
+                  excerpt(pruneLength: 70)
                 }
               }
-            `,
+            }`,
             output: siteConfig.author.contacts.rss,
             title: `${siteConfig.title} RSS Feed`,
             serialize: ({ query: { site, allMarkdownRemark } }) =>

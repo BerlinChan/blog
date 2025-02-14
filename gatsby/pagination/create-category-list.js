@@ -11,7 +11,7 @@ module.exports = async (graphql, actions) => {
       },
     },
   } = await graphql(`
-    query {
+    {
       site {
         siteMetadata {
           postsPerPage
@@ -22,7 +22,7 @@ module.exports = async (graphql, actions) => {
           frontmatter: { template: { eq: "post" }, draft: { ne: true } }
         }
       ) {
-        group(field: frontmatter___categories) {
+        group(field: { frontmatter: { categories: SELECT } }) {
           fieldValue
           totalCount
         }
