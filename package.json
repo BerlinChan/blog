@@ -60,6 +60,6 @@
     "react-share": "4.4.0"
   },
   "devDependencies": {
-    "gh-pages": "3.2.3"
+    "gh-pages": "5.0.0"
   }
 }
