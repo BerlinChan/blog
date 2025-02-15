@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import { format } from "date-fns";
 import Typography from "@mui/material/Typography";
@@ -16,22 +16,18 @@ import {
 import SvgIcons from "../../utils/SvgIcons";
 import ButtonBase from "@mui/material/ButtonBase";
 
-const PREFIX = 'Post';
+const PREFIX = "Post";
 
 const classes = {
   date: `${PREFIX}-date`,
   category: `${PREFIX}-category`,
   tagList: `${PREFIX}-tagList`,
   chip: `${PREFIX}-chip`,
-  shareButton: `${PREFIX}-shareButton`
+  shareButton: `${PREFIX}-shareButton`,
 };
 
 // TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
-const Root = styled('div')((
-  {
-    theme
-  }
-) => ({
+const Root = styled("div")(({ theme }) => ({
   [`& .${classes.date}`]: {
     marginRight: theme.spacing(2),
   },
@@ -54,23 +50,22 @@ const Root = styled('div')((
     marginLeft: theme.spacing(1),
     padding: theme.spacing(1),
     borderRadius: "50%",
-  }
+  },
 }));
 
 const Post = ({ isArchivedBlogPost, post, children }) => {
-
   const { siteUrl, archivedBlogUrl } = useSiteMetadata();
   const { categorySlugs, tagSlugs } = post.fields;
   const { categories, tags, title, date, slug, description } = post.frontmatter;
 
   return (
     <Root>
-      <Typography component="h2" variant={"h4"} gutterBottom>
+      <Typography component="h2" variant="h4" gutterBottom>
         {title}
       </Typography>
       <Typography
-        variant={"body1"}
-        display={"inline"}
+        variant="body1"
+        display="inline"
         color="textSecondary"
         className={classes.date}
       >
@@ -78,8 +73,8 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
       </Typography>
       {categorySlugs.map((categorySlug, index) => (
         <Typography
-          variant={"body1"}
-          display={"inline"}
+          variant="body1"
+          display="inline"
           color="textSecondary"
           className={classes.category}
           key={categorySlug}
@@ -87,7 +82,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           {isArchivedBlogPost ? (
             <Link
               href={`${archivedBlogUrl}${categorySlug}`}
-              target={"_blank"}
+              target="_blank"
               rel="noopener"
             >
               {categories[index]}
@@ -112,7 +107,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
               variant="outlined"
               component={Link}
               href={`${archivedBlogUrl}${tagSlugs[index]}`}
-              target={"_blank"}
+              target="_blank"
               rel="noopener"
               clickable
             />
@@ -130,8 +125,8 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
         )}
       </Box>
 
-      <Box mt={2} display={"flex"} alignItems={"center"}>
-        <Typography component={"h2"} variant={"h6"} display={"inline"}>
+      <Box mt={2} display="flex" alignItems="center">
+        <Typography component="h2" variant="h6" display="inline">
           分享
         </Typography>
         <ButtonBase
@@ -141,7 +136,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           url={`${siteUrl}${slug}`}
           quote={description}
         >
-          <SvgIcons name={"facebook"} />
+          <SvgIcons name="facebook" />
         </ButtonBase>
         <ButtonBase
           className={classes.shareButton}
@@ -150,7 +145,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           url={`${siteUrl}${slug}`}
           title={title}
         >
-          <SvgIcons name={"twitter"} />
+          <SvgIcons name="twitter" />
         </ButtonBase>
         <ButtonBase
           className={classes.shareButton}
@@ -158,7 +153,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           resetButtonStyle={false}
           url={`${siteUrl}${slug}`}
         >
-          <SvgIcons name={"linkedIn"} />
+          <SvgIcons name="linkedIn" />
         </ButtonBase>
         <ButtonBase
           className={classes.shareButton}
@@ -167,7 +162,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           url={`${siteUrl}${slug}`}
           title={title}
         >
-          <SvgIcons name={"telegram"} />
+          <SvgIcons name="telegram" />
         </ButtonBase>
       </Box>
     </Root>

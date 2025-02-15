@@ -1,19 +1,20 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Avatar from "@mui/material/Avatar";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
-import Slide from "@mui/material/Slide";
-import Hidden from "@mui/material/Hidden";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Avatar,
+  Typography,
+  Link,
+  Slide,
+  useScrollTrigger,
+  IconButton,
+} from "@mui/material";
 import Menu from "../Menu";
 import MenuDraw from "../MenuDraw";
 import { useSiteMetadata } from "../../../hooks";
 import { Link as GatsbyLink, withPrefix } from "gatsby";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
-import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import BrightnessHighIcon from "@mui/icons-material/BrightnessHigh";
@@ -83,20 +84,17 @@ const Header = (props) => {
               </Typography>
             </Link>
             <Box sx={{ marginLeft: "auto" }} display="flex" alignItems="center">
-              <Hidden smDown>
-                <Menu />
-              </Hidden>
-              <Hidden smUp>
-                <IconButton
-                  edge="end"
-                  color="inherit"
-                  aria-label="menu"
-                  onClick={() => setOpenDraw(true)}
-                  size="large"
-                >
-                  <MenuIcon color={"primary"} />
-                </IconButton>
-              </Hidden>
+              <Menu sx={{ display: { xs: "none", sm: "block" } }} />
+              <IconButton
+                edge="end"
+                color="inherit"
+                aria-label="menu"
+                onClick={() => setOpenDraw(true)}
+                size="large"
+                sx={{ display: { xs: "block", sm: "none" } }}
+              >
+                <MenuIcon color={"primary"} />
+              </IconButton>
               {props.setColorMode ? (
                 theme.palette.mode === "light" ? (
                   <IconButton

@@ -1,17 +1,18 @@
 import React from "react";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { format } from "date-fns";
 import { Link as GatsbyLink } from "gatsby";
-import CardActionArea from "@mui/material/CardActionArea";
-import Card from "@mui/material/Card";
-import Box from "@mui/material/Box";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Hidden from "@mui/material/Hidden";
-import CardMedia from "@mui/material/CardMedia";
-import { getSrc } from "gatsby-plugin-image"
+import {
+  CardActionArea,
+  Card,
+  Box,
+  CardContent,
+  Typography,
+  CardMedia,
+} from "@mui/material";
+import { getSrc } from "gatsby-plugin-image";
 
-const PREFIX = 'PostList';
+const PREFIX = "PostList";
 
 const classes = {
   cardActionArea: `${PREFIX}-cardActionArea`,
@@ -19,15 +20,11 @@ const classes = {
   cardDetails: `${PREFIX}-cardDetails`,
   cardMedia: `${PREFIX}-cardMedia`,
   date: `${PREFIX}-date`,
-  category: `${PREFIX}-category`
+  category: `${PREFIX}-category`,
 };
 
 // TODO jss-to-styled codemod: The Fragment root was replaced by div. Change the tag if needed.
-const Root = styled('div')((
-  {
-    theme
-  }
-) => ({
+const Root = styled("div")(({ theme }) => ({
   [`& .${classes.cardActionArea}`]: {
     marginBottom: theme.spacing(3),
   },
@@ -50,12 +47,10 @@ const Root = styled('div')((
 
   [`& .${classes.category}`]: {
     marginRight: theme.spacing(0.5),
-  }
+  },
 }));
 
 const PostList = ({ nodes }) => {
-
-
   return (
     <Root>
       {nodes.map((node) => (
@@ -72,7 +67,7 @@ const PostList = ({ nodes }) => {
                   variant="subtitle1"
                   color="textSecondary"
                   className={classes.date}
-                  display={"inline"}
+                  display="inline"
                 >
                   {format(new Date(node.frontmatter.date), "yyyy-MM-dd")}
                 </Typography>
@@ -80,7 +75,7 @@ const PostList = ({ nodes }) => {
                   <Typography
                     variant="subtitle1"
                     color="textSecondary"
-                    display={"inline"}
+                    display="inline"
                     className={classes.category}
                     key={category}
                   >
@@ -90,7 +85,7 @@ const PostList = ({ nodes }) => {
                 <Typography component="h2" variant="h5">
                   {node.frontmatter.title}
                 </Typography>
-                <Typography variant="subtitle1" paragraph>
+                <Typography variant="subtitle1" component="p">
                   {node.frontmatter.description || node.excerpt}
                 </Typography>
                 <Typography variant="subtitle1" color="primary">
@@ -99,15 +94,15 @@ const PostList = ({ nodes }) => {
               </CardContent>
             </Box>
             {node.frontmatter.featured_media && (
-              <Hidden smDown>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={getSrc(
-                    node.frontmatter.featured_media.childImageSharp.gatsbyImageData
-                    )}
-                  title={node.frontmatter.title}
-                />
-              </Hidden>
+              <CardMedia
+                className={classes.cardMedia}
+                image={getSrc(
+                  node.frontmatter.featured_media.childImageSharp
+                    .gatsbyImageData
+                )}
+                title={node.frontmatter.title}
+                sx={{ display: { xs: "none", sm: "block" } }}
+              />
             )}
           </Card>
         </CardActionArea>

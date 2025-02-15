@@ -40,10 +40,10 @@ const Tags = (props) => {
           <Typography variant="subtitle1">随机标签</Typography>
           <IconButton
             component={GatsbyLink}
-            to={"/tags"}
+            to="/tags"
             aria-label="more"
             size="small"
-            title={"全部"}
+            title="全部"
           >
             <MoreHorizIcon />
           </IconButton>

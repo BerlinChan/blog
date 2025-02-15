@@ -6,10 +6,10 @@ import Typography from "@mui/material/Typography";
 const NotFoundTemplate = () => {
   return (
     <Layout>
-      <Typography variant={"subtitle1"} gutterBottom>
+      <Typography variant="subtitle1" gutterBottom>
         NOT FOUND
       </Typography>
-      <Typography component={"h2"} variant={"h4"}>
+      <Typography component="h2" variant="h4">
         页面不存在
       </Typography>
     </Layout>

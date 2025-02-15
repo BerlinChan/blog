@@ -25,7 +25,7 @@ const HomePage = ({ data }) => {
       </Box>
       <PostList nodes={data.recentPosts.nodes} />
       {data.allPostCount.totalCount > postsPerPage && (
-        <Pagination nextPagePath={"/page/1"} />
+        <Pagination nextPagePath="/page/1" />
       )}
     </Layout>
   );

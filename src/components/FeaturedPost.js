@@ -46,7 +46,7 @@ const FeaturedPost = ({ featuredPostNode }) => {
         <Typography component="h1" variant="h3" color="inherit" gutterBottom>
           {featuredPostNode.frontmatter.title}
         </Typography>
-        <Typography variant="h5" color="inherit" paragraph>
+        <Typography variant="h5" color="inherit" component="p">
           {featuredPostNode.frontmatter.description}
         </Typography>
       </ButtonBase>

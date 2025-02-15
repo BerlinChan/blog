@@ -19,14 +19,14 @@
     "react",
     "material-ui"
   ],
-  "engines" : {
-    "node" : ">=18.0.0 <=20.18.3"
+  "engines": {
+    "node": ">=18 <=20"
   },
   "dependencies": {
-    "@emotion/react": "11.14.0",
-    "@emotion/styled": "11.14.0",
-    "@mui/icons-material": "5.16.14",
-    "@mui/material": "5.16.14",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "6.4.4",
+    "@mui/material": "6.4.4",
     "date-fns": "2.30.0",
     "gatsby": "5.14.1",
     "gatsby-plugin-catch-links": "5.14.0",

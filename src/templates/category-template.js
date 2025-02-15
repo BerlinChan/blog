@@ -11,7 +11,7 @@ const CategoryTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Typography component={"h2"} variant={"h4"} gutterBottom>
+      <Typography component="h2" variant="h4" gutterBottom>
         {category}
       </Typography>
       <PostList nodes={data.allMarkdownRemark.nodes} />

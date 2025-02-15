@@ -39,10 +39,10 @@ const Categories = (props) => {
           <Typography variant="subtitle1">分类</Typography>
           <IconButton
             component={GatsbyLink}
-            to={"/categories"}
+            to="/categories"
             aria-label="more"
             size="small"
-            title={"全部"}
+            title="全部"
           >
             <MoreHorizIcon />
           </IconButton>

@@ -7,8 +7,8 @@ import Link from "@mui/material/Link";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import ListSubheader from "@mui/material/ListSubheader";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import ListItemButton from "@mui/material/ListItemButton";
 
 const PREFIX = "MenuDraw";
 
@@ -53,17 +53,15 @@ const MenuDraw = ({ openDraw, setOpenDraw }) => {
           </ListSubheader>
         }
       >
-        <ListItem
-          button
+        <ListItemButton
           component={GatsbyLink}
           to={`/page`}
           activeClassName={classes.activeLink}
         >
           <ListItemText primary="文章" />
-        </ListItem>
+        </ListItemButton>
         {categories.map((category) => (
-          <ListItem
-            button
+          <ListItemButton
             component={GatsbyLink}
             to={`/category/${kebabCase(category.fieldValue)}/`}
             className={classes.nested}
@@ -71,39 +69,36 @@ const MenuDraw = ({ openDraw, setOpenDraw }) => {
             key={category.fieldValue}
           >
             <ListItemText primary={category.fieldValue} />
-          </ListItem>
+          </ListItemButton>
         ))}
-        <ListItem
-          button
+        <ListItemButton
           component={GatsbyLink}
           to={`/archivedBlogPage/`}
           activeClassName={classes.activeLink}
           className={classes.nested}
         >
           <ListItemText primary={"存档文章"} />
-        </ListItem>
+        </ListItemButton>
 
         {menu.map((item) => (
           <React.Fragment key={item.label}>
             {item.path ? (
-              <ListItem
-                button
+              <ListItemButton
                 component={GatsbyLink}
                 to={item.path}
                 activeClassName={classes.activeLink}
               >
                 <ListItemText primary={item.label} />
-              </ListItem>
+              </ListItemButton>
             ) : (
-              <ListItem
-                button
+              <ListItemButton
                 component={Link}
                 target={"_blank"}
                 rel="noopener"
                 href={item.link}
               >
                 <ListItemText primary={item.label} />
-              </ListItem>
+              </ListItemButton>
             )}
           </React.Fragment>
         ))}

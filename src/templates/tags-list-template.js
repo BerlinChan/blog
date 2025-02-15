@@ -11,7 +11,7 @@ const TagsListTemplate = () => {
 
   return (
     <Layout>
-      <Typography component={"h2"} variant={"h4"} gutterBottom>
+      <Typography component="h2" variant="h4" gutterBottom>
         标签
       </Typography>
       <ul>
@@ -20,7 +20,7 @@ const TagsListTemplate = () => {
             <Link
               component={GatsbyLink}
               to={`/tag/${kebabCase(tag.fieldValue)}/`}
-              variant={"body1"}
+              variant="body1"
             >
               {tag.fieldValue} ({tag.totalCount})
             </Link>

@@ -11,7 +11,7 @@ const CategoriesListTemplate = () => {
 
   return (
     <Layout>
-      <Typography component={"h2"} variant={"h4"} gutterBottom>
+      <Typography component="h2" variant="h4" gutterBottom>
         文章分类
       </Typography>
       <ul>
@@ -20,7 +20,7 @@ const CategoriesListTemplate = () => {
             <Link
               component={GatsbyLink}
               to={`/category/${kebabCase(category.fieldValue)}/`}
-              variant={"body1"}
+              variant="body1"
             >
               {category.fieldValue} ({category.totalCount})
             </Link>

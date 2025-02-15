@@ -12,7 +12,7 @@ const PageTemplate = ({ data }) => {
 
   return (
     <Layout noSidebar>
-      <Typography component={"h2"} variant={"h4"} gutterBottom>
+      <Typography component="h2" variant="h4" gutterBottom>
         {pageTitle}
       </Typography>
       <Content html={pageBody} />
