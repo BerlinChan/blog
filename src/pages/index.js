@@ -2,12 +2,11 @@ import React from "react";
 import { graphql } from "gatsby";
 import { useSiteMetadata } from "../hooks";
 import Layout from "../components/Layout";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import PostList from "../components/PostList";
 import Pagination from "../components/Pagination";
 import FeaturedPost from "../components/FeaturedPost";
+
+import { Typography, Box, Divider } from "@mui/material";
 
 const HomePage = ({ data }) => {
   const { postsPerPage } = useSiteMetadata();

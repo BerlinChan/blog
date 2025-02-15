@@ -1,10 +1,9 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
-import Link from "@mui/material/Link";
 import kebabCase from "lodash/kebabCase";
 import Layout from "../components/Layout";
 import { useCategoriesList, useSiteMetadata } from "../hooks";
-import Typography from "@mui/material/Typography";
+import { Link, Typography } from "@mui/material";
 
 const CategoriesListTemplate = () => {
   const categories = useCategoriesList();

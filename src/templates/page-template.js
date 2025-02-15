@@ -2,9 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { useSiteMetadata } from "../hooks";
-import Typography from "@mui/material/Typography";
 import Content from "../components/Content";
 import OpenGraph from "../components/OpenGraph";
+import { Typography } from "@mui/material";
 
 const PageTemplate = ({ data }) => {
   const { html: pageBody } = data.markdownRemark;

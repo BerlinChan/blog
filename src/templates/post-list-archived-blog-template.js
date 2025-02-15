@@ -3,9 +3,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
 import { useSiteMetadata } from "../hooks";
-import Box from "@mui/material/Box";
 import ArchivedBlogTips from "../components/ArchivedBlogTips";
 import PostList from "../components/PostList";
+import { Box } from "@mui/material";
 
 const PostListTemplate = ({ data, pageContext }) => {
   const { archivedBlogUrl } = useSiteMetadata();

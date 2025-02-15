@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import PostList from "../components/PostList";
 import Pagination from "../components/Pagination";
 import { useSiteMetadata } from "../hooks";
-import Typography from "@mui/material/Typography";
+import { Typography } from "@mui/material";
 
 const TagTemplate = ({ data, pageContext }) => {
   const { tag, prevPagePath, nextPagePath } = pageContext;

@@ -1,14 +1,17 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import { useCategoriesList, useSiteMetadata } from "../../../hooks";
 import kebabCase from "lodash/kebabCase";
-import Link from "@mui/material/Link";
-import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import ListSubheader from "@mui/material/ListSubheader";
-import List from "@mui/material/List";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemButton from "@mui/material/ListItemButton";
+
+import {
+  styled,
+  Link,
+  SwipeableDrawer,
+  ListSubheader,
+  List,
+  ListItemText,
+  ListItemButton,
+} from "@mui/material";
 
 const PREFIX = "MenuDraw";
 

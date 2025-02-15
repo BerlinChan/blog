@@ -1,9 +1,6 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import { useCategoriesList, useSiteMetadata } from "../../../hooks";
-import Link from "@mui/material/Link";
-import MenuItem from "@mui/material/MenuItem";
 import Menu from "material-ui-popup-state/HoverMenu";
 import {
   usePopupState,
@@ -11,6 +8,8 @@ import {
   bindMenu,
 } from "material-ui-popup-state/hooks";
 import kebabCase from "lodash/kebabCase";
+
+import { styled, Link, MenuItem } from "@mui/material";
 
 const PREFIX = "MenuComponent";
 

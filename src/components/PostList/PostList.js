@@ -1,5 +1,4 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import { format } from "date-fns";
 import { Link as GatsbyLink } from "gatsby";
 import {
@@ -9,6 +8,7 @@ import {
   CardContent,
   Typography,
   CardMedia,
+  styled,
 } from "@mui/material";
 import { getSrc } from "gatsby-plugin-image";
 

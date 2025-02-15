@@ -1,8 +1,7 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import { PAGINATION } from "../../constants";
-import { Link, Grid2 } from "@mui/material";
+import { Link, Grid2, styled } from "@mui/material";
 
 const PREFIX = "Pagination";
 

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { useMediaQuery } from "@mui/material";
 
 const useColorMode = () => {
   const localStorage = typeof window !== "undefined" && window.localStorage;
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)",{
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)", {
     noSsr: true,
   });
   const initialState =

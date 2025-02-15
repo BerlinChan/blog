@@ -1,14 +1,11 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
-import Link from "@mui/material/Link";
-import Typography from "@mui/material/Typography";
 import { useTagsList } from "../../hooks";
 import kebabCase from "lodash/kebabCase";
-import Box from "@mui/material/Box";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import IconButton from "@mui/material/IconButton";
 import SidebarCard from "./SidebarCard";
+
+import { styled, Link, Typography, Box, IconButton } from "@mui/material";
 
 const PREFIX = "Tags";
 

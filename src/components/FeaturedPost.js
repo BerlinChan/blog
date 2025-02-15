@@ -1,10 +1,9 @@
 import React from "react";
-import { useTheme, alpha } from "@mui/material/styles";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
-import ButtonBase from "@mui/material/ButtonBase";
+import { alpha } from "@mui/material/styles";
 import { Link as GatsbyLink } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+import { useTheme, Paper, Typography, ButtonBase } from "@mui/material";
 
 const FeaturedPost = ({ featuredPostNode }) => {
   const theme = useTheme();

@@ -1,5 +1,4 @@
 import React from "react";
-import { useTheme } from "@mui/material/styles";
 import {
   AppBar,
   Box,
@@ -10,6 +9,7 @@ import {
   Slide,
   useScrollTrigger,
   IconButton,
+  useTheme,
 } from "@mui/material";
 import Menu from "../Menu";
 import MenuDraw from "../MenuDraw";

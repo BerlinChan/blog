@@ -1,6 +1,12 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
-import { IconButton, Typography, Grid2, Link, Popover } from "@mui/material";
+import {
+  IconButton,
+  Typography,
+  Grid2,
+  Link,
+  Popover,
+  styled,
+} from "@mui/material";
 import { useSiteMetadata } from "../../../hooks";
 import SvgIcons from "../../../utils/SvgIcons";
 import { Link as GatsbyLink } from "gatsby";

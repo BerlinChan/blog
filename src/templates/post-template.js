@@ -8,8 +8,8 @@ import Content from "../components/Content";
 import Pagination from "../components/Pagination";
 import { useSiteMetadata } from "../hooks";
 import Comments from "../components/Comments";
-import Box from "@mui/material/Box";
 import { getSrc } from "gatsby-plugin-image";
+import { Box } from "@mui/material";
 
 const PostTemplate = ({ data }) => {
   const { title: postTitle } = data.markdownRemark.frontmatter;
