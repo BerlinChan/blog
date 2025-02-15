@@ -21,7 +21,7 @@ const Layout = ({ children, featuredContent, noSidebar }) => {
       responsiveFontSizes(
         createTheme({
           palette: {
-            mode: prefersDarkMode ? "dark" : "light",
+            // mode: prefersDarkMode ? "dark" : "light",
             primary: deepOrange,
             secondary: brown,
           },
