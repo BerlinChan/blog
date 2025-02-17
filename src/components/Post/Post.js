@@ -145,7 +145,7 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           url={`${siteUrl}${slug}`}
           title={title}
         >
-          <SvgIcons name="twitter" />
+          <SvgIcons name="x" />
         </ButtonBase>
         <ButtonBase
           className={classes.shareButton}

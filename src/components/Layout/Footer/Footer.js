@@ -5,38 +5,15 @@ import {
   Grid2,
   Link,
   Popover,
-  styled,
+  useTheme,
 } from "@mui/material";
 import { useSiteMetadata } from "../../../hooks";
 import SvgIcons from "../../../utils/SvgIcons";
 import { Link as GatsbyLink } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-const PREFIX = "Footer";
-
-const classes = {
-  footer: `${PREFIX}-footer`,
-  snsIcon: `${PREFIX}-snsIcon`,
-  qrCodeText: `${PREFIX}-qrCodeText`,
-};
-
-const Root = styled("footer")(({ theme }) => ({
-  [`&.${classes.footer}`]: {
-    backgroundColor: theme.palette.background.paper,
-    marginTop: theme.spacing(6),
-    padding: theme.spacing(6, 4),
-  },
-
-  [`& .${classes.snsIcon}`]: {
-    marginRight: theme.spacing(1),
-  },
-
-  [`& .${classes.qrCodeText}`]: {
-    marginTop: theme.spacing(1),
-  },
-}));
-
 const Footer = () => {
+  const theme = useTheme();
   const [anchorQrEl, setAnchorQrEl] = React.useState(null);
 
   const {
@@ -53,51 +30,57 @@ const Footer = () => {
   }
 
   return (
-    <Root className={classes.footer}>
+    <footer
+      style={{
+        backgroundColor: theme.palette.background.paper,
+        marginTop: theme.spacing(6),
+      }}
+    >
       <Grid2 container spacing={3}>
         <Grid2
           item
           size={{ md: 4 }}
-          xs={{ display: { xs: "none", md: "block" } }}
+          sx={{
+            display: { xs: "none", md: "flex" },
+            flexWrap: "wrap",
+            alignItems: "flex-start",
+            gap: theme.spacing(1),
+          }}
         >
-          <Typography variant="subtitle1" color="textSecondary">
-            <Link component={GatsbyLink} to={"/page"} color="inherit">
-              文章
-            </Link>
-            {" | "}
-            {menu.map((item, index) => (
-              <React.Fragment key={item.label}>
-                {item.path ? (
-                  <Link component={GatsbyLink} to={item.path} color="inherit">
-                    {item.label}
-                  </Link>
-                ) : (
-                  <Link
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener"
-                    color="inherit"
-                  >
-                    {item.label}
-                  </Link>
-                )}
-                {index < menu.length - 1 ? " | " : null}
-              </React.Fragment>
-            ))}
-          </Typography>
+          <Link component={GatsbyLink} to={"/page"} color="inherit">
+            文章
+          </Link>
+          |
+          {menu.map((item, index) => (
+            <React.Fragment key={item.label}>
+              {item.path ? (
+                <Link component={GatsbyLink} to={item.path} color="inherit">
+                  {item.label}
+                </Link>
+              ) : (
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener"
+                  color="inherit"
+                >
+                  {item.label}
+                </Link>
+              )}
+              {index < menu.length - 1 ? "|" : null}
+            </React.Fragment>
+          ))}
         </Grid2>
-        <Grid2 item size={{ sm: 6, md: 4 }}>
+        <Grid2 item size={{ sm: 6, md: 4 }} sx={{ display: "flex" }}>
           <IconButton
-            className={classes.snsIcon}
-            href={contacts.twitter}
+            href={contacts.x}
             target="_blank"
             rel="noopener"
             size="large"
           >
-            <SvgIcons name={"twitter"} />
+            <SvgIcons name={"x"} />
           </IconButton>
           <IconButton
-            className={classes.snsIcon}
             href={contacts.youtube}
             target="_blank"
             rel="noopener"
@@ -106,7 +89,6 @@ const Footer = () => {
             <SvgIcons name={"youtube"} />
           </IconButton>
           <IconButton
-            className={classes.snsIcon}
             href={contacts.facebook}
             target="_blank"
             rel="noopener"
@@ -115,7 +97,6 @@ const Footer = () => {
             <SvgIcons name={"facebook"} />
           </IconButton>
           <IconButton
-            className={classes.snsIcon}
             href={contacts.linkedIn}
             target="_blank"
             rel="noopener"
@@ -124,7 +105,6 @@ const Footer = () => {
             <SvgIcons name={"linkedIn"} />
           </IconButton>
           <IconButton
-            className={classes.snsIcon}
             href={contacts.github}
             target="_blank"
             rel="noopener"
@@ -132,15 +112,10 @@ const Footer = () => {
           >
             <SvgIcons name={"github"} />
           </IconButton>
-          <IconButton
-            className={classes.snsIcon}
-            onClick={handleQrClick}
-            size="large"
-          >
+          <IconButton onClick={handleQrClick} size="large">
             <SvgIcons name={"wechat"} />
           </IconButton>
           <IconButton
-            className={classes.snsIcon}
             href={contacts.rss}
             target="_blank"
             rel="noopener"
@@ -156,7 +131,7 @@ const Footer = () => {
             anchorEl={anchorQrEl}
             onClose={handleQrClose}
           >
-            <Typography align="center" className={classes.qrCodeText}>
+            <Typography align="center" sx={{ marginTop: theme.spacing(1) }}>
               公众号“摄影师陈柏林”
             </Typography>
             <StaticImage
@@ -183,7 +158,7 @@ const Footer = () => {
           </Typography>
         </Grid2>
       </Grid2>
-    </Root>
+    </footer>
   );
 };
 
