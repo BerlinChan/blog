@@ -20,7 +20,7 @@
     "material-ui"
   ],
   "engines": {
-    "node": ">=18 <=20"
+    "node": ">=18 <=22"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
