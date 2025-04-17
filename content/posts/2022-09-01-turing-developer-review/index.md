@@ -2,7 +2,7 @@
 title: I'm on Turing Developer Review
 date: 2022-09-01T10:46:37.121Z
 template: post
-featured_top: true
+featured_top: false
 featured_media: ./featured_media.jpg
 draft: false
 slug: /2022/09/turing-developer-review

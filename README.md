@@ -1,7 +1,8 @@
 # 陈柏林的 Blog
 ![Website](https://img.shields.io/website/https/www.berlinchan.com)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/BerlinChan/blog/main.yml)
-![Follow me on X.com](https://img.shields.io/twitter/follow/BerlinChanCom)
+[![Follow me on X.com](https://img.shields.io/twitter/url/https/BerlinChanCom?style=social)](https://x.com/BerlinChanCom)
+
 
 [https://www.berlinchan.com/](https://www.berlinchan.com/)
 

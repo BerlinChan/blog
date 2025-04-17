@@ -134,7 +134,6 @@ const Post = ({ isArchivedBlogPost, post, children }) => {
           component={FacebookShareButton}
           resetButtonStyle={false}
           url={`${siteUrl}${slug}`}
-          quote={description}
         >
           <SvgIcons name="facebook" />
         </ButtonBase>
