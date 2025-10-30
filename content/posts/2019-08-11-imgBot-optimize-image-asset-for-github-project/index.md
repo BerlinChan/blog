@@ -18,6 +18,8 @@ description: 用 Github Pages 做 blog 时，经常会插入很多图片，利�
 
 <!-- endExcerpt -->
 
+⚠️ 开始之前值得一提的是，使用在线工具存在安全风险。处理包含敏感内容的图片，应使用本地工具。
+
 ## 介绍 ImgBot
 官方介绍翻译：
 
@@ -60,3 +62,7 @@ ImgBot 默认是无损压缩的，可以按需进行[配置](https://imgbot.net/
 > TinyPNG 采用智能有损压缩技术来优化 PNG 文件大小。有选择地减少图片中的颜色，用更少的字节数存储。图片损失几乎不可见，但文件大小有很大改善。
 
 TingPNG 是个不错的另外选择，他还提供压缩、智能裁剪的 API 用于批量处理。不过 ImgBot 也可以配置为有损压缩的，对于图片多的还是配置 ImgBot 简单又省事。
+
+## 更新 2025-10-30
+ TinyPNG 的免费服务最大支持 5MB 文件的处理，对于更大文件的支持需要订阅 Web Pro。网友 Ana 推荐另一款在线图片压缩工具 [imagecompressor](https://www.websiteplanet.com/webtools/imagecompressor/)，其支持最大 50MB 文件的处理。经实测，压缩一张 49.5MB 的 PNG 是没有问题的。
+ 
