@@ -2,7 +2,7 @@ import React from "react";
 import {
   IconButton,
   Typography,
-  Grid2,
+  Grid,
   Link,
   Popover,
   useTheme,
@@ -36,8 +36,8 @@ const Footer = () => {
         marginTop: theme.spacing(6),
       }}
     >
-      <Grid2 container spacing={3}>
-        <Grid2
+      <Grid container spacing={3}>
+        <Grid
           item
           size={{ md: 4 }}
           sx={{
@@ -70,8 +70,8 @@ const Footer = () => {
               {index < menu.length - 1 ? "|" : null}
             </React.Fragment>
           ))}
-        </Grid2>
-        <Grid2 item size={{ sm: 6, md: 4 }} sx={{ display: "flex" }}>
+        </Grid>
+        <Grid item size={{ sm: 6, md: 4 }} sx={{ display: "flex" }}>
           <IconButton
             href={contacts.x}
             target="_blank"
@@ -142,8 +142,8 @@ const Footer = () => {
               height={258}
             />
           </Popover>
-        </Grid2>
-        <Grid2 item size={{ sm: 6, md: 4 }}>
+        </Grid>
+        <Grid item size={{ sm: 6, md: 4 }}>
           <Typography variant="body2" color="textSecondary">
             本站作品采用
             <Link
@@ -156,8 +156,8 @@ const Footer = () => {
             </Link>
             进行许可。
           </Typography>
-        </Grid2>
-      </Grid2>
+        </Grid>
+      </Grid>
     </footer>
   );
 };

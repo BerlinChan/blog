@@ -1,7 +1,7 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import { PAGINATION } from "../../constants";
-import { Link, Grid2, styled } from "@mui/material";
+import { Link, Grid, styled } from "@mui/material";
 
 const PREFIX = "Pagination";
 
@@ -9,7 +9,7 @@ const classes = {
   nextNav: `${PREFIX}-nextNav`,
 };
 
-const StyledGrid = styled(Grid2)(({ theme }) => ({
+const StyledGrid = styled(Grid)(({ theme }) => ({
   [`& .${classes.nextNav}`]: {
     marginLeft: "auto",
   },
@@ -24,7 +24,7 @@ const Pagination = ({
   return (
     <StyledGrid container justifyContent="space-between" wrap="nowrap">
       {prevPagePath ? (
-        <Grid2 item>
+        <Grid item>
           <Link
             component={GatsbyLink}
             rel="prev"
@@ -33,10 +33,10 @@ const Pagination = ({
           >
             ← {prevPageName ? prevPageName : PAGINATION.PREV_PAGE}
           </Link>
-        </Grid2>
+        </Grid>
       ) : null}
       {nextPagePath ? (
-        <Grid2 item className={classes.nextNav}>
+        <Grid item className={classes.nextNav}>
           <Link
             component={GatsbyLink}
             rel="next"
@@ -45,7 +45,7 @@ const Pagination = ({
           >
             {nextPageName ? nextPageName : PAGINATION.NEXT_PAGE} →
           </Link>
-        </Grid2>
+        </Grid>
       ) : null}
     </StyledGrid>
   );

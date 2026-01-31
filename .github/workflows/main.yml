@@ -21,17 +21,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: "20"
           cache: 'yarn'
       - run: yarn
       - run: yarn build
 
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@v4.2.0
         with:
           target_branch: gh-pages
           build_dir: public

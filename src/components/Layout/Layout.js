@@ -1,5 +1,5 @@
 import React from "react";
-import { CssBaseline, useMediaQuery, Container, Grid2 } from "@mui/material";
+import { CssBaseline, useMediaQuery, Container, Grid } from "@mui/material";
 import {
   ThemeProvider,
   createTheme,
@@ -33,16 +33,16 @@ const Layout = ({ children, featuredContent, noSidebar }) => {
       <Header />
       <Container maxWidth="lg">
         {featuredContent}
-        <Grid2 container spacing={5}>
-          <Grid2 item size={{ xs: 12, md: 8 }}>
+        <Grid container spacing={5}>
+          <Grid item size={{ xs: 12, md: 8 }}>
             {children}
-          </Grid2>
+          </Grid>
           {noSidebar ? null : (
-            <Grid2 item size={{ xs: 12, md: 4 }}>
+            <Grid item size={{ xs: 12, md: 4 }}>
               <Sidebar />
-            </Grid2>
+            </Grid>
           )}
-        </Grid2>
+        </Grid>
         <Footer />
       </Container>
       <ScrollTop />
