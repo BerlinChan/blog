@@ -1,4 +1,7 @@
 {
-  "extends": ["config:base", "schedule:monthly"],
-  "masterIssue": true
+  "extends": [
+    "config:recommended",
+    "schedule:monthly"
+  ],
+  "dependencyDashboard": true
 }
