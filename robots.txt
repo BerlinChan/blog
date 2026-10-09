@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.berlinchan.com/sitemap-index.xml
+Host: https://www.berlinchan.com
